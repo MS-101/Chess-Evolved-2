@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TitleCanvas : MonoBehaviour
 {
     [SerializeField] private Button playBtn, quitBtn;
+    [SerializeField] private CreateGameOverlay createGameOverlay;
     [SerializeField] private GameCanvas gameCanvas;
 
     private void Start()
@@ -16,8 +17,7 @@ public class TitleCanvas : MonoBehaviour
 
     private void OnPlayClick()
     {
-        gameObject.SetActive(false);
-        gameCanvas.gameObject.SetActive(true);
+        createGameOverlay.gameObject.SetActive(true);
     }
     
     private void OnQuitClick()
