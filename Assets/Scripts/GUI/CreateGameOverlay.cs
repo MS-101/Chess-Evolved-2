@@ -1,17 +1,19 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class CreateGameOverlay : MonoBehaviour
 {
     [SerializeField] private Toggle playerWhiteColorToggle, playerBlackColorToggle, playerRandomColorToggle;
     [SerializeField] private Toggle malakhWhiteColorToggle, malakhBlackColorToggle, malakhRandomColorToggle;
-    [SerializeField] private PieceDropdown playerPawnDropdown;
-    [SerializeField] private TMP_Dropdown playerKnightDropdown, playerBishopDropdown, playerRookDropdown;
-    [SerializeField] private TMP_Dropdown malakhPawnDropdown, malakhKnightDropdown, malakhBishopDropdown, malakhRookDropdown;
+    [SerializeField] private ClickableDropdown playerPawnDropdown, playerKnightDropdown, playerBishopDropdown, playerRookDropdown;
+    [SerializeField] private ClickableDropdown malakhPawnDropdown, malakhKnightDropdown, malakhBishopDropdown, malakhRookDropdown;
     [SerializeField] private Toggle playerRandomPiecesToggle, malakhRandomPiecesToggle;
     [SerializeField] private TMP_Dropdown pieceDropdown, essenceDropdown;
     [SerializeField] private Button returnBtn, playBtn;
+
+    public UnityEvent<Chess.GameSettings> onGameCreated;
 
     private void Start()
     {
@@ -24,15 +26,24 @@ public class CreateGameOverlay : MonoBehaviour
         malakhRandomColorToggle.onValueChanged.AddListener(OnMalakhRandomColorToggled);
 
         // Pieces
-        playerPawnDropdown.onClicked.AddListener(OnPlayerPawnClicked);
-        playerPawnDropdown.onValueChanged.AddListener(OnPlayerPawnChanged);
-        playerKnightDropdown.onValueChanged.AddListener(OnPlayerKnightChanged);
-        playerBishopDropdown.onValueChanged.AddListener(OnPlayerBishopChanged);
-        playerRookDropdown.onValueChanged.AddListener(OnPlayerRookChanged);
-        malakhPawnDropdown.onValueChanged.AddListener(OnMalakhPawnChanged);
-        malakhKnightDropdown.onValueChanged.AddListener(OnMalakhKnightChanged);
-        malakhBishopDropdown.onValueChanged.AddListener(OnMalakhBishopChanged);
-        malakhRookDropdown.onValueChanged.AddListener(OnMalakhRookChanged);
+        playerPawnDropdown.onClicked.AddListener(() => SetPieceInfo(Chess.PieceType.Pawn, (Chess.Essence)playerPawnDropdown.value));
+        playerPawnDropdown.onValueChanged.AddListener((int value) => SetPieceInfo(Chess.PieceType.Pawn, (Chess.Essence)value));
+        playerKnightDropdown.onClicked.AddListener(() => SetPieceInfo(Chess.PieceType.Knight, (Chess.Essence)playerKnightDropdown.value));
+        playerKnightDropdown.onValueChanged.AddListener((int value) => SetPieceInfo(Chess.PieceType.Knight, (Chess.Essence)value));
+        playerBishopDropdown.onClicked.AddListener(() => SetPieceInfo(Chess.PieceType.Bishop, (Chess.Essence)playerBishopDropdown.value));
+        playerBishopDropdown.onValueChanged.AddListener((int value) => SetPieceInfo(Chess.PieceType.Bishop, (Chess.Essence)value));
+        playerRookDropdown.onClicked.AddListener(() => SetPieceInfo(Chess.PieceType.Rook, (Chess.Essence)playerRookDropdown.value));
+        playerRookDropdown.onValueChanged.AddListener((int value) => SetPieceInfo(Chess.PieceType.Rook, (Chess.Essence)value));
+
+        malakhPawnDropdown.onClicked.AddListener(() => SetPieceInfo(Chess.PieceType.Pawn, (Chess.Essence)malakhPawnDropdown.value));
+        malakhPawnDropdown.onValueChanged.AddListener((int value) => SetPieceInfo(Chess.PieceType.Pawn, (Chess.Essence)value));
+        malakhKnightDropdown.onClicked.AddListener(() => SetPieceInfo(Chess.PieceType.Knight, (Chess.Essence)malakhKnightDropdown.value));
+        malakhKnightDropdown.onValueChanged.AddListener((int value) => SetPieceInfo(Chess.PieceType.Knight, (Chess.Essence)value));
+        malakhBishopDropdown.onClicked.AddListener(() => SetPieceInfo(Chess.PieceType.Bishop, (Chess.Essence)malakhBishopDropdown.value));
+        malakhBishopDropdown.onValueChanged.AddListener((int value) => SetPieceInfo(Chess.PieceType.Bishop, (Chess.Essence)value));
+        malakhRookDropdown.onClicked.AddListener(() => SetPieceInfo(Chess.PieceType.Rook, (Chess.Essence)malakhRookDropdown.value));
+        malakhRookDropdown.onValueChanged.AddListener((int value) => SetPieceInfo(Chess.PieceType.Rook, (Chess.Essence)value));
+
         playerRandomPiecesToggle.onValueChanged.AddListener(OnPlayerRandomPiecesToggled);
         malakhRandomPiecesToggle.onValueChanged.AddListener(OnMalakhRandomPiecesToggled);
 
@@ -220,66 +231,6 @@ public class CreateGameOverlay : MonoBehaviour
 
     #region Pieces
 
-    enum PieceType
-    {
-        Pawn = 0,
-        Knight = 1,
-        Bishop = 2,
-        Rook = 3,
-    }
-
-    enum Essence
-    {
-        Classic = 0,
-        Red = 1,
-        Blue = 2
-    }
-
-    private void OnPlayerPawnClicked()
-    {
-        SetPieceInfo(PieceType.Pawn, (Essence)playerPawnDropdown.value);
-    }
-
-    private void OnPlayerPawnChanged(int value)
-    {
-        SetPieceInfo(PieceType.Pawn, (Essence)value);
-    }
-
-    private void OnPlayerKnightChanged(int value)
-    {
-        SetPieceInfo(PieceType.Knight, (Essence)value);
-    }
-
-    private void OnPlayerBishopChanged(int value)
-    {
-        SetPieceInfo(PieceType.Bishop, (Essence)value);
-    }
-
-    private void OnPlayerRookChanged(int value)
-    {
-        SetPieceInfo(PieceType.Rook, (Essence)value);
-    }
-
-    private void OnMalakhPawnChanged(int value)
-    {
-        SetPieceInfo(PieceType.Pawn, (Essence)value);
-    }
-
-    private void OnMalakhKnightChanged(int value)
-    {
-        SetPieceInfo(PieceType.Knight, (Essence)value);
-    }
-
-    private void OnMalakhBishopChanged(int value)
-    {
-        SetPieceInfo(PieceType.Bishop, (Essence)value);
-    }
-
-    private void OnMalakhRookChanged(int value)
-    {
-        SetPieceInfo(PieceType.Rook, (Essence)value);
-    }
-
     private void OnPlayerRandomPiecesToggled(bool value)
     {
         playerPawnDropdown.interactable = !value;
@@ -307,33 +258,78 @@ public class CreateGameOverlay : MonoBehaviour
 
     private void OnPlayClick()
     {
-        gameObject.SetActive(false);
+        Random.InitState(System.DateTime.Now.Millisecond);
+
+        Chess.Color playerColor;
+        if (playerWhiteColorToggle.isOn)
+            playerColor = Chess.Color.White;
+        else if (playerBlackColorToggle.isOn)
+            playerColor = Chess.Color.Black;
+        else
+            playerColor = (Chess.Color)Random.Range(0, 2);
+
+        Chess.Essence playerPawn, playerKnight, playerBishop, playerRook;
+        if (!playerRandomPiecesToggle.isOn)
+        {
+            playerPawn = (Chess.Essence)playerPawnDropdown.value;
+            playerKnight = (Chess.Essence)playerKnightDropdown.value;
+            playerBishop = (Chess.Essence)playerBishopDropdown.value;
+            playerRook = (Chess.Essence)playerRookDropdown.value;
+        }
+        else
+        {
+            playerPawn = (Chess.Essence)Random.Range(1, 3);
+            playerKnight = (Chess.Essence)Random.Range(1, 3);
+            playerBishop = (Chess.Essence)Random.Range(1, 3);
+            playerRook = (Chess.Essence)Random.Range(1, 3);
+        }
+
+        Chess.Essence malakhPawn, malakhKnight, malakhBishop, malakhRook;
+        if (!malakhRandomPiecesToggle.isOn)
+        {
+            malakhPawn = (Chess.Essence)malakhPawnDropdown.value;
+            malakhKnight = (Chess.Essence)malakhKnightDropdown.value;
+            malakhBishop = (Chess.Essence)malakhBishopDropdown.value;
+            malakhRook = (Chess.Essence)malakhRookDropdown.value;
+        }
+        else
+        {
+            malakhPawn = (Chess.Essence)Random.Range(1, 3);
+            malakhKnight = (Chess.Essence)Random.Range(1, 3);
+            malakhBishop = (Chess.Essence)Random.Range(1, 3);
+            malakhRook = (Chess.Essence)Random.Range(1, 3);
+        }
+
+        onGameCreated?.Invoke(new(
+            playerColor, playerPawn, playerKnight, playerBishop, playerRook,
+            malakhPawn, malakhKnight, malakhBishop, malakhRook
+        ));
     }
 
     #endregion
 
     #region Piece Info
 
-    private void SetPieceInfo(PieceType pieceType, Essence essence)
+    private void SetPieceInfo(Chess.PieceType pieceType, Chess.Essence essence)
     {
         pieceDropdown.SetValueWithoutNotify((int)pieceType);
         essenceDropdown.SetValueWithoutNotify((int)essence);
 
         switch (essence)
         {
-            case Essence.Classic:
+            case Chess.Essence.Classic:
                 pieceDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Classic/Pawn_Random_Classic");
                 pieceDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Classic/Knight_Random_Classic");
                 pieceDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Classic/Bishop_Random_Classic");
                 pieceDropdown.options[3].image = Resources.Load<Sprite>("Pieces/Random/Classic/Rook_Random_Classic");
                 break;
-            case Essence.Red:
+            case Chess.Essence.Red:
                 pieceDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Red/Pawn_Random_Red");
                 pieceDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Red/Knight_Random_Red");
                 pieceDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Red/Bishop_Random_Red");
                 pieceDropdown.options[3].image = Resources.Load<Sprite>("Pieces/Random/Red/Rook_Random_Red");
                 break;
-            case Essence.Blue:
+            case Chess.Essence.Blue:
                 pieceDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Blue/Pawn_Random_Blue");
                 pieceDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Blue/Knight_Random_Blue");
                 pieceDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Blue/Bishop_Random_Blue");
@@ -346,12 +342,12 @@ public class CreateGameOverlay : MonoBehaviour
 
     private void OnPieceChanged(int value)
     {
-        SetPieceInfo((PieceType)value, (Essence)essenceDropdown.value);
+        SetPieceInfo((Chess.PieceType)value, (Chess.Essence)essenceDropdown.value);
     }
 
     private void OnEssenceChanged(int value)
     {
-        SetPieceInfo((PieceType)pieceDropdown.value, (Essence)value);
+        SetPieceInfo((Chess.PieceType)pieceDropdown.value, (Chess.Essence)value);
     }
 
     #endregion

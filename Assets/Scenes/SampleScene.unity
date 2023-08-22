@@ -4245,7 +4245,7 @@ GameObject:
   - component: {fileID: 409581225}
   - component: {fileID: 409581228}
   - component: {fileID: 409581227}
-  - component: {fileID: 409581226}
+  - component: {fileID: 409581229}
   m_Layer: 5
   m_Name: KnightDropdown
   m_TagString: Untagged
@@ -4276,7 +4276,7 @@ RectTransform:
   m_AnchoredPosition: {x: 275, y: 0}
   m_SizeDelta: {x: 125, y: -9.094947e-13}
   m_Pivot: {x: 0.00000006146729, y: 0.9999999}
---- !u!114 &409581226
+--- !u!114 &409581227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4285,7 +4285,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 409581224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &409581228
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409581224}
+  m_CullTransparentMesh: 1
+--- !u!114 &409581229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409581224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d034250cdeb833046bb2b558d327a412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -4326,54 +4364,19 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Classic Pawn
+    - m_Text: Knight Classic
       m_Image: {fileID: 21300000, guid: ede50ebe6dbe4a24fb9131f18142fdde, type: 3}
-    - m_Text: Red Pawn
+    - m_Text: Knight Red
       m_Image: {fileID: 21300000, guid: fd177ba8dd40fb846a42bfae3885f0aa, type: 3}
-    - m_Text: BluePawn
+    - m_Text: Knight Blue
       m_Image: {fileID: 21300000, guid: 01f2cc155cdd8dc458d900c954caac64, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
   m_AlphaFadeSpeed: 0.15
---- !u!114 &409581227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409581224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
+  onClicked:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &409581228
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409581224}
-  m_CullTransparentMesh: 1
 --- !u!1 &411265094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,7 +4789,7 @@ GameObject:
   - component: {fileID: 452356531}
   - component: {fileID: 452356534}
   - component: {fileID: 452356533}
-  - component: {fileID: 452356532}
+  - component: {fileID: 452356535}
   m_Layer: 5
   m_Name: PawnDropdown
   m_TagString: Untagged
@@ -4817,7 +4820,7 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: 0}
   m_SizeDelta: {x: 125, y: -9.094947e-13}
   m_Pivot: {x: 0.00000006146729, y: 0.9999999}
---- !u!114 &452356532
+--- !u!114 &452356533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4826,7 +4829,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 452356530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &452356534
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452356530}
+  m_CullTransparentMesh: 1
+--- !u!114 &452356535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452356530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d034250cdeb833046bb2b558d327a412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -4867,54 +4908,19 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Classic Pawn
+    - m_Text: Pawn Classic
       m_Image: {fileID: 21300000, guid: db15f4e9b6b3cdc4281c82f735d00058, type: 3}
-    - m_Text: Red Pawn
+    - m_Text: Pawn Red
       m_Image: {fileID: 21300000, guid: 66c9dc32aedb842438a1cb20c7508a71, type: 3}
-    - m_Text: BluePawn
+    - m_Text: Pawn Blue
       m_Image: {fileID: 21300000, guid: 7524eba35611b3c44a048497cb513c30, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
   m_AlphaFadeSpeed: 0.15
---- !u!114 &452356533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452356530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
+  onClicked:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &452356534
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452356530}
-  m_CullTransparentMesh: 1
 --- !u!1 &455689041
 GameObject:
   m_ObjectHideFlags: 0
@@ -6684,7 +6690,7 @@ MonoBehaviour:
   playBtn: {fileID: 862407711}
   quitBtn: {fileID: 199653066}
   createGameOverlay: {fileID: 1183957670}
-  gameCanvas: {fileID: 0}
+  gameCanvas: {fileID: 810977406}
 --- !u!1 &570172214
 GameObject:
   m_ObjectHideFlags: 0
@@ -7646,7 +7652,7 @@ GameObject:
   - component: {fileID: 657885053}
   - component: {fileID: 657885056}
   - component: {fileID: 657885055}
-  - component: {fileID: 657885054}
+  - component: {fileID: 657885057}
   m_Layer: 5
   m_Name: KnightDropdown
   m_TagString: Untagged
@@ -7677,7 +7683,7 @@ RectTransform:
   m_AnchoredPosition: {x: 275, y: 0}
   m_SizeDelta: {x: 125, y: -9.094947e-13}
   m_Pivot: {x: 0.00000006146729, y: 0.9999999}
---- !u!114 &657885054
+--- !u!114 &657885055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7686,7 +7692,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 657885052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &657885056
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657885052}
+  m_CullTransparentMesh: 1
+--- !u!114 &657885057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657885052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d034250cdeb833046bb2b558d327a412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -7727,54 +7771,19 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Classic Pawn
+    - m_Text: Knight Classic
       m_Image: {fileID: 21300000, guid: 4e6fa89b4cb43c74fa0bf6e4a5e533f1, type: 3}
-    - m_Text: Red Pawn
+    - m_Text: Knight Red
       m_Image: {fileID: 21300000, guid: 059638dd912a1ab419203697cf1fb578, type: 3}
-    - m_Text: BluePawn
+    - m_Text: Knight Blue
       m_Image: {fileID: 21300000, guid: 6e80be199b535ff4e8529e90dbae8b9f, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
   m_AlphaFadeSpeed: 0.15
---- !u!114 &657885055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657885052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
+  onClicked:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &657885056
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657885052}
-  m_CullTransparentMesh: 1
 --- !u!1 &671886519
 GameObject:
   m_ObjectHideFlags: 0
@@ -8794,7 +8803,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -400}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &716407200
 MonoBehaviour:
@@ -12502,7 +12511,7 @@ GameObject:
   - component: {fileID: 926333781}
   - component: {fileID: 926333784}
   - component: {fileID: 926333783}
-  - component: {fileID: 926333782}
+  - component: {fileID: 926333785}
   m_Layer: 5
   m_Name: BishopDropdown
   m_TagString: Untagged
@@ -12533,7 +12542,7 @@ RectTransform:
   m_AnchoredPosition: {x: 400, y: 0}
   m_SizeDelta: {x: 125, y: -9.094947e-13}
   m_Pivot: {x: 0.00000006146729, y: 0.9999999}
---- !u!114 &926333782
+--- !u!114 &926333783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12542,7 +12551,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 926333780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &926333784
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926333780}
+  m_CullTransparentMesh: 1
+--- !u!114 &926333785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926333780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d034250cdeb833046bb2b558d327a412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -12583,54 +12630,19 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Classic Pawn
+    - m_Text: Bishop Classic
       m_Image: {fileID: 21300000, guid: 4e7adc806f285f245a3f58fa8a2f9964, type: 3}
-    - m_Text: Red Pawn
+    - m_Text: Bishop Red
       m_Image: {fileID: 21300000, guid: ad1bf663d6699c74195001bcb0c37b1b, type: 3}
-    - m_Text: BluePawn
+    - m_Text: Bishop Blue
       m_Image: {fileID: 21300000, guid: 6b1e4ab9e88fb474285074004f348c45, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
   m_AlphaFadeSpeed: 0.15
---- !u!114 &926333783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926333780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
+  onClicked:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &926333784
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926333780}
-  m_CullTransparentMesh: 1
 --- !u!1 &929365644
 GameObject:
   m_ObjectHideFlags: 0
@@ -14539,7 +14551,7 @@ GameObject:
   - component: {fileID: 1157884224}
   - component: {fileID: 1157884227}
   - component: {fileID: 1157884226}
-  - component: {fileID: 1157884225}
+  - component: {fileID: 1157884228}
   m_Layer: 5
   m_Name: RookDropdown
   m_TagString: Untagged
@@ -14570,7 +14582,7 @@ RectTransform:
   m_AnchoredPosition: {x: 525, y: 0}
   m_SizeDelta: {x: 125, y: -9.094947e-13}
   m_Pivot: {x: 0.00000006146729, y: 0.9999999}
---- !u!114 &1157884225
+--- !u!114 &1157884226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14579,7 +14591,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 1157884223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1157884227
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157884223}
+  m_CullTransparentMesh: 1
+--- !u!114 &1157884228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157884223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d034250cdeb833046bb2b558d327a412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -14620,54 +14670,19 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Classic Pawn
+    - m_Text: Rook Classic
       m_Image: {fileID: 21300000, guid: fc794eda33318b542b95e6f0020a2fe5, type: 3}
-    - m_Text: Red Pawn
+    - m_Text: Rook Red
       m_Image: {fileID: 21300000, guid: 732e3c5d095da9942991bf590cc93256, type: 3}
-    - m_Text: BluePawn
+    - m_Text: Rook Blue
       m_Image: {fileID: 21300000, guid: 287c03634f692cc4189b584ddbab60ca, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
   m_AlphaFadeSpeed: 0.15
---- !u!114 &1157884226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157884223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
+  onClicked:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1157884227
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157884223}
-  m_CullTransparentMesh: 1
 --- !u!1 &1161007141
 GameObject:
   m_ObjectHideFlags: 0
@@ -14950,7 +14965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1183957667
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15030,19 +15045,22 @@ MonoBehaviour:
   malakhBlackColorToggle: {fileID: 1411537659}
   malakhRandomColorToggle: {fileID: 1021790067}
   playerPawnDropdown: {fileID: 1505014852}
-  playerKnightDropdown: {fileID: 657885054}
-  playerBishopDropdown: {fileID: 926333782}
-  playerRookDropdown: {fileID: 1751426306}
-  malakhPawnDropdown: {fileID: 452356532}
-  malakhKnightDropdown: {fileID: 409581226}
-  malakhBishopDropdown: {fileID: 2048594648}
-  malakhRookDropdown: {fileID: 1157884225}
+  playerKnightDropdown: {fileID: 657885057}
+  playerBishopDropdown: {fileID: 926333785}
+  playerRookDropdown: {fileID: 1751426309}
+  malakhPawnDropdown: {fileID: 452356535}
+  malakhKnightDropdown: {fileID: 409581229}
+  malakhBishopDropdown: {fileID: 2048594651}
+  malakhRookDropdown: {fileID: 1157884228}
   playerRandomPiecesToggle: {fileID: 142550430}
   malakhRandomPiecesToggle: {fileID: 1430364433}
   pieceDropdown: {fileID: 699365602}
   essenceDropdown: {fileID: 1177859190}
   returnBtn: {fileID: 68013489}
   playBtn: {fileID: 1358931774}
+  onGameCreated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1191293082
 GameObject:
   m_ObjectHideFlags: 0
@@ -17449,7 +17467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fa9376afdf86d2341804278df56d40e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16dfcb8ec7b99114ab91aefe206897ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -19171,12 +19189,12 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: 
-      m_Image: {fileID: 21300000, guid: fa9376afdf86d2341804278df56d40e8, type: 3}
-    - m_Text: 
-      m_Image: {fileID: 21300000, guid: 3c7406c8567cd0d4d96e26b34d4b56a5, type: 3}
-    - m_Text: 
-      m_Image: {fileID: 21300000, guid: 9e669b57a8201eb48bf6b08137f211fe, type: 3}
+    - m_Text: Pawn Classic
+      m_Image: {fileID: 21300000, guid: 16dfcb8ec7b99114ab91aefe206897ac, type: 3}
+    - m_Text: Pawn Red
+      m_Image: {fileID: 21300000, guid: c706c695ee7fdde4381807bd3ab7f03e, type: 3}
+    - m_Text: Pawn Blue
+      m_Image: {fileID: 21300000, guid: 0a37693e501d86548aa29d5eb0179011, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21835,7 +21853,7 @@ GameObject:
   - component: {fileID: 1751426305}
   - component: {fileID: 1751426308}
   - component: {fileID: 1751426307}
-  - component: {fileID: 1751426306}
+  - component: {fileID: 1751426309}
   m_Layer: 5
   m_Name: RookDropdown
   m_TagString: Untagged
@@ -21866,7 +21884,7 @@ RectTransform:
   m_AnchoredPosition: {x: 525, y: 0}
   m_SizeDelta: {x: 125, y: -9.094947e-13}
   m_Pivot: {x: 0.00000006146729, y: 0.9999999}
---- !u!114 &1751426306
+--- !u!114 &1751426307
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21875,7 +21893,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 1751426304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1751426308
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751426304}
+  m_CullTransparentMesh: 1
+--- !u!114 &1751426309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751426304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d034250cdeb833046bb2b558d327a412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -21916,54 +21972,19 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Classic Pawn
+    - m_Text: Rook Classic
       m_Image: {fileID: 21300000, guid: 5fbd678bdc114fc4bb4ef4d03a70d870, type: 3}
-    - m_Text: Red Pawn
+    - m_Text: Rook Red
       m_Image: {fileID: 21300000, guid: c872093a6f26c2d4ea87364353d5258a, type: 3}
-    - m_Text: BluePawn
+    - m_Text: Rook Blue
       m_Image: {fileID: 21300000, guid: 30187917bf01b42468237757097a597c, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
   m_AlphaFadeSpeed: 0.15
---- !u!114 &1751426307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751426304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
+  onClicked:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1751426308
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751426304}
-  m_CullTransparentMesh: 1
 --- !u!1 &1753512858
 GameObject:
   m_ObjectHideFlags: 0
@@ -24718,7 +24739,7 @@ GameObject:
   - component: {fileID: 2048594647}
   - component: {fileID: 2048594650}
   - component: {fileID: 2048594649}
-  - component: {fileID: 2048594648}
+  - component: {fileID: 2048594651}
   m_Layer: 5
   m_Name: BishopDropdown
   m_TagString: Untagged
@@ -24749,7 +24770,7 @@ RectTransform:
   m_AnchoredPosition: {x: 400, y: 0}
   m_SizeDelta: {x: 125, y: -9.094947e-13}
   m_Pivot: {x: 0.00000006146729, y: 0.9999999}
---- !u!114 &2048594648
+--- !u!114 &2048594649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24758,7 +24779,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 2048594646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2048594650
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048594646}
+  m_CullTransparentMesh: 1
+--- !u!114 &2048594651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048594646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d034250cdeb833046bb2b558d327a412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -24799,54 +24858,19 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Classic Pawn
+    - m_Text: Bishop Classic
       m_Image: {fileID: 21300000, guid: 61903ffaf8ea31946a01ea2b7a52b1ee, type: 3}
-    - m_Text: Red Pawn
+    - m_Text: Bishop Red
       m_Image: {fileID: 21300000, guid: 6ab34fdea58d9bc489cc29a3ab8da0f0, type: 3}
-    - m_Text: BluePawn
+    - m_Text: Bishop Blue
       m_Image: {fileID: 21300000, guid: 630267e294a61c04f91dc68a373dfbe6, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
   m_AlphaFadeSpeed: 0.15
---- !u!114 &2048594649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048594646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
+  onClicked:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2048594650
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048594646}
-  m_CullTransparentMesh: 1
 --- !u!1 &2048946830
 GameObject:
   m_ObjectHideFlags: 0

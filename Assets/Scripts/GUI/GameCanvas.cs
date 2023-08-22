@@ -14,6 +14,11 @@ public class GameCanvas : MonoBehaviour
         playBtn.onClick.AddListener(OnPlayClick);
     }
 
+    public void SetGame(Chess.GameSettings gameSettings)
+    {
+
+    }
+
     private void OnReturnClick()
     {
         gameObject.SetActive(false);

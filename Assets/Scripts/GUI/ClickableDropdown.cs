@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class PieceDropdown : TMP_Dropdown, IPointerClickHandler
+public class ClickableDropdown : TMP_Dropdown, IPointerClickHandler
 {
     public UnityEvent onClicked;
 
