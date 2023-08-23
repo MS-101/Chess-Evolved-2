@@ -10,6 +10,8 @@ public class Chess : MonoBehaviour
         Knight = 1,
         Bishop = 2,
         Rook = 3,
+        Queen = 4,
+        King = 5
     }
 
     public enum Essence
@@ -28,12 +30,12 @@ public class Chess : MonoBehaviour
 
     public class GameSettings
     {
-        public Color playerColor;
+        public Color playerColor, malakhColor;
         public Essence playerPawn, playerKnight, playerBishop, playerRook;
         public Essence malakhPawn, malakhKnight, malakhBishop, malakhRook;
 
         public GameSettings(Color playerColor, Essence playerPawn, Essence playerKnight, Essence playerBishop, Essence playerRook,
-            Essence malakhPawn, Essence malakhKnight, Essence malakhBishop, Essence malakhRook)
+            Color malakhColor, Essence malakhPawn, Essence malakhKnight, Essence malakhBishop, Essence malakhRook)
         {
             this.playerColor = playerColor;
 
@@ -42,10 +44,17 @@ public class Chess : MonoBehaviour
             this.playerBishop = playerBishop;
             this.playerRook = playerRook;
 
+            this.malakhColor = malakhColor;
+
             this.malakhPawn = malakhPawn;
             this.malakhKnight = malakhKnight;
             this.malakhBishop = malakhBishop;
             this.malakhRook = malakhRook;
         }
+    }
+
+    public static Sprite GetPieceImage(PieceType pieceType, Color color,  Essence essence)
+    {
+        return Resources.Load<Sprite>("Pieces/" + pieceType.ToString() + "_" + color.ToString() + "_" + essence.ToString());
     }
 }

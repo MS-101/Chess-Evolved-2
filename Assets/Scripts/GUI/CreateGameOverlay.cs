@@ -18,12 +18,12 @@ public class CreateGameOverlay : MonoBehaviour
     private void Start()
     {
         // Colors
-        playerWhiteColorToggle.onValueChanged.AddListener(OnPlayerWhiteColorToggled);
-        playerBlackColorToggle.onValueChanged.AddListener(OnPlayerBlackColorToggled);
-        playerRandomColorToggle.onValueChanged.AddListener(OnPlayerRandomColorToggled);
-        malakhWhiteColorToggle.onValueChanged.AddListener(OnMalakhWhiteColorToggled);
-        malakhBlackColorToggle.onValueChanged.AddListener(OnMalakhBlackColorToggled);
-        malakhRandomColorToggle.onValueChanged.AddListener(OnMalakhRandomColorToggled);
+        playerWhiteColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnPlayerColorSet(Chess.Color.White); });
+        playerBlackColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnPlayerColorSet(Chess.Color.Black); });
+        playerRandomColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnPlayerColorSet(Chess.Color.Random); });
+        malakhWhiteColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnMalakhColorSet(Chess.Color.White); });
+        malakhBlackColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnMalakhColorSet(Chess.Color.Black); });
+        malakhRandomColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnMalakhColorSet(Chess.Color.Random); });
 
         // Pieces
         playerPawnDropdown.onClicked.AddListener(() => SetPieceInfo(Chess.PieceType.Pawn, (Chess.Essence)playerPawnDropdown.value));
@@ -52,184 +52,81 @@ public class CreateGameOverlay : MonoBehaviour
         playBtn.onClick.AddListener(OnPlayClick);
 
         // Piece Info
-        pieceDropdown.onValueChanged.AddListener(OnPieceChanged);
-        essenceDropdown.onValueChanged.AddListener(OnEssenceChanged);
+        pieceDropdown.onValueChanged.AddListener((int value) => SetPieceInfo((Chess.PieceType)value, (Chess.Essence)essenceDropdown.value));
+        essenceDropdown.onValueChanged.AddListener((int value) => SetPieceInfo((Chess.PieceType)pieceDropdown.value, (Chess.Essence)value));
     }
 
-    #region Colors
-
-    private void OnPlayerWhiteColorToggled(bool value)
+    private void OnPlayerColorSet(Chess.Color color)
     {
-        if (value)
+        playerPawnDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Pawn, color, Chess.Essence.Classic);
+        playerPawnDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Pawn, color, Chess.Essence.Red);
+        playerPawnDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Pawn, color, Chess.Essence.Blue);
+        playerPawnDropdown.RefreshShownValue();
+
+        playerKnightDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Knight, color, Chess.Essence.Classic);
+        playerKnightDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Knight, color, Chess.Essence.Red);
+        playerKnightDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Knight, color, Chess.Essence.Blue);
+        playerKnightDropdown.RefreshShownValue();
+
+        playerBishopDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Bishop, color, Chess.Essence.Classic);
+        playerBishopDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Bishop, color, Chess.Essence.Red);
+        playerBishopDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Bishop, color, Chess.Essence.Blue);
+        playerBishopDropdown.RefreshShownValue();
+
+        playerRookDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Rook, color, Chess.Essence.Classic);
+        playerRookDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Rook, color, Chess.Essence.Red);
+        playerRookDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Rook, color, Chess.Essence.Blue);
+        playerRookDropdown.RefreshShownValue();
+
+        switch (color)
         {
-            playerPawnDropdown.options[0].image = Resources.Load<Sprite>("Pieces/White/Classic/Pawn_White_Classic");
-            playerPawnDropdown.options[1].image = Resources.Load<Sprite>("Pieces/White/Red/Pawn_White_Red");
-            playerPawnDropdown.options[2].image = Resources.Load<Sprite>("Pieces/White/Blue/Pawn_White_Blue");
-            playerPawnDropdown.RefreshShownValue();
-
-            playerKnightDropdown.options[0].image = Resources.Load<Sprite>("Pieces/White/Classic/Knight_White_Classic");
-            playerKnightDropdown.options[1].image = Resources.Load<Sprite>("Pieces/White/Red/Knight_White_Red");
-            playerKnightDropdown.options[2].image = Resources.Load<Sprite>("Pieces/White/Blue/Knight_White_Blue");
-            playerKnightDropdown.RefreshShownValue();
-
-            playerBishopDropdown.options[0].image = Resources.Load<Sprite>("Pieces/White/Classic/Bishop_White_Classic");
-            playerBishopDropdown.options[1].image = Resources.Load<Sprite>("Pieces/White/Red/Bishop_White_Red");
-            playerBishopDropdown.options[2].image = Resources.Load<Sprite>("Pieces/White/Blue/Bishop_White_Blue");
-            playerBishopDropdown.RefreshShownValue();
-
-            playerRookDropdown.options[0].image = Resources.Load<Sprite>("Pieces/White/Classic/Rook_White_Classic");
-            playerRookDropdown.options[1].image = Resources.Load<Sprite>("Pieces/White/Red/Rook_White_Red");
-            playerRookDropdown.options[2].image = Resources.Load<Sprite>("Pieces/White/Blue/Rook_White_Blue");
-            playerRookDropdown.RefreshShownValue();
-
-            malakhBlackColorToggle.isOn = true;
+            case Chess.Color.White:
+                malakhBlackColorToggle.isOn = true;
+                break;
+            case Chess.Color.Black:
+                malakhWhiteColorToggle.isOn = true;
+                break;
+            case Chess.Color.Random:
+                malakhRandomColorToggle.isOn = true;
+                break;
         }
     }
 
-    private void OnPlayerBlackColorToggled(bool value)
+    private void OnMalakhColorSet(Chess.Color color)
     {
-        if (value)
+        malakhPawnDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Pawn, color, Chess.Essence.Classic);
+        malakhPawnDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Pawn, color, Chess.Essence.Red);
+        malakhPawnDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Pawn, color, Chess.Essence.Blue);
+        malakhPawnDropdown.RefreshShownValue();
+
+        malakhKnightDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Knight, color, Chess.Essence.Classic);
+        malakhKnightDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Knight, color, Chess.Essence.Red);
+        malakhKnightDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Knight, color, Chess.Essence.Blue);
+        malakhKnightDropdown.RefreshShownValue();
+
+        malakhBishopDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Bishop, color, Chess.Essence.Classic);
+        malakhBishopDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Bishop, color, Chess.Essence.Red);
+        malakhBishopDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Bishop, color, Chess.Essence.Blue);
+        malakhBishopDropdown.RefreshShownValue();
+
+        malakhRookDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Rook, color, Chess.Essence.Classic);
+        malakhRookDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Rook, color, Chess.Essence.Red);
+        malakhRookDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Rook, color, Chess.Essence.Blue);
+        malakhRookDropdown.RefreshShownValue();
+
+        switch (color)
         {
-            playerPawnDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Black/Classic/Pawn_Black_Classic");
-            playerPawnDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Black/Red/Pawn_Black_Red");
-            playerPawnDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Black/Blue/Pawn_Black_Blue");
-            playerPawnDropdown.RefreshShownValue();
-
-            playerKnightDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Black/Classic/Knight_Black_Classic");
-            playerKnightDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Black/Red/Knight_Black_Red");
-            playerKnightDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Black/Blue/Knight_Black_Blue");
-            playerKnightDropdown.RefreshShownValue();
-
-            playerBishopDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Black/Classic/Bishop_Black_Classic");
-            playerBishopDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Black/Red/Bishop_Black_Red");
-            playerBishopDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Black/Blue/Bishop_Black_Blue");
-            playerBishopDropdown.RefreshShownValue();
-
-            playerRookDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Black/Classic/Rook_Black_Classic");
-            playerRookDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Black/Red/Rook_Black_Red");
-            playerRookDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Black/Blue/Rook_Black_Blue");
-            playerRookDropdown.RefreshShownValue();
-
-            malakhWhiteColorToggle.isOn = true;
+            case Chess.Color.White:
+                playerBlackColorToggle.isOn = true;
+                break;
+            case Chess.Color.Black:
+                playerWhiteColorToggle.isOn = true;
+                break;
+            case Chess.Color.Random:
+                playerRandomColorToggle.isOn = true;
+                break;
         }
     }
-
-    private void OnPlayerRandomColorToggled(bool value)
-    {
-        if (value)
-        {
-            playerPawnDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Classic/Pawn_Random_Classic");
-            playerPawnDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Red/Pawn_Random_Red");
-            playerPawnDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Blue/Pawn_Random_Blue");
-            playerPawnDropdown.RefreshShownValue();
-
-            playerKnightDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Classic/Knight_Random_Classic");
-            playerKnightDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Red/Knight_Random_Red");
-            playerKnightDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Blue/Knight_Random_Blue");
-            playerKnightDropdown.RefreshShownValue();
-
-            playerBishopDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Classic/Bishop_Random_Classic");
-            playerBishopDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Red/Bishop_Random_Red");
-            playerBishopDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Blue/Bishop_Random_Blue");
-            playerBishopDropdown.RefreshShownValue();
-
-            playerRookDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Classic/Rook_Random_Classic");
-            playerRookDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Red/Rook_Random_Red");
-            playerRookDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Blue/Rook_Random_Blue");
-            playerRookDropdown.RefreshShownValue();
-
-            malakhRandomColorToggle.isOn = true;
-        }
-    }
-
-    private void OnMalakhWhiteColorToggled(bool value)
-    {
-        if (value)
-        {
-            malakhPawnDropdown.options[0].image = Resources.Load<Sprite>("Pieces/White/Classic/Pawn_White_Classic");
-            malakhPawnDropdown.options[1].image = Resources.Load<Sprite>("Pieces/White/Red/Pawn_White_Red");
-            malakhPawnDropdown.options[2].image = Resources.Load<Sprite>("Pieces/White/Blue/Pawn_White_Blue");
-            malakhPawnDropdown.RefreshShownValue();
-
-            malakhKnightDropdown.options[0].image = Resources.Load<Sprite>("Pieces/White/Classic/Knight_White_Classic");
-            malakhKnightDropdown.options[1].image = Resources.Load<Sprite>("Pieces/White/Red/Knight_White_Red");
-            malakhKnightDropdown.options[2].image = Resources.Load<Sprite>("Pieces/White/Blue/Knight_White_Blue");
-            malakhKnightDropdown.RefreshShownValue();
-
-            malakhBishopDropdown.options[0].image = Resources.Load<Sprite>("Pieces/White/Classic/Bishop_White_Classic");
-            malakhBishopDropdown.options[1].image = Resources.Load<Sprite>("Pieces/White/Red/Bishop_White_Red");
-            malakhBishopDropdown.options[2].image = Resources.Load<Sprite>("Pieces/White/Blue/Bishop_White_Blue");
-            malakhBishopDropdown.RefreshShownValue();
-
-            malakhRookDropdown.options[0].image = Resources.Load<Sprite>("Pieces/White/Classic/Rook_White_Classic");
-            malakhRookDropdown.options[1].image = Resources.Load<Sprite>("Pieces/White/Red/Rook_White_Red");
-            malakhRookDropdown.options[2].image = Resources.Load<Sprite>("Pieces/White/Blue/Rook_White_Blue");
-            malakhRookDropdown.RefreshShownValue();
-
-            playerBlackColorToggle.isOn = true;
-        }
-            
-    }
-
-    private void OnMalakhBlackColorToggled(bool value)
-    {
-        if (value)
-        {
-            malakhPawnDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Black/Classic/Pawn_Black_Classic");
-            malakhPawnDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Black/Red/Pawn_Black_Red");
-            malakhPawnDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Black/Blue/Pawn_Black_Blue");
-            malakhPawnDropdown.RefreshShownValue();
-
-            malakhKnightDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Black/Classic/Knight_Black_Classic");
-            malakhKnightDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Black/Red/Knight_Black_Red");
-            malakhKnightDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Black/Blue/Knight_Black_Blue");
-            malakhKnightDropdown.RefreshShownValue();
-
-            malakhBishopDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Black/Classic/Bishop_Black_Classic");
-            malakhBishopDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Black/Red/Bishop_Black_Red");
-            malakhBishopDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Black/Blue/Bishop_Black_Blue");
-            malakhBishopDropdown.RefreshShownValue();
-
-            malakhRookDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Black/Classic/Rook_Black_Classic");
-            malakhRookDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Black/Red/Rook_Black_Red");
-            malakhRookDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Black/Blue/Rook_Black_Blue");
-            malakhRookDropdown.RefreshShownValue();
-
-            playerWhiteColorToggle.isOn = true;
-        }
-    }
-
-    private void OnMalakhRandomColorToggled(bool value)
-    {
-        if (value)
-        {
-            malakhPawnDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Classic/Pawn_Random_Classic");
-            malakhPawnDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Red/Pawn_Random_Red");
-            malakhPawnDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Blue/Pawn_Random_Blue");
-            malakhPawnDropdown.RefreshShownValue();
-
-            malakhKnightDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Classic/Knight_Random_Classic");
-            malakhKnightDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Red/Knight_Random_Red");
-            malakhKnightDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Blue/Knight_Random_Blue");
-            malakhKnightDropdown.RefreshShownValue();
-
-            malakhBishopDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Classic/Bishop_Random_Classic");
-            malakhBishopDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Red/Bishop_Random_Red");
-            malakhBishopDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Blue/Bishop_Random_Blue");
-            malakhBishopDropdown.RefreshShownValue();
-
-            malakhRookDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Classic/Rook_Random_Classic");
-            malakhRookDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Red/Rook_Random_Red");
-            malakhRookDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Blue/Rook_Random_Blue");
-            malakhRookDropdown.RefreshShownValue();
-
-            playerRandomColorToggle.isOn = true;
-        }
-    }
-
-    #endregion
-
-    #region Pieces
 
     private void OnPlayerRandomPiecesToggled(bool value)
     {
@@ -247,10 +144,6 @@ public class CreateGameOverlay : MonoBehaviour
         malakhRookDropdown.interactable = !value;
     }
 
-    #endregion
-
-    #region Buttons
-
     private void OnReturnClick()
     {
         gameObject.SetActive(false);
@@ -267,6 +160,8 @@ public class CreateGameOverlay : MonoBehaviour
             playerColor = Chess.Color.Black;
         else
             playerColor = (Chess.Color)Random.Range(0, 2);
+
+        Chess.Color malakhColor = (playerColor == Chess.Color.White) ? Chess.Color.Black : Chess.Color.White;
 
         Chess.Essence playerPawn, playerKnight, playerBishop, playerRook;
         if (!playerRandomPiecesToggle.isOn)
@@ -302,53 +197,20 @@ public class CreateGameOverlay : MonoBehaviour
 
         onGameCreated?.Invoke(new(
             playerColor, playerPawn, playerKnight, playerBishop, playerRook,
-            malakhPawn, malakhKnight, malakhBishop, malakhRook
+            malakhColor, malakhPawn, malakhKnight, malakhBishop, malakhRook
         ));
     }
-
-    #endregion
-
-    #region Piece Info
 
     private void SetPieceInfo(Chess.PieceType pieceType, Chess.Essence essence)
     {
         pieceDropdown.SetValueWithoutNotify((int)pieceType);
         essenceDropdown.SetValueWithoutNotify((int)essence);
 
-        switch (essence)
-        {
-            case Chess.Essence.Classic:
-                pieceDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Classic/Pawn_Random_Classic");
-                pieceDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Classic/Knight_Random_Classic");
-                pieceDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Classic/Bishop_Random_Classic");
-                pieceDropdown.options[3].image = Resources.Load<Sprite>("Pieces/Random/Classic/Rook_Random_Classic");
-                break;
-            case Chess.Essence.Red:
-                pieceDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Red/Pawn_Random_Red");
-                pieceDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Red/Knight_Random_Red");
-                pieceDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Red/Bishop_Random_Red");
-                pieceDropdown.options[3].image = Resources.Load<Sprite>("Pieces/Random/Red/Rook_Random_Red");
-                break;
-            case Chess.Essence.Blue:
-                pieceDropdown.options[0].image = Resources.Load<Sprite>("Pieces/Random/Blue/Pawn_Random_Blue");
-                pieceDropdown.options[1].image = Resources.Load<Sprite>("Pieces/Random/Blue/Knight_Random_Blue");
-                pieceDropdown.options[2].image = Resources.Load<Sprite>("Pieces/Random/Blue/Bishop_Random_Blue");
-                pieceDropdown.options[3].image = Resources.Load<Sprite>("Pieces/Random/Blue/Rook_Random_Blue");
-                break;
-        };
+        pieceDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Pawn, Chess.Color.Random, essence);
+        pieceDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Knight, Chess.Color.Random, essence);
+        pieceDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Bishop, Chess.Color.Random, essence);
+        pieceDropdown.options[3].image = Chess.GetPieceImage(Chess.PieceType.Rook, Chess.Color.Random, essence);
 
         pieceDropdown.RefreshShownValue();
     }
-
-    private void OnPieceChanged(int value)
-    {
-        SetPieceInfo((Chess.PieceType)value, (Chess.Essence)essenceDropdown.value);
-    }
-
-    private void OnEssenceChanged(int value)
-    {
-        SetPieceInfo((Chess.PieceType)pieceDropdown.value, (Chess.Essence)value);
-    }
-
-    #endregion
 }
