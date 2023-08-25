@@ -6,24 +6,28 @@ using UnityEngine.UI;
 public class TitleCanvas : MonoBehaviour
 {
     [SerializeField] private Button playBtn, quitBtn;
-    [SerializeField] private CreateGameOverlay createGameOverlay;
     [SerializeField] private GameCanvas gameCanvas;
+
+    private GameObject createGameOverlay = null;
 
     private void Start()
     {
         playBtn.onClick.AddListener(OnPlayClick);
         quitBtn.onClick.AddListener(OnQuitClick);
-        createGameOverlay.onGameCreated.AddListener(OnGameCreated);
     }
 
     private void OnPlayClick()
     {
-        createGameOverlay.gameObject.SetActive(true);
+        createGameOverlay = Instantiate((GameObject)Resources.Load("Prefabs/CreateGameOverlay"), gameObject.transform);
+
+        CreateGameOverlay createGameOverlayScript = createGameOverlay.GetComponent<CreateGameOverlay>();
+        createGameOverlayScript.onGameCreated.AddListener(OnGameCreated);
     }
 
     private void OnGameCreated(Chess.GameSettings gameSettings)
     {
-        createGameOverlay.gameObject.SetActive(false);
+        Destroy(createGameOverlay);
+
         gameCanvas.gameObject.SetActive(true);
         gameCanvas.SetGame(gameSettings);
         gameObject.SetActive(false);

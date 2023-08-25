@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chess : MonoBehaviour
 {
-    public enum PieceType
+    public enum Type
     {
         Pawn = 0,
         Knight = 1,
@@ -53,8 +53,8 @@ public class Chess : MonoBehaviour
         }
     }
 
-    public static Sprite GetPieceImage(PieceType pieceType, Color color,  Essence essence)
+    public static Sprite GetPieceImage(Type type, Color color, Essence essence)
     {
-        return Resources.Load<Sprite>("Pieces/" + pieceType.ToString() + "_" + color.ToString() + "_" + essence.ToString());
+        return Resources.Load<Sprite>("Pieces/" + type.ToString() + "_" + color.ToString() + "_" + essence.ToString());
     }
 }
