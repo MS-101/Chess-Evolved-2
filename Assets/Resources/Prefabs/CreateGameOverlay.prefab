@@ -4915,7 +4915,7 @@ MonoBehaviour:
     - m_Text: Knight Red
       m_Image: {fileID: 21300000, guid: fd177ba8dd40fb846a42bfae3885f0aa, type: 3}
     - m_Text: Knight Blue
-      m_Image: {fileID: 21300000, guid: 01f2cc155cdd8dc458d900c954caac64, type: 3}
+      m_Image: {fileID: 21300000, guid: 615972fe89737694ebf1f7bc92320882, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9092,7 +9092,7 @@ MonoBehaviour:
     - m_Text: Bishop Red
       m_Image: {fileID: 21300000, guid: 6ab34fdea58d9bc489cc29a3ab8da0f0, type: 3}
     - m_Text: Bishop Blue
-      m_Image: {fileID: 21300000, guid: 630267e294a61c04f91dc68a373dfbe6, type: 3}
+      m_Image: {fileID: 21300000, guid: c33093aa7137dae4599b2d054d8fc2ab, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9309,7 +9309,7 @@ MonoBehaviour:
     - m_Text: Pawn Red
       m_Image: {fileID: 21300000, guid: 66c9dc32aedb842438a1cb20c7508a71, type: 3}
     - m_Text: Pawn Blue
-      m_Image: {fileID: 21300000, guid: 7524eba35611b3c44a048497cb513c30, type: 3}
+      m_Image: {fileID: 21300000, guid: 8ccecf75e7d493f4a93236a5d3d6678f, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10091,6 +10091,7 @@ MonoBehaviour:
   essenceDropdown: {fileID: 4275557780332936832}
   returnBtn: {fileID: 5791703477499078728}
   playBtn: {fileID: 5285363026269110156}
+  board: {fileID: 6240461807357553335}
   onGameCreated:
     m_PersistentCalls:
       m_Calls: []
@@ -14703,7 +14704,7 @@ MonoBehaviour:
     - m_Text: Rook Red
       m_Image: {fileID: 21300000, guid: 732e3c5d095da9942991bf590cc93256, type: 3}
     - m_Text: Rook Blue
-      m_Image: {fileID: 21300000, guid: 287c03634f692cc4189b584ddbab60ca, type: 3}
+      m_Image: {fileID: 21300000, guid: f055a9b7e642411469f245aec5243d20, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

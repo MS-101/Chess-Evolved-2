@@ -7,6 +7,7 @@ public class TitleCanvas : MonoBehaviour
 {
     [SerializeField] private Button playBtn, quitBtn;
     [SerializeField] private GameCanvas gameCanvas;
+    [SerializeField] private EngineController engineController;
 
     private GameObject createGameOverlay = null;
 
@@ -21,6 +22,7 @@ public class TitleCanvas : MonoBehaviour
         createGameOverlay = Instantiate((GameObject)Resources.Load("Prefabs/CreateGameOverlay"), gameObject.transform);
 
         CreateGameOverlay createGameOverlayScript = createGameOverlay.GetComponent<CreateGameOverlay>();
+        createGameOverlayScript.SetEngineController(engineController);
         createGameOverlayScript.onGameCreated.AddListener(OnGameCreated);
     }
 

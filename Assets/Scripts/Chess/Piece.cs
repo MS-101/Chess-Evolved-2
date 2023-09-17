@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Piece
 {
-    public Chess.Type type;
+    public Chess.PieceType type;
     public Chess.Color color;
     public Chess.Essence essence;
 
-    public Piece(Chess.Type type, Chess.Color color, Chess.Essence essence)
+    public Piece(Chess.PieceType type, Chess.Color color, Chess.Essence essence)
     {
         this.type = type;
         this.color = color;
