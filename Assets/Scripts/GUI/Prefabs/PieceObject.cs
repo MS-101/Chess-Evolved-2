@@ -25,6 +25,6 @@ public class PieceObject : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        onPieceClicked?.Invoke(Piece);
+        onPieceClicked?.Invoke(piece);
     }
 }

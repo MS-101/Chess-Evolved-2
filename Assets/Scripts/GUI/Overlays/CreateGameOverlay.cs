@@ -234,10 +234,12 @@ public class CreateGameOverlay : MonoBehaviour
             malakhRook = (Chess.Essence)Random.Range(1, 3);
         }
 
-        onGameCreated?.Invoke(new(
+        Chess.GameSettings gameSettings = new(
             playerColor, playerPawn, playerKnight, playerBishop, playerRook,
             malakhColor, malakhPawn, malakhKnight, malakhBishop, malakhRook
-        ));
+        );
+
+        onGameCreated?.Invoke(gameSettings);
     }
 
     private PieceObject pieceObject;
@@ -271,15 +273,6 @@ public class CreateGameOverlay : MonoBehaviour
         float height = parentRect.rect.height / 7;
 
         List<Mobility> mobilities = engineController.mobilities[pieceType][essence];
-        /*
-        if (pieceType == Chess.PieceType.Rook && essence == Chess.Essence.Classic)
-        {
-            mobilities.Add(new(Chess.MovementType.AttackMove, -1, +0, -1, +0, 0));
-            mobilities.Add(new(Chess.MovementType.AttackMove, +0, +1, +0, +1, 0));
-            mobilities.Add(new(Chess.MovementType.AttackMove, +1, +0, +1, +0, 0));
-            mobilities.Add(new(Chess.MovementType.AttackMove, +0, -1, +0, -1, 0));
-        }
-        */
 
         foreach (Mobility mobility in mobilities)
         {

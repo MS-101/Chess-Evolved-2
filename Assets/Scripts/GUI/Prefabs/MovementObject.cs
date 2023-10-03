@@ -21,10 +21,10 @@ public class MovementObject : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public UnityEvent onClick;
+    public UnityEvent<Movement> onClick;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        onClick?.Invoke();
+        onClick?.Invoke(movement);
     }
 }
