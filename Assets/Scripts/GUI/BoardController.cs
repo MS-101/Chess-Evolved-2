@@ -111,41 +111,69 @@ public class BoardController : MonoBehaviour
     {
         ClearPieces();
 
-        AddPiece(new(Chess.PieceType.Rook, Chess.Color.White, gameSettings.playerRook), 0, 0);
-        AddPiece(new(Chess.PieceType.Knight, Chess.Color.White, gameSettings.playerKnight), 1, 0);
-        AddPiece(new(Chess.PieceType.Bishop, Chess.Color.White, gameSettings.playerBishop), 2, 0);
+        Chess.Essence whitePawnEssence, whiteKnightEssence, whiteBishopEssence, whiteRookEssence;
+        Chess.Essence blackPawnEssence, blackKnightEssence, blackBishopEssence, blackRookEssence;
+        
+        if (gameSettings.playerColor == Chess.Color.White)
+        {
+            whitePawnEssence = gameSettings.playerPawn;
+            whiteKnightEssence = gameSettings.playerKnight;
+            whiteBishopEssence = gameSettings.playerBishop;
+            whiteRookEssence = gameSettings.playerRook;
+
+            blackPawnEssence = gameSettings.malakhPawn;
+            blackKnightEssence = gameSettings.malakhKnight;
+            blackBishopEssence = gameSettings.malakhBishop;
+            blackRookEssence = gameSettings.malakhRook;
+        }
+        else
+        {
+            whitePawnEssence = gameSettings.malakhPawn;
+            whiteKnightEssence = gameSettings.malakhKnight;
+            whiteBishopEssence = gameSettings.malakhBishop;
+            whiteRookEssence = gameSettings.malakhRook;
+
+            blackPawnEssence = gameSettings.playerPawn;
+            blackKnightEssence = gameSettings.playerKnight;
+            blackBishopEssence = gameSettings.playerBishop;
+            blackRookEssence = gameSettings.playerRook;
+        }
+
+        AddPiece(new(Chess.PieceType.Rook, Chess.Color.White, whiteRookEssence), 0, 0);
+        AddPiece(new(Chess.PieceType.Knight, Chess.Color.White, whiteKnightEssence), 1, 0);
+        AddPiece(new(Chess.PieceType.Bishop, Chess.Color.White, whiteBishopEssence), 2, 0);
         AddPiece(new(Chess.PieceType.Queen, Chess.Color.White, Chess.Essence.Classic), 3, 0);
         AddPiece(new(Chess.PieceType.King, Chess.Color.White, Chess.Essence.Classic), 4, 0);
-        AddPiece(new(Chess.PieceType.Bishop, Chess.Color.White, gameSettings.playerBishop), 5, 0);
-        AddPiece(new(Chess.PieceType.Knight, Chess.Color.White, gameSettings.playerKnight), 6, 0);
-        AddPiece(new(Chess.PieceType.Rook, Chess.Color.White, gameSettings.playerRook), 7, 0);
+        AddPiece(new(Chess.PieceType.Bishop, Chess.Color.White, whiteBishopEssence), 5, 0);
+        AddPiece(new(Chess.PieceType.Knight, Chess.Color.White, whiteKnightEssence), 6, 0);
+        AddPiece(new(Chess.PieceType.Rook, Chess.Color.White, whiteRookEssence), 7, 0);
 
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, gameSettings.playerPawn), 0, 1);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, gameSettings.playerPawn), 1, 1);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, gameSettings.playerPawn), 2, 1);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, gameSettings.playerPawn), 3, 1);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, gameSettings.playerPawn), 4, 1);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, gameSettings.playerPawn), 5, 1);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, gameSettings.playerPawn), 6, 1);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, gameSettings.playerPawn), 7, 1);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, whitePawnEssence), 0, 1);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, whitePawnEssence), 1, 1);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, whitePawnEssence), 2, 1);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, whitePawnEssence), 3, 1);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, whitePawnEssence), 4, 1);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, whitePawnEssence), 5, 1);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, whitePawnEssence), 6, 1);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.White, whitePawnEssence), 7, 1);
 
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, gameSettings.malakhPawn), 0, 6);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, gameSettings.malakhPawn), 1, 6);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, gameSettings.malakhPawn), 2, 6);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, gameSettings.malakhPawn), 3, 6);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, gameSettings.malakhPawn), 4, 6);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, gameSettings.malakhPawn), 5, 6);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, gameSettings.malakhPawn), 6, 6);
-        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, gameSettings.malakhPawn), 7, 6);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, blackPawnEssence), 0, 6);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, blackPawnEssence), 1, 6);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, blackPawnEssence), 2, 6);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, blackPawnEssence), 3, 6);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, blackPawnEssence), 4, 6);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, blackPawnEssence), 5, 6);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, blackPawnEssence), 6, 6);
+        AddPiece(new(Chess.PieceType.Pawn, Chess.Color.Black, blackPawnEssence), 7, 6);
 
-        AddPiece(new(Chess.PieceType.Rook, Chess.Color.Black, gameSettings.malakhRook), 0, 7);
-        AddPiece(new(Chess.PieceType.Knight, Chess.Color.Black, gameSettings.malakhKnight), 1, 7);
-        AddPiece(new(Chess.PieceType.Bishop, Chess.Color.Black, gameSettings.malakhBishop), 2, 7);
+        AddPiece(new(Chess.PieceType.Rook, Chess.Color.Black, blackRookEssence), 0, 7);
+        AddPiece(new(Chess.PieceType.Knight, Chess.Color.Black, blackKnightEssence), 1, 7);
+        AddPiece(new(Chess.PieceType.Bishop, Chess.Color.Black, blackBishopEssence), 2, 7);
         AddPiece(new(Chess.PieceType.Queen, Chess.Color.Black, Chess.Essence.Classic), 3, 7);
         AddPiece(new(Chess.PieceType.King, Chess.Color.Black, Chess.Essence.Classic), 4, 7);
-        AddPiece(new(Chess.PieceType.Bishop, Chess.Color.Black, gameSettings.malakhBishop), 5, 7);
-        AddPiece(new(Chess.PieceType.Knight, Chess.Color.Black, gameSettings.malakhKnight), 6, 7);
-        AddPiece(new(Chess.PieceType.Rook, Chess.Color.Black, gameSettings.malakhRook), 7, 7);
+        AddPiece(new(Chess.PieceType.Bishop, Chess.Color.Black, blackBishopEssence), 5, 7);
+        AddPiece(new(Chess.PieceType.Knight, Chess.Color.Black, blackKnightEssence), 6, 7);
+        AddPiece(new(Chess.PieceType.Rook, Chess.Color.Black, blackRookEssence), 7, 7);
     }
 
     #region Pieces
@@ -177,7 +205,7 @@ public class BoardController : MonoBehaviour
         PieceObject capturedPiece = GetPieceObject(x, y);
         if (capturedPiece != null)
         {
-            pieceObjects.Remove(pieceObject);
+            pieceObjects.Remove(capturedPiece);
             Destroy(capturedPiece.gameObject);
         }
 

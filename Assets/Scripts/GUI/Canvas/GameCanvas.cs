@@ -110,8 +110,8 @@ public class GameCanvas : MonoBehaviour
 
     private void OnHelpButtonClicked(Chess.PieceType pieceType, Chess.Color color, Chess.Essence essence)
     {
-        pieceInfoController.MyPiece = new(pieceType, color, essence);
         pieceInfoController.gameObject.SetActive(true);
+        pieceInfoController.MyPiece = new(pieceType, color, essence);
     }
 
     #region TurnLogs

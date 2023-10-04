@@ -18,8 +18,7 @@ public class CreateGameOverlay : MonoBehaviour
 
     public UnityEvent<Chess.GameSettings> onGameCreated;
 
-    private GameObject piecePrefab; 
-    private GameObject movementPrefab;
+    private GameObject piecePrefab, movementPrefab;
     private EngineController engineController;
 
     private void Awake()
@@ -258,7 +257,6 @@ public class CreateGameOverlay : MonoBehaviour
         pieceDropdown.RefreshShownValue();
 
         pieceObject.Piece = new(pieceType, Chess.Color.White, essence);
-
         while(movements.Count > 0)
         {
             Destroy(movements.Last().gameObject);
@@ -273,7 +271,6 @@ public class CreateGameOverlay : MonoBehaviour
         float height = parentRect.rect.height / 7;
 
         List<Mobility> mobilities = engineController.mobilities[pieceType][essence];
-
         foreach (Mobility mobility in mobilities)
         {
             int x = 3 + mobility.start_x;
