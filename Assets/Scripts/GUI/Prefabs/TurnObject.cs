@@ -19,15 +19,15 @@ public class TurnObject : MonoBehaviour
         }
     }
 
-    public void UpdateWhitePly(Chess.PieceType pieceType, Chess.MovementType movementType, Move move)
+    public void UpdateWhitePly(Chess.PieceType pieceType, Chess.PieceType piecePromotion, Chess.MovementType movementType, Move move)
     {
-        myTurn.SetWhitePly(pieceType, movementType, move);
+        myTurn.SetWhitePly(pieceType, piecePromotion, movementType, move);
         UpdateDisplayedText();
     }
 
-    public void UpdateBlackPly(Chess.PieceType pieceType, Chess.MovementType movementType, Move move)
+    public void UpdateBlackPly(Chess.PieceType pieceType, Chess.PieceType piecePromotion, Chess.MovementType movementType, Move move)
     {
-        myTurn.SetBlackPly(pieceType, movementType, move);
+        myTurn.SetBlackPly(pieceType, piecePromotion, movementType, move);
         UpdateDisplayedText();
     }
 

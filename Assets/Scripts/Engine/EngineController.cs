@@ -24,9 +24,10 @@ public class EngineController : MonoBehaviour
     public Dictionary<Chess.PieceType, Dictionary<Chess.Essence, List<Mobility>>> mobilities = new();
 
     public UnityEvent<List<Move>> onLegalMovesReceived = new();
-    public UnityEvent<Move> onBestMoveReceived = new();
+    public UnityEvent<Move, Chess.PieceType> onBestMoveReceived = new();
 
     private Move receivedBestMove = null;
+    private Chess.PieceType promotedPieceType = Chess.PieceType.Pawn;
 
     private void Start()
     {
@@ -37,7 +38,7 @@ public class EngineController : MonoBehaviour
     {
         if (receivedBestMove != null)
         {
-            onBestMoveReceived?.Invoke(receivedBestMove);
+            onBestMoveReceived?.Invoke(receivedBestMove, promotedPieceType);
             receivedBestMove = null;
         }   
     }
@@ -94,14 +95,30 @@ public class EngineController : MonoBehaviour
         SendCommand("go depth 10");
     }
 
-    public void MovePiece(int x1, int y1, int x2, int y2)
+    public void MovePiece(int x1, int y1, int x2, int y2, Chess.PieceType promotedPieceType)
     {
-        char sourceColumn = (char)('a' + x1);
-        char sourceRow = (char)('1' + y1);
-        char targetColumn = (char)('a' + x2);
-        char targetRow = (char)('1' + y2);
+        string move = "";
+        move += (char)('a' + x1);
+        move += (char)('1' + y1);
+        move += (char)('a' + x2);
+        move += (char)('1' + y2);
+        switch (promotedPieceType)
+        {
+            case Chess.PieceType.Queen:
+                move += "q";
+                break;
+            case Chess.PieceType.Rook:
+                move += "r";
+                break;
+            case Chess.PieceType.Bishop:
+                move += "b";
+                break;
+            case Chess.PieceType.Knight:
+                move += "n";
+                break;
+        }
 
-        SendCommand("position curpos moves " + sourceColumn + sourceRow + targetColumn + targetRow);
+        SendCommand("position curpos moves " + move);
     }
 
     private void SendCommand(string command)
@@ -169,30 +186,77 @@ public class EngineController : MonoBehaviour
             {
                 List<Move> legalMoves = new();
                 for (int i = 1; i < tokens.Length; i++)
-                {
-                    string legalMove = tokens[i];
-
-                    int sourceColumn = legalMove[0] - 'a';
-                    int sourceRow = legalMove[1] - '1';
-                    int targetColumn = legalMove[2] - 'a';
-                    int targetRow = legalMove[3] - '1';
-
-                    legalMoves.Add(new(sourceColumn, sourceRow, targetColumn, targetRow));
-                }
+                    legalMoves.Add(ParseMove(tokens[i]));
 
                 onLegalMovesReceived?.Invoke(legalMoves);
             }
             else if (tokens[0] == "bestmove")
             {
-                string bestMove = tokens[1];
+                receivedBestMove = ParseMove(tokens[1]);
 
-                int sourceColumn = bestMove[0] - 'a';
-                int sourceRow = bestMove[1] - '1';
-                int targetColumn = bestMove[2] - 'a';
-                int targetRow = bestMove[3] - '1';
-
-                receivedBestMove = new(sourceColumn, sourceRow, targetColumn, targetRow);
+                string[] bestMoveTokens = tokens[1].Split('_');
+                if (bestMoveTokens[0].Length == 5)
+                {
+                    char promotedPieceTypeChar = bestMoveTokens[0][4];
+                    switch(promotedPieceTypeChar)
+                    {
+                        case 'q':
+                            promotedPieceType = Chess.PieceType.Queen;
+                            break;
+                        case 'r':
+                            promotedPieceType = Chess.PieceType.Rook;
+                            break;
+                        case 'b':
+                            promotedPieceType = Chess.PieceType.Bishop;
+                            break;
+                        case 'n':
+                            promotedPieceType = Chess.PieceType.Knight;
+                            break;
+                    }
+                }
+                else
+                    promotedPieceType = Chess.PieceType.Pawn;
             }
         }
+    }
+
+    private Move ParseMove(string move)
+    {
+        string[] tokens = move.Split('_');
+
+        string moveToken = tokens[0];
+        int sourceColumn = moveToken[0] - 'a';
+        int sourceRow = moveToken[1] - '1';
+        int targetColumn = moveToken[2] - 'a';
+        int targetRow = moveToken[3] - '1';
+
+        Move retVal = new(sourceColumn, sourceRow, targetColumn, targetRow);
+
+        for (int i = 1; i < tokens.Length; i++)
+        {
+            string flagToken = tokens[i];
+            if (flagToken[0] == 'H')
+            {
+                int hastyColumn = flagToken[1] - 'a';
+                int hastyRow = flagToken[2] - '1';
+
+                retVal.SetHasty(hastyColumn, hastyRow);
+            }
+            else if (flagToken[0] == 'V')
+            {
+                retVal.SetVigilant();
+            }
+            else if (flagToken[0] == 'I')
+            {
+                int inspiringSourceColumn = flagToken[1] - 'a';
+                int inspiringSourceRow = flagToken[2] - '1';
+                int inspiringTargetColumn = flagToken[3] - 'a';
+                int inspiringTargetRow = flagToken[4] - '1';
+
+                retVal.SetInspiring(inspiringSourceColumn, inspiringSourceRow, inspiringTargetColumn, inspiringTargetRow);
+            }
+        }
+
+        return retVal;
     }
 }

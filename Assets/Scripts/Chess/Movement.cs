@@ -6,13 +6,12 @@ public class Movement
 {
     public Piece owner;
     public Chess.MovementType type;
-    public int x, y;
+    public Move move;
 
-    public Movement(Piece owner, Chess.MovementType type, int x, int y)
+    public Movement(Piece owner, Chess.MovementType type, Move move)
     {
         this.owner = owner;
         this.type = type;
-        this.x = x;
-        this.y = y;
+        this.move = move;
     }
 }

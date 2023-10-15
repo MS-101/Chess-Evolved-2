@@ -6,10 +6,10 @@ using UnityEngine;
 public class Turn
 {
     public int turnCounter;
-    public Chess.PieceType whitePieceType = Chess.PieceType.Pawn;
+    public Chess.PieceType whitePieceType = Chess.PieceType.Pawn, whitePromotion = Chess.PieceType.Pawn;
     public Chess.MovementType whiteMovementType = Chess.MovementType.Move;
     public Move whiteMove = null;
-    public Chess.PieceType blackPieceType = Chess.PieceType.Pawn;
+    public Chess.PieceType blackPieceType = Chess.PieceType.Pawn, blackPromotion = Chess.PieceType.Pawn;
     public Chess.MovementType blackMovementType = Chess.MovementType.Move;
     public Move blackMove = null;
 
@@ -28,16 +28,18 @@ public class Turn
         return GetPly(blackPieceType, blackMovementType, blackMove);
     }
 
-    public void SetWhitePly(Chess.PieceType whitePieceType, Chess.MovementType whiteMovementType, Move whiteMove)
+    public void SetWhitePly(Chess.PieceType whitePieceType, Chess.PieceType whitePromotion, Chess.MovementType whiteMovementType, Move whiteMove)
     {
         this.whitePieceType = whitePieceType;
+        this.whitePromotion = whitePromotion;
         this.whiteMovementType = whiteMovementType;
         this.whiteMove = whiteMove;
     }
 
-    public void SetBlackPly(Chess.PieceType blackPieceType, Chess.MovementType blackMovementType, Move blackMove)
+    public void SetBlackPly(Chess.PieceType blackPieceType, Chess.PieceType blackPromotion, Chess.MovementType blackMovementType, Move blackMove)
     {
         this.blackPieceType = blackPieceType;
+        this.blackPromotion = blackPromotion;
         this.blackMovementType = blackMovementType;
         this.blackMove = blackMove;
     }

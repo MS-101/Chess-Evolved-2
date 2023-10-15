@@ -280,7 +280,7 @@ public class CreateGameOverlay : MonoBehaviour
             while(x >= 0 && x <= 6 && y >= 0 && y <= 6 && (mobility.limit == 0 || moveCounter < mobility.limit))
             {
                 MovementObject movementObject = Instantiate(movementPrefab, board.transform).GetComponent<MovementObject>();
-                movementObject.Movement = new(pieceObject.Piece, mobility.type, x, y);
+                movementObject.Movement = new(pieceObject.Piece, mobility.type, new Move(3, 3, x, y));
 
                 RectTransform rect = movementObject.gameObject.GetComponent<RectTransform>();
                 rect.position = new(baseX + x * width, baseY + y * height);

@@ -10,6 +10,7 @@ public class GameCanvas : MonoBehaviour
     [SerializeField] private BoardController boardController;
     [SerializeField] private PlayerInfoController playerInfoController, malakhInfoController;
     [SerializeField] private PieceInfoController pieceInfoController;
+    [SerializeField] private PromotionController promotionController;
     [SerializeField] private EngineController engineController;
     [SerializeField] private TMP_Text turnDisplay;
     [SerializeField] private Button returnBtn, playBtn;
@@ -26,6 +27,8 @@ public class GameCanvas : MonoBehaviour
         returnBtn.onClick.AddListener(OnReturnClick);
         playBtn.onClick.AddListener(OnPlayClick);
         boardController.onPlayerMove.AddListener(OnPlayerMove);
+        boardController.onPromotionRequested.AddListener(OnPromotionRequested);
+        promotionController.onPromotionChosen.AddListener(OnPromotionChosen);
         playerInfoController.onHelpButtonClicked.AddListener(OnHelpButtonClicked);
         malakhInfoController.onHelpButtonClicked.AddListener(OnHelpButtonClicked);
     }
@@ -38,6 +41,7 @@ public class GameCanvas : MonoBehaviour
 
         playerInfoController.SetPieces(gameSettings.playerColor, gameSettings.playerPawn, gameSettings.playerKnight, gameSettings.playerBishop, gameSettings.playerRook);
         malakhInfoController.SetPieces(gameSettings.malakhColor, gameSettings.malakhPawn, gameSettings.malakhKnight, gameSettings.malakhBishop, gameSettings.malakhRook);
+        promotionController.SetPieces(gameSettings.playerRook, gameSettings.playerBishop, gameSettings.playerKnight);
 
         ClearTurns();
 
@@ -55,7 +59,7 @@ public class GameCanvas : MonoBehaviour
         boardController.SetLegalMoves(legalMoves);
     }
 
-    private void OnBestMoveReceived(Move bestMove)
+    private void OnBestMoveReceived(Move bestMove, Chess.PieceType promotedPieceType)
     {
         Piece movingPiece = boardController.GetPiece(bestMove.x1, bestMove.y1);
         Piece attackedPiece = boardController.GetPiece(bestMove.x2, bestMove.y2);
@@ -67,31 +71,44 @@ public class GameCanvas : MonoBehaviour
             movementType = Chess.MovementType.Attack;
 
         boardController.PerformMove(bestMove);
+        if (promotedPieceType != Chess.PieceType.Pawn)
+            boardController.PerformPromotion(promotedPieceType);
 
         if (gameSettings.malakhColor == Chess.Color.White)
-            AddTurn(movingPiece.type, movementType, bestMove);
+            AddTurn(movingPiece.type, promotedPieceType, movementType, bestMove);
         else
-            SetBlackPly(movingPiece.type, movementType, bestMove);
+            SetBlackPly(movingPiece.type, promotedPieceType, movementType, bestMove);
 
         if (movementType == Chess.MovementType.Attack)
             playerInfoController.DecPieceCounter(attackedPiece.type);
 
-        engineController.MovePiece(bestMove.x1, bestMove.y1, bestMove.x2, bestMove.y2);
+        engineController.MovePiece(bestMove.x1, bestMove.y1, bestMove.x2, bestMove.y2, promotedPieceType);
         SetTurn(gameSettings.playerColor);
     }
 
-    private void OnPlayerMove(Chess.PieceType pieceType, Chess.PieceType attackedPieceType, Chess.MovementType movementType, Move move)
+    private void OnPlayerMove(Movement movement, Chess.PieceType attackedPieceType, Chess.PieceType promotedPieceType)
     {
         if (gameSettings.playerColor == Chess.Color.White)
-            AddTurn(pieceType, movementType, move);
+            AddTurn(movement.owner.type, promotedPieceType, movement.type, movement.move);
         else
-            SetBlackPly(pieceType, movementType, move);
+            SetBlackPly(movement.owner.type, promotedPieceType, movement.type, movement.move);
 
-        if (movementType == Chess.MovementType.Attack)
+        if (movement.type == Chess.MovementType.Attack)
             malakhInfoController.DecPieceCounter(attackedPieceType);
 
-        engineController.MovePiece(move.x1, move.y1, move.x2, move.y2);
+        engineController.MovePiece(movement.move.x1, movement.move.y1, movement.move.x2, movement.move.y2, promotedPieceType);
         SetTurn(gameSettings.malakhColor);
+    }
+
+    private void OnPromotionRequested()
+    {
+        promotionController.gameObject.SetActive(true);
+    }
+
+    private void OnPromotionChosen(Chess.PieceType pieceType)
+    {
+        promotionController.gameObject.SetActive(false);
+        boardController.PerformPromotion(pieceType);
     }
 
     private void SetTurn(Chess.Color currentPly)
@@ -121,7 +138,7 @@ public class GameCanvas : MonoBehaviour
     private List<TurnObject> turnObjectList = new();
     private int turnCounter = 0;
 
-    public void AddTurn(Chess.PieceType whitePieceType, Chess.MovementType whiteMovementType, Move whiteMove)
+    public void AddTurn(Chess.PieceType whitePieceType, Chess.PieceType whitePromotion, Chess.MovementType whiteMovementType, Move whiteMove)
     {
         turnCounter++;
 
@@ -129,15 +146,15 @@ public class GameCanvas : MonoBehaviour
 
         TurnObject newTurnObject = newGameObject.GetComponent<TurnObject>();
         Turn newTurn = new(turnCounter);
-        newTurn.SetWhitePly(whitePieceType, whiteMovementType, whiteMove);
+        newTurn.SetWhitePly(whitePieceType, whitePromotion, whiteMovementType, whiteMove);
         newTurnObject.MyTurn = newTurn;
 
         turnObjectList.Add(newTurnObject);
     }
 
-    public void SetBlackPly(Chess.PieceType blackPieceType, Chess.MovementType blackMovementType, Move blackMove)
+    public void SetBlackPly(Chess.PieceType blackPieceType, Chess.PieceType blackPromotion, Chess.MovementType blackMovementType, Move blackMove)
     {
-        turnObjectList.Last()?.UpdateBlackPly(blackPieceType, blackMovementType, blackMove);
+        turnObjectList.Last()?.UpdateBlackPly(blackPieceType, blackPromotion, blackMovementType, blackMove);
     }
 
     public void ClearTurns()

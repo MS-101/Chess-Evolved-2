@@ -16,7 +16,8 @@ public class BoardController : MonoBehaviour
     private bool reversed = false;
     Chess.GameSettings gameSettings;
 
-    public UnityEvent<Chess.PieceType, Chess.PieceType, Chess.MovementType, Move> onPlayerMove = new();
+    public UnityEvent<Movement, Chess.PieceType, Chess.PieceType> onPlayerMove = new();
+    public UnityEvent onPromotionRequested = new();
 
     public void InitBoard(bool reversed, Chess.GameSettings gameSettings)
     {
@@ -36,14 +37,17 @@ public class BoardController : MonoBehaviour
             PieceObject curPieceObject = GetPieceObject(legalMove.x1, legalMove.y1);
             PieceObject attackedPieceObject = GetPieceObject(legalMove.x2, legalMove.y2);
 
-            Chess.MovementType movementType;
-            if (attackedPieceObject == null)
-                movementType = Chess.MovementType.Move;
-            else
+            Chess.MovementType movementType = Chess.MovementType.Move;
+            if (attackedPieceObject != null)
                 movementType = Chess.MovementType.Attack;
-
+            else if (legalMove.vigilant && curGhost != null)
+            {
+                if (curGhost.x == legalMove.x2 && curGhost.y == legalMove.x2)
+                    movementType = Chess.MovementType.Attack;
+            }
+            
             Piece curPiece = curPieceObject.Piece;
-            curPiece.availableMoves.Add(new(curPiece, movementType, legalMove.x2, legalMove.y2));
+            curPiece.availableMoves.Add(new(curPiece, movementType, legalMove));
         }
     }
 
@@ -58,7 +62,19 @@ public class BoardController : MonoBehaviour
 
     public void PerformMove(Move legalMove)
     {
-        MovePiece(GetPieceObject(legalMove.x1, legalMove.y1), legalMove.x2, legalMove.y2);
+        MovePiece(legalMove);
+    }
+
+    public void PerformPromotion(Chess.PieceType promotedPieceType)
+    {
+        PieceObject promotedPieceObject = GetPieceObject(performedMovement.move.x2, performedMovement.move.y2);
+        Piece promotedPiece = promotedPieceObject.Piece;
+
+        if (promotedPiece.color == gameSettings.playerColor)
+            onPlayerMove?.Invoke(performedMovement, attackedPieceType, promotedPieceType);
+
+        promotedPiece.type = promotedPieceType;
+        promotedPieceObject.Piece = promotedPiece;
     }
 
     private void SetBoardOrientation(bool reversed)
@@ -180,6 +196,8 @@ public class BoardController : MonoBehaviour
 
     private List<PieceObject> pieceObjects = new();
 
+    private Ghost curGhost = null;
+
     private void ClearPieces()
     {
         while (pieceObjects.Count > 0)
@@ -195,23 +213,56 @@ public class BoardController : MonoBehaviour
         pieceObject.Piece = piece;
         pieceObjects.Add(pieceObject);
 
-        MovePiece(pieceObject, x, y);
+        MoveGameObject(pieceObject.gameObject, x, y);
+        pieceObject.Piece.x = x;
+        pieceObject.Piece.y = y;
 
         pieceObject.onPieceClicked.AddListener(OnPieceClicked);
     }
 
-    private void MovePiece(PieceObject pieceObject, int x, int y)
+    private Movement MovePiece(Move move)
     {
-        PieceObject capturedPiece = GetPieceObject(x, y);
-        if (capturedPiece != null)
+        PieceObject movedPieceObject = GetPieceObject(move.x1, move.y1);
+        Chess.MovementType movementType = Chess.MovementType.Move;
+
+        PieceObject capturedPieceObject = GetPieceObject(move.x2, move.y2);
+        
+        if (capturedPieceObject != null)
         {
-            pieceObjects.Remove(capturedPiece);
-            Destroy(capturedPiece.gameObject);
+            pieceObjects.Remove(capturedPieceObject);
+            Destroy(capturedPieceObject.gameObject);
         }
 
-        MoveGameObject(pieceObject.gameObject, x, y);
-        pieceObject.Piece.x = x;
-        pieceObject.Piece.y = y;
+        if (move.vigilant && curGhost != null)
+        {
+            if (curGhost.x == move.x2 && curGhost.y == move.y2)
+            {
+                PieceObject ghostParentObject = GetPieceObject(curGhost.parent.x, curGhost.parent.y);
+                pieceObjects.Remove(ghostParentObject);
+                Destroy(ghostParentObject.gameObject);
+            }
+        }
+
+        if (move.hasty)
+            curGhost = new(move.hastyX, move.hastyY, movedPieceObject.Piece);
+        else
+            curGhost = null;
+
+        MoveGameObject(movedPieceObject.gameObject, move.x2, move.y2);
+        movedPieceObject.Piece.x = move.x2;
+        movedPieceObject.Piece.y = move.y2;
+
+        if (move.inspiring)
+        {
+            PieceObject inspiredPieceObject = GetPieceObject(move.inspiringX1, move.inspiringY1);
+            if (inspiredPieceObject != null)
+            {
+                MoveGameObject(inspiredPieceObject.gameObject, move.inspiringX2, move.inspiringY2);
+                Destroy(inspiredPieceObject);
+            }
+        }
+
+        return new(movedPieceObject.Piece, movementType, move);
     }
 
     private PieceObject GetPieceObject(int x, int y)
@@ -248,10 +299,13 @@ public class BoardController : MonoBehaviour
         movementObject.Movement = movement;
         movementObjects.Add(movementObject);
 
-        MoveGameObject(movementObject.gameObject, movement.x, movement.y);
+        MoveGameObject(movementObject.gameObject, movement.move.x2, movement.move.y2);
 
         movementObject.onClick.AddListener(OnMovementClicked);
     }
+
+    Movement performedMovement = null;
+    Chess.PieceType attackedPieceType = Chess.PieceType.Pawn;
 
     private void OnMovementClicked(Movement movement)
     {
@@ -263,17 +317,32 @@ public class BoardController : MonoBehaviour
         
         int sourceX = piece.x;
         int sourceY = piece.y;
-        int destinationX = movement.x;
-        int destinationY = movement.y;
+        int destinationX = movement.move.x2;
+        int destinationY = movement.move.y2;
 
         PieceObject attackedPieceObject = GetPieceObject(destinationX, destinationY);
-        Chess.PieceType attackedPieceType = Chess.PieceType.Pawn;
         if (attackedPieceObject != null)
             attackedPieceType = attackedPieceObject.Piece.type;
+        else if (movement.move.vigilant && curGhost != null)
+        {
+            if (movement.move.x2 == curGhost.x && movement.move.y2 == curGhost.y)
+            {
+                PieceObject ghostParentObject = GetPieceObject(curGhost.parent.x, curGhost.parent.y);
+                if (ghostParentObject != null)
+                    attackedPieceType = ghostParentObject.Piece.type;
+            }
+        }
 
-        MovePiece(GetPieceObject(sourceX, sourceY), destinationX, destinationY);
-
-        onPlayerMove?.Invoke(piece.type, attackedPieceType, movement.type, new(sourceX, sourceY, destinationX, destinationY));
+        performedMovement = MovePiece(movement.move);
+        if (piece.type == Chess.PieceType.Pawn &&
+            ((piece.color == Chess.Color.White && piece.y == 7) || (piece.color == Chess.Color.Black && piece.y == 0)))
+        {
+            onPromotionRequested?.Invoke();
+        }
+        else
+        {
+            onPlayerMove?.Invoke(performedMovement, attackedPieceType, Chess.PieceType.Pawn);
+        }
     }
 
     #endregion
