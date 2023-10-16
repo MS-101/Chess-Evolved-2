@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PieceObject : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private Image image;
+    [SerializeField] private Image pieceImage, outlineImage;
 
     private Piece piece = null;
     public Piece Piece
@@ -17,8 +17,13 @@ public class PieceObject : MonoBehaviour, IPointerClickHandler
         {
             piece = value;
 
-            image.sprite = Chess.GetPieceImage(piece.type, piece.color, piece.essence);
+            pieceImage.sprite = Chess.GetPieceImage(piece.type, piece.color, piece.essence);
         }
+    }
+
+    public void SetOutlineVisibility(bool visible)
+    {
+        outlineImage.gameObject.SetActive(visible);
     }
 
     public UnityEvent<Piece> onPieceClicked;

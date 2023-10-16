@@ -60,7 +60,6 @@ public class EngineController : MonoBehaviour
 
         engineProcess.Start();
         Task.Run(() => ReceiveEngineResponses());
-        Task.Run(() => ReceiveEngineErrors());
         SendCommand("uci");
     }
 
@@ -126,15 +125,6 @@ public class EngineController : MonoBehaviour
         UnityEngine.Debug.Log("GUI->ENGINE: " + command);
         engineProcess.StandardInput.WriteLine(command);
         engineProcess.StandardInput.Flush();
-    }
-
-    private void ReceiveEngineErrors()
-    {
-        string respone;
-        while ((respone = engineProcess.StandardError.ReadLine()) != null)
-        {
-            UnityEngine.Debug.Log("ENGINE ERROR: " + respone);
-        }
     }
 
     private void ReceiveEngineResponses()

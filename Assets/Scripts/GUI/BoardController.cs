@@ -274,6 +274,14 @@ public class BoardController : MonoBehaviour
     {
         ClearMovements();
 
+        foreach(PieceObject pieceObject in pieceObjects)
+        {
+            if (pieceObject.Piece != piece)
+                pieceObject.SetOutlineVisibility(false);
+            else
+                pieceObject.SetOutlineVisibility(true);
+        }
+
         foreach (Movement movement in piece.availableMoves)
             AddMovement(movement);
     }
@@ -311,7 +319,10 @@ public class BoardController : MonoBehaviour
     {
         ClearMovements();
         foreach (PieceObject pieceObject in pieceObjects)
+        {
+            pieceObject.SetOutlineVisibility(false);
             pieceObject.Piece.availableMoves.Clear();
+        }
 
         Piece piece = movement.owner;
         
