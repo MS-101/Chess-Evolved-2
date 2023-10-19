@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 14880756}
   - component: {fileID: 14880755}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: King
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 20456496}
   - component: {fileID: 20456495}
   m_Layer: 5
-  m_Name: PiecesPanel
+  m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1377,7 +1377,7 @@ GameObject:
   - component: {fileID: 211751569}
   - component: {fileID: 211751568}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1423,7 +1423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: Pawn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2078,7 +2078,7 @@ GameObject:
   - component: {fileID: 252826806}
   - component: {fileID: 252826805}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2124,7 +2124,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: Rook
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2252,7 +2252,7 @@ GameObject:
   - component: {fileID: 278899327}
   - component: {fileID: 278899326}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2298,7 +2298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: Queen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2387,7 +2387,7 @@ GameObject:
   - component: {fileID: 296392501}
   - component: {fileID: 296392500}
   m_Layer: 5
-  m_Name: NamePanel
+  m_Name: TopPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3707,7 +3707,7 @@ GameObject:
   - component: {fileID: 578138763}
   - component: {fileID: 578138762}
   m_Layer: 5
-  m_Name: NamePanel
+  m_Name: TopPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4950,7 +4950,7 @@ GameObject:
   - component: {fileID: 719406244}
   - component: {fileID: 719406243}
   m_Layer: 5
-  m_Name: PiecesPanel
+  m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5167,7 +5167,7 @@ GameObject:
   - component: {fileID: 739626496}
   - component: {fileID: 739626495}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5213,7 +5213,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: Bishop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5454,8 +5454,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1303543013}
-  - {fileID: 1303087718}
   - {fileID: 900120964}
+  - {fileID: 1303087718}
   m_Father: {fileID: 810977403}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5868,7 +5868,7 @@ GameObject:
   - component: {fileID: 786659351}
   - component: {fileID: 786659350}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5914,7 +5914,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: Bishop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6370,7 +6370,7 @@ GameObject:
   - component: {fileID: 838834118}
   - component: {fileID: 838834117}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6416,7 +6416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: Rook
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8210,7 +8210,7 @@ GameObject:
   - component: {fileID: 959665519}
   - component: {fileID: 959665518}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8256,7 +8256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: Knight
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8384,12 +8384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b02d4720e1ecee49818b2bd0d13ec93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pawnText: {fileID: 1613063868}
-  knightText: {fileID: 959665518}
-  bishopText: {fileID: 739626495}
-  rookText: {fileID: 252826805}
-  queenText: {fileID: 278899326}
-  kingText: {fileID: 14880755}
   pawnImage: {fileID: 1406983045}
   knightImage: {fileID: 472825790}
   bishopImage: {fileID: 1211787192}
@@ -9106,7 +9100,7 @@ GameObject:
   - component: {fileID: 1191701172}
   - component: {fileID: 1191701171}
   m_Layer: 5
-  m_Name: Scroll View
+  m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9958,12 +9952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b02d4720e1ecee49818b2bd0d13ec93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pawnText: {fileID: 211751568}
-  knightText: {fileID: 1500023636}
-  bishopText: {fileID: 786659350}
-  rookText: {fileID: 838834117}
-  queenText: {fileID: 1892220535}
-  kingText: {fileID: 1708351204}
   pawnImage: {fileID: 606544233}
   knightImage: {fileID: 1103183001}
   bishopImage: {fileID: 65275292}
@@ -10902,7 +10890,7 @@ GameObject:
   - component: {fileID: 1500023637}
   - component: {fileID: 1500023636}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10948,7 +10936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: Knight
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11294,7 +11282,7 @@ GameObject:
   - component: {fileID: 1529734131}
   - component: {fileID: 1529734130}
   m_Layer: 5
-  m_Name: Header
+  m_Name: TopPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11891,7 +11879,7 @@ GameObject:
   - component: {fileID: 1613063869}
   - component: {fileID: 1613063868}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11937,7 +11925,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: Pawn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12384,6 +12372,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onBestMoveReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  onResultReceived:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1671047110
@@ -12957,7 +12948,7 @@ GameObject:
   - component: {fileID: 1708351205}
   - component: {fileID: 1708351204}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13003,7 +12994,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: King
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14518,7 +14509,7 @@ GameObject:
   - component: {fileID: 1892220536}
   - component: {fileID: 1892220535}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14564,7 +14555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X/Y
+  m_text: Queen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

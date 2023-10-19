@@ -20,12 +20,12 @@ public class Turn
 
     public string GetWhitePly()
     {
-        return GetPly(whitePieceType, whiteMovementType, whiteMove);
+        return GetPly(whitePieceType, whiteMovementType, whiteMove, whitePromotion);
     }
 
     public string GetBlackPly()
     {
-        return GetPly(blackPieceType, blackMovementType, blackMove);
+        return GetPly(blackPieceType, blackMovementType, blackMove, blackPromotion);
     }
 
     public void SetWhitePly(Chess.PieceType whitePieceType, Chess.PieceType whitePromotion, Chess.MovementType whiteMovementType, Move whiteMove)
@@ -44,7 +44,7 @@ public class Turn
         this.blackMove = blackMove;
     }
 
-    private string GetPly(Chess.PieceType pieceType, Chess.MovementType movementType, Move move)
+    private string GetPly(Chess.PieceType pieceType, Chess.MovementType movementType, Move move, Chess.PieceType promotionType)
     {
         string ply = string.Empty;
         if (move == null)
@@ -82,6 +82,22 @@ public class Turn
 
         ply += (char)(move.x2 + 'a');
         ply += (char)(move.y2 + '1');
+
+        switch (promotionType)
+        {
+            case Chess.PieceType.Knight:
+                ply += 'n';
+                break;
+            case Chess.PieceType.Bishop:
+                ply += 'b';
+                break;
+            case Chess.PieceType.Rook:
+                ply += 'r';
+                break;
+            case Chess.PieceType.Queen:
+                ply += 'q';
+                break;
+        }
 
         return ply;
     }

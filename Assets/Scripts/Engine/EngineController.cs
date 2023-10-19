@@ -25,9 +25,13 @@ public class EngineController : MonoBehaviour
 
     public UnityEvent<List<Move>> onLegalMovesReceived = new();
     public UnityEvent<Move, Chess.PieceType> onBestMoveReceived = new();
+    public UnityEvent<Chess.Color> onResultReceived = new();
 
     private Move receivedBestMove = null;
     private Chess.PieceType promotedPieceType = Chess.PieceType.Pawn;
+
+    private bool unhandledResult = false;
+    private Chess.Color receivedResult = Chess.Color.None;
 
     private void Start()
     {
@@ -40,7 +44,13 @@ public class EngineController : MonoBehaviour
         {
             onBestMoveReceived?.Invoke(receivedBestMove, promotedPieceType);
             receivedBestMove = null;
-        }   
+        }
+
+        if (unhandledResult)
+        {
+            unhandledResult = false;
+            onResultReceived?.Invoke(receivedResult);
+        }
     }
 
     private void OnApplicationQuit()
@@ -84,9 +94,9 @@ public class EngineController : MonoBehaviour
         SendCommand("ucinewgame");
     }
 
-    public void RequestAvailableMoves(Chess.Color color)
+    public void RequestAvailableMoves()
     {
-        SendCommand("legalmoves " + color.ToString());
+        SendCommand("legalmoves");
     }
 
     public void RequestBestMove()
@@ -206,6 +216,16 @@ public class EngineController : MonoBehaviour
                 }
                 else
                     promotedPieceType = Chess.PieceType.Pawn;
+            }
+            else if (tokens[0] == "result")
+            {
+                if (tokens[1] == "White")
+                    receivedResult = Chess.Color.White;
+                else if (tokens[1] == "Black")
+                    receivedResult = Chess.Color.Black;
+                else if (tokens[1] == "Stalemate")
+                    receivedResult = Chess.Color.None;
+                unhandledResult = true;
             }
         }
     }

@@ -25,7 +25,7 @@ public class Chess : MonoBehaviour
     {
         White = 0,
         Black = 1,
-        Random = 2
+        None = 2
     }
 
     public enum MovementType

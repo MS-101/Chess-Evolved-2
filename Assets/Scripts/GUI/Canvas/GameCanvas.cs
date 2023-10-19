@@ -20,6 +20,7 @@ public class GameCanvas : MonoBehaviour
     {
         engineController.onLegalMovesReceived.AddListener(OnLegalMovesReceived);
         engineController.onBestMoveReceived.AddListener(OnBestMoveReceived);
+        engineController.onResultReceived.AddListener(OnResultReceived);
     }
 
     private void Start()
@@ -79,25 +80,29 @@ public class GameCanvas : MonoBehaviour
         else
             SetBlackPly(movingPiece.type, promotedPieceType, movementType, bestMove);
 
-        if (movementType == Chess.MovementType.Attack)
-            playerInfoController.DecPieceCounter(attackedPiece.type);
-
         engineController.MovePiece(bestMove.x1, bestMove.y1, bestMove.x2, bestMove.y2, promotedPieceType);
         SetTurn(gameSettings.playerColor);
     }
 
-    private void OnPlayerMove(Movement movement, Chess.PieceType attackedPieceType, Chess.PieceType promotedPieceType)
+    private void OnPlayerMove(Movement movement, Chess.PieceType promotedPieceType)
     {
         if (gameSettings.playerColor == Chess.Color.White)
             AddTurn(movement.owner.type, promotedPieceType, movement.type, movement.move);
         else
             SetBlackPly(movement.owner.type, promotedPieceType, movement.type, movement.move);
 
-        if (movement.type == Chess.MovementType.Attack)
-            malakhInfoController.DecPieceCounter(attackedPieceType);
-
         engineController.MovePiece(movement.move.x1, movement.move.y1, movement.move.x2, movement.move.y2, promotedPieceType);
         SetTurn(gameSettings.malakhColor);
+    }
+
+    private void OnResultReceived(Chess.Color victor)
+    {
+        if (gameSettings.playerColor == victor)
+            turnDisplay.text = "<b><color=\"red\">Player</color></b> wins!";
+        else if (gameSettings.malakhColor == victor)
+            turnDisplay.text = "<b><color=\"red\">Malakh</color></b> wins!";
+        else if (victor == Chess.Color.None)
+            turnDisplay.text = "<b><color=\"red\">Stalemate</color></b>!";
     }
 
     private void OnPromotionRequested()
@@ -116,7 +121,7 @@ public class GameCanvas : MonoBehaviour
         if (currentPly == gameSettings.playerColor)
         {
             turnDisplay.text = "<b><color=\"red\">Player</color></b>'s turn";
-            engineController.RequestAvailableMoves(gameSettings.playerColor);
+            engineController.RequestAvailableMoves();
         }
         else
         {
