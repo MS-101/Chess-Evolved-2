@@ -29,10 +29,10 @@ public class CreateGameOverlay : MonoBehaviour
         // Colors
         playerWhiteColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnPlayerColorSet(Chess.Color.White); });
         playerBlackColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnPlayerColorSet(Chess.Color.Black); });
-        playerRandomColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnPlayerColorSet(Chess.Color.None); });
+        playerRandomColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnPlayerColorSet(Chess.Color.Random); });
         malakhWhiteColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnMalakhColorSet(Chess.Color.White); });
         malakhBlackColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnMalakhColorSet(Chess.Color.Black); });
-        malakhRandomColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnMalakhColorSet(Chess.Color.None); });
+        malakhRandomColorToggle.onValueChanged.AddListener((bool value) => { if (value) OnMalakhColorSet(Chess.Color.Random); });
 
         // Pieces
         playerPawnDropdown.onClicked.AddListener(() => SetPieceInfo(Chess.PieceType.Pawn, (Chess.Essence)playerPawnDropdown.value));
@@ -124,7 +124,7 @@ public class CreateGameOverlay : MonoBehaviour
             case Chess.Color.Black:
                 malakhWhiteColorToggle.isOn = true;
                 break;
-            case Chess.Color.None:
+            case Chess.Color.Random:
                 malakhRandomColorToggle.isOn = true;
                 break;
         }
@@ -160,7 +160,7 @@ public class CreateGameOverlay : MonoBehaviour
             case Chess.Color.Black:
                 playerWhiteColorToggle.isOn = true;
                 break;
-            case Chess.Color.None:
+            case Chess.Color.Random:
                 playerRandomColorToggle.isOn = true;
                 break;
         }
@@ -249,10 +249,10 @@ public class CreateGameOverlay : MonoBehaviour
         pieceDropdown.SetValueWithoutNotify((int)pieceType);
         essenceDropdown.SetValueWithoutNotify((int)essence);
 
-        pieceDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Pawn, Chess.Color.None, essence);
-        pieceDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Knight, Chess.Color.None, essence);
-        pieceDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Bishop, Chess.Color.None, essence);
-        pieceDropdown.options[3].image = Chess.GetPieceImage(Chess.PieceType.Rook, Chess.Color.None, essence);
+        pieceDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Pawn, Chess.Color.Random, essence);
+        pieceDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Knight, Chess.Color.Random, essence);
+        pieceDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Bishop, Chess.Color.Random, essence);
+        pieceDropdown.options[3].image = Chess.GetPieceImage(Chess.PieceType.Rook, Chess.Color.Random, essence);
 
         pieceDropdown.RefreshShownValue();
 

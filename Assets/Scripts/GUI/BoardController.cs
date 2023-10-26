@@ -128,6 +128,7 @@ public class BoardController : MonoBehaviour
     private void CreateInitialPosition()
     {
         ClearPieces();
+        ClearGhost();
 
         Chess.Essence whitePawnEssence, whiteKnightEssence, whiteBishopEssence, whiteRookEssence;
         Chess.Essence blackPawnEssence, blackKnightEssence, blackBishopEssence, blackRookEssence;

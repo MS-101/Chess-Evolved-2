@@ -31,7 +31,7 @@ public class EngineController : MonoBehaviour
     private Chess.PieceType promotedPieceType = Chess.PieceType.Pawn;
 
     private bool unhandledResult = false;
-    private Chess.Color receivedResult = Chess.Color.None;
+    private Chess.Color receivedResult = Chess.Color.Random;
 
     private void Start()
     {
@@ -224,7 +224,7 @@ public class EngineController : MonoBehaviour
                 else if (tokens[1] == "Black")
                     receivedResult = Chess.Color.Black;
                 else if (tokens[1] == "Stalemate")
-                    receivedResult = Chess.Color.None;
+                    receivedResult = Chess.Color.Random;
                 unhandledResult = true;
             }
         }

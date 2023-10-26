@@ -101,7 +101,7 @@ public class GameCanvas : MonoBehaviour
             turnDisplay.text = "<b><color=\"red\">Player</color></b> wins!";
         else if (gameSettings.malakhColor == victor)
             turnDisplay.text = "<b><color=\"red\">Malakh</color></b> wins!";
-        else if (victor == Chess.Color.None)
+        else if (victor == Chess.Color.Random)
             turnDisplay.text = "<b><color=\"red\">Stalemate</color></b>!";
     }
 
