@@ -21,9 +21,16 @@ public class PieceObject : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void SetOutlineVisibility(bool visible)
+    private bool selected = false;
+    public bool Selected
     {
-        outlineImage.gameObject.SetActive(visible);
+        get { return selected; }
+        set
+        {
+            selected = value;
+
+            outlineImage.gameObject.SetActive(selected);
+        }
     }
 
     public UnityEvent<Piece> onPieceClicked;

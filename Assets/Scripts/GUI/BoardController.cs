@@ -294,16 +294,22 @@ public class BoardController : MonoBehaviour
     {
         ClearMovements();
 
-        foreach(PieceObject pieceObject in pieceObjects)
+        foreach (PieceObject pieceObject in pieceObjects)
         {
             if (pieceObject.Piece != piece)
-                pieceObject.SetOutlineVisibility(false);
+                pieceObject.Selected = false;
             else
-                pieceObject.SetOutlineVisibility(true);
+            {
+                if (piece.color == gameSettings.playerColor && !pieceObject.Selected)
+                {
+                    pieceObject.Selected = true;
+                    foreach (Movement movement in piece.availableMoves)
+                        AddMovement(movement);
+                }
+                else
+                    pieceObject.Selected = false;
+            }
         }
-
-        foreach (Movement movement in piece.availableMoves)
-            AddMovement(movement);
     }
 
     #endregion
@@ -340,7 +346,7 @@ public class BoardController : MonoBehaviour
         ClearMovements();
         foreach (PieceObject pieceObject in pieceObjects)
         {
-            pieceObject.SetOutlineVisibility(false);
+            pieceObject.Selected = false;
             pieceObject.Piece.availableMoves.Clear();
         }
 
