@@ -14,6 +14,7 @@ public class BoardController : MonoBehaviour
     [SerializeField] private GameObject board;
 
     private bool reversed = false;
+    private Chess.Color currentPly;
     Chess.GameSettings gameSettings;
 
     public UnityEvent<Movement, Chess.PieceType> onPlayerMove = new();
@@ -26,6 +27,11 @@ public class BoardController : MonoBehaviour
         SetBoardOrientation(reversed);
         ClearMovements();
         CreateInitialPosition();
+    }
+
+    public void SetPly(Chess.Color currentPly)
+    {
+        this.currentPly = currentPly;
     }
 
     public void SetLegalMoves(List<Move> legalMoves)
@@ -292,22 +298,25 @@ public class BoardController : MonoBehaviour
 
     private void OnPieceClicked(Piece piece)
     {
-        ClearMovements();
-
-        foreach (PieceObject pieceObject in pieceObjects)
+        if (currentPly == gameSettings.playerColor)
         {
-            if (pieceObject.Piece != piece)
-                pieceObject.Selected = false;
-            else
+            ClearMovements();
+
+            foreach (PieceObject pieceObject in pieceObjects)
             {
-                if (piece.color == gameSettings.playerColor && !pieceObject.Selected)
-                {
-                    pieceObject.Selected = true;
-                    foreach (Movement movement in piece.availableMoves)
-                        AddMovement(movement);
-                }
-                else
+                if (pieceObject.Piece != piece)
                     pieceObject.Selected = false;
+                else
+                {
+                    if (piece.color == gameSettings.playerColor && !pieceObject.Selected)
+                    {
+                        pieceObject.Selected = true;
+                        foreach (Movement movement in piece.availableMoves)
+                            AddMovement(movement);
+                    }
+                    else
+                        pieceObject.Selected = false;
+                }
             }
         }
     }

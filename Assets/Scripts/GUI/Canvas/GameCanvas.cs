@@ -116,8 +116,13 @@ public class GameCanvas : MonoBehaviour
         boardController.PerformPromotion(pieceType);
     }
 
+    Chess.Color currentPly;
+
     private void SetTurn(Chess.Color currentPly)
     {
+        this.currentPly = currentPly;
+        boardController.SetPly(currentPly);
+
         if (currentPly == gameSettings.playerColor)
         {
             turnDisplay.text = "<b><color=\"red\">Player</color></b>'s turn";
