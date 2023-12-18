@@ -215,8 +215,10 @@ public class BoardController : MonoBehaviour
         }
     }
 
-    private void AddGhost(Ghost ghost)
+    private void SetGhost(Ghost ghost)
     {
+        ClearGhost();
+
         ghostObject = Instantiate((GameObject)Resources.Load("Prefabs/Ghost"), board.transform).GetComponent<GhostObject>();
         ghostObject.Ghost = ghost;
 
@@ -254,6 +256,7 @@ public class BoardController : MonoBehaviour
         
         if (capturedPieceObject != null)
         {
+            movementType = Chess.MovementType.Attack;
             pieceObjects.Remove(capturedPieceObject);
             Destroy(capturedPieceObject.gameObject);
         }
@@ -263,6 +266,8 @@ public class BoardController : MonoBehaviour
             Ghost ghost = ghostObject.Ghost;
             if (ghost.x == move.x2 && ghost.y == move.y2)
             {
+                movementType = Chess.MovementType.Attack;
+
                 PieceObject ghostParentObject = GetPieceObject(ghost.parent.x, ghost.parent.y);
                 pieceObjects.Remove(ghostParentObject);
                 Destroy(ghostParentObject.gameObject);
@@ -270,7 +275,7 @@ public class BoardController : MonoBehaviour
         }
 
         if (move.hasty)
-            AddGhost(new(move.hastyX, move.hastyY, movedPieceObject.Piece));
+            SetGhost(new(move.hastyX, move.hastyY, movedPieceObject.Piece));
         else
             ClearGhost();
 
@@ -284,7 +289,8 @@ public class BoardController : MonoBehaviour
             if (inspiredPieceObject != null)
             {
                 MoveGameObject(inspiredPieceObject.gameObject, move.inspiringX2, move.inspiringY2);
-                Destroy(inspiredPieceObject);
+                inspiredPieceObject.Piece.x = move.inspiringX2;
+                inspiredPieceObject.Piece.y = move.inspiringY2;
             }
         }
 
@@ -348,7 +354,6 @@ public class BoardController : MonoBehaviour
     }
 
     Movement performedMovement = null;
-    Chess.PieceType attackedPieceType = Chess.PieceType.Pawn;
 
     private void OnMovementClicked(Movement movement)
     {
@@ -360,36 +365,12 @@ public class BoardController : MonoBehaviour
         }
 
         Piece piece = movement.owner;
-        
-        int sourceX = piece.x;
-        int sourceY = piece.y;
-        int destinationX = movement.move.x2;
-        int destinationY = movement.move.y2;
-
-        PieceObject attackedPieceObject = GetPieceObject(destinationX, destinationY);
-        if (attackedPieceObject != null)
-            attackedPieceType = attackedPieceObject.Piece.type;
-        else if (movement.move.vigilant && ghostObject != null)
-        {
-            Ghost ghost = ghostObject.Ghost;
-            if (movement.move.x2 == ghost.x && movement.move.y2 == ghost.y)
-            {
-                PieceObject ghostParentObject = GetPieceObject(ghost.parent.x, ghost.parent.y);
-                if (ghostParentObject != null)
-                    attackedPieceType = ghostParentObject.Piece.type;
-            }
-        }
 
         performedMovement = MovePiece(movement.move);
-        if (piece.type == Chess.PieceType.Pawn &&
-            ((piece.color == Chess.Color.White && piece.y == 7) || (piece.color == Chess.Color.Black && piece.y == 0)))
-        {
+        if (piece.type == Chess.PieceType.Pawn && ((piece.color == Chess.Color.White && piece.y == 7) || (piece.color == Chess.Color.Black && piece.y == 0)))
             onPromotionRequested?.Invoke();
-        }
         else
-        {
             onPlayerMove?.Invoke(performedMovement, Chess.PieceType.Pawn);
-        }
     }
 
     #endregion

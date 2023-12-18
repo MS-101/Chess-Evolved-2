@@ -101,7 +101,7 @@ public class EngineController : MonoBehaviour
 
     public void RequestBestMove()
     {
-        SendCommand("go depth 10");
+        SendCommand("go depth 2");
     }
 
     public void MovePiece(int x1, int y1, int x2, int y2, Chess.PieceType promotedPieceType)
@@ -134,7 +134,6 @@ public class EngineController : MonoBehaviour
     {
         UnityEngine.Debug.Log("GUI->ENGINE: " + command);
         engineProcess.StandardInput.WriteLine(command);
-        engineProcess.StandardInput.Flush();
     }
 
     private void ReceiveEngineResponses()
