@@ -21,6 +21,7 @@ public class GameCanvas : MonoBehaviour
         engineController.onLegalMovesReceived.AddListener(OnLegalMovesReceived);
         engineController.onBestMoveReceived.AddListener(OnBestMoveReceived);
         engineController.onResultReceived.AddListener(OnResultReceived);
+        engineController.onCheckReceived.AddListener(OnCheckReceived);
     }
 
     private void Start()
@@ -103,6 +104,11 @@ public class GameCanvas : MonoBehaviour
             turnDisplay.text = "<b><color=\"red\">Malakh</color></b> wins!";
         else if (victor == Chess.Color.Random)
             turnDisplay.text = "<b><color=\"red\">Stalemate</color></b>!";
+    }
+
+    private void OnCheckReceived()
+    {
+        boardController.SetCheck();
     }
 
     private void OnPromotionRequested()

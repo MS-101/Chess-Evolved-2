@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PieceObject : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private Image pieceImage, outlineImage;
+    [SerializeField] private Image pieceImage, outlineImage, backgroundImage;
 
     private Piece piece = null;
     public Piece Piece
@@ -31,6 +31,24 @@ public class PieceObject : MonoBehaviour, IPointerClickHandler
 
             outlineImage.gameObject.SetActive(selected);
         }
+    }
+
+    private bool highlighted = false;
+    public bool Highlighted
+    {
+        get { return highlighted; }
+        set
+        {
+            highlighted = value;
+
+            backgroundImage.gameObject.SetActive(highlighted);
+        }
+    }
+
+    public Color HighlightColor
+    {
+        get { return backgroundImage.color; }
+        set { backgroundImage.color = value; }
     }
 
     public UnityEvent<Piece> onPieceClicked;

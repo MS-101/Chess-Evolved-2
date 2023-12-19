@@ -11,6 +11,7 @@ public class BoardController : MonoBehaviour
     [SerializeField] private TMP_Text bottomColumn1, bottomColumn2, bottomColumn3, bottomColumn4, bottomColumn5, bottomColumn6, bottomColumn7, bottomColumn8;
     [SerializeField] private TMP_Text leftRow1, leftRow2, leftRow3, leftRow4, leftRow5, leftRow6, leftRow7, leftRow8;
     [SerializeField] private TMP_Text rightRow1, rightRow2, rightRow3, rightRow4, rightRow5, rightRow6, rightRow7, rightRow8;
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject board;
 
     private bool reversed = false;
@@ -25,13 +26,27 @@ public class BoardController : MonoBehaviour
         this.gameSettings = gameSettings;
 
         SetBoardOrientation(reversed);
+        ClearHighlightedSquare();
         ClearMovements();
+        ClearGhost();
         CreateInitialPosition();
     }
 
     public void SetPly(Chess.Color currentPly)
     {
         this.currentPly = currentPly;
+    }
+
+    public void SetCheck()
+    {
+        foreach (PieceObject pieceObject in pieceObjects)
+        {
+            if (pieceObject.Piece.type == Chess.PieceType.King && pieceObject.Piece.color == currentPly)
+            {
+                pieceObject.HighlightColor = new(1, 0, 0, (float)0.4);
+                pieceObject.Highlighted = true;
+            }
+        }
     }
 
     public void SetLegalMoves(List<Move> legalMoves)
@@ -134,7 +149,6 @@ public class BoardController : MonoBehaviour
     private void CreateInitialPosition()
     {
         ClearPieces();
-        ClearGhost();
 
         Chess.Essence whitePawnEssence, whiteKnightEssence, whiteBishopEssence, whiteRookEssence;
         Chess.Essence blackPawnEssence, blackKnightEssence, blackBishopEssence, blackRookEssence;
@@ -205,6 +219,7 @@ public class BoardController : MonoBehaviour
 
     private List<PieceObject> pieceObjects = new();
     private GhostObject ghostObject = null;
+    private GameObject highlightedSquare = null;
 
     private void ClearPieces()
     {
@@ -212,6 +227,15 @@ public class BoardController : MonoBehaviour
         {
             Destroy(pieceObjects.Last().gameObject);
             pieceObjects.RemoveAt(pieceObjects.Count - 1);
+        }
+    }
+
+    private void ClearGhost()
+    {
+        if (ghostObject != null)
+        {
+            Destroy(ghostObject.gameObject);
+            ghostObject = null;
         }
     }
 
@@ -225,13 +249,21 @@ public class BoardController : MonoBehaviour
         MoveGameObject(ghostObject.gameObject, ghost.x, ghost.y);
     }
 
-    private void ClearGhost()
+    private void ClearHighlightedSquare()
     {
-        if (ghostObject != null)
+        if (highlightedSquare != null)
         {
-            Destroy(ghostObject.gameObject);
-            ghostObject = null;
+            Destroy(highlightedSquare);
+            highlightedSquare = null;
         }
+    }
+
+    private void SetHighlightedSquare(int x, int y)
+    {
+        ClearHighlightedSquare();
+
+        highlightedSquare = Instantiate((GameObject)Resources.Load("Prefabs/HighlightedSquare"), board.transform);
+        MoveGameObject(highlightedSquare, x, y);
     }
 
     private void AddPiece(Piece piece, int x, int y)
@@ -253,7 +285,6 @@ public class BoardController : MonoBehaviour
         Chess.MovementType movementType = Chess.MovementType.Move;
 
         PieceObject capturedPieceObject = GetPieceObject(move.x2, move.y2);
-        
         if (capturedPieceObject != null)
         {
             movementType = Chess.MovementType.Attack;
@@ -279,9 +310,16 @@ public class BoardController : MonoBehaviour
         else
             ClearGhost();
 
+        SetHighlightedSquare(movedPieceObject.Piece.x, movedPieceObject.Piece.y);
+
         MoveGameObject(movedPieceObject.gameObject, move.x2, move.y2);
         movedPieceObject.Piece.x = move.x2;
         movedPieceObject.Piece.y = move.y2;
+
+        foreach (PieceObject pieceObject in pieceObjects)
+            pieceObject.Highlighted = false;
+        movedPieceObject.HighlightColor = new(1, 1, 0, (float)0.4);
+        movedPieceObject.Highlighted = true;
 
         if (move.inspiring)
         {
@@ -293,6 +331,9 @@ public class BoardController : MonoBehaviour
                 inspiredPieceObject.Piece.y = move.inspiringY2;
             }
         }
+
+        audioSource.clip = (AudioClip)Resources.Load("Audio/PieceMove");
+        audioSource.Play();
 
         return new(movedPieceObject.Piece, movementType, move);
     }

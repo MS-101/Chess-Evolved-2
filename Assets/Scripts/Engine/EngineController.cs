@@ -26,12 +26,15 @@ public class EngineController : MonoBehaviour
     public UnityEvent<List<Move>> onLegalMovesReceived = new();
     public UnityEvent<Move, Chess.PieceType> onBestMoveReceived = new();
     public UnityEvent<Chess.Color> onResultReceived = new();
+    public UnityEvent onCheckReceived = new();
 
     private Move receivedBestMove = null;
     private Chess.PieceType promotedPieceType = Chess.PieceType.Pawn;
 
     private bool unhandledResult = false;
     private Chess.Color receivedResult = Chess.Color.Random;
+
+    private bool receivedCheck = false;
 
     private void Start()
     {
@@ -40,6 +43,12 @@ public class EngineController : MonoBehaviour
 
     private void Update()
     {
+        if (receivedCheck)
+        {
+            receivedCheck = false;
+            onCheckReceived?.Invoke();
+        }
+
         if (receivedBestMove != null)
         {
             onBestMoveReceived?.Invoke(receivedBestMove, promotedPieceType);
@@ -215,6 +224,10 @@ public class EngineController : MonoBehaviour
                 }
                 else
                     promotedPieceType = Chess.PieceType.Pawn;
+            }
+            else if (tokens[0] == "check")
+            {
+                receivedCheck = true;
             }
             else if (tokens[0] == "result")
             {
