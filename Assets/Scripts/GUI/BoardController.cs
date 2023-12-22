@@ -420,17 +420,17 @@ public class BoardController : MonoBehaviour
     {
         RectTransform parentRect = board.GetComponent<RectTransform>();
 
-        float baseX = parentRect.position.x - parentRect.rect.width / 2;
-        float baseY = parentRect.position.y - parentRect.rect.height / 2;
+        float baseX = -(parentRect.rect.width / 2);
+        float baseY = -(parentRect.rect.height / 2);
         float width = parentRect.rect.width / 8;
         float height = parentRect.rect.height / 8;
 
         RectTransform rect = gameObject.GetComponent<RectTransform>();
 
         if (!reversed)
-            rect.position = new(baseX + x * width, baseY + y * height);
+            rect.localPosition = new(baseX + x * width, baseY + y * height);
         else
-            rect.position = new(baseX + (7 - x) * width, baseY + (7 - y) * height);
+            rect.localPosition = new(baseX + (7 - x) * width, baseY + (7 - y) * height);
         rect.sizeDelta = new(width, height);
     }
 }
