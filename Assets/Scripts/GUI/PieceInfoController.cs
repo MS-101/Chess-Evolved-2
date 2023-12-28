@@ -46,13 +46,13 @@ public class PieceInfoController : MonoBehaviour
 
         RectTransform parentRect = board.gameObject.GetComponent<RectTransform>();
 
-        float baseX = parentRect.position.x - parentRect.rect.width / 2;
-        float baseY = parentRect.position.y - parentRect.rect.height / 2;
+        float baseX = -(parentRect.rect.width / 2);
+        float baseY = -(parentRect.rect.height / 2);
         float width = parentRect.rect.width / 7;
         float height = width;
 
         RectTransform rect = pieceObject.gameObject.GetComponent<RectTransform>();
-        rect.position = new(baseX + 3 * width, baseY + 3 * height);
+        rect.localPosition = new(baseX + 3 * width, baseY + 3 * height);
         rect.sizeDelta = new(width, height);
     }
 
@@ -67,8 +67,8 @@ public class PieceInfoController : MonoBehaviour
 
         RectTransform parentRect = board.gameObject.GetComponent<RectTransform>();
 
-        float baseX = parentRect.position.x - parentRect.rect.width / 2;
-        float baseY = parentRect.position.y - parentRect.rect.height / 2;
+        float baseX = -(parentRect.rect.width / 2);
+        float baseY = -(parentRect.rect.height / 2);
         float width = parentRect.rect.width / 7;
         float height = parentRect.rect.height / 7;
 
@@ -85,7 +85,7 @@ public class PieceInfoController : MonoBehaviour
                 movementObject.Movement = new(pieceObject.Piece, mobility.type, new Move(3, 3, x, y));
 
                 RectTransform rect = movementObject.gameObject.GetComponent<RectTransform>();
-                rect.position = new(baseX + x * width, baseY + y * height);
+                rect.localPosition = new(baseX + x * width, baseY + y * height);
                 rect.sizeDelta = new(width, height);
 
                 movements.Add(movementObject);
