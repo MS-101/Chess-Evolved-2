@@ -46,8 +46,8 @@ public class PieceInfoController : MonoBehaviour
 
         RectTransform parentRect = board.gameObject.GetComponent<RectTransform>();
 
-        float baseX = -(parentRect.rect.width / 2);
-        float baseY = -(parentRect.rect.height / 2);
+        float baseX = parentRect.rect.x;
+        float baseY = parentRect.rect.y;
         float width = parentRect.rect.width / 7;
         float height = width;
 
@@ -67,8 +67,8 @@ public class PieceInfoController : MonoBehaviour
 
         RectTransform parentRect = board.gameObject.GetComponent<RectTransform>();
 
-        float baseX = -(parentRect.rect.width / 2);
-        float baseY = -(parentRect.rect.height / 2);
+        float baseX = parentRect.rect.x;
+        float baseY = parentRect.rect.y;
         float width = parentRect.rect.width / 7;
         float height = parentRect.rect.height / 7;
 

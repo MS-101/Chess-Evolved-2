@@ -13,6 +13,7 @@ public class CreateGameOverlay : MonoBehaviour
     [SerializeField] private ClickableDropdown malakhPawnDropdown, malakhKnightDropdown, malakhBishopDropdown, malakhRookDropdown;
     [SerializeField] private Toggle playerRandomPiecesToggle, malakhRandomPiecesToggle;
     [SerializeField] private TMP_Dropdown pieceDropdown, essenceDropdown;
+    [SerializeField] private TMP_Text pieceLabel, essenceLabel;
     [SerializeField] private Button returnBtn, playBtn;
     [SerializeField] private GameObject board;
 
@@ -69,8 +70,8 @@ public class CreateGameOverlay : MonoBehaviour
 
         RectTransform parentRect = board.gameObject.GetComponent<RectTransform>();
 
-        float baseX = -(parentRect.rect.width / 2);
-        float baseY = 0;
+        float baseX = parentRect.rect.x;
+        float baseY = parentRect.rect.y;
         float width = parentRect.rect.width / 7;
         float height = width;
 
@@ -249,6 +250,9 @@ public class CreateGameOverlay : MonoBehaviour
         pieceDropdown.SetValueWithoutNotify((int)pieceType);
         essenceDropdown.SetValueWithoutNotify((int)essence);
 
+        pieceLabel.text = pieceType.ToString();
+        essenceLabel.text = essence.ToString();
+
         pieceDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Pawn, Chess.Color.Random, essence);
         pieceDropdown.options[1].image = Chess.GetPieceImage(Chess.PieceType.Knight, Chess.Color.Random, essence);
         pieceDropdown.options[2].image = Chess.GetPieceImage(Chess.PieceType.Bishop, Chess.Color.Random, essence);
@@ -265,8 +269,8 @@ public class CreateGameOverlay : MonoBehaviour
 
         RectTransform parentRect = board.gameObject.GetComponent<RectTransform>();
 
-        float baseX = -(parentRect.rect.width / 2);
-        float baseY = -(parentRect.rect.height / 2);
+        float baseX = parentRect.rect.x;
+        float baseY = parentRect.rect.y;
         float width = parentRect.rect.width / 7;
         float height = parentRect.rect.height / 7;
 
@@ -277,7 +281,7 @@ public class CreateGameOverlay : MonoBehaviour
             int y = 3 + mobility.start_y;
             int moveCounter = 0;
 
-            while(x >= 0 && x <= 6 && y >= 0 && y <= 6 && (mobility.limit == 0 || moveCounter < mobility.limit))
+            while (x >= 0 && x <= 6 && y >= 0 && y <= 6 && (mobility.limit == 0 || moveCounter < mobility.limit))
             {
                 MovementObject movementObject = Instantiate(movementPrefab, board.transform).GetComponent<MovementObject>();
                 movementObject.Movement = new(pieceObject.Piece, mobility.type, new Move(3, 3, x, y));
