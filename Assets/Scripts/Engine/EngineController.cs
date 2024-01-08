@@ -110,7 +110,7 @@ public class EngineController : MonoBehaviour
 
     public void RequestBestMove()
     {
-        SendCommand("go depth 2");
+        SendCommand("go depth 3");
     }
 
     public void MovePiece(int x1, int y1, int x2, int y2, Chess.PieceType promotedPieceType)
@@ -244,6 +244,12 @@ public class EngineController : MonoBehaviour
 
     private Move ParseMove(string move)
     {
+        if (move.Equals("O-O"))
+            return new(Castling.KingSide);
+
+        if (move.Equals("O-O-O"))
+            return new(Castling.QueenSide);
+
         string[] tokens = move.Split('_');
 
         string moveToken = tokens[0];
@@ -267,15 +273,6 @@ public class EngineController : MonoBehaviour
             else if (flagToken[0] == 'V')
             {
                 retVal.SetVigilant();
-            }
-            else if (flagToken[0] == 'I')
-            {
-                int inspiringSourceColumn = flagToken[1] - 'a';
-                int inspiringSourceRow = flagToken[2] - '1';
-                int inspiringTargetColumn = flagToken[3] - 'a';
-                int inspiringTargetRow = flagToken[4] - '1';
-
-                retVal.SetInspiring(inspiringSourceColumn, inspiringSourceRow, inspiringTargetColumn, inspiringTargetRow);
             }
         }
 

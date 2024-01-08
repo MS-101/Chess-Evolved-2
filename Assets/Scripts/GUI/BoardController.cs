@@ -281,28 +281,79 @@ public class BoardController : MonoBehaviour
 
     private Movement MovePiece(Move move)
     {
-        PieceObject movedPieceObject = GetPieceObject(move.x1, move.y1);
+        PieceObject movedPieceObject;
         Chess.MovementType movementType = Chess.MovementType.Move;
 
-        PieceObject capturedPieceObject = GetPieceObject(move.x2, move.y2);
-        if (capturedPieceObject != null)
+        switch (move.castling)
         {
-            movementType = Chess.MovementType.Attack;
-            pieceObjects.Remove(capturedPieceObject);
-            Destroy(capturedPieceObject.gameObject);
-        }
+            case Castling.QueenSide:
+                PieceObject rookPieceObject_q;
 
-        if (move.vigilant && ghostObject != null)
-        {
-            Ghost ghost = ghostObject.Ghost;
-            if (ghost.x == move.x2 && ghost.y == move.y2)
-            {
-                movementType = Chess.MovementType.Attack;
+                if (currentPly == Chess.Color.White)
+                {
+                    movedPieceObject = GetPieceObject(4, 0); // king
+                    rookPieceObject_q = GetPieceObject(0, 0);
+                }
+                else
+                {
+                    movedPieceObject = GetPieceObject(4, 7); // king
+                    rookPieceObject_q = GetPieceObject(0, 7);
+                }
+                
+                if (rookPieceObject_q != null)
+                {
+                    MoveGameObject(rookPieceObject_q.gameObject, 2, 0);
+                    rookPieceObject_q.Piece.x = 2;
+                    rookPieceObject_q.Piece.y = 0;
+                }
 
-                PieceObject ghostParentObject = GetPieceObject(ghost.parent.x, ghost.parent.y);
-                pieceObjects.Remove(ghostParentObject);
-                Destroy(ghostParentObject.gameObject);
-            }
+                break;
+            case Castling.KingSide:
+                PieceObject rookPieceObject_k;
+
+                if (currentPly == Chess.Color.White)
+                {
+                    movedPieceObject = GetPieceObject(4, 0); // king
+                    rookPieceObject_k = GetPieceObject(7, 0);
+                }
+                else
+                {
+                    movedPieceObject = GetPieceObject(4, 7); // king
+                    rookPieceObject_k = GetPieceObject(7, 7);
+                }
+
+                if (rookPieceObject_k != null)
+                {
+                    MoveGameObject(rookPieceObject_k.gameObject, 2, 0);
+                    rookPieceObject_k.Piece.x = 2;
+                    rookPieceObject_k.Piece.y = 0;
+                }
+
+                break;
+            default:
+                movedPieceObject = GetPieceObject(move.x1, move.y1);
+                
+                PieceObject capturedPieceObject = GetPieceObject(move.x2, move.y2);
+                if (capturedPieceObject != null)
+                {
+                    movementType = Chess.MovementType.Attack;
+                    pieceObjects.Remove(capturedPieceObject);
+                    Destroy(capturedPieceObject.gameObject);
+                }
+
+                if (move.vigilant && ghostObject != null)
+                {
+                    Ghost ghost = ghostObject.Ghost;
+                    if (ghost.x == move.x2 && ghost.y == move.y2)
+                    {
+                        movementType = Chess.MovementType.Attack;
+
+                        PieceObject ghostParentObject = GetPieceObject(ghost.parent.x, ghost.parent.y);
+                        pieceObjects.Remove(ghostParentObject);
+                        Destroy(ghostParentObject.gameObject);
+                    }
+                }
+                break;
         }
 
         if (move.hasty)
@@ -320,17 +371,6 @@ public class BoardController : MonoBehaviour
             pieceObject.Highlighted = false;
         movedPieceObject.HighlightColor = new(1, 1, 0, (float)0.4);
         movedPieceObject.Highlighted = true;
-
-        if (move.inspiring)
-        {
-            PieceObject inspiredPieceObject = GetPieceObject(move.inspiringX1, move.inspiringY1);
-            if (inspiredPieceObject != null)
-            {
-                MoveGameObject(inspiredPieceObject.gameObject, move.inspiringX2, move.inspiringY2);
-                inspiredPieceObject.Piece.x = move.inspiringX2;
-                inspiredPieceObject.Piece.y = move.inspiringY2;
-            }
-        }
 
         audioSource.clip = (AudioClip)Resources.Load("Audio/PieceMove");
         audioSource.Play();
