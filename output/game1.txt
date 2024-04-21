@@ -1,0 +1,17 @@
+Player color = White
+Game result = Player's turn
+
+Essence config:
+Player pawn = Classic
+Player rook = Classic
+Player knight = Classic
+Player bishop = Classic
+Malakh pawn = Classic
+Malakh rook = Classic
+Malakh knight = Classic
+Malakh bishop = Classic
+
+Turns history:
+1. e2-e3 e7-e6
+2. Bf1-c4 Qd8-h4
+

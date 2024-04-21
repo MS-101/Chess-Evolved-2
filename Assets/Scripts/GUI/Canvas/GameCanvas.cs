@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class GameCanvas : MonoBehaviour
     [SerializeField] private PromotionController promotionController;
     [SerializeField] private EngineController engineController;
     [SerializeField] private TMP_Text turnDisplay;
-    [SerializeField] private Button returnBtn, playBtn;
+    [SerializeField] private Button returnBtn, playBtn, exportBtn;
     [SerializeField] private TitleCanvas titleCanvas;
 
     private void Awake()
@@ -28,6 +29,7 @@ public class GameCanvas : MonoBehaviour
     {
         returnBtn.onClick.AddListener(OnReturnClick);
         playBtn.onClick.AddListener(OnPlayClick);
+        exportBtn.onClick.AddListener(OnExportClick);
         boardController.onPlayerMove.AddListener(OnPlayerMove);
         boardController.onPromotionRequested.AddListener(OnPromotionRequested);
         promotionController.onPromotionChosen.AddListener(OnPromotionChosen);
@@ -180,6 +182,53 @@ public class GameCanvas : MonoBehaviour
             TurnObject turnObject = turnObjectList[0];
             Destroy(turnObject.gameObject);
             turnObjectList.Remove(turnObject);
+        }
+    }
+
+    public void OnExportClick()
+    {
+        string outputDir = "output";
+        string outputName = "game";
+        string outputExtension = ".txt";
+        
+        string fullFilename;
+        int fileCounter = 1;
+
+        while (true)
+        {
+            fullFilename = outputDir + "/" + outputName + fileCounter.ToString() + outputExtension;
+
+            if (File.Exists(fullFilename))
+                fileCounter++;
+            else
+                break;
+        }
+
+        using (StreamWriter sw = new(fullFilename))
+        {
+            sw.WriteLine("Player color = " + gameSettings.playerColor);
+            sw.WriteLine("Game result = " + turnDisplay.GetParsedText());
+            sw.WriteLine();
+
+            sw.WriteLine("Essence config:");
+            sw.WriteLine("Player pawn = " + gameSettings.playerPawn.ToString());
+            sw.WriteLine("Player rook = " + gameSettings.playerRook.ToString());
+            sw.WriteLine("Player knight = " + gameSettings.playerKnight.ToString());
+            sw.WriteLine("Player bishop = " + gameSettings.playerBishop.ToString());
+            sw.WriteLine("Malakh pawn = " + gameSettings.malakhPawn.ToString());
+            sw.WriteLine("Malakh rook = " + gameSettings.malakhRook.ToString());
+            sw.WriteLine("Malakh knight = " + gameSettings.malakhKnight.ToString());
+            sw.WriteLine("Malakh bishop = " + gameSettings.malakhBishop.ToString());
+            sw.WriteLine();
+
+            sw.WriteLine("Turns history:");
+            foreach (TurnObject turnObject in turnObjectList)
+            {
+                Turn myTurn = turnObject.MyTurn;
+                string turnString = myTurn.turnCounter.ToString() + ". " + myTurn.GetWhitePly() + " " + myTurn.GetBlackPly();
+                sw.WriteLine(turnString);
+            }
+            sw.WriteLine();
         }
     }
 
