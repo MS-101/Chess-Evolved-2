@@ -74,14 +74,14 @@ public class GameCanvas : MonoBehaviour
         else
             movementType = Chess.MovementType.Attack;
 
-        boardController.PerformMove(bestMove);
-        if (promotedPieceType != Chess.PieceType.Pawn)
-            boardController.PerformPromotion(promotedPieceType);
-
         if (gameSettings.malakhColor == Chess.Color.White)
             AddTurn(movingPiece.type, promotedPieceType, movementType, bestMove);
         else
             SetBlackPly(movingPiece.type, promotedPieceType, movementType, bestMove);
+
+        boardController.PerformMove(bestMove);
+        if (promotedPieceType != Chess.PieceType.Pawn)
+            boardController.PerformPromotion(promotedPieceType);
 
         engineController.MovePiece(bestMove.x1, bestMove.y1, bestMove.x2, bestMove.y2, promotedPieceType);
         SetTurn(gameSettings.playerColor);
@@ -124,11 +124,8 @@ public class GameCanvas : MonoBehaviour
         boardController.PerformPromotion(pieceType);
     }
 
-    Chess.Color currentPly;
-
     private void SetTurn(Chess.Color currentPly)
     {
-        this.currentPly = currentPly;
         boardController.SetPly(currentPly);
 
         if (currentPly == gameSettings.playerColor)
@@ -152,6 +149,7 @@ public class GameCanvas : MonoBehaviour
     #region TurnLogs
 
     [SerializeField] private GameObject turnListContent, turnObjectPrefab;
+    [SerializeField] private Scrollbar turnScrollbar;
 
     private List<TurnObject> turnObjectList = new();
     private int turnCounter = 0;
@@ -166,8 +164,11 @@ public class GameCanvas : MonoBehaviour
         Turn newTurn = new(turnCounter);
         newTurn.SetWhitePly(whitePieceType, whitePromotion, whiteMovementType, whiteMove);
         newTurnObject.MyTurn = newTurn;
-
+        
         turnObjectList.Add(newTurnObject);
+
+        Canvas.ForceUpdateCanvases();
+        turnScrollbar.value = 0;
     }
 
     public void SetBlackPly(Chess.PieceType blackPieceType, Chess.PieceType blackPromotion, Chess.MovementType blackMovementType, Move blackMove)
@@ -177,6 +178,8 @@ public class GameCanvas : MonoBehaviour
 
     public void ClearTurns()
     {
+        turnCounter = 0;
+
         while (turnObjectList.Count > 0)
         {
             TurnObject turnObject = turnObjectList[0];

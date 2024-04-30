@@ -200,8 +200,6 @@ public class EngineController : MonoBehaviour
             }
             else if (tokens[0] == "bestmove")
             {
-                receivedBestMove = ParseMove(tokens[1]);
-
                 string[] bestMoveTokens = tokens[1].Split('_');
                 if (bestMoveTokens[0].Length == 5)
                 {
@@ -224,6 +222,8 @@ public class EngineController : MonoBehaviour
                 }
                 else
                     promotedPieceType = Chess.PieceType.Pawn;
+
+                receivedBestMove = ParseMove(bestMoveTokens[0]);
             }
             else if (tokens[0] == "check")
             {

@@ -85,7 +85,7 @@ public class BoardController : MonoBehaviour
 
     public void PerformMove(Move legalMove)
     {
-        MovePiece(legalMove);
+        performedMovement = MovePiece(legalMove);
     }
 
     public void PerformPromotion(Chess.PieceType promotedPieceType)
@@ -96,6 +96,8 @@ public class BoardController : MonoBehaviour
         if (promotedPiece.color == gameSettings.playerColor)
             onPlayerMove?.Invoke(performedMovement, promotedPieceType);
 
+        if (promotedPieceType == Chess.PieceType.Queen)
+            promotedPiece.essence = Chess.Essence.Classic;
         promotedPiece.type = promotedPieceType;
         promotedPieceObject.Piece = promotedPiece;
     }

@@ -812,7 +812,7 @@ RectTransform:
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6497,6 +6497,7 @@ MonoBehaviour:
   titleCanvas: {fileID: 569848607}
   turnListContent: {fileID: 1388256548}
   turnObjectPrefab: {fileID: 9188005223435399589, guid: 3c7b64143737a004391cf19cc7f261e8, type: 3}
+  turnScrollbar: {fileID: 655669938}
 --- !u!1 &814275022
 GameObject:
   m_ObjectHideFlags: 0
