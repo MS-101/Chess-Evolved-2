@@ -7,6 +7,7 @@ using System.Linq;
 
 public class CreateGameOverlay : MonoBehaviour
 {
+    [SerializeField] private Toggle aiBasicToggle, aiEnsembleToggle;
     [SerializeField] private Toggle playerWhiteColorToggle, playerBlackColorToggle, playerRandomColorToggle;
     [SerializeField] private Toggle malakhWhiteColorToggle, malakhBlackColorToggle, malakhRandomColorToggle;
     [SerializeField] private ClickableDropdown playerPawnDropdown, playerKnightDropdown, playerBishopDropdown, playerRookDropdown;
@@ -192,6 +193,12 @@ public class CreateGameOverlay : MonoBehaviour
     {
         Random.InitState(System.DateTime.Now.Millisecond);
 
+        Chess.AI ai;
+        if (aiBasicToggle.isOn)
+            ai = Chess.AI.Basic;
+        else
+            ai = Chess.AI.Ensemble;
+
         Chess.Color playerColor;
         if (playerWhiteColorToggle.isOn)
             playerColor = Chess.Color.White;
@@ -234,7 +241,7 @@ public class CreateGameOverlay : MonoBehaviour
             malakhRook = (Chess.Essence)Random.Range(1, 3);
         }
 
-        Chess.GameSettings gameSettings = new(
+        Chess.GameSettings gameSettings = new(ai,
             playerColor, playerPawn, playerKnight, playerBishop, playerRook,
             malakhColor, malakhPawn, malakhKnight, malakhBishop, malakhRook
         );

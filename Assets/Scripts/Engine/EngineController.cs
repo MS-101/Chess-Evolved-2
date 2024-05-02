@@ -92,6 +92,8 @@ public class EngineController : MonoBehaviour
 
     public void StartGame(Chess.GameSettings gameSettings)
     {
+        SendCommand("setoption name AI value " + gameSettings.ai.ToString());
+        SendCommand("setoption name WhitePawn value " + (gameSettings.playerColor == Chess.Color.White ? gameSettings.playerPawn.ToString() : gameSettings.malakhPawn.ToString()));
         SendCommand("setoption name WhitePawn value " + (gameSettings.playerColor == Chess.Color.White ? gameSettings.playerPawn.ToString() : gameSettings.malakhPawn.ToString()));
         SendCommand("setoption name WhiteKnight value " + (gameSettings.playerColor == Chess.Color.White ? gameSettings.playerKnight.ToString() : gameSettings.malakhKnight.ToString()));
         SendCommand("setoption name WhiteBishop value " + (gameSettings.playerColor == Chess.Color.White ? gameSettings.playerBishop.ToString() : gameSettings.malakhBishop.ToString()));

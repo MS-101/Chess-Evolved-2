@@ -35,15 +35,24 @@ public class Chess : MonoBehaviour
         AttackMove = 2
     }
 
+    public enum AI
+    {
+        Basic = 0,
+        Ensemble = 1
+    }
+
     public class GameSettings
     {
+        public AI ai;
         public Color playerColor, malakhColor;
         public Essence playerPawn, playerKnight, playerBishop, playerRook;
         public Essence malakhPawn, malakhKnight, malakhBishop, malakhRook;
 
-        public GameSettings(Color playerColor, Essence playerPawn, Essence playerKnight, Essence playerBishop, Essence playerRook,
+        public GameSettings(AI ai, Color playerColor, Essence playerPawn, Essence playerKnight, Essence playerBishop, Essence playerRook,
             Color malakhColor, Essence malakhPawn, Essence malakhKnight, Essence malakhBishop, Essence malakhRook)
         {
+            this.ai = ai;
+
             this.playerColor = playerColor;
 
             this.playerPawn = playerPawn;
