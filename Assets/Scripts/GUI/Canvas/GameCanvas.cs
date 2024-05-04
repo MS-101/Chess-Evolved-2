@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using TMPro;
@@ -191,6 +192,15 @@ public class GameCanvas : MonoBehaviour
     public void OnExportClick()
     {
         string outputDir = "output";
+        switch (gameSettings.ai) {
+            case Chess.AI.Basic:
+                outputDir += "/basic";
+                break;
+            case Chess.AI.Ensemble:
+                outputDir += "/ensemble";
+                break;
+        }
+
         string outputName = "game";
         string outputExtension = ".txt";
         
