@@ -81,19 +81,29 @@ public class CreateGameOverlay : MonoBehaviour
         rect.sizeDelta = new(width, height);
     }
 
-    public void InitializeSettings(Chess.GameSettings gameSettins)
+    public void InitializeSettings(Chess.GameSettings gameSettings)
     {
-        OnPlayerColorSet(gameSettins.playerColor);
+        Chess.AI ai = gameSettings.ai;
+        switch (ai) {
+            case Chess.AI.Basic:
+                aiBasicToggle.isOn = true;
+                break;
+            case Chess.AI.Ensemble:
+                aiEnsembleToggle.isOn = true;
+                break;
+        }
 
-        playerPawnDropdown.SetValueWithoutNotify((int)gameSettins.playerPawn);
-        playerKnightDropdown.SetValueWithoutNotify((int)gameSettins.playerKnight);
-        playerBishopDropdown.SetValueWithoutNotify((int)gameSettins.playerBishop);
-        playerRookDropdown.SetValueWithoutNotify((int)gameSettins.playerRook);
+        OnPlayerColorSet(gameSettings.playerColor);
 
-        malakhPawnDropdown.SetValueWithoutNotify((int)gameSettins.malakhPawn);
-        malakhKnightDropdown.SetValueWithoutNotify((int)gameSettins.malakhKnight);
-        malakhBishopDropdown.SetValueWithoutNotify((int)gameSettins.malakhBishop);
-        malakhRookDropdown.SetValueWithoutNotify((int)gameSettins.malakhRook);
+        playerPawnDropdown.SetValueWithoutNotify((int)gameSettings.playerPawn);
+        playerKnightDropdown.SetValueWithoutNotify((int)gameSettings.playerKnight);
+        playerBishopDropdown.SetValueWithoutNotify((int)gameSettings.playerBishop);
+        playerRookDropdown.SetValueWithoutNotify((int)gameSettings.playerRook);
+
+        malakhPawnDropdown.SetValueWithoutNotify((int)gameSettings.malakhPawn);
+        malakhKnightDropdown.SetValueWithoutNotify((int)gameSettings.malakhKnight);
+        malakhBishopDropdown.SetValueWithoutNotify((int)gameSettings.malakhBishop);
+        malakhRookDropdown.SetValueWithoutNotify((int)gameSettings.malakhRook);
     }
 
     private void OnPlayerColorSet(Chess.Color color)

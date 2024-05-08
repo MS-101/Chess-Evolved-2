@@ -1,0 +1,11 @@
+Zadajte vaše ELO, resp. iné relevantné informácie ak hráte šach (napr. účasť na turnajoch):
+
+TO DO
+
+Opíšte vaše skúsenosti pri hraní s AI režimom "basic":
+
+TO DO
+
+Opíšte vaše skúsenosti pri hraní s AI režimom "ensemble":
+
+TO DO
