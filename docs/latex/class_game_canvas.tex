@@ -1,0 +1,314 @@
+\doxysection{Dokumentácia triedy Game\+Canvas}
+\hypertarget{class_game_canvas}{}\label{class_game_canvas}\index{GameCanvas@{GameCanvas}}
+Diagram dedičnosti pre triedu Game\+Canvas\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_canvas}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_canvas_a8b79f5ad90da9d0d7fa08aabf85669ce}{Set\+Game}} (\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess.\+Game\+Settings}} game\+Settings)
+\item 
+void \mbox{\hyperlink{class_game_canvas_a807c14eda90049c649d49ddd2f469bfd}{Add\+Turn}} (\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} white\+Piece\+Type, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} white\+Promotion, \mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Chess.\+Movement\+Type}} white\+Movement\+Type, \mbox{\hyperlink{class_move}{Move}} white\+Move)
+\item 
+void \mbox{\hyperlink{class_game_canvas_afaf8fda7a733c6a818c9e7f861762a26}{Set\+Black\+Ply}} (\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} black\+Piece\+Type, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} black\+Promotion, \mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Chess.\+Movement\+Type}} black\+Movement\+Type, \mbox{\hyperlink{class_move}{Move}} black\+Move)
+\item 
+void \mbox{\hyperlink{class_game_canvas_aa3aee1c056deeb00da6fd8ae61528efa}{Clear\+Turns}} ()
+\item 
+void \mbox{\hyperlink{class_game_canvas_aab5ac95af051fa2789f841d18b968236}{On\+Export\+Click}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne metódy}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_canvas_a12691fc12e78544b100cc628c905f9ba}\label{class_game_canvas_a12691fc12e78544b100cc628c905f9ba} 
+void {\bfseries Awake} ()
+\item 
+\Hypertarget{class_game_canvas_ab9cdf57411668e300dde27052d9665a6}\label{class_game_canvas_ab9cdf57411668e300dde27052d9665a6} 
+void {\bfseries Start} ()
+\item 
+void \mbox{\hyperlink{class_game_canvas_a738efe68d792310e16038b23c82c1d14}{On\+Legal\+Moves\+Received}} (List$<$ \mbox{\hyperlink{class_move}{Move}} $>$ legal\+Moves)
+\item 
+void \mbox{\hyperlink{class_game_canvas_af353d4f1fc363d829d1896a0778be97a}{On\+Best\+Move\+Received}} (\mbox{\hyperlink{class_move}{Move}} best\+Move, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} promoted\+Piece\+Type)
+\item 
+void \mbox{\hyperlink{class_game_canvas_aeb59f4ea64239fd609f2e0ea1600c936}{On\+Player\+Move}} (\mbox{\hyperlink{class_movement}{Movement}} movement, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} promoted\+Piece\+Type)
+\item 
+void \mbox{\hyperlink{class_game_canvas_af420961f601e54e9faa0bf5c40d864be}{On\+Result\+Received}} (\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} victor)
+\item 
+void \mbox{\hyperlink{class_game_canvas_a47a6b701dfa984bd4efa6b7059808608}{On\+Check\+Received}} ()
+\item 
+void \mbox{\hyperlink{class_game_canvas_a55783f6bee10cfa96bc4f5c0a9e51f5f}{On\+Promotion\+Requested}} ()
+\item 
+void \mbox{\hyperlink{class_game_canvas_a0ec0cdfb76f02a6a12d9cb2f249740dc}{On\+Promotion\+Chosen}} (\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} piece\+Type)
+\item 
+void \mbox{\hyperlink{class_game_canvas_ad0a03695bd6346addb4820ce333b820b}{Set\+Turn}} (\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} current\+Ply)
+\item 
+void \mbox{\hyperlink{class_game_canvas_a3f461f614d1ae8c86fb5e3106743af29}{On\+Help\+Button\+Clicked}} (\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} piece\+Type, \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} color, \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}} essence)
+\item 
+void \mbox{\hyperlink{class_game_canvas_a692706c9389169020b1028bcce42e5a4}{On\+Return\+Click}} ()
+\item 
+void \mbox{\hyperlink{class_game_canvas_a1bf90df4b35826a2bc772492e6e8699a}{On\+Play\+Click}} ()
+\item 
+void \mbox{\hyperlink{class_game_canvas_a96c33bb9e6c2ec04a89c4cfda27d446c}{On\+Game\+Created}} (\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess.\+Game\+Settings}} game\+Settings)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_canvas_acb92d7c367ac7838e13091e565d7027e}\label{class_game_canvas_acb92d7c367ac7838e13091e565d7027e} 
+\mbox{\hyperlink{class_board_controller}{Board\+Controller}} {\bfseries board\+Controller}
+\item 
+\Hypertarget{class_game_canvas_ae799cad664bbaca49c4788132e969295}\label{class_game_canvas_ae799cad664bbaca49c4788132e969295} 
+\mbox{\hyperlink{class_player_info_controller}{Player\+Info\+Controller}} {\bfseries player\+Info\+Controller}
+\item 
+\Hypertarget{class_game_canvas_a8c461d903e8ea21f80f8e2a840629765}\label{class_game_canvas_a8c461d903e8ea21f80f8e2a840629765} 
+\mbox{\hyperlink{class_player_info_controller}{Player\+Info\+Controller}} {\bfseries malakh\+Info\+Controller}
+\item 
+\Hypertarget{class_game_canvas_a7651bce9bbc9f49619d086ecec9efa23}\label{class_game_canvas_a7651bce9bbc9f49619d086ecec9efa23} 
+\mbox{\hyperlink{class_piece_info_controller}{Piece\+Info\+Controller}} {\bfseries piece\+Info\+Controller}
+\item 
+\Hypertarget{class_game_canvas_aab956eb6245f2c32665cde8f91feb26d}\label{class_game_canvas_aab956eb6245f2c32665cde8f91feb26d} 
+\mbox{\hyperlink{class_promotion_controller}{Promotion\+Controller}} {\bfseries promotion\+Controller}
+\item 
+\Hypertarget{class_game_canvas_a95cf62aa8c9c5dc45a6a2fe10b482f88}\label{class_game_canvas_a95cf62aa8c9c5dc45a6a2fe10b482f88} 
+\mbox{\hyperlink{class_engine_controller}{Engine\+Controller}} {\bfseries engine\+Controller}
+\item 
+\Hypertarget{class_game_canvas_a834e82438628a88468df968eb5f07611}\label{class_game_canvas_a834e82438628a88468df968eb5f07611} 
+TMP\+\_\+\+Text {\bfseries turn\+Display}
+\item 
+\Hypertarget{class_game_canvas_a5c9dd3c3f2231ae287bedbe0e8e4fd75}\label{class_game_canvas_a5c9dd3c3f2231ae287bedbe0e8e4fd75} 
+Button {\bfseries return\+Btn}
+\item 
+\Hypertarget{class_game_canvas_af3b319096d5a54a8545c804d6d0e25ff}\label{class_game_canvas_af3b319096d5a54a8545c804d6d0e25ff} 
+Button {\bfseries play\+Btn}
+\item 
+\Hypertarget{class_game_canvas_aab6b5c64ea9063ec1c0fe2f3580f25b4}\label{class_game_canvas_aab6b5c64ea9063ec1c0fe2f3580f25b4} 
+Button {\bfseries export\+Btn}
+\item 
+\Hypertarget{class_game_canvas_afa869285b6364ecf591073f6744fce58}\label{class_game_canvas_afa869285b6364ecf591073f6744fce58} 
+\mbox{\hyperlink{class_title_canvas}{Title\+Canvas}} {\bfseries title\+Canvas}
+\item 
+\Hypertarget{class_game_canvas_af57bed30c163d5d5c2223da5646a1021}\label{class_game_canvas_af57bed30c163d5d5c2223da5646a1021} 
+\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess.\+Game\+Settings}} {\bfseries game\+Settings}
+\item 
+\Hypertarget{class_game_canvas_a427d5b5eee0fbd397f4a5e6e3250bfe9}\label{class_game_canvas_a427d5b5eee0fbd397f4a5e6e3250bfe9} 
+Game\+Object {\bfseries turn\+List\+Content}
+\item 
+\Hypertarget{class_game_canvas_a268f1d92539b7a9919e760f283ab38db}\label{class_game_canvas_a268f1d92539b7a9919e760f283ab38db} 
+Game\+Object {\bfseries turn\+Object\+Prefab}
+\item 
+\Hypertarget{class_game_canvas_a2ea8652eac29043afe580f4b8e1f84a2}\label{class_game_canvas_a2ea8652eac29043afe580f4b8e1f84a2} 
+Scrollbar {\bfseries turn\+Scrollbar}
+\item 
+\Hypertarget{class_game_canvas_ae1b20b5fe1f65c20be8d1ef51dd77485}\label{class_game_canvas_ae1b20b5fe1f65c20be8d1ef51dd77485} 
+List$<$ \mbox{\hyperlink{class_turn_object}{Turn\+Object}} $>$ {\bfseries turn\+Object\+List} = new()
+\item 
+\Hypertarget{class_game_canvas_a2c7f0561ce8ba51c8f618e112faf5531}\label{class_game_canvas_a2c7f0561ce8ba51c8f618e112faf5531} 
+int {\bfseries turn\+Counter} = 0
+\item 
+\Hypertarget{class_game_canvas_a3856797bb4671ea53970d5de6e81b53e}\label{class_game_canvas_a3856797bb4671ea53970d5de6e81b53e} 
+Game\+Object {\bfseries create\+Game\+Overlay} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Táto trieda je zodpovedná za správu hernej obrazovky. 
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_game_canvas_a807c14eda90049c649d49ddd2f469bfd}\label{class_game_canvas_a807c14eda90049c649d49ddd2f469bfd} 
+\index{GameCanvas@{GameCanvas}!AddTurn@{AddTurn}}
+\index{AddTurn@{AddTurn}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{AddTurn()}{AddTurn()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+Add\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{white\+Piece\+Type,  }\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{white\+Promotion,  }\item[{\mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Chess\+::\+Movement\+Type}}}]{white\+Movement\+Type,  }\item[{\mbox{\hyperlink{class_move}{Move}}}]{white\+Move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Do histórie hry pridáme nový pohyb bieleho hráča.
+
+
+\begin{DoxyParams}{Parametre}
+{\em white\+Piece\+Type} & Typ bielej figúrky. \\
+\hline
+{\em white\+Promotion} & Promócia bieleho pešiaka. \\
+\hline
+{\em white\+Movement\+Type} & Typ pohybu bielej figúrky. \\
+\hline
+{\em white\+Move} & Vykonaný pohyb bielej figúrky. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_canvas_aa3aee1c056deeb00da6fd8ae61528efa}\label{class_game_canvas_aa3aee1c056deeb00da6fd8ae61528efa} 
+\index{GameCanvas@{GameCanvas}!ClearTurns@{ClearTurns}}
+\index{ClearTurns@{ClearTurns}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{ClearTurns()}{ClearTurns()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+Clear\+Turns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Vymažeme históriu hry. \Hypertarget{class_game_canvas_af353d4f1fc363d829d1896a0778be97a}\label{class_game_canvas_af353d4f1fc363d829d1896a0778be97a} 
+\index{GameCanvas@{GameCanvas}!OnBestMoveReceived@{OnBestMoveReceived}}
+\index{OnBestMoveReceived@{OnBestMoveReceived}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnBestMoveReceived()}{OnBestMoveReceived()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Best\+Move\+Received (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}}]{best\+Move,  }\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{promoted\+Piece\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri prijatí najlepšieho pohybu od enginu tento pohyb vykonáme na šachovnici a pohyb vložíme do histórie hry. Následne prikážeme enginu aby daný pohyb vykonal a vyžiadame si legálne pohyby.
+
+
+\begin{DoxyParams}{Parametre}
+{\em best\+Move} & Najlepší pohyb podľa enginu. \\
+\hline
+{\em promoted\+Piece\+Type} & ak bola vykonaná promócia tak sa pešiak premení na tento typ figúrky. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_canvas_a47a6b701dfa984bd4efa6b7059808608}\label{class_game_canvas_a47a6b701dfa984bd4efa6b7059808608} 
+\index{GameCanvas@{GameCanvas}!OnCheckReceived@{OnCheckReceived}}
+\index{OnCheckReceived@{OnCheckReceived}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnCheckReceived()}{OnCheckReceived()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Check\+Received (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri prijatí informácie o napadnutí kráľa od enginu to nastavíme na šachovnici. \Hypertarget{class_game_canvas_aab5ac95af051fa2789f841d18b968236}\label{class_game_canvas_aab5ac95af051fa2789f841d18b968236} 
+\index{GameCanvas@{GameCanvas}!OnExportClick@{OnExportClick}}
+\index{OnExportClick@{OnExportClick}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnExportClick()}{OnExportClick()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Export\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pri kliknutí na tlačidlo exportu výsledok hry exportujeme do výstupného súboru. Do súboru ukladáme informácie ako herná konfigurácia, výsledok hry a história hry. \Hypertarget{class_game_canvas_a96c33bb9e6c2ec04a89c4cfda27d446c}\label{class_game_canvas_a96c33bb9e6c2ec04a89c4cfda27d446c} 
+\index{GameCanvas@{GameCanvas}!OnGameCreated@{OnGameCreated}}
+\index{OnGameCreated@{OnGameCreated}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnGameCreated()}{OnGameCreated()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Game\+Created (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess\+::\+Game\+Settings}}}]{game\+Settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri prijatí hernej konfigurácie od rozhrania vytvorenia novej hry nastavíme túto konfiguráciu v tomto rozhraní.
+
+
+\begin{DoxyParams}{Parametre}
+{\em game\+Settings} & Herná konfigurácia. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_canvas_a3f461f614d1ae8c86fb5e3106743af29}\label{class_game_canvas_a3f461f614d1ae8c86fb5e3106743af29} 
+\index{GameCanvas@{GameCanvas}!OnHelpButtonClicked@{OnHelpButtonClicked}}
+\index{OnHelpButtonClicked@{OnHelpButtonClicked}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnHelpButtonClicked()}{OnHelpButtonClicked()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Help\+Button\+Clicked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{piece\+Type,  }\item[{\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess\+::\+Color}}}]{color,  }\item[{\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess\+::\+Essence}}}]{essence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri kliknutí na tlačidlo nápovedy pri figúrke v bočnom paneli zobrazíme nápovedu pre danú figúrku.
+
+
+\begin{DoxyParams}{Parametre}
+{\em piece\+Type} & Typ figúrky. \\
+\hline
+{\em color} & Vlastník figúrky. \\
+\hline
+{\em essence} & Esencia figúrky. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_canvas_a738efe68d792310e16038b23c82c1d14}\label{class_game_canvas_a738efe68d792310e16038b23c82c1d14} 
+\index{GameCanvas@{GameCanvas}!OnLegalMovesReceived@{OnLegalMovesReceived}}
+\index{OnLegalMovesReceived@{OnLegalMovesReceived}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnLegalMovesReceived()}{OnLegalMovesReceived()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Legal\+Moves\+Received (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_move}{Move}} $>$}]{legal\+Moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri prijatí legálnych pohybov od enginu prepošleme túto informáciu ovládaču šachovnice. \Hypertarget{class_game_canvas_a1bf90df4b35826a2bc772492e6e8699a}\label{class_game_canvas_a1bf90df4b35826a2bc772492e6e8699a} 
+\index{GameCanvas@{GameCanvas}!OnPlayClick@{OnPlayClick}}
+\index{OnPlayClick@{OnPlayClick}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnPlayClick()}{OnPlayClick()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Play\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Po stlačení tlačidla novej hry zobrazíme rozhranie vytvorenia novej hry. \Hypertarget{class_game_canvas_aeb59f4ea64239fd609f2e0ea1600c936}\label{class_game_canvas_aeb59f4ea64239fd609f2e0ea1600c936} 
+\index{GameCanvas@{GameCanvas}!OnPlayerMove@{OnPlayerMove}}
+\index{OnPlayerMove@{OnPlayerMove}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnPlayerMove()}{OnPlayerMove()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Player\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_movement}{Movement}}}]{movement,  }\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{promoted\+Piece\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Po prijatí pohybu hráča od ovládača šachovnice sa vykonaný pohyb zapíše do histórie hry. Následne prikážeme enginu aby daný pohyb vykonal a vyžiadame si najlepší pohyb.
+
+
+\begin{DoxyParams}{Parametre}
+{\em movement} & Vykonaný pohyb hráča. \\
+\hline
+{\em promoted\+Piece\+Type} & Ak bola vykonaná promócia pešiaka, tak toto bol typ figúrky na ktorú sa premenil. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_canvas_a0ec0cdfb76f02a6a12d9cb2f249740dc}\label{class_game_canvas_a0ec0cdfb76f02a6a12d9cb2f249740dc} 
+\index{GameCanvas@{GameCanvas}!OnPromotionChosen@{OnPromotionChosen}}
+\index{OnPromotionChosen@{OnPromotionChosen}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnPromotionChosen()}{OnPromotionChosen()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Promotion\+Chosen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{piece\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri prijatí promócia od rozhrania promócie vykonáme promóciu na šachovnici.
+
+
+\begin{DoxyParams}{Parametre}
+{\em piece\+Type} & Vybraná promócia pešiaka. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_canvas_a55783f6bee10cfa96bc4f5c0a9e51f5f}\label{class_game_canvas_a55783f6bee10cfa96bc4f5c0a9e51f5f} 
+\index{GameCanvas@{GameCanvas}!OnPromotionRequested@{OnPromotionRequested}}
+\index{OnPromotionRequested@{OnPromotionRequested}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnPromotionRequested()}{OnPromotionRequested()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Promotion\+Requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri prijatí žiadosti o výber promócie od ovládača šachovnice zobrazíme rozhranie na výber promócie. \Hypertarget{class_game_canvas_af420961f601e54e9faa0bf5c40d864be}\label{class_game_canvas_af420961f601e54e9faa0bf5c40d864be} 
+\index{GameCanvas@{GameCanvas}!OnResultReceived@{OnResultReceived}}
+\index{OnResultReceived@{OnResultReceived}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnResultReceived()}{OnResultReceived()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Result\+Received (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess\+::\+Color}}}]{victor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri prijatí výsledku hry od enginu hra je terminovaná a zobrazí sa výsledok hry.
+
+
+\begin{DoxyParams}{Parametre}
+{\em victor} & Výherný hráč. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_canvas_a692706c9389169020b1028bcce42e5a4}\label{class_game_canvas_a692706c9389169020b1028bcce42e5a4} 
+\index{GameCanvas@{GameCanvas}!OnReturnClick@{OnReturnClick}}
+\index{OnReturnClick@{OnReturnClick}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{OnReturnClick()}{OnReturnClick()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+On\+Return\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Po stlačení tlačidla návratu sa vrátime do rozhrania hlavnej obrazovky. \Hypertarget{class_game_canvas_afaf8fda7a733c6a818c9e7f861762a26}\label{class_game_canvas_afaf8fda7a733c6a818c9e7f861762a26} 
+\index{GameCanvas@{GameCanvas}!SetBlackPly@{SetBlackPly}}
+\index{SetBlackPly@{SetBlackPly}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{SetBlackPly()}{SetBlackPly()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+Set\+Black\+Ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{black\+Piece\+Type,  }\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{black\+Promotion,  }\item[{\mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Chess\+::\+Movement\+Type}}}]{black\+Movement\+Type,  }\item[{\mbox{\hyperlink{class_move}{Move}}}]{black\+Move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Do histórie hry pridáme nová pohyb čierneho hráča.
+
+
+\begin{DoxyParams}{Parametre}
+{\em black\+Piece\+Type} & Typ čiernej figúrky. \\
+\hline
+{\em black\+Promotion} & Promócia čierneho pešiaka. \\
+\hline
+{\em black\+Movement\+Type} & Typ pohybu čiernej figúrky. \\
+\hline
+{\em black\+Move} & Vykonaný pohyb čiernej figúrky. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_canvas_a8b79f5ad90da9d0d7fa08aabf85669ce}\label{class_game_canvas_a8b79f5ad90da9d0d7fa08aabf85669ce} 
+\index{GameCanvas@{GameCanvas}!SetGame@{SetGame}}
+\index{SetGame@{SetGame}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{SetGame()}{SetGame()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+Set\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess\+::\+Game\+Settings}}}]{game\+Settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Inicializujeme toto rozhranie aby sa spustila hra s danou hernou konfiguráciou.
+
+
+\begin{DoxyParams}{Parametre}
+{\em game\+Settings} & Herná konfigurácia novej hry \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_canvas_ad0a03695bd6346addb4820ce333b820b}\label{class_game_canvas_ad0a03695bd6346addb4820ce333b820b} 
+\index{GameCanvas@{GameCanvas}!SetTurn@{SetTurn}}
+\index{SetTurn@{SetTurn}!GameCanvas@{GameCanvas}}
+\doxysubsubsection{\texorpdfstring{SetTurn()}{SetTurn()}}
+{\footnotesize\ttfamily void Game\+Canvas.\+Set\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess\+::\+Color}}}]{current\+Ply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Nastavenie hráča na rade. Informáciu zobrazíme v nadpise. Ak je na rade hráč, tak si vyžiadame dostupné pohyby. Ak je na rade Malakh, tak si vyžiadame najlepší pohyb.
+
+
+\begin{DoxyParams}{Parametre}
+{\em current\+Ply} & Hráč na rade. \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_canvas_8cs}{Game\+Canvas.\+cs}}\end{DoxyCompactItemize}

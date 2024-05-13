@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess Evolved 2: Dokumentácia triedy Chess</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Chess Evolved 2
+   </div>
+   <div id="projectbrief">Grafické rozhranie pre šachový engine Malakh</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generované programom Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hľadať');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítam...</div>
+<div class="SRStatus" id="Searching">Vyhľadávam...</div>
+<div class="SRStatus" id="NoMatches">Nič sa nenašlo</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Triedy</a> &#124;
+<a href="#pub-types">Verejné typy</a> &#124;
+<a href="#pub-static-methods">Statické verejné metódy</a> &#124;
+<a href="class_chess-members.html">Zoznam všetkých členov</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentácia triedy Chess</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Diagram dedičnosti pre triedu Chess</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_chess.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Triedy</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_chess_1_1_game_settings.html">GameSettings</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Verejné typy</h2></td></tr>
+<tr class="memitem:a5c28d265b562136476b0a7591659b0cf" id="r_a5c28d265b562136476b0a7591659b0cf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c28d265b562136476b0a7591659b0cf">PieceType</a> { <br />
+&#160;&#160;<a class="el" href="#a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80">Pawn</a> = 0
+, <a class="el" href="#a5c28d265b562136476b0a7591659b0cfa8c23b2b86573edf2a5ea482c2ccc1497">Knight</a> = 1
+, <a class="el" href="#a5c28d265b562136476b0a7591659b0cfa3aa4584e547efba20238772d4af5c03d">Bishop</a> = 2
+, <a class="el" href="#a5c28d265b562136476b0a7591659b0cfa1a415f5ae0f891e49d34821a896b4466">Rook</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="#a5c28d265b562136476b0a7591659b0cfa2c2d2c0291163b077a372c2a9c5a6eda">Queen</a> = 4
+, <a class="el" href="#a5c28d265b562136476b0a7591659b0cfa719ef271d38a388fd7b2bc967f4bd885">King</a> = 5
+<br />
+ }</td></tr>
+<tr class="separator:a5c28d265b562136476b0a7591659b0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab74d2b8080f6aa53fd7f72fc7e396758" id="r_ab74d2b8080f6aa53fd7f72fc7e396758"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> { <a class="el" href="#ab74d2b8080f6aa53fd7f72fc7e396758ad35b51b639528d580362ca7042de6a0e">Classic</a> = 0
+, <a class="el" href="#ab74d2b8080f6aa53fd7f72fc7e396758aee38e4d5dd68c4e440825018d549cb47">Red</a> = 1
+, <a class="el" href="#ab74d2b8080f6aa53fd7f72fc7e396758a9594eec95be70e7b1710f730fdda33d9">Blue</a> = 2
+ }</td></tr>
+<tr class="separator:ab74d2b8080f6aa53fd7f72fc7e396758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a9d4e4128655f58f1b9e44d810b8dd" id="r_a59a9d4e4128655f58f1b9e44d810b8dd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a> { <a class="el" href="#a59a9d4e4128655f58f1b9e44d810b8dda25a81701fbfa4a1efdf660a950c1d006">White</a> = 0
+, <a class="el" href="#a59a9d4e4128655f58f1b9e44d810b8ddae90dfb84e30edf611e326eeb04d680de">Black</a> = 1
+, <a class="el" href="#a59a9d4e4128655f58f1b9e44d810b8dda64663f4646781c9c0110838b905daa23">Random</a> = 2
+ }</td></tr>
+<tr class="separator:a59a9d4e4128655f58f1b9e44d810b8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a680fe9f481ee48f3b19309dfc818261d" id="r_a680fe9f481ee48f3b19309dfc818261d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a680fe9f481ee48f3b19309dfc818261d">MovementType</a> { <a class="el" href="#a680fe9f481ee48f3b19309dfc818261da6bc362dbf494c61ea117fe3c71ca48a5">Move</a> = 0
+, <a class="el" href="#a680fe9f481ee48f3b19309dfc818261dadcfafcb4323b102c7e204555d313ba0a">Attack</a> = 1
+, <a class="el" href="#a680fe9f481ee48f3b19309dfc818261da364dce30a8b9b040a3938b09d9932a4a">AttackMove</a> = 2
+ }</td></tr>
+<tr class="separator:a680fe9f481ee48f3b19309dfc818261d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56f6ae8945c2b4a779131b4c087e7f73" id="r_a56f6ae8945c2b4a779131b4c087e7f73"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56f6ae8945c2b4a779131b4c087e7f73">AI</a> { <a class="el" href="#a56f6ae8945c2b4a779131b4c087e7f73a972e73b7a882d0802a4e3a16946a2f94">Basic</a> = 0
+, <a class="el" href="#a56f6ae8945c2b4a779131b4c087e7f73abe5dd267794f8f209543995a5461710f">Ensemble</a> = 1
+ }</td></tr>
+<tr class="separator:a56f6ae8945c2b4a779131b4c087e7f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Statické verejné metódy</h2></td></tr>
+<tr class="memitem:af01198010246258000bd54d29388c2ae" id="r_af01198010246258000bd54d29388c2ae"><td class="memItemLeft" align="right" valign="top">static Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af01198010246258000bd54d29388c2ae">GetPieceImage</a> (<a class="el" href="#a5c28d265b562136476b0a7591659b0cf">PieceType</a> type, <a class="el" href="#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a> color, <a class="el" href="#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> essence)</td></tr>
+<tr class="separator:af01198010246258000bd54d29388c2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a11ca0578c5326279a32d7f651d2e7a" id="r_a0a11ca0578c5326279a32d7f651d2e7a"><td class="memItemLeft" align="right" valign="top">static Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a11ca0578c5326279a32d7f651d2e7a">GetMovementImage</a> (<a class="el" href="#a680fe9f481ee48f3b19309dfc818261d">MovementType</a> type)</td></tr>
+<tr class="separator:a0a11ca0578c5326279a32d7f651d2e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailný popis</h2>
+<div class="textblock"><p>Táto trieda slúži podobne ako Common trieda. </p>
+</div><h2 class="groupheader">Dokumentácia k členským enumeráciám</h2>
+<a id="a56f6ae8945c2b4a779131b4c087e7f73" name="a56f6ae8945c2b4a779131b4c087e7f73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56f6ae8945c2b4a779131b4c087e7f73">&#9670;&#160;</a></span>AI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a56f6ae8945c2b4a779131b4c087e7f73">Chess.AI</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enumerátor reprezentujúci typ šachovej inteligencie. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Hodnoty enumerácií</th></tr><tr><td class="fieldname"><a id="a56f6ae8945c2b4a779131b4c087e7f73a972e73b7a882d0802a4e3a16946a2f94" name="a56f6ae8945c2b4a779131b4c087e7f73a972e73b7a882d0802a4e3a16946a2f94"></a>Basic&#160;</td><td class="fielddoc"><p>Základná inteligencia využíva na evaluáciu šachovej pozície ručne nastavenú evaluačnú funkciu. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a56f6ae8945c2b4a779131b4c087e7f73abe5dd267794f8f209543995a5461710f" name="a56f6ae8945c2b4a779131b4c087e7f73abe5dd267794f8f209543995a5461710f"></a>Ensemble&#160;</td><td class="fielddoc"><p>Základná inteligencia využíva na evaluáciu šachovej pozície súbor CNN modelov. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a59a9d4e4128655f58f1b9e44d810b8dd" name="a59a9d4e4128655f58f1b9e44d810b8dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a9d4e4128655f58f1b9e44d810b8dd">&#9670;&#160;</a></span>Color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a59a9d4e4128655f58f1b9e44d810b8dd">Chess.Color</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Farba šachovej figúrky. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Hodnoty enumerácií</th></tr><tr><td class="fieldname"><a id="a59a9d4e4128655f58f1b9e44d810b8dda25a81701fbfa4a1efdf660a950c1d006" name="a59a9d4e4128655f58f1b9e44d810b8dda25a81701fbfa4a1efdf660a950c1d006"></a>White&#160;</td><td class="fielddoc"><p>Biela figúrka. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a59a9d4e4128655f58f1b9e44d810b8ddae90dfb84e30edf611e326eeb04d680de" name="a59a9d4e4128655f58f1b9e44d810b8ddae90dfb84e30edf611e326eeb04d680de"></a>Black&#160;</td><td class="fielddoc"><p>Čierna figúrka. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a59a9d4e4128655f58f1b9e44d810b8dda64663f4646781c9c0110838b905daa23" name="a59a9d4e4128655f58f1b9e44d810b8dda64663f4646781c9c0110838b905daa23"></a>Random&#160;</td><td class="fielddoc"><p>Náhodná figúrka. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ab74d2b8080f6aa53fd7f72fc7e396758" name="ab74d2b8080f6aa53fd7f72fc7e396758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab74d2b8080f6aa53fd7f72fc7e396758">&#9670;&#160;</a></span>Essence</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ab74d2b8080f6aa53fd7f72fc7e396758">Chess.Essence</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enumerátor reprezentujúci esenciu šachovej figúrky </p>
+<table class="fieldtable">
+<tr><th colspan="2">Hodnoty enumerácií</th></tr><tr><td class="fieldname"><a id="ab74d2b8080f6aa53fd7f72fc7e396758ad35b51b639528d580362ca7042de6a0e" name="ab74d2b8080f6aa53fd7f72fc7e396758ad35b51b639528d580362ca7042de6a0e"></a>Classic&#160;</td><td class="fielddoc"><p>Klasická esencia. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab74d2b8080f6aa53fd7f72fc7e396758aee38e4d5dd68c4e440825018d549cb47" name="ab74d2b8080f6aa53fd7f72fc7e396758aee38e4d5dd68c4e440825018d549cb47"></a>Red&#160;</td><td class="fielddoc"><p>Červená esencia. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab74d2b8080f6aa53fd7f72fc7e396758a9594eec95be70e7b1710f730fdda33d9" name="ab74d2b8080f6aa53fd7f72fc7e396758a9594eec95be70e7b1710f730fdda33d9"></a>Blue&#160;</td><td class="fielddoc"><p>Modrá esencia. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a680fe9f481ee48f3b19309dfc818261d" name="a680fe9f481ee48f3b19309dfc818261d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a680fe9f481ee48f3b19309dfc818261d">&#9670;&#160;</a></span>MovementType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a680fe9f481ee48f3b19309dfc818261d">Chess.MovementType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enumerátor reprezentujúci typ mobility. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Hodnoty enumerácií</th></tr><tr><td class="fieldname"><a id="a680fe9f481ee48f3b19309dfc818261da6bc362dbf494c61ea117fe3c71ca48a5" name="a680fe9f481ee48f3b19309dfc818261da6bc362dbf494c61ea117fe3c71ca48a5"></a>Move&#160;</td><td class="fielddoc"><p>Tento pohyb umožňuje len presunúť sa na prázdnu pozíciu. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a680fe9f481ee48f3b19309dfc818261dadcfafcb4323b102c7e204555d313ba0a" name="a680fe9f481ee48f3b19309dfc818261dadcfafcb4323b102c7e204555d313ba0a"></a>Attack&#160;</td><td class="fielddoc"><p>Tento pohyb umožňuje len napadnúť protivníkovu figúrku. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a680fe9f481ee48f3b19309dfc818261da364dce30a8b9b040a3938b09d9932a4a" name="a680fe9f481ee48f3b19309dfc818261da364dce30a8b9b040a3938b09d9932a4a"></a>AttackMove&#160;</td><td class="fielddoc"><p>Tento pohyb umožňuje presunúť sa na prádznu pozíciu a napadnúť protivníkovu figúrku. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5c28d265b562136476b0a7591659b0cf" name="a5c28d265b562136476b0a7591659b0cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c28d265b562136476b0a7591659b0cf">&#9670;&#160;</a></span>PieceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enumerátor reprezentujúci typ šachovej figúrky. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Hodnoty enumerácií</th></tr><tr><td class="fieldname"><a id="a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80" name="a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80"></a>Pawn&#160;</td><td class="fielddoc"><p>Pešiak. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5c28d265b562136476b0a7591659b0cfa8c23b2b86573edf2a5ea482c2ccc1497" name="a5c28d265b562136476b0a7591659b0cfa8c23b2b86573edf2a5ea482c2ccc1497"></a>Knight&#160;</td><td class="fielddoc"><p>Rytier. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5c28d265b562136476b0a7591659b0cfa3aa4584e547efba20238772d4af5c03d" name="a5c28d265b562136476b0a7591659b0cfa3aa4584e547efba20238772d4af5c03d"></a>Bishop&#160;</td><td class="fielddoc"><p>Strelec. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5c28d265b562136476b0a7591659b0cfa1a415f5ae0f891e49d34821a896b4466" name="a5c28d265b562136476b0a7591659b0cfa1a415f5ae0f891e49d34821a896b4466"></a>Rook&#160;</td><td class="fielddoc"><p>Veža. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5c28d265b562136476b0a7591659b0cfa2c2d2c0291163b077a372c2a9c5a6eda" name="a5c28d265b562136476b0a7591659b0cfa2c2d2c0291163b077a372c2a9c5a6eda"></a>Queen&#160;</td><td class="fielddoc"><p>Kráľovná. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5c28d265b562136476b0a7591659b0cfa719ef271d38a388fd7b2bc967f4bd885" name="a5c28d265b562136476b0a7591659b0cfa719ef271d38a388fd7b2bc967f4bd885"></a>King&#160;</td><td class="fielddoc"><p>Kráľ. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k metódam</h2>
+<a id="a0a11ca0578c5326279a32d7f651d2e7a" name="a0a11ca0578c5326279a32d7f651d2e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a11ca0578c5326279a32d7f651d2e7a">&#9670;&#160;</a></span>GetMovementImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Sprite Chess.GetMovementImage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a680fe9f481ee48f3b19309dfc818261d">MovementType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Táto metóda načíta obrázok požadovaného pohybu</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Typ pohybu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Obrázok daného pohybu. </dd></dl>
+
+</div>
+</div>
+<a id="af01198010246258000bd54d29388c2ae" name="af01198010246258000bd54d29388c2ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01198010246258000bd54d29388c2ae">&#9670;&#160;</a></span>GetPieceImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Sprite Chess.GetPieceImage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5c28d265b562136476b0a7591659b0cf">PieceType</a></td>          <td class="paramname"><span class="paramname"><em>type</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a></td>          <td class="paramname"><span class="paramname"><em>color</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a></td>          <td class="paramname"><span class="paramname"><em>essence</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Táto metóda načíta obrázok požadovanej šachovej figúrky.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Typ figúrky. </td></tr>
+    <tr><td class="paramname">color</td><td>Farba figúrky. </td></tr>
+    <tr><td class="paramname">essence</td><td>Esencia figúrky. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Obrázok danej figúrky. </dd></dl>
+
+</div>
+</div>
+<hr/>Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru:<ul>
+<li><a class="el" href="_chess_8cs.html">Chess.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generované programom&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

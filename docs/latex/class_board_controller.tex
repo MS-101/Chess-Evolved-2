@@ -1,0 +1,476 @@
+\doxysection{Dokumentácia triedy Board\+Controller}
+\hypertarget{class_board_controller}{}\label{class_board_controller}\index{BoardController@{BoardController}}
+Diagram dedičnosti pre triedu Board\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_board_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_board_controller_a2df37653e5a50a68a530f4c0f6a6dcee}{Init\+Board}} (bool reversed, \mbox{\hyperlink{class_chess_1_1_game_settings}{Chess.\+Game\+Settings}} game\+Settings)
+\item 
+void \mbox{\hyperlink{class_board_controller_aef023cb8dffab14d2b891b4905182512}{Set\+Ply}} (\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} current\+Ply)
+\item 
+void \mbox{\hyperlink{class_board_controller_a013ae4e05d7251e4b7c851b59150ebb3}{Set\+Check}} ()
+\item 
+void \mbox{\hyperlink{class_board_controller_a47449d1a9523aab11e98ae74befd148a}{Set\+Legal\+Moves}} (List$<$ \mbox{\hyperlink{class_move}{Move}} $>$ legal\+Moves)
+\item 
+\mbox{\hyperlink{class_piece}{Piece}} \mbox{\hyperlink{class_board_controller_a042ff3106cbcfd9e115dd6bc8980d378}{Get\+Piece}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_board_controller_ad59fab4c8888ff566e8c914695374568}{Perform\+Move}} (\mbox{\hyperlink{class_move}{Move}} legal\+Move)
+\item 
+void \mbox{\hyperlink{class_board_controller_aacfe8fc48308de6996d94cc7eb53765c}{Perform\+Promotion}} (\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} promoted\+Piece\+Type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Verejné atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_board_controller_a226d06db9cac4426bdb0f1b597993dae}\label{class_board_controller_a226d06db9cac4426bdb0f1b597993dae} 
+Unity\+Event$<$ \mbox{\hyperlink{class_movement}{Movement}}, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} $>$ {\bfseries on\+Player\+Move} = new()
+\item 
+\Hypertarget{class_board_controller_abc5408b4e665b719f6a1a3cf5b967645}\label{class_board_controller_abc5408b4e665b719f6a1a3cf5b967645} 
+Unity\+Event {\bfseries on\+Promotion\+Requested} = new()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne metódy}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_board_controller_a9225ed91135103ad7b9d846c24328502}{Set\+Board\+Orientation}} (bool reversed)
+\item 
+void \mbox{\hyperlink{class_board_controller_a2cab6f1adfd50ebf4360d45e8b6851a5}{Create\+Initial\+Position}} ()
+\item 
+void \mbox{\hyperlink{class_board_controller_af8eed8157e18d741c1e944e12e191cca}{Clear\+Pieces}} ()
+\item 
+void \mbox{\hyperlink{class_board_controller_a8143e1fc2c827725be7e923b0db6b9df}{Clear\+Ghost}} ()
+\item 
+void \mbox{\hyperlink{class_board_controller_a6c6b19da3c76d6ef431dea7d7c5971b9}{Set\+Ghost}} (\mbox{\hyperlink{class_ghost}{Ghost}} ghost)
+\item 
+void \mbox{\hyperlink{class_board_controller_ae4d94a1c1ca48816b8549c86971d518d}{Clear\+Highlighted\+Square}} ()
+\item 
+void \mbox{\hyperlink{class_board_controller_a5e17f0d7ed41ef2ad46c687ba433e610}{Set\+Highlighted\+Square}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_board_controller_a66cedf5ee33f1df639fa083a8dcbf2a9}{Add\+Piece}} (\mbox{\hyperlink{class_piece}{Piece}} piece, int x, int y)
+\item 
+\mbox{\hyperlink{class_movement}{Movement}} \mbox{\hyperlink{class_board_controller_a79c8832c31278cd8b6698e6af595f1a8}{Move\+Piece}} (\mbox{\hyperlink{class_move}{Move}} move)
+\item 
+\mbox{\hyperlink{class_piece_object}{Piece\+Object}} \mbox{\hyperlink{class_board_controller_aee5ddf6d4f1ee3fe3cb270d9400acc9f}{Get\+Piece\+Object}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_board_controller_aaf6b42b7b122b5b4e6256d898d60bcac}{On\+Piece\+Clicked}} (\mbox{\hyperlink{class_piece}{Piece}} piece)
+\item 
+void \mbox{\hyperlink{class_board_controller_ab002a92da69e88d569ad074d198c4b7a}{Clear\+Movements}} ()
+\item 
+void \mbox{\hyperlink{class_board_controller_ae3ff9f5eb7081a136af27f191d4867eb}{Add\+Movement}} (\mbox{\hyperlink{class_movement}{Movement}} movement)
+\item 
+void \mbox{\hyperlink{class_board_controller_a3a6fc91b90cbaaa60874e37333c494b7}{On\+Movement\+Clicked}} (\mbox{\hyperlink{class_movement}{Movement}} movement)
+\item 
+void \mbox{\hyperlink{class_board_controller_a2484968f6f2b07e729c280136e6a7146}{Move\+Game\+Object}} (Game\+Object game\+Object, int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_board_controller_a36d9ceabbdaff1242e4d4303437ab8f1}\label{class_board_controller_a36d9ceabbdaff1242e4d4303437ab8f1} 
+TMP\+\_\+\+Text {\bfseries top\+Column1}
+\item 
+\Hypertarget{class_board_controller_aac0c748727e40810a3540a5b0702b0cb}\label{class_board_controller_aac0c748727e40810a3540a5b0702b0cb} 
+TMP\+\_\+\+Text {\bfseries top\+Column2}
+\item 
+\Hypertarget{class_board_controller_a6cf395825d81d06f860902e1a51efe2a}\label{class_board_controller_a6cf395825d81d06f860902e1a51efe2a} 
+TMP\+\_\+\+Text {\bfseries top\+Column3}
+\item 
+\Hypertarget{class_board_controller_a02c7df4bed986f4784b7f70a01ee9224}\label{class_board_controller_a02c7df4bed986f4784b7f70a01ee9224} 
+TMP\+\_\+\+Text {\bfseries top\+Column4}
+\item 
+\Hypertarget{class_board_controller_a3e5a5b63b8ab1ccfcce733e3ff83cd0c}\label{class_board_controller_a3e5a5b63b8ab1ccfcce733e3ff83cd0c} 
+TMP\+\_\+\+Text {\bfseries top\+Column5}
+\item 
+\Hypertarget{class_board_controller_a23597f3f1911b885745a982189003fcb}\label{class_board_controller_a23597f3f1911b885745a982189003fcb} 
+TMP\+\_\+\+Text {\bfseries top\+Column6}
+\item 
+\Hypertarget{class_board_controller_a81488b9231a90c2b705f5b0be4d2c0d4}\label{class_board_controller_a81488b9231a90c2b705f5b0be4d2c0d4} 
+TMP\+\_\+\+Text {\bfseries top\+Column7}
+\item 
+\Hypertarget{class_board_controller_a5f5a1dc34edaaf3e84ab6e3cfb01547b}\label{class_board_controller_a5f5a1dc34edaaf3e84ab6e3cfb01547b} 
+TMP\+\_\+\+Text {\bfseries top\+Column8}
+\item 
+\Hypertarget{class_board_controller_abfe8c873599d7e3321c15ae91e0d6e98}\label{class_board_controller_abfe8c873599d7e3321c15ae91e0d6e98} 
+TMP\+\_\+\+Text {\bfseries bottom\+Column1}
+\item 
+\Hypertarget{class_board_controller_a4155784484f5e99ef823a423afc58b81}\label{class_board_controller_a4155784484f5e99ef823a423afc58b81} 
+TMP\+\_\+\+Text {\bfseries bottom\+Column2}
+\item 
+\Hypertarget{class_board_controller_aed31078373d7caea06f15714acf7d2e5}\label{class_board_controller_aed31078373d7caea06f15714acf7d2e5} 
+TMP\+\_\+\+Text {\bfseries bottom\+Column3}
+\item 
+\Hypertarget{class_board_controller_ad4f31d6713e24b4a08df018621acc6a1}\label{class_board_controller_ad4f31d6713e24b4a08df018621acc6a1} 
+TMP\+\_\+\+Text {\bfseries bottom\+Column4}
+\item 
+\Hypertarget{class_board_controller_aa8d2b056e8152c869bfd2abd73b0eff1}\label{class_board_controller_aa8d2b056e8152c869bfd2abd73b0eff1} 
+TMP\+\_\+\+Text {\bfseries bottom\+Column5}
+\item 
+\Hypertarget{class_board_controller_ab5421d8be8ee869fc397f7c8fe6933fd}\label{class_board_controller_ab5421d8be8ee869fc397f7c8fe6933fd} 
+TMP\+\_\+\+Text {\bfseries bottom\+Column6}
+\item 
+\Hypertarget{class_board_controller_a25e90df5802b5f2ec986b63ea99e3319}\label{class_board_controller_a25e90df5802b5f2ec986b63ea99e3319} 
+TMP\+\_\+\+Text {\bfseries bottom\+Column7}
+\item 
+\Hypertarget{class_board_controller_afa3d849b4bf6e94d77a5d03e865350a2}\label{class_board_controller_afa3d849b4bf6e94d77a5d03e865350a2} 
+TMP\+\_\+\+Text {\bfseries bottom\+Column8}
+\item 
+\Hypertarget{class_board_controller_ac17afada187321acfda6b469d7283a47}\label{class_board_controller_ac17afada187321acfda6b469d7283a47} 
+TMP\+\_\+\+Text {\bfseries left\+Row1}
+\item 
+\Hypertarget{class_board_controller_ac5d422949d2bead99aa19c8820401a5b}\label{class_board_controller_ac5d422949d2bead99aa19c8820401a5b} 
+TMP\+\_\+\+Text {\bfseries left\+Row2}
+\item 
+\Hypertarget{class_board_controller_a0c17868aec4e72a7f8e6034692676e61}\label{class_board_controller_a0c17868aec4e72a7f8e6034692676e61} 
+TMP\+\_\+\+Text {\bfseries left\+Row3}
+\item 
+\Hypertarget{class_board_controller_ae875cf62a038d43b7edd26d24a7287c8}\label{class_board_controller_ae875cf62a038d43b7edd26d24a7287c8} 
+TMP\+\_\+\+Text {\bfseries left\+Row4}
+\item 
+\Hypertarget{class_board_controller_a684c85aa75d3cf396bd302aa36355788}\label{class_board_controller_a684c85aa75d3cf396bd302aa36355788} 
+TMP\+\_\+\+Text {\bfseries left\+Row5}
+\item 
+\Hypertarget{class_board_controller_a5cea8bad0abaeb54836b362d2e3dfc60}\label{class_board_controller_a5cea8bad0abaeb54836b362d2e3dfc60} 
+TMP\+\_\+\+Text {\bfseries left\+Row6}
+\item 
+\Hypertarget{class_board_controller_ab77fbc338ec831b6ad6eb10f43f18f3c}\label{class_board_controller_ab77fbc338ec831b6ad6eb10f43f18f3c} 
+TMP\+\_\+\+Text {\bfseries left\+Row7}
+\item 
+\Hypertarget{class_board_controller_a1aeb509fecbe6a71542d60211ca60dfa}\label{class_board_controller_a1aeb509fecbe6a71542d60211ca60dfa} 
+TMP\+\_\+\+Text {\bfseries left\+Row8}
+\item 
+\Hypertarget{class_board_controller_a58dd79876464340c4ee56b0e17bacdea}\label{class_board_controller_a58dd79876464340c4ee56b0e17bacdea} 
+TMP\+\_\+\+Text {\bfseries right\+Row1}
+\item 
+\Hypertarget{class_board_controller_a8dae5ba747125937d7205ace016edb3b}\label{class_board_controller_a8dae5ba747125937d7205ace016edb3b} 
+TMP\+\_\+\+Text {\bfseries right\+Row2}
+\item 
+\Hypertarget{class_board_controller_a55a375844d9ec3241839c9fd803bd448}\label{class_board_controller_a55a375844d9ec3241839c9fd803bd448} 
+TMP\+\_\+\+Text {\bfseries right\+Row3}
+\item 
+\Hypertarget{class_board_controller_aecb41c85f84c367ef1ea2e6ac6fd2011}\label{class_board_controller_aecb41c85f84c367ef1ea2e6ac6fd2011} 
+TMP\+\_\+\+Text {\bfseries right\+Row4}
+\item 
+\Hypertarget{class_board_controller_a834ffd8f71da7a20acfb1b07ff95aa77}\label{class_board_controller_a834ffd8f71da7a20acfb1b07ff95aa77} 
+TMP\+\_\+\+Text {\bfseries right\+Row5}
+\item 
+\Hypertarget{class_board_controller_ae3e9c040b9663b2fc047062f54d0763c}\label{class_board_controller_ae3e9c040b9663b2fc047062f54d0763c} 
+TMP\+\_\+\+Text {\bfseries right\+Row6}
+\item 
+\Hypertarget{class_board_controller_ad102ddb40aaa1b079c2d0285a22e3c8c}\label{class_board_controller_ad102ddb40aaa1b079c2d0285a22e3c8c} 
+TMP\+\_\+\+Text {\bfseries right\+Row7}
+\item 
+\Hypertarget{class_board_controller_ae5d7de6977734726baf0c5c16e0327bc}\label{class_board_controller_ae5d7de6977734726baf0c5c16e0327bc} 
+TMP\+\_\+\+Text {\bfseries right\+Row8}
+\item 
+\Hypertarget{class_board_controller_a6b6e23cb10638c3f27fa5a962821910b}\label{class_board_controller_a6b6e23cb10638c3f27fa5a962821910b} 
+Audio\+Source {\bfseries audio\+Source}
+\item 
+\Hypertarget{class_board_controller_a182ebb6dbd3471511c5fb400f65f2c4b}\label{class_board_controller_a182ebb6dbd3471511c5fb400f65f2c4b} 
+Game\+Object {\bfseries board}
+\item 
+\Hypertarget{class_board_controller_a2df32af71e66c4fe6e79b11de8aba242}\label{class_board_controller_a2df32af71e66c4fe6e79b11de8aba242} 
+bool {\bfseries reversed} = false
+\item 
+\Hypertarget{class_board_controller_a9b66fae4df6dffdd0bf517a959d3d2b5}\label{class_board_controller_a9b66fae4df6dffdd0bf517a959d3d2b5} 
+\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} {\bfseries current\+Ply}
+\item 
+\Hypertarget{class_board_controller_a354f0be2b9678d284d5366b31629662f}\label{class_board_controller_a354f0be2b9678d284d5366b31629662f} 
+\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess.\+Game\+Settings}} {\bfseries game\+Settings}
+\item 
+\Hypertarget{class_board_controller_ac7d7cd8023ca2e6a59cf09751d824e7e}\label{class_board_controller_ac7d7cd8023ca2e6a59cf09751d824e7e} 
+List$<$ \mbox{\hyperlink{class_piece_object}{Piece\+Object}} $>$ {\bfseries piece\+Objects} = new()
+\item 
+\Hypertarget{class_board_controller_af0e843ee9e28135897683410999800d4}\label{class_board_controller_af0e843ee9e28135897683410999800d4} 
+\mbox{\hyperlink{class_ghost_object}{Ghost\+Object}} {\bfseries ghost\+Object} = null
+\item 
+\Hypertarget{class_board_controller_ac8513cd0b0d5214345ebed90a89c903c}\label{class_board_controller_ac8513cd0b0d5214345ebed90a89c903c} 
+Game\+Object {\bfseries highlighted\+Square} = null
+\item 
+\Hypertarget{class_board_controller_a3510e125acd27d508173e58b80cd17b4}\label{class_board_controller_a3510e125acd27d508173e58b80cd17b4} 
+List$<$ \mbox{\hyperlink{class_movement_object}{Movement\+Object}} $>$ {\bfseries movement\+Objects} = new()
+\item 
+\Hypertarget{class_board_controller_aa2b03a96261801b5af7ce1f6f027aa9f}\label{class_board_controller_aa2b03a96261801b5af7ce1f6f027aa9f} 
+\mbox{\hyperlink{class_movement}{Movement}} {\bfseries performed\+Movement} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Táto trieda je zodpovedná za správu šachovnice. 
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_board_controller_ae3ff9f5eb7081a136af27f191d4867eb}\label{class_board_controller_ae3ff9f5eb7081a136af27f191d4867eb} 
+\index{BoardController@{BoardController}!AddMovement@{AddMovement}}
+\index{AddMovement@{AddMovement}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{AddMovement()}{AddMovement()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Add\+Movement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_movement}{Movement}}}]{movement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Do šachovnice sa pridá nový pohyb.
+
+
+\begin{DoxyParams}{Parametre}
+{\em movement} & Vykonaný pohyb. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_a66cedf5ee33f1df639fa083a8dcbf2a9}\label{class_board_controller_a66cedf5ee33f1df639fa083a8dcbf2a9} 
+\index{BoardController@{BoardController}!AddPiece@{AddPiece}}
+\index{AddPiece@{AddPiece}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{AddPiece()}{AddPiece()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Add\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}}}]{piece,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Do šachovnice sa na danú pozíciu pridá nová figúrka.
+
+
+\begin{DoxyParams}{Parametre}
+{\em piece} & Nová figúrka. \\
+\hline
+{\em x} & Koordinát X danej pozície. \\
+\hline
+{\em x} & Koordinát Y danej pozície. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_a8143e1fc2c827725be7e923b0db6b9df}\label{class_board_controller_a8143e1fc2c827725be7e923b0db6b9df} 
+\index{BoardController@{BoardController}!ClearGhost@{ClearGhost}}
+\index{ClearGhost@{ClearGhost}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{ClearGhost()}{ClearGhost()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Clear\+Ghost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Zo šachovnice sa odstráni duch (pre pravidlo En Passant). \Hypertarget{class_board_controller_ae4d94a1c1ca48816b8549c86971d518d}\label{class_board_controller_ae4d94a1c1ca48816b8549c86971d518d} 
+\index{BoardController@{BoardController}!ClearHighlightedSquare@{ClearHighlightedSquare}}
+\index{ClearHighlightedSquare@{ClearHighlightedSquare}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{ClearHighlightedSquare()}{ClearHighlightedSquare()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Clear\+Highlighted\+Square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Zo šachovnice sa odstráni znázornené políčko. \Hypertarget{class_board_controller_ab002a92da69e88d569ad074d198c4b7a}\label{class_board_controller_ab002a92da69e88d569ad074d198c4b7a} 
+\index{BoardController@{BoardController}!ClearMovements@{ClearMovements}}
+\index{ClearMovements@{ClearMovements}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{ClearMovements()}{ClearMovements()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Clear\+Movements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Zo šachovnice sa odstránia všetky pohyby. \Hypertarget{class_board_controller_af8eed8157e18d741c1e944e12e191cca}\label{class_board_controller_af8eed8157e18d741c1e944e12e191cca} 
+\index{BoardController@{BoardController}!ClearPieces@{ClearPieces}}
+\index{ClearPieces@{ClearPieces}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{ClearPieces()}{ClearPieces()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Clear\+Pieces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Zo šachovnice sa odstránia všetky figúrky. \Hypertarget{class_board_controller_a2cab6f1adfd50ebf4360d45e8b6851a5}\label{class_board_controller_a2cab6f1adfd50ebf4360d45e8b6851a5} 
+\index{BoardController@{BoardController}!CreateInitialPosition@{CreateInitialPosition}}
+\index{CreateInitialPosition@{CreateInitialPosition}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{CreateInitialPosition()}{CreateInitialPosition()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Create\+Initial\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Zo šachovnice sa odstránia všetky figúrky a pridajú sa tu nové figúrky na počiatočnú pozíciu. Esencie sú priradené podľa aktuálnej hernej konfigurácie. \Hypertarget{class_board_controller_a042ff3106cbcfd9e115dd6bc8980d378}\label{class_board_controller_a042ff3106cbcfd9e115dd6bc8980d378} 
+\index{BoardController@{BoardController}!GetPiece@{GetPiece}}
+\index{GetPiece@{GetPiece}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{GetPiece()}{GetPiece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_piece}{Piece}} Board\+Controller.\+Get\+Piece (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Na danej pozícii sa vyhľadá figúrka.
+
+
+\begin{DoxyParams}{Parametre}
+{\em x} & Koordinát X danej pozície. \\
+\hline
+{\em y} & Koordinát Y danej pozície. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Nájdená figúrka na danej pozícii. Ak žiadan nebol nájdená tak sa vráti null. 
+\end{DoxyReturn}
+\Hypertarget{class_board_controller_aee5ddf6d4f1ee3fe3cb270d9400acc9f}\label{class_board_controller_aee5ddf6d4f1ee3fe3cb270d9400acc9f} 
+\index{BoardController@{BoardController}!GetPieceObject@{GetPieceObject}}
+\index{GetPieceObject@{GetPieceObject}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{GetPieceObject()}{GetPieceObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_piece_object}{Piece\+Object}} Board\+Controller.\+Get\+Piece\+Object (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Na šachovnici sa nájde objekt figúrky na danej pozícii.
+
+
+\begin{DoxyParams}{Parametre}
+{\em x} & Koordinát X danej pozície. \\
+\hline
+{\em x} & Koordinát Y danej pozície. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Nájdený objekt figúrky. 
+\end{DoxyReturn}
+\Hypertarget{class_board_controller_a2df37653e5a50a68a530f4c0f6a6dcee}\label{class_board_controller_a2df37653e5a50a68a530f4c0f6a6dcee} 
+\index{BoardController@{BoardController}!InitBoard@{InitBoard}}
+\index{InitBoard@{InitBoard}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{InitBoard()}{InitBoard()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Init\+Board (\begin{DoxyParamCaption}\item[{bool}]{reversed,  }\item[{\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess\+::\+Game\+Settings}}}]{game\+Settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Šachovnica sa inicializuje na počiatočnú pozíciu sa danou hernou konfiguráciou a orientáciou.
+
+
+\begin{DoxyParams}{Parametre}
+{\em reversed} & Ak hráč hráč hrá za čierneho hráča, tak šachovnica je obrátená o 180 stupňov. \\
+\hline
+{\em game\+Settings} & Herná konfigurácia. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_a2484968f6f2b07e729c280136e6a7146}\label{class_board_controller_a2484968f6f2b07e729c280136e6a7146} 
+\index{BoardController@{BoardController}!MoveGameObject@{MoveGameObject}}
+\index{MoveGameObject@{MoveGameObject}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{MoveGameObject()}{MoveGameObject()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Move\+Game\+Object (\begin{DoxyParamCaption}\item[{Game\+Object}]{game\+Object,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Generická metóda na presunutie herného objektu na danú pozíciu na šachovnici.
+
+
+\begin{DoxyParams}{Parametre}
+{\em game\+Object} & Presunutý herný objekt. \\
+\hline
+{\em x} & Koordinát X danej pozície. \\
+\hline
+{\em x} & Koordinát Y danej pozície. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_a79c8832c31278cd8b6698e6af595f1a8}\label{class_board_controller_a79c8832c31278cd8b6698e6af595f1a8} 
+\index{BoardController@{BoardController}!MovePiece@{MovePiece}}
+\index{MovePiece@{MovePiece}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{MovePiece()}{MovePiece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_movement}{Movement}} Board\+Controller.\+Move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Na šachovnici sa vykoná daný pohyb.
+
+
+\begin{DoxyParams}{Parametre}
+{\em move} & Vykonaný pohyb. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Vykonaný pohyb spolu s jej figúrkou. 
+\end{DoxyReturn}
+\Hypertarget{class_board_controller_a3a6fc91b90cbaaa60874e37333c494b7}\label{class_board_controller_a3a6fc91b90cbaaa60874e37333c494b7} 
+\index{BoardController@{BoardController}!OnMovementClicked@{OnMovementClicked}}
+\index{OnMovementClicked@{OnMovementClicked}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{OnMovementClicked()}{OnMovementClicked()}}
+{\footnotesize\ttfamily void Board\+Controller.\+On\+Movement\+Clicked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_movement}{Movement}}}]{movement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Po kliknutí na pohyb sa daný pohyb vykoná. Ak došlo k promócii tak sa vyžiada vykonanie promócie pešiaka.
+
+
+\begin{DoxyParams}{Parametre}
+{\em movement} & Vybraný pohyb. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_aaf6b42b7b122b5b4e6256d898d60bcac}\label{class_board_controller_aaf6b42b7b122b5b4e6256d898d60bcac} 
+\index{BoardController@{BoardController}!OnPieceClicked@{OnPieceClicked}}
+\index{OnPieceClicked@{OnPieceClicked}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{OnPieceClicked()}{OnPieceClicked()}}
+{\footnotesize\ttfamily void Board\+Controller.\+On\+Piece\+Clicked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}}}]{piece }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri kliknutí na figúrku sa vymažú všetky aktuálne pohyby a zruší sa výber všetkých figúrok. Ak táto figúrka ešte nebola vybraná tak sa vyberie a znázornia sa jej dostupné pohyby.
+
+
+\begin{DoxyParams}{Parametre}
+{\em piece} & Kliknutá figúrka. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_ad59fab4c8888ff566e8c914695374568}\label{class_board_controller_ad59fab4c8888ff566e8c914695374568} 
+\index{BoardController@{BoardController}!PerformMove@{PerformMove}}
+\index{PerformMove@{PerformMove}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{PerformMove()}{PerformMove()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Perform\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}}]{legal\+Move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Vykoná sa daný pohyb. Vykonaný pohyb sa zapíše do lokálnej premennej
+
+
+\begin{DoxyParams}{Parametre}
+{\em legal\+Move} & Vykonaný pohyb. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_aacfe8fc48308de6996d94cc7eb53765c}\label{class_board_controller_aacfe8fc48308de6996d94cc7eb53765c} 
+\index{BoardController@{BoardController}!PerformPromotion@{PerformPromotion}}
+\index{PerformPromotion@{PerformPromotion}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{PerformPromotion()}{PerformPromotion()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Perform\+Promotion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{promoted\+Piece\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Vykoná sa promócia poslednej pohnutej figúrky.
+
+
+\begin{DoxyParams}{Parametre}
+{\em promoted\+Piece\+Type} & Nový typ figúrky priradený pešiakovi. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_a9225ed91135103ad7b9d846c24328502}\label{class_board_controller_a9225ed91135103ad7b9d846c24328502} 
+\index{BoardController@{BoardController}!SetBoardOrientation@{SetBoardOrientation}}
+\index{SetBoardOrientation@{SetBoardOrientation}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{SetBoardOrientation()}{SetBoardOrientation()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Set\+Board\+Orientation (\begin{DoxyParamCaption}\item[{bool}]{reversed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Táto metóda nastaví orientáciu šachovnice.
+
+
+\begin{DoxyParams}{Parametre}
+{\em reversed} & Ak hráč hráč hrá za čierneho hráča, tak šachovnica je obrátená o 180 stupňov. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_a013ae4e05d7251e4b7c851b59150ebb3}\label{class_board_controller_a013ae4e05d7251e4b7c851b59150ebb3} 
+\index{BoardController@{BoardController}!SetCheck@{SetCheck}}
+\index{SetCheck@{SetCheck}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{SetCheck()}{SetCheck()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Set\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Na šachovnici sa zobrazí napadnutie kráľa s červeným políčkom pre hráča na rade. \Hypertarget{class_board_controller_a6c6b19da3c76d6ef431dea7d7c5971b9}\label{class_board_controller_a6c6b19da3c76d6ef431dea7d7c5971b9} 
+\index{BoardController@{BoardController}!SetGhost@{SetGhost}}
+\index{SetGhost@{SetGhost}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{SetGhost()}{SetGhost()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Set\+Ghost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ghost}{Ghost}}}]{ghost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Na šachovnici sa vytvorí nový duch (pre pravidlo En Passant).
+
+
+\begin{DoxyParams}{Parametre}
+{\em ghost} & Nový duch. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_a5e17f0d7ed41ef2ad46c687ba433e610}\label{class_board_controller_a5e17f0d7ed41ef2ad46c687ba433e610} 
+\index{BoardController@{BoardController}!SetHighlightedSquare@{SetHighlightedSquare}}
+\index{SetHighlightedSquare@{SetHighlightedSquare}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{SetHighlightedSquare()}{SetHighlightedSquare()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Set\+Highlighted\+Square (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Do šachovnice sa na danú pozíciu pridá znázornené políčko.
+
+
+\begin{DoxyParams}{Parametre}
+{\em x} & Koordinát X danej pozície. \\
+\hline
+{\em x} & Koordinát Y danej pozície. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_a47449d1a9523aab11e98ae74befd148a}\label{class_board_controller_a47449d1a9523aab11e98ae74befd148a} 
+\index{BoardController@{BoardController}!SetLegalMoves@{SetLegalMoves}}
+\index{SetLegalMoves@{SetLegalMoves}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{SetLegalMoves()}{SetLegalMoves()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Set\+Legal\+Moves (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_move}{Move}} $>$}]{legal\+Moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Všetkým figúrkam sa odstránia legálne pohyby a priradia sa im nové.
+
+
+\begin{DoxyParams}{Parametre}
+{\em legal\+Moves} & Zoznam legálnych pohybov. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_controller_aef023cb8dffab14d2b891b4905182512}\label{class_board_controller_aef023cb8dffab14d2b891b4905182512} 
+\index{BoardController@{BoardController}!SetPly@{SetPly}}
+\index{SetPly@{SetPly}!BoardController@{BoardController}}
+\doxysubsubsection{\texorpdfstring{SetPly()}{SetPly()}}
+{\footnotesize\ttfamily void Board\+Controller.\+Set\+Ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess\+::\+Color}}}]{current\+Ply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Nastaví sa lokálna premenná akutálneho hráča na rade.
+
+
+\begin{DoxyParams}{Parametre}
+{\em current\+Ply} & Aktuálny hráč na rade. \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_board_controller_8cs}{Board\+Controller.\+cs}}\end{DoxyCompactItemize}

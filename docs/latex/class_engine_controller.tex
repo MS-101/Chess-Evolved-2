@@ -1,0 +1,216 @@
+\doxysection{Dokumentácia triedy Engine\+Controller}
+\hypertarget{class_engine_controller}{}\label{class_engine_controller}\index{EngineController@{EngineController}}
+Diagram dedičnosti pre triedu Engine\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_engine_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_engine_controller_a72747ea068cea74bbfad7a7c1f075d88}{Start\+Engine}} ()
+\item 
+void \mbox{\hyperlink{class_engine_controller_a9d03df5c45791ad5929251bc6ce83883}{Stop\+Engine}} ()
+\item 
+void \mbox{\hyperlink{class_engine_controller_a9d6194a104f24be819ae06fe1dd23e2f}{Start\+Game}} (\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess.\+Game\+Settings}} game\+Settings)
+\item 
+void \mbox{\hyperlink{class_engine_controller_a5d0bfb74d73036599a4a45329f4d4cf8}{Request\+Available\+Moves}} ()
+\item 
+void \mbox{\hyperlink{class_engine_controller_ad4d83d618e1af0a0011e83f90b7942d4}{Request\+Best\+Move}} ()
+\item 
+void \mbox{\hyperlink{class_engine_controller_a411f495ff542f84bfcc4da9e545905b6}{Move\+Piece}} (int x1, int y1, int x2, int y2, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} promoted\+Piece\+Type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Verejné atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine_controller_ac7e84f91315ca14b60da4dcf3f4beb38}\label{class_engine_controller_ac7e84f91315ca14b60da4dcf3f4beb38} 
+string {\bfseries engine\+Name} = string.\+Empty
+\item 
+\Hypertarget{class_engine_controller_acaaf2dab924b771e72e8c5f4cdfd78dc}\label{class_engine_controller_acaaf2dab924b771e72e8c5f4cdfd78dc} 
+string {\bfseries author} = string.\+Empty
+\item 
+\Hypertarget{class_engine_controller_a05f49f2205de5457b6302a455443b67e}\label{class_engine_controller_a05f49f2205de5457b6302a455443b67e} 
+Dictionary$<$ \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}}, Dictionary$<$ \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}}, List$<$ \mbox{\hyperlink{class_mobility}{Mobility}} $>$ $>$ $>$ {\bfseries mobilities} = new()
+\item 
+\Hypertarget{class_engine_controller_a4dd71ac685a7946db531ae4e4fc57d72}\label{class_engine_controller_a4dd71ac685a7946db531ae4e4fc57d72} 
+Unity\+Event$<$ List$<$ \mbox{\hyperlink{class_move}{Move}} $>$ $>$ {\bfseries on\+Legal\+Moves\+Received} = new()
+\item 
+\Hypertarget{class_engine_controller_a12afb7f16bda93b2fecd1a7fad188dc9}\label{class_engine_controller_a12afb7f16bda93b2fecd1a7fad188dc9} 
+Unity\+Event$<$ \mbox{\hyperlink{class_move}{Move}}, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} $>$ {\bfseries on\+Best\+Move\+Received} = new()
+\item 
+\Hypertarget{class_engine_controller_ad7b82d506d6d1c3e2eb42e8df1972177}\label{class_engine_controller_ad7b82d506d6d1c3e2eb42e8df1972177} 
+Unity\+Event$<$ \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} $>$ {\bfseries on\+Result\+Received} = new()
+\item 
+\Hypertarget{class_engine_controller_afdf77b21ca29d39cd54abfde54e01805}\label{class_engine_controller_afdf77b21ca29d39cd54abfde54e01805} 
+Unity\+Event {\bfseries on\+Check\+Received} = new()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne metódy}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_engine_controller_a6e03acb4d7580f3ce69b671e5a273a5e}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_engine_controller_a1cf33bd09c4a83545f04be1cdc1050f7}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_engine_controller_a40ee445355bc26d89bbfff79cea240d2}{On\+Application\+Quit}} ()
+\item 
+void \mbox{\hyperlink{class_engine_controller_a9745a61eb6689dd1ef5081523e4217b2}{Send\+Command}} (string command)
+\item 
+void \mbox{\hyperlink{class_engine_controller_ae390352322b27d97f19ca87d756dca12}{Receive\+Engine\+Responses}} ()
+\item 
+\mbox{\hyperlink{class_move}{Move}} \mbox{\hyperlink{class_engine_controller_aaa023ddea1e21cedf2729aafa3faa426}{Parse\+Move}} (string move)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne atribúty}
+\begin{DoxyCompactItemize}
+\item 
+Process \mbox{\hyperlink{class_engine_controller_a84147599b7e63c5fbdb474f9b3a9f8ab}{engine\+Process}}
+\item 
+\Hypertarget{class_engine_controller_ab3fc5d97e59ba740ddc2244c4ab9efbd}\label{class_engine_controller_ab3fc5d97e59ba740ddc2244c4ab9efbd} 
+\mbox{\hyperlink{class_move}{Move}} {\bfseries received\+Best\+Move} = null
+\item 
+\Hypertarget{class_engine_controller_a4e654cbfb28e89e6c944bafead3ab5fe}\label{class_engine_controller_a4e654cbfb28e89e6c944bafead3ab5fe} 
+\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} {\bfseries promoted\+Piece\+Type} = \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80}{Chess.\+Piece\+Type.\+Pawn}}
+\item 
+\Hypertarget{class_engine_controller_abf3cafa2aeb862caa00e10b970946ac9}\label{class_engine_controller_abf3cafa2aeb862caa00e10b970946ac9} 
+bool {\bfseries unhandled\+Result} = false
+\item 
+\Hypertarget{class_engine_controller_a45fc2000362d0f2ed2a9c9a07976e89e}\label{class_engine_controller_a45fc2000362d0f2ed2a9c9a07976e89e} 
+\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} {\bfseries received\+Result} = \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dda64663f4646781c9c0110838b905daa23}{Chess.\+Color.\+Random}}
+\item 
+\Hypertarget{class_engine_controller_ad6e8f6b21f7ebb2b86942893ec4fee68}\label{class_engine_controller_ad6e8f6b21f7ebb2b86942893ec4fee68} 
+bool {\bfseries received\+Check} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Táto trieda je zodpovedná za komunikáciu s enginom Malakh pomocou UCI protokolu. 
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_engine_controller_a411f495ff542f84bfcc4da9e545905b6}\label{class_engine_controller_a411f495ff542f84bfcc4da9e545905b6} 
+\index{EngineController@{EngineController}!MovePiece@{MovePiece}}
+\index{MovePiece@{MovePiece}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{MovePiece()}{MovePiece()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+Move\+Piece (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{promoted\+Piece\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Enginu prikážeme aby vykonal daný pohyb.
+
+
+\begin{DoxyParams}{Parametre}
+{\em x1} & Koordinát X zdrojovej pozície. \\
+\hline
+{\em y1} & Koordinát Y zdrojovej pozície. \\
+\hline
+{\em x2} & Koordinát X cieľovej pozície. \\
+\hline
+{\em y2} & Koordinát Y cieľovej pozície. \\
+\hline
+{\em promoted\+Piece\+Type} & Typ figúrky na ktorú sa zmení pešiak pri promócii. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_controller_a40ee445355bc26d89bbfff79cea240d2}\label{class_engine_controller_a40ee445355bc26d89bbfff79cea240d2} 
+\index{EngineController@{EngineController}!OnApplicationQuit@{OnApplicationQuit}}
+\index{OnApplicationQuit@{OnApplicationQuit}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{OnApplicationQuit()}{OnApplicationQuit()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+On\+Application\+Quit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri ukončení aplikácie terminuje šachový engine. \Hypertarget{class_engine_controller_aaa023ddea1e21cedf2729aafa3faa426}\label{class_engine_controller_aaa023ddea1e21cedf2729aafa3faa426} 
+\index{EngineController@{EngineController}!ParseMove@{ParseMove}}
+\index{ParseMove@{ParseMove}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{ParseMove()}{ParseMove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_move}{Move}} Engine\+Controller.\+Parse\+Move (\begin{DoxyParamCaption}\item[{string}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+String konvertujeme na pohyb figúrky.
+
+
+\begin{DoxyParams}{Parametre}
+{\em move} & Slovo reprezentujúce pohyb figúrky v algebraickej notácii. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Pohyb figúrky. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_controller_ae390352322b27d97f19ca87d756dca12}\label{class_engine_controller_ae390352322b27d97f19ca87d756dca12} 
+\index{EngineController@{EngineController}!ReceiveEngineResponses@{ReceiveEngineResponses}}
+\index{ReceiveEngineResponses@{ReceiveEngineResponses}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{ReceiveEngineResponses()}{ReceiveEngineResponses()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+Receive\+Engine\+Responses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+V tejto metóde periodicky prijímame a spracuvávame prijaté správy od enginu. \Hypertarget{class_engine_controller_a5d0bfb74d73036599a4a45329f4d4cf8}\label{class_engine_controller_a5d0bfb74d73036599a4a45329f4d4cf8} 
+\index{EngineController@{EngineController}!RequestAvailableMoves@{RequestAvailableMoves}}
+\index{RequestAvailableMoves@{RequestAvailableMoves}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{RequestAvailableMoves()}{RequestAvailableMoves()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+Request\+Available\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Od enginu si vyžiadame všetky dostupné legálne pohyby. \Hypertarget{class_engine_controller_ad4d83d618e1af0a0011e83f90b7942d4}\label{class_engine_controller_ad4d83d618e1af0a0011e83f90b7942d4} 
+\index{EngineController@{EngineController}!RequestBestMove@{RequestBestMove}}
+\index{RequestBestMove@{RequestBestMove}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{RequestBestMove()}{RequestBestMove()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+Request\+Best\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Od enginu si vyžiadame najlepší pohyb. \Hypertarget{class_engine_controller_a9745a61eb6689dd1ef5081523e4217b2}\label{class_engine_controller_a9745a61eb6689dd1ef5081523e4217b2} 
+\index{EngineController@{EngineController}!SendCommand@{SendCommand}}
+\index{SendCommand@{SendCommand}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{SendCommand()}{SendCommand()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+Send\+Command (\begin{DoxyParamCaption}\item[{string}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Generická metóda na odoslanie ľubovoľnej správy enginu. \Hypertarget{class_engine_controller_a6e03acb4d7580f3ce69b671e5a273a5e}\label{class_engine_controller_a6e03acb4d7580f3ce69b671e5a273a5e} 
+\index{EngineController@{EngineController}!Start@{Start}}
+\index{Start@{Start}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri spustení tohto skriptu zapneme engine. \Hypertarget{class_engine_controller_a72747ea068cea74bbfad7a7c1f075d88}\label{class_engine_controller_a72747ea068cea74bbfad7a7c1f075d88} 
+\index{EngineController@{EngineController}!StartEngine@{StartEngine}}
+\index{StartEngine@{StartEngine}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{StartEngine()}{StartEngine()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+Start\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Táto funkcia spustí engine Malakh v UCI režime. \Hypertarget{class_engine_controller_a9d6194a104f24be819ae06fe1dd23e2f}\label{class_engine_controller_a9d6194a104f24be819ae06fe1dd23e2f} 
+\index{EngineController@{EngineController}!StartGame@{StartGame}}
+\index{StartGame@{StartGame}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{StartGame()}{StartGame()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+Start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess\+::\+Game\+Settings}}}]{game\+Settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Hra je spustená s danou hernou konfiguráciou.
+
+game\+Settings Nastavenia novej hry. \Hypertarget{class_engine_controller_a9d03df5c45791ad5929251bc6ce83883}\label{class_engine_controller_a9d03df5c45791ad5929251bc6ce83883} 
+\index{EngineController@{EngineController}!StopEngine@{StopEngine}}
+\index{StopEngine@{StopEngine}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{StopEngine()}{StopEngine()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+Stop\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Táto funkcia terminuje engine pomocou UCI príkazu. \Hypertarget{class_engine_controller_a1cf33bd09c4a83545f04be1cdc1050f7}\label{class_engine_controller_a1cf33bd09c4a83545f04be1cdc1050f7} 
+\index{EngineController@{EngineController}!Update@{Update}}
+\index{Update@{Update}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Engine\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri každej aktualizácii kontrolujeme, či sme nedostali od enginu novú nespracovanú správu. Niektoré operácie musia byť vykonané cez update procedúru a nemôžu byť vykonané priamo. 
+
+\doxysubsection{Dokumentácia k dátovým členom}
+\Hypertarget{class_engine_controller_a84147599b7e63c5fbdb474f9b3a9f8ab}\label{class_engine_controller_a84147599b7e63c5fbdb474f9b3a9f8ab} 
+\index{EngineController@{EngineController}!engineProcess@{engineProcess}}
+\index{engineProcess@{engineProcess}!EngineController@{EngineController}}
+\doxysubsubsection{\texorpdfstring{engineProcess}{engineProcess}}
+{\footnotesize\ttfamily Process Engine\+Controller.\+engine\+Process\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Inicializátor\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ StartInfo\ =\ \textcolor{keyword}{new}()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ FileName\ =\ \textcolor{stringliteral}{"{}Malakh-\/chess-\/engine.exe"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ UseShellExecute\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ RedirectStandardInput\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ RedirectStandardOutput\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ CreateNoWindow\ =\ \textcolor{keyword}{true}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_engine_controller_8cs}{Engine\+Controller.\+cs}}\end{DoxyCompactItemize}

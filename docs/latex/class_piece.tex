@@ -1,0 +1,89 @@
+\doxysection{Dokumentácia triedy Piece}
+\hypertarget{class_piece}{}\label{class_piece}\index{Piece@{Piece}}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_piece_aa87f4c40aace0ef93d1c99334e1ce35e}{Piece}} (\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} \mbox{\hyperlink{class_piece_ade09795f63acae12148a1c3cc47dec3e}{type}}, \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} \mbox{\hyperlink{class_piece_ab89551571247c97fd2627c6cbea6d51f}{color}}, \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}} \mbox{\hyperlink{class_piece_ac52654a9e0f75281b766fe9ee666e222}{essence}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Verejné atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} \mbox{\hyperlink{class_piece_ade09795f63acae12148a1c3cc47dec3e}{type}}
+\item 
+\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} \mbox{\hyperlink{class_piece_ab89551571247c97fd2627c6cbea6d51f}{color}}
+\item 
+\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}} \mbox{\hyperlink{class_piece_ac52654a9e0f75281b766fe9ee666e222}{essence}}
+\item 
+int \mbox{\hyperlink{class_piece_a2053c12793ff4151040cfe7a00296497}{x}} = -\/1
+\item 
+int \mbox{\hyperlink{class_piece_a743880d3d5c8f11950c1742692392322}{y}} = -\/1
+\item 
+List$<$ \mbox{\hyperlink{class_movement}{Movement}} $>$ \mbox{\hyperlink{class_piece_a1a1dd8131b6d01d41ade46d08c025f44}{available\+Moves}} = new()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Táto trieda reprezentuje šachovú figúrku. 
+
+\doxysubsection{Dokumentácia konštruktoru a deštruktoru}
+\Hypertarget{class_piece_aa87f4c40aace0ef93d1c99334e1ce35e}\label{class_piece_aa87f4c40aace0ef93d1c99334e1ce35e} 
+\index{Piece@{Piece}!Piece@{Piece}}
+\index{Piece@{Piece}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{Piece()}{Piece()}}
+{\footnotesize\ttfamily Piece.\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{type,  }\item[{\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess\+::\+Color}}}]{color,  }\item[{\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess\+::\+Essence}}}]{essence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konštruktor figúrky.
+
+
+\begin{DoxyParams}{Parametre}
+{\em type} & Typ figúrky. \\
+\hline
+{\em color} & Farba figúrky. \\
+\hline
+{\em essence} & Esencia figúrky. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentácia k dátovým členom}
+\Hypertarget{class_piece_a1a1dd8131b6d01d41ade46d08c025f44}\label{class_piece_a1a1dd8131b6d01d41ade46d08c025f44} 
+\index{Piece@{Piece}!availableMoves@{availableMoves}}
+\index{availableMoves@{availableMoves}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{availableMoves}{availableMoves}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_movement}{Movement}}$>$ Piece.\+available\+Moves = new()}
+
+Zoznam dostupných pohybov figúrky. \Hypertarget{class_piece_ab89551571247c97fd2627c6cbea6d51f}\label{class_piece_ab89551571247c97fd2627c6cbea6d51f} 
+\index{Piece@{Piece}!color@{color}}
+\index{color@{color}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} Piece.\+color}
+
+Farba šachovej figúrky. \Hypertarget{class_piece_ac52654a9e0f75281b766fe9ee666e222}\label{class_piece_ac52654a9e0f75281b766fe9ee666e222} 
+\index{Piece@{Piece}!essence@{essence}}
+\index{essence@{essence}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{essence}{essence}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}} Piece.\+essence}
+
+Esencia šachovej figúrky. \Hypertarget{class_piece_ade09795f63acae12148a1c3cc47dec3e}\label{class_piece_ade09795f63acae12148a1c3cc47dec3e} 
+\index{Piece@{Piece}!type@{type}}
+\index{type@{type}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} Piece.\+type}
+
+Typ šachovej figúrky. \Hypertarget{class_piece_a2053c12793ff4151040cfe7a00296497}\label{class_piece_a2053c12793ff4151040cfe7a00296497} 
+\index{Piece@{Piece}!x@{x}}
+\index{x@{x}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int Piece.\+x = -\/1}
+
+Koordinát X umiestnenia figúrky na šachovnici. \Hypertarget{class_piece_a743880d3d5c8f11950c1742692392322}\label{class_piece_a743880d3d5c8f11950c1742692392322} 
+\index{Piece@{Piece}!y@{y}}
+\index{y@{y}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int Piece.\+y = -\/1}
+
+Koordinát Y umiestnenia figúrky na šachovnici. 
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_piece_8cs}{Piece.\+cs}}\end{DoxyCompactItemize}

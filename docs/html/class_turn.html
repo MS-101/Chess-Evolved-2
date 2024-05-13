@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess Evolved 2: Dokumentácia triedy Turn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Chess Evolved 2
+   </div>
+   <div id="projectbrief">Grafické rozhranie pre šachový engine Malakh</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generované programom Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hľadať');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítam...</div>
+<div class="SRStatus" id="Searching">Vyhľadávam...</div>
+<div class="SRStatus" id="NoMatches">Nič sa nenašlo</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Verejné metódy</a> &#124;
+<a href="#pub-attribs">Verejné atribúty</a> &#124;
+<a href="#pri-methods">Privátne metódy</a> &#124;
+<a href="class_turn-members.html">Zoznam všetkých členov</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentácia triedy Turn</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Verejné metódy</h2></td></tr>
+<tr class="memitem:ad138ac533f85eacbd23dd7dcd47cf0db" id="r_ad138ac533f85eacbd23dd7dcd47cf0db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad138ac533f85eacbd23dd7dcd47cf0db">Turn</a> (int <a class="el" href="#a0fd6551c4bda1d627c766368607e120f">turnCounter</a>)</td></tr>
+<tr class="separator:ad138ac533f85eacbd23dd7dcd47cf0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab036f47bb9baa01d057fe4277c151d" id="r_a3ab036f47bb9baa01d057fe4277c151d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ab036f47bb9baa01d057fe4277c151d">GetWhitePly</a> ()</td></tr>
+<tr class="separator:a3ab036f47bb9baa01d057fe4277c151d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b9cb96e2c7291a589090a6b54cb0a0" id="r_ae6b9cb96e2c7291a589090a6b54cb0a0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6b9cb96e2c7291a589090a6b54cb0a0">GetBlackPly</a> ()</td></tr>
+<tr class="separator:ae6b9cb96e2c7291a589090a6b54cb0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca03cdb14a18dba3896070a7ec6d60b6" id="r_aca03cdb14a18dba3896070a7ec6d60b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca03cdb14a18dba3896070a7ec6d60b6">SetWhitePly</a> (<a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> <a class="el" href="#a610023a1ab8cbf16d10aa3a220e06cd5">whitePieceType</a>, <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> <a class="el" href="#afbae97a0b4ef07f3486feaf8e6323d3c">whitePromotion</a>, <a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261d">Chess.MovementType</a> <a class="el" href="#a1180b5704eaeabbba113ccafe77f3492">whiteMovementType</a>, <a class="el" href="class_move.html">Move</a> <a class="el" href="#afbb84324c22b5d2274f8d0a2a2eda6ca">whiteMove</a>)</td></tr>
+<tr class="separator:aca03cdb14a18dba3896070a7ec6d60b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2088dfded1c631882085f6ce118e7ada" id="r_a2088dfded1c631882085f6ce118e7ada"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2088dfded1c631882085f6ce118e7ada">SetBlackPly</a> (<a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> <a class="el" href="#ab1b838e853abf35930aef60b7a669c33">blackPieceType</a>, <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> <a class="el" href="#ae8226136dca5bc90eaa7405b661668c6">blackPromotion</a>, <a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261d">Chess.MovementType</a> <a class="el" href="#ac7cf7b748c3e45ea3812335b40a0e90b">blackMovementType</a>, <a class="el" href="class_move.html">Move</a> <a class="el" href="#ab6578ad47d943dfefdd34f16ba3f40f8">blackMove</a>)</td></tr>
+<tr class="separator:a2088dfded1c631882085f6ce118e7ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Verejné atribúty</h2></td></tr>
+<tr class="memitem:a0fd6551c4bda1d627c766368607e120f" id="r_a0fd6551c4bda1d627c766368607e120f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fd6551c4bda1d627c766368607e120f">turnCounter</a></td></tr>
+<tr class="separator:a0fd6551c4bda1d627c766368607e120f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a610023a1ab8cbf16d10aa3a220e06cd5" id="r_a610023a1ab8cbf16d10aa3a220e06cd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a610023a1ab8cbf16d10aa3a220e06cd5">whitePieceType</a> = <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80">Chess.PieceType.Pawn</a></td></tr>
+<tr class="separator:a610023a1ab8cbf16d10aa3a220e06cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbae97a0b4ef07f3486feaf8e6323d3c" id="r_afbae97a0b4ef07f3486feaf8e6323d3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbae97a0b4ef07f3486feaf8e6323d3c">whitePromotion</a> = <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80">Chess.PieceType.Pawn</a></td></tr>
+<tr class="separator:afbae97a0b4ef07f3486feaf8e6323d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1180b5704eaeabbba113ccafe77f3492" id="r_a1180b5704eaeabbba113ccafe77f3492"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261d">Chess.MovementType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1180b5704eaeabbba113ccafe77f3492">whiteMovementType</a> = <a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261da6bc362dbf494c61ea117fe3c71ca48a5">Chess.MovementType.Move</a></td></tr>
+<tr class="separator:a1180b5704eaeabbba113ccafe77f3492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb84324c22b5d2274f8d0a2a2eda6ca" id="r_afbb84324c22b5d2274f8d0a2a2eda6ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_move.html">Move</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbb84324c22b5d2274f8d0a2a2eda6ca">whiteMove</a> = null</td></tr>
+<tr class="separator:afbb84324c22b5d2274f8d0a2a2eda6ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b838e853abf35930aef60b7a669c33" id="r_ab1b838e853abf35930aef60b7a669c33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1b838e853abf35930aef60b7a669c33">blackPieceType</a> = <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80">Chess.PieceType.Pawn</a></td></tr>
+<tr class="separator:ab1b838e853abf35930aef60b7a669c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8226136dca5bc90eaa7405b661668c6" id="r_ae8226136dca5bc90eaa7405b661668c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8226136dca5bc90eaa7405b661668c6">blackPromotion</a> = <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80">Chess.PieceType.Pawn</a></td></tr>
+<tr class="separator:ae8226136dca5bc90eaa7405b661668c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7cf7b748c3e45ea3812335b40a0e90b" id="r_ac7cf7b748c3e45ea3812335b40a0e90b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261d">Chess.MovementType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7cf7b748c3e45ea3812335b40a0e90b">blackMovementType</a> = <a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261da6bc362dbf494c61ea117fe3c71ca48a5">Chess.MovementType.Move</a></td></tr>
+<tr class="separator:ac7cf7b748c3e45ea3812335b40a0e90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6578ad47d943dfefdd34f16ba3f40f8" id="r_ab6578ad47d943dfefdd34f16ba3f40f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_move.html">Move</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6578ad47d943dfefdd34f16ba3f40f8">blackMove</a> = null</td></tr>
+<tr class="separator:ab6578ad47d943dfefdd34f16ba3f40f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Privátne metódy</h2></td></tr>
+<tr class="memitem:a9719b1cd9fe050ea6902cb59ce91af70" id="r_a9719b1cd9fe050ea6902cb59ce91af70"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9719b1cd9fe050ea6902cb59ce91af70">GetPly</a> (<a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> pieceType, <a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261d">Chess.MovementType</a> movementType, <a class="el" href="class_move.html">Move</a> move, <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> promotionType)</td></tr>
+<tr class="separator:a9719b1cd9fe050ea6902cb59ce91af70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailný popis</h2>
+<div class="textblock"><p>Trieda reprezentujúca herný ťah. </p>
+</div><h2 class="groupheader">Dokumentácia konštruktoru a deštruktoru</h2>
+<a id="ad138ac533f85eacbd23dd7dcd47cf0db" name="ad138ac533f85eacbd23dd7dcd47cf0db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad138ac533f85eacbd23dd7dcd47cf0db">&#9670;&#160;</a></span>Turn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Turn.Turn </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>turnCounter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Konštruktor herného ťahu.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">turnCounter</td><td>Poradie herného ťahu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k metódam</h2>
+<a id="ae6b9cb96e2c7291a589090a6b54cb0a0" name="ae6b9cb96e2c7291a589090a6b54cb0a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b9cb96e2c7291a589090a6b54cb0a0">&#9670;&#160;</a></span>GetBlackPly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Turn.GetBlackPly </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Táto metóda vráti string reprezentujúci čierny polťah.</p>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Čierny polťah v algebraickej notácii. </dd></dl>
+
+</div>
+</div>
+<a id="a9719b1cd9fe050ea6902cb59ce91af70" name="a9719b1cd9fe050ea6902cb59ce91af70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9719b1cd9fe050ea6902cb59ce91af70">&#9670;&#160;</a></span>GetPly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Turn.GetPly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess::PieceType</a></td>          <td class="paramname"><span class="paramname"><em>pieceType</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261d">Chess::MovementType</a></td>          <td class="paramname"><span class="paramname"><em>movementType</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_move.html">Move</a></td>          <td class="paramname"><span class="paramname"><em>move</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess::PieceType</a></td>          <td class="paramname"><span class="paramname"><em>promotionType</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Táto metóda vytvorí algebraickú notáciu daného pohybu.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pieceType</td><td>Typ presunutej figúrky. </td></tr>
+    <tr><td class="paramname">movementType</td><td>Typ vykoneného pohybu. </td></tr>
+    <tr><td class="paramname">promotionType</td><td>Typ vykonanej promócie pešiaka. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ab036f47bb9baa01d057fe4277c151d" name="a3ab036f47bb9baa01d057fe4277c151d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab036f47bb9baa01d057fe4277c151d">&#9670;&#160;</a></span>GetWhitePly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Turn.GetWhitePly </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Táto metóda vráti string reprezentujúci biely polťah.</p>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Biely polťah v algebraickej notácii. </dd></dl>
+
+</div>
+</div>
+<a id="a2088dfded1c631882085f6ce118e7ada" name="a2088dfded1c631882085f6ce118e7ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2088dfded1c631882085f6ce118e7ada">&#9670;&#160;</a></span>SetBlackPly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Turn.SetBlackPly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess::PieceType</a></td>          <td class="paramname"><span class="paramname"><em>blackPieceType</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess::PieceType</a></td>          <td class="paramname"><span class="paramname"><em>blackPromotion</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261d">Chess::MovementType</a></td>          <td class="paramname"><span class="paramname"><em>blackMovementType</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_move.html">Move</a></td>          <td class="paramname"><span class="paramname"><em>blackMove</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Táto metóda nastaví čierny polťah.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blackPieceType</td><td>Typ presunutej figúrky. </td></tr>
+    <tr><td class="paramname">blackPromotion</td><td>Promócia pešiaka. </td></tr>
+    <tr><td class="paramname">blackMovementType</td><td>Typ pohybu. </td></tr>
+    <tr><td class="paramname">blackMove</td><td>Vykonaný pohyb </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca03cdb14a18dba3896070a7ec6d60b6" name="aca03cdb14a18dba3896070a7ec6d60b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca03cdb14a18dba3896070a7ec6d60b6">&#9670;&#160;</a></span>SetWhitePly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Turn.SetWhitePly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess::PieceType</a></td>          <td class="paramname"><span class="paramname"><em>whitePieceType</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess::PieceType</a></td>          <td class="paramname"><span class="paramname"><em>whitePromotion</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261d">Chess::MovementType</a></td>          <td class="paramname"><span class="paramname"><em>whiteMovementType</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_move.html">Move</a></td>          <td class="paramname"><span class="paramname"><em>whiteMove</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Táto metóda nastaví biely polťah.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">whitePieceType</td><td>Typ presunutej figúrky. </td></tr>
+    <tr><td class="paramname">whitePromotion</td><td>Promócia pešiaka. </td></tr>
+    <tr><td class="paramname">whiteMovementType</td><td>Typ pohybu. </td></tr>
+    <tr><td class="paramname">whiteMove</td><td>Vykonaný pohyb </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k dátovým členom</h2>
+<a id="ab6578ad47d943dfefdd34f16ba3f40f8" name="ab6578ad47d943dfefdd34f16ba3f40f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6578ad47d943dfefdd34f16ba3f40f8">&#9670;&#160;</a></span>blackMove</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_move.html">Move</a> Turn.blackMove = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vykonaný pohyb čierneho hráča (čierny polťah). </p>
+
+</div>
+</div>
+<a id="ac7cf7b748c3e45ea3812335b40a0e90b" name="ac7cf7b748c3e45ea3812335b40a0e90b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7cf7b748c3e45ea3812335b40a0e90b">&#9670;&#160;</a></span>blackMovementType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261d">Chess.MovementType</a> Turn.blackMovementType = <a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261da6bc362dbf494c61ea117fe3c71ca48a5">Chess.MovementType.Move</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Typ čierneho pohybu (čierny polťah). </p>
+
+</div>
+</div>
+<a id="ab1b838e853abf35930aef60b7a669c33" name="ab1b838e853abf35930aef60b7a669c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1b838e853abf35930aef60b7a669c33">&#9670;&#160;</a></span>blackPieceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> Turn.blackPieceType = <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80">Chess.PieceType.Pawn</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Typ čiernej figúrky (čierny polťah). </p>
+
+</div>
+</div>
+<a id="ae8226136dca5bc90eaa7405b661668c6" name="ae8226136dca5bc90eaa7405b661668c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8226136dca5bc90eaa7405b661668c6">&#9670;&#160;</a></span>blackPromotion</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> Turn.blackPromotion = <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80">Chess.PieceType.Pawn</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Typ čiernej promócie (čierny polťah). </p>
+
+</div>
+</div>
+<a id="a0fd6551c4bda1d627c766368607e120f" name="a0fd6551c4bda1d627c766368607e120f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd6551c4bda1d627c766368607e120f">&#9670;&#160;</a></span>turnCounter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Turn.turnCounter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Poradie ťahu. </p>
+
+</div>
+</div>
+<a id="afbb84324c22b5d2274f8d0a2a2eda6ca" name="afbb84324c22b5d2274f8d0a2a2eda6ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbb84324c22b5d2274f8d0a2a2eda6ca">&#9670;&#160;</a></span>whiteMove</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_move.html">Move</a> Turn.whiteMove = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vykonaný pohyb bieleho hráča (biely polťah). </p>
+
+</div>
+</div>
+<a id="a1180b5704eaeabbba113ccafe77f3492" name="a1180b5704eaeabbba113ccafe77f3492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1180b5704eaeabbba113ccafe77f3492">&#9670;&#160;</a></span>whiteMovementType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261d">Chess.MovementType</a> Turn.whiteMovementType = <a class="el" href="class_chess.html#a680fe9f481ee48f3b19309dfc818261da6bc362dbf494c61ea117fe3c71ca48a5">Chess.MovementType.Move</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Typ bieleho pohybu (biely polťah). </p>
+
+</div>
+</div>
+<a id="a610023a1ab8cbf16d10aa3a220e06cd5" name="a610023a1ab8cbf16d10aa3a220e06cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a610023a1ab8cbf16d10aa3a220e06cd5">&#9670;&#160;</a></span>whitePieceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> Turn.whitePieceType = <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80">Chess.PieceType.Pawn</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Typ bielej figúrky (biely polťah). </p>
+
+</div>
+</div>
+<a id="afbae97a0b4ef07f3486feaf8e6323d3c" name="afbae97a0b4ef07f3486feaf8e6323d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbae97a0b4ef07f3486feaf8e6323d3c">&#9670;&#160;</a></span>whitePromotion</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> Turn.whitePromotion = <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80">Chess.PieceType.Pawn</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Typ bielej promócie (biely polťah). </p>
+
+</div>
+</div>
+<hr/>Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru:<ul>
+<li><a class="el" href="_turn_8cs.html">Turn.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generované programom&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

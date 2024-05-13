@@ -1,3 +1,11 @@
+﻿/*****************************************************************//**
+ * \file   CreateGameOverlay.cs
+ * \brief  Ovládač rozhrania vytvorenia novej hry.
+ * 
+ * \author Martin Šváb
+ * \date   Máj 2024
+ *********************************************************************/
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,6 +13,9 @@ using UnityEngine.Events;
 using System.Collections.Generic;
 using System.Linq;
 
+/**
+ * Táto trieda je zodpovedná za správu rozhrania vytvorenia novej hry.
+ */
 public class CreateGameOverlay : MonoBehaviour
 {
     [SerializeField] private Toggle aiBasicToggle, aiEnsembleToggle;
@@ -81,6 +92,11 @@ public class CreateGameOverlay : MonoBehaviour
         rect.sizeDelta = new(width, height);
     }
 
+    /**
+     * V tomto rozhraní inicializujeme hernú konfiguráciu predošlej hry.
+     * 
+     * \param gameSettings Herná konfigurácia.
+     */
     public void InitializeSettings(Chess.GameSettings gameSettings)
     {
         Chess.AI ai = gameSettings.ai;
@@ -106,6 +122,12 @@ public class CreateGameOverlay : MonoBehaviour
         malakhRookDropdown.SetValueWithoutNotify((int)gameSettings.malakhRook);
     }
 
+    /**
+     * Pri nastavení farby hráča aktualizujeme všetky relevantné hráčove grafické komponenty.
+     * Následne nastavíme farbu Malakha.
+     * 
+     * \param color Nová farba hráča.
+     */
     private void OnPlayerColorSet(Chess.Color color)
     {
         playerPawnDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Pawn, color, Chess.Essence.Classic);
@@ -142,6 +164,12 @@ public class CreateGameOverlay : MonoBehaviour
         }
     }
 
+    /**
+     * Pri nastavení farby Malakha aktualizujeme všetky relevantné hráčove grafické komponenty.
+     * Následne nastavíme farbu hráča.
+     * 
+     * \param color Nová farba Malakha.
+     */
     private void OnMalakhColorSet(Chess.Color color)
     {
         malakhPawnDropdown.options[0].image = Chess.GetPieceImage(Chess.PieceType.Pawn, color, Chess.Essence.Classic);
@@ -178,6 +206,11 @@ public class CreateGameOverlay : MonoBehaviour
         }
     }
 
+    /**
+     * Pri nastavení náhodných figúrok pre hráča nastavíme interaktívnosť výberu esencie pre hráčove figúrky.
+     * 
+     * \param value Ak je hodnota true, tak sú figúrky náhodné. V opačnom prípade je false.
+     */
     private void OnPlayerRandomPiecesToggled(bool value)
     {
         playerPawnDropdown.interactable = !value;
@@ -186,6 +219,11 @@ public class CreateGameOverlay : MonoBehaviour
         playerRookDropdown.interactable = !value;
     }
 
+    /**
+    * Pri nastavení náhodných figúrok pre Malakha nastavíme interaktívnosť výberu esencie pre Malakhove figúrky.
+    * 
+    * \param value Ak je hodnota true, tak sú figúrky náhodné. V opačnom prípade je false.
+    */
     private void OnMalakhRandomPiecesToggled(bool value)
     {
         malakhPawnDropdown.interactable = !value;
@@ -194,11 +232,18 @@ public class CreateGameOverlay : MonoBehaviour
         malakhRookDropdown.interactable = !value;
     }
 
+    /**
+     * Pri stlačení tlačidla vrátenia vymažeme toto rozhranie.
+     */
     private void OnReturnClick()
     {
         Destroy(gameObject);
     }
 
+    /**
+     * Pri stlačení tlačidla spustenia hry sa všetkým poslucháčom odošle informácia o novej hernej konfigurácii (tie spustia novú hru).
+     * Ak boli nastavené náhodné esencie, tak sa tu esencie náhodne vyberú.
+     */
     private void OnPlayClick()
     {
         Random.InitState(System.DateTime.Now.Millisecond);
@@ -262,6 +307,12 @@ public class CreateGameOverlay : MonoBehaviour
     private PieceObject pieceObject;
     private List<MovementObject> movements = new();
 
+    /**
+     * V nápovede sa zobrazí mobilita danej figúrky.
+     * 
+     * \param pieceType Typ figúrky.
+     * \param essence Esencia figúrky.
+     */
     private void SetPieceInfo(Chess.PieceType pieceType, Chess.Essence essence)
     {
         pieceDropdown.SetValueWithoutNotify((int)pieceType);
@@ -316,6 +367,9 @@ public class CreateGameOverlay : MonoBehaviour
         }
     }
 
+    /**
+     * Táto funkcia nastaví lokálna premenná ovládača enginu. Táto trieda je potrebná na čítanie mobilít figúrok.
+     */
     public void SetEngineController(EngineController engineController)
     {
         this.engineController = engineController;

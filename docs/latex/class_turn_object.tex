@@ -1,0 +1,98 @@
+\doxysection{Dokumentácia triedy Turn\+Object}
+\hypertarget{class_turn_object}{}\label{class_turn_object}\index{TurnObject@{TurnObject}}
+Diagram dedičnosti pre triedu Turn\+Object\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_turn_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_turn_object_a19b9a5390c02d8306ecb249991d158df}{Update\+White\+Ply}} (\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} piece\+Type, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} piece\+Promotion, \mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Chess.\+Movement\+Type}} movement\+Type, \mbox{\hyperlink{class_move}{Move}} move)
+\item 
+void \mbox{\hyperlink{class_turn_object_a7eabf2698540dd4b21779c01b7e446d5}{Update\+Black\+Ply}} (\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} piece\+Type, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} piece\+Promotion, \mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Chess.\+Movement\+Type}} movement\+Type, \mbox{\hyperlink{class_move}{Move}} move)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Vlastnosti}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn}{Turn}} \mbox{\hyperlink{class_turn_object_aa686cf86842f4065e4c3e31292380879}{My\+Turn}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne metódy}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_turn_object_a1eff03af2f96432aeaeb4c82fd8c261f}{Update\+Displayed\+Text}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_object_aa748f7b35965aa8a0edaee7bf3e3c2c8}\label{class_turn_object_aa748f7b35965aa8a0edaee7bf3e3c2c8} 
+TMP\+\_\+\+Text {\bfseries display}
+\item 
+\Hypertarget{class_turn_object_a893ca246e658bbabc82a9bd4b7504cf5}\label{class_turn_object_a893ca246e658bbabc82a9bd4b7504cf5} 
+\mbox{\hyperlink{class_turn}{Turn}} {\bfseries my\+Turn} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Táto trieda spravuje objekt herného ťahu. 
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_turn_object_a7eabf2698540dd4b21779c01b7e446d5}\label{class_turn_object_a7eabf2698540dd4b21779c01b7e446d5} 
+\index{TurnObject@{TurnObject}!UpdateBlackPly@{UpdateBlackPly}}
+\index{UpdateBlackPly@{UpdateBlackPly}!TurnObject@{TurnObject}}
+\doxysubsubsection{\texorpdfstring{UpdateBlackPly()}{UpdateBlackPly()}}
+{\footnotesize\ttfamily void Turn\+Object.\+Update\+Black\+Ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{piece\+Type,  }\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{piece\+Promotion,  }\item[{\mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Chess\+::\+Movement\+Type}}}]{movement\+Type,  }\item[{\mbox{\hyperlink{class_move}{Move}}}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Upravíme čierny polťah herného ťahu.
+
+
+\begin{DoxyParams}{Parametre}
+{\em piece\+Type} & Typ pohnutej figúrky. \\
+\hline
+{\em piece\+Promotion} & Promócia pešiaka. \\
+\hline
+{\em movement\+Type} & Typ pohybu. \\
+\hline
+{\em move} & Vykonaný pohyb. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_object_a1eff03af2f96432aeaeb4c82fd8c261f}\label{class_turn_object_a1eff03af2f96432aeaeb4c82fd8c261f} 
+\index{TurnObject@{TurnObject}!UpdateDisplayedText@{UpdateDisplayedText}}
+\index{UpdateDisplayedText@{UpdateDisplayedText}!TurnObject@{TurnObject}}
+\doxysubsubsection{\texorpdfstring{UpdateDisplayedText()}{UpdateDisplayedText()}}
+{\footnotesize\ttfamily void Turn\+Object.\+Update\+Displayed\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Aktualizujeme zobrazený text herného ťahu. Herný ťah ma formát\+: @turn\+Counter. @white\+Ply @black\+Ply \Hypertarget{class_turn_object_a19b9a5390c02d8306ecb249991d158df}\label{class_turn_object_a19b9a5390c02d8306ecb249991d158df} 
+\index{TurnObject@{TurnObject}!UpdateWhitePly@{UpdateWhitePly}}
+\index{UpdateWhitePly@{UpdateWhitePly}!TurnObject@{TurnObject}}
+\doxysubsubsection{\texorpdfstring{UpdateWhitePly()}{UpdateWhitePly()}}
+{\footnotesize\ttfamily void Turn\+Object.\+Update\+White\+Ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{piece\+Type,  }\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{piece\+Promotion,  }\item[{\mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Chess\+::\+Movement\+Type}}}]{movement\+Type,  }\item[{\mbox{\hyperlink{class_move}{Move}}}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Upravíme biely polťah herného ťahu.
+
+
+\begin{DoxyParams}{Parametre}
+{\em piece\+Type} & Typ pohnutej figúrky. \\
+\hline
+{\em piece\+Promotion} & Promócia pešiaka. \\
+\hline
+{\em movement\+Type} & Typ pohybu. \\
+\hline
+{\em move} & Vykonaný pohyb. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentácia k vlastnosti}
+\Hypertarget{class_turn_object_aa686cf86842f4065e4c3e31292380879}\label{class_turn_object_aa686cf86842f4065e4c3e31292380879} 
+\index{TurnObject@{TurnObject}!MyTurn@{MyTurn}}
+\index{MyTurn@{MyTurn}!TurnObject@{TurnObject}}
+\doxysubsubsection{\texorpdfstring{MyTurn}{MyTurn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn}{Turn}} Turn\+Object.\+My\+Turn\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Herný ťah priradený tomuto objektu. Ak ho zmeníme, tak sa aktualizuje zobrazený text. 
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_turn_object_8cs}{Turn\+Object.\+cs}}\end{DoxyCompactItemize}

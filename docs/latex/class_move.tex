@@ -1,0 +1,174 @@
+\doxysection{Dokumentácia triedy Move}
+\hypertarget{class_move}{}\label{class_move}\index{Move@{Move}}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_move_aa07c79184490842de077386e0ebb0f9b}{Move}} (int \mbox{\hyperlink{class_move_a9089aa896901561d17b81dadd14d92ff}{x1}}, int \mbox{\hyperlink{class_move_a2573db986b7d56576e797515b65e2698}{y1}}, int \mbox{\hyperlink{class_move_addda9e090b792029711d06d8015fdca9}{x2}}, int \mbox{\hyperlink{class_move_a7eb80c74ec0c6c55d11c7faf0d70e3ae}{y2}})
+\item 
+\mbox{\hyperlink{class_move_af88ef3d0b96d0628774a630b4f3c3e0e}{Move}} (\mbox{\hyperlink{_move_8cs_ac663d85beab039663f297c3992360793}{Castling}} \mbox{\hyperlink{class_move_a64293a21a5b33033ca9e4b70dd6056ef}{castling}})
+\item 
+void \mbox{\hyperlink{class_move_a33b0c62cd9dee92b182d412651663c41}{Set\+Hasty}} (int \mbox{\hyperlink{class_move_abc796968316e71e4da7304911df0c252}{hastyX}}, int \mbox{\hyperlink{class_move_a46fdbdb85e1373def5e5e878d1b1bc8f}{hastyY}})
+\item 
+void \mbox{\hyperlink{class_move_a7f9a04e2e5a25ebdee7cc20eadd5cace}{Clear\+Hasty}} ()
+\item 
+void \mbox{\hyperlink{class_move_a04041fbadd2296d2b96ead6ad363d1db}{Set\+Vigilant}} ()
+\item 
+void \mbox{\hyperlink{class_move_ad38adf9b8b474d19a25413947631e103}{Clear\+Vigilant}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Verejné atribúty}
+\begin{DoxyCompactItemize}
+\item 
+readonly int \mbox{\hyperlink{class_move_a9089aa896901561d17b81dadd14d92ff}{x1}}
+\item 
+readonly int \mbox{\hyperlink{class_move_a2573db986b7d56576e797515b65e2698}{y1}}
+\item 
+readonly int \mbox{\hyperlink{class_move_addda9e090b792029711d06d8015fdca9}{x2}}
+\item 
+readonly int \mbox{\hyperlink{class_move_a7eb80c74ec0c6c55d11c7faf0d70e3ae}{y2}}
+\item 
+bool \mbox{\hyperlink{class_move_ab2ac4dbc094ef11d16f8c076b84d0b8f}{hasty}} = false
+\item 
+bool \mbox{\hyperlink{class_move_a5a3cfc24dcf0fbb31330728083dc7106}{vigilant}} = false
+\item 
+int \mbox{\hyperlink{class_move_abc796968316e71e4da7304911df0c252}{hastyX}}
+\item 
+int \mbox{\hyperlink{class_move_a46fdbdb85e1373def5e5e878d1b1bc8f}{hastyY}}
+\item 
+readonly \mbox{\hyperlink{_move_8cs_ac663d85beab039663f297c3992360793}{Castling}} \mbox{\hyperlink{class_move_a64293a21a5b33033ca9e4b70dd6056ef}{castling}} = \mbox{\hyperlink{_move_8cs_ac663d85beab039663f297c3992360793a6adf97f83acf6453d4a6a4b1070f3754}{Castling.\+None}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Trieda reprezentujúca pohyb na šachovnici. 
+
+\doxysubsection{Dokumentácia konštruktoru a deštruktoru}
+\Hypertarget{class_move_aa07c79184490842de077386e0ebb0f9b}\label{class_move_aa07c79184490842de077386e0ebb0f9b} 
+\index{Move@{Move}!Move@{Move}}
+\index{Move@{Move}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Move.\+Move (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konštruktor normálneho pohybu na šachovnici.
+
+
+\begin{DoxyParams}{Parametre}
+{\em x1} & Koordinát X počiatočnej pozície. \\
+\hline
+{\em y1} & Koordinát Y počiatočnej pozície. \\
+\hline
+{\em x2} & Koordinát X cieľovej pozície. \\
+\hline
+{\em y2} & Koordinát Y cieľovej pozície. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_move_af88ef3d0b96d0628774a630b4f3c3e0e}\label{class_move_af88ef3d0b96d0628774a630b4f3c3e0e} 
+\index{Move@{Move}!Move@{Move}}
+\index{Move@{Move}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Move.\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_move_8cs_ac663d85beab039663f297c3992360793}{Castling}}}]{castling }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konštruktor rošády.
+
+
+\begin{DoxyParams}{Parametre}
+{\em castling} & Typ rošády. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_move_a7f9a04e2e5a25ebdee7cc20eadd5cace}\label{class_move_a7f9a04e2e5a25ebdee7cc20eadd5cace} 
+\index{Move@{Move}!ClearHasty@{ClearHasty}}
+\index{ClearHasty@{ClearHasty}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{ClearHasty()}{ClearHasty()}}
+{\footnotesize\ttfamily void Move.\+Clear\+Hasty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Zrušenie hasty flagu. \Hypertarget{class_move_ad38adf9b8b474d19a25413947631e103}\label{class_move_ad38adf9b8b474d19a25413947631e103} 
+\index{Move@{Move}!ClearVigilant@{ClearVigilant}}
+\index{ClearVigilant@{ClearVigilant}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{ClearVigilant()}{ClearVigilant()}}
+{\footnotesize\ttfamily void Move.\+Clear\+Vigilant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Zrušenie vigilant flagu. \Hypertarget{class_move_a33b0c62cd9dee92b182d412651663c41}\label{class_move_a33b0c62cd9dee92b182d412651663c41} 
+\index{Move@{Move}!SetHasty@{SetHasty}}
+\index{SetHasty@{SetHasty}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{SetHasty()}{SetHasty()}}
+{\footnotesize\ttfamily void Move.\+Set\+Hasty (\begin{DoxyParamCaption}\item[{int}]{hastyX,  }\item[{int}]{hastyY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Nastavenie hasty flagu.
+
+
+\begin{DoxyParams}{Parametre}
+{\em hastyX} & Koordinát X vytvoreného ducha. \\
+\hline
+{\em hastyY} & Koordinát Y vytvoreného ducha. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_move_a04041fbadd2296d2b96ead6ad363d1db}\label{class_move_a04041fbadd2296d2b96ead6ad363d1db} 
+\index{Move@{Move}!SetVigilant@{SetVigilant}}
+\index{SetVigilant@{SetVigilant}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{SetVigilant()}{SetVigilant()}}
+{\footnotesize\ttfamily void Move.\+Set\+Vigilant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Nastavenie vigilant flagu. 
+
+\doxysubsection{Dokumentácia k dátovým členom}
+\Hypertarget{class_move_a64293a21a5b33033ca9e4b70dd6056ef}\label{class_move_a64293a21a5b33033ca9e4b70dd6056ef} 
+\index{Move@{Move}!castling@{castling}}
+\index{castling@{castling}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{castling}{castling}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{_move_8cs_ac663d85beab039663f297c3992360793}{Castling}} Move.\+castling = \mbox{\hyperlink{_move_8cs_ac663d85beab039663f297c3992360793a6adf97f83acf6453d4a6a4b1070f3754}{Castling.\+None}}}
+
+Typ rošády. \Hypertarget{class_move_ab2ac4dbc094ef11d16f8c076b84d0b8f}\label{class_move_ab2ac4dbc094ef11d16f8c076b84d0b8f} 
+\index{Move@{Move}!hasty@{hasty}}
+\index{hasty@{hasty}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{hasty}{hasty}}
+{\footnotesize\ttfamily bool Move.\+hasty = false}
+
+Hasty flag pohybu (pohyb vytvorí ducha). \Hypertarget{class_move_abc796968316e71e4da7304911df0c252}\label{class_move_abc796968316e71e4da7304911df0c252} 
+\index{Move@{Move}!hastyX@{hastyX}}
+\index{hastyX@{hastyX}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{hastyX}{hastyX}}
+{\footnotesize\ttfamily int Move.\+hastyX}
+
+Koordinát X vytvoreného ducha. \Hypertarget{class_move_a46fdbdb85e1373def5e5e878d1b1bc8f}\label{class_move_a46fdbdb85e1373def5e5e878d1b1bc8f} 
+\index{Move@{Move}!hastyY@{hastyY}}
+\index{hastyY@{hastyY}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{hastyY}{hastyY}}
+{\footnotesize\ttfamily int Move.\+hastyY}
+
+Koordinát Y vytvoreného ducha. \Hypertarget{class_move_a5a3cfc24dcf0fbb31330728083dc7106}\label{class_move_a5a3cfc24dcf0fbb31330728083dc7106} 
+\index{Move@{Move}!vigilant@{vigilant}}
+\index{vigilant@{vigilant}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{vigilant}{vigilant}}
+{\footnotesize\ttfamily bool Move.\+vigilant = false}
+
+Vigilant flag pohybu (pohyb môže napadnúť ducha). \Hypertarget{class_move_a9089aa896901561d17b81dadd14d92ff}\label{class_move_a9089aa896901561d17b81dadd14d92ff} 
+\index{Move@{Move}!x1@{x1}}
+\index{x1@{x1}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{x1}{x1}}
+{\footnotesize\ttfamily readonly int Move.\+x1}
+
+Koordinát X zdrojovej pozície. \Hypertarget{class_move_addda9e090b792029711d06d8015fdca9}\label{class_move_addda9e090b792029711d06d8015fdca9} 
+\index{Move@{Move}!x2@{x2}}
+\index{x2@{x2}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{x2}{x2}}
+{\footnotesize\ttfamily readonly int Move.\+x2}
+
+Koordinát X cieľovej pozície. \Hypertarget{class_move_a2573db986b7d56576e797515b65e2698}\label{class_move_a2573db986b7d56576e797515b65e2698} 
+\index{Move@{Move}!y1@{y1}}
+\index{y1@{y1}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{y1}{y1}}
+{\footnotesize\ttfamily readonly int Move.\+y1}
+
+Koordinát Y zdrojovej pozície. \Hypertarget{class_move_a7eb80c74ec0c6c55d11c7faf0d70e3ae}\label{class_move_a7eb80c74ec0c6c55d11c7faf0d70e3ae} 
+\index{Move@{Move}!y2@{y2}}
+\index{y2@{y2}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{y2}{y2}}
+{\footnotesize\ttfamily readonly int Move.\+y2}
+
+Koordinát Y cieľovej pozície. 
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_move_8cs}{Move.\+cs}}\end{DoxyCompactItemize}

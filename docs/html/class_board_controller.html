@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess Evolved 2: Dokumentácia triedy BoardController</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Chess Evolved 2
+   </div>
+   <div id="projectbrief">Grafické rozhranie pre šachový engine Malakh</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generované programom Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hľadať');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítam...</div>
+<div class="SRStatus" id="Searching">Vyhľadávam...</div>
+<div class="SRStatus" id="NoMatches">Nič sa nenašlo</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Verejné metódy</a> &#124;
+<a href="#pub-attribs">Verejné atribúty</a> &#124;
+<a href="#pri-methods">Privátne metódy</a> &#124;
+<a href="#pri-attribs">Privátne atribúty</a> &#124;
+<a href="class_board_controller-members.html">Zoznam všetkých členov</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentácia triedy BoardController</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Diagram dedičnosti pre triedu BoardController</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_board_controller.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Verejné metódy</h2></td></tr>
+<tr class="memitem:a2df37653e5a50a68a530f4c0f6a6dcee" id="r_a2df37653e5a50a68a530f4c0f6a6dcee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2df37653e5a50a68a530f4c0f6a6dcee">InitBoard</a> (bool reversed, <a class="el" href="class_chess_1_1_game_settings.html">Chess.GameSettings</a> gameSettings)</td></tr>
+<tr class="separator:a2df37653e5a50a68a530f4c0f6a6dcee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef023cb8dffab14d2b891b4905182512" id="r_aef023cb8dffab14d2b891b4905182512"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef023cb8dffab14d2b891b4905182512">SetPly</a> (<a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Chess.Color</a> currentPly)</td></tr>
+<tr class="separator:aef023cb8dffab14d2b891b4905182512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a013ae4e05d7251e4b7c851b59150ebb3" id="r_a013ae4e05d7251e4b7c851b59150ebb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a013ae4e05d7251e4b7c851b59150ebb3">SetCheck</a> ()</td></tr>
+<tr class="separator:a013ae4e05d7251e4b7c851b59150ebb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47449d1a9523aab11e98ae74befd148a" id="r_a47449d1a9523aab11e98ae74befd148a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47449d1a9523aab11e98ae74befd148a">SetLegalMoves</a> (List&lt; <a class="el" href="class_move.html">Move</a> &gt; legalMoves)</td></tr>
+<tr class="separator:a47449d1a9523aab11e98ae74befd148a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042ff3106cbcfd9e115dd6bc8980d378" id="r_a042ff3106cbcfd9e115dd6bc8980d378"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_piece.html">Piece</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a042ff3106cbcfd9e115dd6bc8980d378">GetPiece</a> (int x, int y)</td></tr>
+<tr class="separator:a042ff3106cbcfd9e115dd6bc8980d378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad59fab4c8888ff566e8c914695374568" id="r_ad59fab4c8888ff566e8c914695374568"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad59fab4c8888ff566e8c914695374568">PerformMove</a> (<a class="el" href="class_move.html">Move</a> legalMove)</td></tr>
+<tr class="separator:ad59fab4c8888ff566e8c914695374568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacfe8fc48308de6996d94cc7eb53765c" id="r_aacfe8fc48308de6996d94cc7eb53765c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacfe8fc48308de6996d94cc7eb53765c">PerformPromotion</a> (<a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> promotedPieceType)</td></tr>
+<tr class="separator:aacfe8fc48308de6996d94cc7eb53765c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Verejné atribúty</h2></td></tr>
+<tr class="memitem:a226d06db9cac4426bdb0f1b597993dae" id="r_a226d06db9cac4426bdb0f1b597993dae"><td class="memItemLeft" align="right" valign="top"><a id="a226d06db9cac4426bdb0f1b597993dae" name="a226d06db9cac4426bdb0f1b597993dae"></a>
+UnityEvent&lt; <a class="el" href="class_movement.html">Movement</a>, <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onPlayerMove</b> = new()</td></tr>
+<tr class="separator:a226d06db9cac4426bdb0f1b597993dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5408b4e665b719f6a1a3cf5b967645" id="r_abc5408b4e665b719f6a1a3cf5b967645"><td class="memItemLeft" align="right" valign="top"><a id="abc5408b4e665b719f6a1a3cf5b967645" name="abc5408b4e665b719f6a1a3cf5b967645"></a>
+UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><b>onPromotionRequested</b> = new()</td></tr>
+<tr class="separator:abc5408b4e665b719f6a1a3cf5b967645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Privátne metódy</h2></td></tr>
+<tr class="memitem:a9225ed91135103ad7b9d846c24328502" id="r_a9225ed91135103ad7b9d846c24328502"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9225ed91135103ad7b9d846c24328502">SetBoardOrientation</a> (bool reversed)</td></tr>
+<tr class="separator:a9225ed91135103ad7b9d846c24328502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cab6f1adfd50ebf4360d45e8b6851a5" id="r_a2cab6f1adfd50ebf4360d45e8b6851a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cab6f1adfd50ebf4360d45e8b6851a5">CreateInitialPosition</a> ()</td></tr>
+<tr class="separator:a2cab6f1adfd50ebf4360d45e8b6851a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8eed8157e18d741c1e944e12e191cca" id="r_af8eed8157e18d741c1e944e12e191cca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8eed8157e18d741c1e944e12e191cca">ClearPieces</a> ()</td></tr>
+<tr class="separator:af8eed8157e18d741c1e944e12e191cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8143e1fc2c827725be7e923b0db6b9df" id="r_a8143e1fc2c827725be7e923b0db6b9df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8143e1fc2c827725be7e923b0db6b9df">ClearGhost</a> ()</td></tr>
+<tr class="separator:a8143e1fc2c827725be7e923b0db6b9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6b19da3c76d6ef431dea7d7c5971b9" id="r_a6c6b19da3c76d6ef431dea7d7c5971b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c6b19da3c76d6ef431dea7d7c5971b9">SetGhost</a> (<a class="el" href="class_ghost.html">Ghost</a> ghost)</td></tr>
+<tr class="separator:a6c6b19da3c76d6ef431dea7d7c5971b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d94a1c1ca48816b8549c86971d518d" id="r_ae4d94a1c1ca48816b8549c86971d518d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4d94a1c1ca48816b8549c86971d518d">ClearHighlightedSquare</a> ()</td></tr>
+<tr class="separator:ae4d94a1c1ca48816b8549c86971d518d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e17f0d7ed41ef2ad46c687ba433e610" id="r_a5e17f0d7ed41ef2ad46c687ba433e610"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e17f0d7ed41ef2ad46c687ba433e610">SetHighlightedSquare</a> (int x, int y)</td></tr>
+<tr class="separator:a5e17f0d7ed41ef2ad46c687ba433e610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66cedf5ee33f1df639fa083a8dcbf2a9" id="r_a66cedf5ee33f1df639fa083a8dcbf2a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66cedf5ee33f1df639fa083a8dcbf2a9">AddPiece</a> (<a class="el" href="class_piece.html">Piece</a> piece, int x, int y)</td></tr>
+<tr class="separator:a66cedf5ee33f1df639fa083a8dcbf2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79c8832c31278cd8b6698e6af595f1a8" id="r_a79c8832c31278cd8b6698e6af595f1a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_movement.html">Movement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79c8832c31278cd8b6698e6af595f1a8">MovePiece</a> (<a class="el" href="class_move.html">Move</a> move)</td></tr>
+<tr class="separator:a79c8832c31278cd8b6698e6af595f1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5ddf6d4f1ee3fe3cb270d9400acc9f" id="r_aee5ddf6d4f1ee3fe3cb270d9400acc9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_piece_object.html">PieceObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee5ddf6d4f1ee3fe3cb270d9400acc9f">GetPieceObject</a> (int x, int y)</td></tr>
+<tr class="separator:aee5ddf6d4f1ee3fe3cb270d9400acc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf6b42b7b122b5b4e6256d898d60bcac" id="r_aaf6b42b7b122b5b4e6256d898d60bcac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf6b42b7b122b5b4e6256d898d60bcac">OnPieceClicked</a> (<a class="el" href="class_piece.html">Piece</a> piece)</td></tr>
+<tr class="separator:aaf6b42b7b122b5b4e6256d898d60bcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab002a92da69e88d569ad074d198c4b7a" id="r_ab002a92da69e88d569ad074d198c4b7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab002a92da69e88d569ad074d198c4b7a">ClearMovements</a> ()</td></tr>
+<tr class="separator:ab002a92da69e88d569ad074d198c4b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3ff9f5eb7081a136af27f191d4867eb" id="r_ae3ff9f5eb7081a136af27f191d4867eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3ff9f5eb7081a136af27f191d4867eb">AddMovement</a> (<a class="el" href="class_movement.html">Movement</a> movement)</td></tr>
+<tr class="separator:ae3ff9f5eb7081a136af27f191d4867eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a6fc91b90cbaaa60874e37333c494b7" id="r_a3a6fc91b90cbaaa60874e37333c494b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a6fc91b90cbaaa60874e37333c494b7">OnMovementClicked</a> (<a class="el" href="class_movement.html">Movement</a> movement)</td></tr>
+<tr class="separator:a3a6fc91b90cbaaa60874e37333c494b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2484968f6f2b07e729c280136e6a7146" id="r_a2484968f6f2b07e729c280136e6a7146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2484968f6f2b07e729c280136e6a7146">MoveGameObject</a> (GameObject gameObject, int x, int y)</td></tr>
+<tr class="separator:a2484968f6f2b07e729c280136e6a7146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Privátne atribúty</h2></td></tr>
+<tr class="memitem:a36d9ceabbdaff1242e4d4303437ab8f1" id="r_a36d9ceabbdaff1242e4d4303437ab8f1"><td class="memItemLeft" align="right" valign="top"><a id="a36d9ceabbdaff1242e4d4303437ab8f1" name="a36d9ceabbdaff1242e4d4303437ab8f1"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>topColumn1</b></td></tr>
+<tr class="separator:a36d9ceabbdaff1242e4d4303437ab8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0c748727e40810a3540a5b0702b0cb" id="r_aac0c748727e40810a3540a5b0702b0cb"><td class="memItemLeft" align="right" valign="top"><a id="aac0c748727e40810a3540a5b0702b0cb" name="aac0c748727e40810a3540a5b0702b0cb"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>topColumn2</b></td></tr>
+<tr class="separator:aac0c748727e40810a3540a5b0702b0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf395825d81d06f860902e1a51efe2a" id="r_a6cf395825d81d06f860902e1a51efe2a"><td class="memItemLeft" align="right" valign="top"><a id="a6cf395825d81d06f860902e1a51efe2a" name="a6cf395825d81d06f860902e1a51efe2a"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>topColumn3</b></td></tr>
+<tr class="separator:a6cf395825d81d06f860902e1a51efe2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c7df4bed986f4784b7f70a01ee9224" id="r_a02c7df4bed986f4784b7f70a01ee9224"><td class="memItemLeft" align="right" valign="top"><a id="a02c7df4bed986f4784b7f70a01ee9224" name="a02c7df4bed986f4784b7f70a01ee9224"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>topColumn4</b></td></tr>
+<tr class="separator:a02c7df4bed986f4784b7f70a01ee9224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5a5b63b8ab1ccfcce733e3ff83cd0c" id="r_a3e5a5b63b8ab1ccfcce733e3ff83cd0c"><td class="memItemLeft" align="right" valign="top"><a id="a3e5a5b63b8ab1ccfcce733e3ff83cd0c" name="a3e5a5b63b8ab1ccfcce733e3ff83cd0c"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>topColumn5</b></td></tr>
+<tr class="separator:a3e5a5b63b8ab1ccfcce733e3ff83cd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23597f3f1911b885745a982189003fcb" id="r_a23597f3f1911b885745a982189003fcb"><td class="memItemLeft" align="right" valign="top"><a id="a23597f3f1911b885745a982189003fcb" name="a23597f3f1911b885745a982189003fcb"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>topColumn6</b></td></tr>
+<tr class="separator:a23597f3f1911b885745a982189003fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81488b9231a90c2b705f5b0be4d2c0d4" id="r_a81488b9231a90c2b705f5b0be4d2c0d4"><td class="memItemLeft" align="right" valign="top"><a id="a81488b9231a90c2b705f5b0be4d2c0d4" name="a81488b9231a90c2b705f5b0be4d2c0d4"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>topColumn7</b></td></tr>
+<tr class="separator:a81488b9231a90c2b705f5b0be4d2c0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5a1dc34edaaf3e84ab6e3cfb01547b" id="r_a5f5a1dc34edaaf3e84ab6e3cfb01547b"><td class="memItemLeft" align="right" valign="top"><a id="a5f5a1dc34edaaf3e84ab6e3cfb01547b" name="a5f5a1dc34edaaf3e84ab6e3cfb01547b"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>topColumn8</b></td></tr>
+<tr class="separator:a5f5a1dc34edaaf3e84ab6e3cfb01547b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe8c873599d7e3321c15ae91e0d6e98" id="r_abfe8c873599d7e3321c15ae91e0d6e98"><td class="memItemLeft" align="right" valign="top"><a id="abfe8c873599d7e3321c15ae91e0d6e98" name="abfe8c873599d7e3321c15ae91e0d6e98"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>bottomColumn1</b></td></tr>
+<tr class="separator:abfe8c873599d7e3321c15ae91e0d6e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4155784484f5e99ef823a423afc58b81" id="r_a4155784484f5e99ef823a423afc58b81"><td class="memItemLeft" align="right" valign="top"><a id="a4155784484f5e99ef823a423afc58b81" name="a4155784484f5e99ef823a423afc58b81"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>bottomColumn2</b></td></tr>
+<tr class="separator:a4155784484f5e99ef823a423afc58b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed31078373d7caea06f15714acf7d2e5" id="r_aed31078373d7caea06f15714acf7d2e5"><td class="memItemLeft" align="right" valign="top"><a id="aed31078373d7caea06f15714acf7d2e5" name="aed31078373d7caea06f15714acf7d2e5"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>bottomColumn3</b></td></tr>
+<tr class="separator:aed31078373d7caea06f15714acf7d2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f31d6713e24b4a08df018621acc6a1" id="r_ad4f31d6713e24b4a08df018621acc6a1"><td class="memItemLeft" align="right" valign="top"><a id="ad4f31d6713e24b4a08df018621acc6a1" name="ad4f31d6713e24b4a08df018621acc6a1"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>bottomColumn4</b></td></tr>
+<tr class="separator:ad4f31d6713e24b4a08df018621acc6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d2b056e8152c869bfd2abd73b0eff1" id="r_aa8d2b056e8152c869bfd2abd73b0eff1"><td class="memItemLeft" align="right" valign="top"><a id="aa8d2b056e8152c869bfd2abd73b0eff1" name="aa8d2b056e8152c869bfd2abd73b0eff1"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>bottomColumn5</b></td></tr>
+<tr class="separator:aa8d2b056e8152c869bfd2abd73b0eff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5421d8be8ee869fc397f7c8fe6933fd" id="r_ab5421d8be8ee869fc397f7c8fe6933fd"><td class="memItemLeft" align="right" valign="top"><a id="ab5421d8be8ee869fc397f7c8fe6933fd" name="ab5421d8be8ee869fc397f7c8fe6933fd"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>bottomColumn6</b></td></tr>
+<tr class="separator:ab5421d8be8ee869fc397f7c8fe6933fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e90df5802b5f2ec986b63ea99e3319" id="r_a25e90df5802b5f2ec986b63ea99e3319"><td class="memItemLeft" align="right" valign="top"><a id="a25e90df5802b5f2ec986b63ea99e3319" name="a25e90df5802b5f2ec986b63ea99e3319"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>bottomColumn7</b></td></tr>
+<tr class="separator:a25e90df5802b5f2ec986b63ea99e3319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3d849b4bf6e94d77a5d03e865350a2" id="r_afa3d849b4bf6e94d77a5d03e865350a2"><td class="memItemLeft" align="right" valign="top"><a id="afa3d849b4bf6e94d77a5d03e865350a2" name="afa3d849b4bf6e94d77a5d03e865350a2"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>bottomColumn8</b></td></tr>
+<tr class="separator:afa3d849b4bf6e94d77a5d03e865350a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17afada187321acfda6b469d7283a47" id="r_ac17afada187321acfda6b469d7283a47"><td class="memItemLeft" align="right" valign="top"><a id="ac17afada187321acfda6b469d7283a47" name="ac17afada187321acfda6b469d7283a47"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>leftRow1</b></td></tr>
+<tr class="separator:ac17afada187321acfda6b469d7283a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5d422949d2bead99aa19c8820401a5b" id="r_ac5d422949d2bead99aa19c8820401a5b"><td class="memItemLeft" align="right" valign="top"><a id="ac5d422949d2bead99aa19c8820401a5b" name="ac5d422949d2bead99aa19c8820401a5b"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>leftRow2</b></td></tr>
+<tr class="separator:ac5d422949d2bead99aa19c8820401a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c17868aec4e72a7f8e6034692676e61" id="r_a0c17868aec4e72a7f8e6034692676e61"><td class="memItemLeft" align="right" valign="top"><a id="a0c17868aec4e72a7f8e6034692676e61" name="a0c17868aec4e72a7f8e6034692676e61"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>leftRow3</b></td></tr>
+<tr class="separator:a0c17868aec4e72a7f8e6034692676e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae875cf62a038d43b7edd26d24a7287c8" id="r_ae875cf62a038d43b7edd26d24a7287c8"><td class="memItemLeft" align="right" valign="top"><a id="ae875cf62a038d43b7edd26d24a7287c8" name="ae875cf62a038d43b7edd26d24a7287c8"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>leftRow4</b></td></tr>
+<tr class="separator:ae875cf62a038d43b7edd26d24a7287c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684c85aa75d3cf396bd302aa36355788" id="r_a684c85aa75d3cf396bd302aa36355788"><td class="memItemLeft" align="right" valign="top"><a id="a684c85aa75d3cf396bd302aa36355788" name="a684c85aa75d3cf396bd302aa36355788"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>leftRow5</b></td></tr>
+<tr class="separator:a684c85aa75d3cf396bd302aa36355788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cea8bad0abaeb54836b362d2e3dfc60" id="r_a5cea8bad0abaeb54836b362d2e3dfc60"><td class="memItemLeft" align="right" valign="top"><a id="a5cea8bad0abaeb54836b362d2e3dfc60" name="a5cea8bad0abaeb54836b362d2e3dfc60"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>leftRow6</b></td></tr>
+<tr class="separator:a5cea8bad0abaeb54836b362d2e3dfc60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77fbc338ec831b6ad6eb10f43f18f3c" id="r_ab77fbc338ec831b6ad6eb10f43f18f3c"><td class="memItemLeft" align="right" valign="top"><a id="ab77fbc338ec831b6ad6eb10f43f18f3c" name="ab77fbc338ec831b6ad6eb10f43f18f3c"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>leftRow7</b></td></tr>
+<tr class="separator:ab77fbc338ec831b6ad6eb10f43f18f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aeb509fecbe6a71542d60211ca60dfa" id="r_a1aeb509fecbe6a71542d60211ca60dfa"><td class="memItemLeft" align="right" valign="top"><a id="a1aeb509fecbe6a71542d60211ca60dfa" name="a1aeb509fecbe6a71542d60211ca60dfa"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>leftRow8</b></td></tr>
+<tr class="separator:a1aeb509fecbe6a71542d60211ca60dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58dd79876464340c4ee56b0e17bacdea" id="r_a58dd79876464340c4ee56b0e17bacdea"><td class="memItemLeft" align="right" valign="top"><a id="a58dd79876464340c4ee56b0e17bacdea" name="a58dd79876464340c4ee56b0e17bacdea"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>rightRow1</b></td></tr>
+<tr class="separator:a58dd79876464340c4ee56b0e17bacdea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dae5ba747125937d7205ace016edb3b" id="r_a8dae5ba747125937d7205ace016edb3b"><td class="memItemLeft" align="right" valign="top"><a id="a8dae5ba747125937d7205ace016edb3b" name="a8dae5ba747125937d7205ace016edb3b"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>rightRow2</b></td></tr>
+<tr class="separator:a8dae5ba747125937d7205ace016edb3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a375844d9ec3241839c9fd803bd448" id="r_a55a375844d9ec3241839c9fd803bd448"><td class="memItemLeft" align="right" valign="top"><a id="a55a375844d9ec3241839c9fd803bd448" name="a55a375844d9ec3241839c9fd803bd448"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>rightRow3</b></td></tr>
+<tr class="separator:a55a375844d9ec3241839c9fd803bd448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb41c85f84c367ef1ea2e6ac6fd2011" id="r_aecb41c85f84c367ef1ea2e6ac6fd2011"><td class="memItemLeft" align="right" valign="top"><a id="aecb41c85f84c367ef1ea2e6ac6fd2011" name="aecb41c85f84c367ef1ea2e6ac6fd2011"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>rightRow4</b></td></tr>
+<tr class="separator:aecb41c85f84c367ef1ea2e6ac6fd2011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834ffd8f71da7a20acfb1b07ff95aa77" id="r_a834ffd8f71da7a20acfb1b07ff95aa77"><td class="memItemLeft" align="right" valign="top"><a id="a834ffd8f71da7a20acfb1b07ff95aa77" name="a834ffd8f71da7a20acfb1b07ff95aa77"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>rightRow5</b></td></tr>
+<tr class="separator:a834ffd8f71da7a20acfb1b07ff95aa77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3e9c040b9663b2fc047062f54d0763c" id="r_ae3e9c040b9663b2fc047062f54d0763c"><td class="memItemLeft" align="right" valign="top"><a id="ae3e9c040b9663b2fc047062f54d0763c" name="ae3e9c040b9663b2fc047062f54d0763c"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>rightRow6</b></td></tr>
+<tr class="separator:ae3e9c040b9663b2fc047062f54d0763c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad102ddb40aaa1b079c2d0285a22e3c8c" id="r_ad102ddb40aaa1b079c2d0285a22e3c8c"><td class="memItemLeft" align="right" valign="top"><a id="ad102ddb40aaa1b079c2d0285a22e3c8c" name="ad102ddb40aaa1b079c2d0285a22e3c8c"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>rightRow7</b></td></tr>
+<tr class="separator:ad102ddb40aaa1b079c2d0285a22e3c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d7de6977734726baf0c5c16e0327bc" id="r_ae5d7de6977734726baf0c5c16e0327bc"><td class="memItemLeft" align="right" valign="top"><a id="ae5d7de6977734726baf0c5c16e0327bc" name="ae5d7de6977734726baf0c5c16e0327bc"></a>
+TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><b>rightRow8</b></td></tr>
+<tr class="separator:ae5d7de6977734726baf0c5c16e0327bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6e23cb10638c3f27fa5a962821910b" id="r_a6b6e23cb10638c3f27fa5a962821910b"><td class="memItemLeft" align="right" valign="top"><a id="a6b6e23cb10638c3f27fa5a962821910b" name="a6b6e23cb10638c3f27fa5a962821910b"></a>
+AudioSource&#160;</td><td class="memItemRight" valign="bottom"><b>audioSource</b></td></tr>
+<tr class="separator:a6b6e23cb10638c3f27fa5a962821910b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182ebb6dbd3471511c5fb400f65f2c4b" id="r_a182ebb6dbd3471511c5fb400f65f2c4b"><td class="memItemLeft" align="right" valign="top"><a id="a182ebb6dbd3471511c5fb400f65f2c4b" name="a182ebb6dbd3471511c5fb400f65f2c4b"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>board</b></td></tr>
+<tr class="separator:a182ebb6dbd3471511c5fb400f65f2c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df32af71e66c4fe6e79b11de8aba242" id="r_a2df32af71e66c4fe6e79b11de8aba242"><td class="memItemLeft" align="right" valign="top"><a id="a2df32af71e66c4fe6e79b11de8aba242" name="a2df32af71e66c4fe6e79b11de8aba242"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>reversed</b> = false</td></tr>
+<tr class="separator:a2df32af71e66c4fe6e79b11de8aba242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b66fae4df6dffdd0bf517a959d3d2b5" id="r_a9b66fae4df6dffdd0bf517a959d3d2b5"><td class="memItemLeft" align="right" valign="top"><a id="a9b66fae4df6dffdd0bf517a959d3d2b5" name="a9b66fae4df6dffdd0bf517a959d3d2b5"></a>
+<a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Chess.Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>currentPly</b></td></tr>
+<tr class="separator:a9b66fae4df6dffdd0bf517a959d3d2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354f0be2b9678d284d5366b31629662f" id="r_a354f0be2b9678d284d5366b31629662f"><td class="memItemLeft" align="right" valign="top"><a id="a354f0be2b9678d284d5366b31629662f" name="a354f0be2b9678d284d5366b31629662f"></a>
+<a class="el" href="class_chess_1_1_game_settings.html">Chess.GameSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><b>gameSettings</b></td></tr>
+<tr class="separator:a354f0be2b9678d284d5366b31629662f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d7cd8023ca2e6a59cf09751d824e7e" id="r_ac7d7cd8023ca2e6a59cf09751d824e7e"><td class="memItemLeft" align="right" valign="top"><a id="ac7d7cd8023ca2e6a59cf09751d824e7e" name="ac7d7cd8023ca2e6a59cf09751d824e7e"></a>
+List&lt; <a class="el" href="class_piece_object.html">PieceObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pieceObjects</b> = new()</td></tr>
+<tr class="separator:ac7d7cd8023ca2e6a59cf09751d824e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e843ee9e28135897683410999800d4" id="r_af0e843ee9e28135897683410999800d4"><td class="memItemLeft" align="right" valign="top"><a id="af0e843ee9e28135897683410999800d4" name="af0e843ee9e28135897683410999800d4"></a>
+<a class="el" href="class_ghost_object.html">GhostObject</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ghostObject</b> = null</td></tr>
+<tr class="separator:af0e843ee9e28135897683410999800d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8513cd0b0d5214345ebed90a89c903c" id="r_ac8513cd0b0d5214345ebed90a89c903c"><td class="memItemLeft" align="right" valign="top"><a id="ac8513cd0b0d5214345ebed90a89c903c" name="ac8513cd0b0d5214345ebed90a89c903c"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>highlightedSquare</b> = null</td></tr>
+<tr class="separator:ac8513cd0b0d5214345ebed90a89c903c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3510e125acd27d508173e58b80cd17b4" id="r_a3510e125acd27d508173e58b80cd17b4"><td class="memItemLeft" align="right" valign="top"><a id="a3510e125acd27d508173e58b80cd17b4" name="a3510e125acd27d508173e58b80cd17b4"></a>
+List&lt; <a class="el" href="class_movement_object.html">MovementObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>movementObjects</b> = new()</td></tr>
+<tr class="separator:a3510e125acd27d508173e58b80cd17b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b03a96261801b5af7ce1f6f027aa9f" id="r_aa2b03a96261801b5af7ce1f6f027aa9f"><td class="memItemLeft" align="right" valign="top"><a id="aa2b03a96261801b5af7ce1f6f027aa9f" name="aa2b03a96261801b5af7ce1f6f027aa9f"></a>
+<a class="el" href="class_movement.html">Movement</a>&#160;</td><td class="memItemRight" valign="bottom"><b>performedMovement</b> = null</td></tr>
+<tr class="separator:aa2b03a96261801b5af7ce1f6f027aa9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailný popis</h2>
+<div class="textblock"><p>Táto trieda je zodpovedná za správu šachovnice. </p>
+</div><h2 class="groupheader">Dokumentácia k metódam</h2>
+<a id="ae3ff9f5eb7081a136af27f191d4867eb" name="ae3ff9f5eb7081a136af27f191d4867eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3ff9f5eb7081a136af27f191d4867eb">&#9670;&#160;</a></span>AddMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.AddMovement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_movement.html">Movement</a></td>          <td class="paramname"><span class="paramname"><em>movement</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Do šachovnice sa pridá nový pohyb.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">movement</td><td>Vykonaný pohyb. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a66cedf5ee33f1df639fa083a8dcbf2a9" name="a66cedf5ee33f1df639fa083a8dcbf2a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66cedf5ee33f1df639fa083a8dcbf2a9">&#9670;&#160;</a></span>AddPiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.AddPiece </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_piece.html">Piece</a></td>          <td class="paramname"><span class="paramname"><em>piece</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Do šachovnice sa na danú pozíciu pridá nová figúrka.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">piece</td><td>Nová figúrka. </td></tr>
+    <tr><td class="paramname">x</td><td>Koordinát X danej pozície. </td></tr>
+    <tr><td class="paramname">x</td><td>Koordinát Y danej pozície. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8143e1fc2c827725be7e923b0db6b9df" name="a8143e1fc2c827725be7e923b0db6b9df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8143e1fc2c827725be7e923b0db6b9df">&#9670;&#160;</a></span>ClearGhost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.ClearGhost </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zo šachovnice sa odstráni duch (pre pravidlo En Passant). </p>
+
+</div>
+</div>
+<a id="ae4d94a1c1ca48816b8549c86971d518d" name="ae4d94a1c1ca48816b8549c86971d518d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d94a1c1ca48816b8549c86971d518d">&#9670;&#160;</a></span>ClearHighlightedSquare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.ClearHighlightedSquare </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zo šachovnice sa odstráni znázornené políčko. </p>
+
+</div>
+</div>
+<a id="ab002a92da69e88d569ad074d198c4b7a" name="ab002a92da69e88d569ad074d198c4b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab002a92da69e88d569ad074d198c4b7a">&#9670;&#160;</a></span>ClearMovements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.ClearMovements </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zo šachovnice sa odstránia všetky pohyby. </p>
+
+</div>
+</div>
+<a id="af8eed8157e18d741c1e944e12e191cca" name="af8eed8157e18d741c1e944e12e191cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8eed8157e18d741c1e944e12e191cca">&#9670;&#160;</a></span>ClearPieces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.ClearPieces </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zo šachovnice sa odstránia všetky figúrky. </p>
+
+</div>
+</div>
+<a id="a2cab6f1adfd50ebf4360d45e8b6851a5" name="a2cab6f1adfd50ebf4360d45e8b6851a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cab6f1adfd50ebf4360d45e8b6851a5">&#9670;&#160;</a></span>CreateInitialPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.CreateInitialPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zo šachovnice sa odstránia všetky figúrky a pridajú sa tu nové figúrky na počiatočnú pozíciu. Esencie sú priradené podľa aktuálnej hernej konfigurácie. </p>
+
+</div>
+</div>
+<a id="a042ff3106cbcfd9e115dd6bc8980d378" name="a042ff3106cbcfd9e115dd6bc8980d378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a042ff3106cbcfd9e115dd6bc8980d378">&#9670;&#160;</a></span>GetPiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_piece.html">Piece</a> BoardController.GetPiece </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Na danej pozícii sa vyhľadá figúrka.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Koordinát X danej pozície. </td></tr>
+    <tr><td class="paramname">y</td><td>Koordinát Y danej pozície. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Nájdená figúrka na danej pozícii. Ak žiadan nebol nájdená tak sa vráti null. </dd></dl>
+
+</div>
+</div>
+<a id="aee5ddf6d4f1ee3fe3cb270d9400acc9f" name="aee5ddf6d4f1ee3fe3cb270d9400acc9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5ddf6d4f1ee3fe3cb270d9400acc9f">&#9670;&#160;</a></span>GetPieceObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_piece_object.html">PieceObject</a> BoardController.GetPieceObject </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Na šachovnici sa nájde objekt figúrky na danej pozícii.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Koordinát X danej pozície. </td></tr>
+    <tr><td class="paramname">x</td><td>Koordinát Y danej pozície. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Nájdený objekt figúrky. </dd></dl>
+
+</div>
+</div>
+<a id="a2df37653e5a50a68a530f4c0f6a6dcee" name="a2df37653e5a50a68a530f4c0f6a6dcee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df37653e5a50a68a530f4c0f6a6dcee">&#9670;&#160;</a></span>InitBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.InitBoard </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>reversed</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess_1_1_game_settings.html">Chess::GameSettings</a></td>          <td class="paramname"><span class="paramname"><em>gameSettings</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Šachovnica sa inicializuje na počiatočnú pozíciu sa danou hernou konfiguráciou a orientáciou.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reversed</td><td>Ak hráč hráč hrá za čierneho hráča, tak šachovnica je obrátená o 180 stupňov. </td></tr>
+    <tr><td class="paramname">gameSettings</td><td>Herná konfigurácia. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2484968f6f2b07e729c280136e6a7146" name="a2484968f6f2b07e729c280136e6a7146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2484968f6f2b07e729c280136e6a7146">&#9670;&#160;</a></span>MoveGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.MoveGameObject </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>gameObject</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generická metóda na presunutie herného objektu na danú pozíciu na šachovnici.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gameObject</td><td>Presunutý herný objekt. </td></tr>
+    <tr><td class="paramname">x</td><td>Koordinát X danej pozície. </td></tr>
+    <tr><td class="paramname">x</td><td>Koordinát Y danej pozície. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a79c8832c31278cd8b6698e6af595f1a8" name="a79c8832c31278cd8b6698e6af595f1a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79c8832c31278cd8b6698e6af595f1a8">&#9670;&#160;</a></span>MovePiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_movement.html">Movement</a> BoardController.MovePiece </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_move.html">Move</a></td>          <td class="paramname"><span class="paramname"><em>move</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Na šachovnici sa vykoná daný pohyb.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">move</td><td>Vykonaný pohyb. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Vykonaný pohyb spolu s jej figúrkou. </dd></dl>
+
+</div>
+</div>
+<a id="a3a6fc91b90cbaaa60874e37333c494b7" name="a3a6fc91b90cbaaa60874e37333c494b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a6fc91b90cbaaa60874e37333c494b7">&#9670;&#160;</a></span>OnMovementClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.OnMovementClicked </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_movement.html">Movement</a></td>          <td class="paramname"><span class="paramname"><em>movement</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Po kliknutí na pohyb sa daný pohyb vykoná. Ak došlo k promócii tak sa vyžiada vykonanie promócie pešiaka.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">movement</td><td>Vybraný pohyb. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaf6b42b7b122b5b4e6256d898d60bcac" name="aaf6b42b7b122b5b4e6256d898d60bcac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf6b42b7b122b5b4e6256d898d60bcac">&#9670;&#160;</a></span>OnPieceClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.OnPieceClicked </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_piece.html">Piece</a></td>          <td class="paramname"><span class="paramname"><em>piece</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pri kliknutí na figúrku sa vymažú všetky aktuálne pohyby a zruší sa výber všetkých figúrok. Ak táto figúrka ešte nebola vybraná tak sa vyberie a znázornia sa jej dostupné pohyby.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">piece</td><td>Kliknutá figúrka. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad59fab4c8888ff566e8c914695374568" name="ad59fab4c8888ff566e8c914695374568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad59fab4c8888ff566e8c914695374568">&#9670;&#160;</a></span>PerformMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.PerformMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_move.html">Move</a></td>          <td class="paramname"><span class="paramname"><em>legalMove</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vykoná sa daný pohyb. Vykonaný pohyb sa zapíše do lokálnej premennej</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">legalMove</td><td>Vykonaný pohyb. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aacfe8fc48308de6996d94cc7eb53765c" name="aacfe8fc48308de6996d94cc7eb53765c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacfe8fc48308de6996d94cc7eb53765c">&#9670;&#160;</a></span>PerformPromotion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.PerformPromotion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess::PieceType</a></td>          <td class="paramname"><span class="paramname"><em>promotedPieceType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vykoná sa promócia poslednej pohnutej figúrky.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">promotedPieceType</td><td>Nový typ figúrky priradený pešiakovi. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9225ed91135103ad7b9d846c24328502" name="a9225ed91135103ad7b9d846c24328502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9225ed91135103ad7b9d846c24328502">&#9670;&#160;</a></span>SetBoardOrientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.SetBoardOrientation </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>reversed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Táto metóda nastaví orientáciu šachovnice.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reversed</td><td>Ak hráč hráč hrá za čierneho hráča, tak šachovnica je obrátená o 180 stupňov. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a013ae4e05d7251e4b7c851b59150ebb3" name="a013ae4e05d7251e4b7c851b59150ebb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a013ae4e05d7251e4b7c851b59150ebb3">&#9670;&#160;</a></span>SetCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.SetCheck </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Na šachovnici sa zobrazí napadnutie kráľa s červeným políčkom pre hráča na rade. </p>
+
+</div>
+</div>
+<a id="a6c6b19da3c76d6ef431dea7d7c5971b9" name="a6c6b19da3c76d6ef431dea7d7c5971b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6b19da3c76d6ef431dea7d7c5971b9">&#9670;&#160;</a></span>SetGhost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.SetGhost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_ghost.html">Ghost</a></td>          <td class="paramname"><span class="paramname"><em>ghost</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Na šachovnici sa vytvorí nový duch (pre pravidlo En Passant).</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ghost</td><td>Nový duch. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5e17f0d7ed41ef2ad46c687ba433e610" name="a5e17f0d7ed41ef2ad46c687ba433e610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e17f0d7ed41ef2ad46c687ba433e610">&#9670;&#160;</a></span>SetHighlightedSquare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.SetHighlightedSquare </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Do šachovnice sa na danú pozíciu pridá znázornené políčko.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Koordinát X danej pozície. </td></tr>
+    <tr><td class="paramname">x</td><td>Koordinát Y danej pozície. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a47449d1a9523aab11e98ae74befd148a" name="a47449d1a9523aab11e98ae74befd148a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47449d1a9523aab11e98ae74befd148a">&#9670;&#160;</a></span>SetLegalMoves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.SetLegalMoves </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="class_move.html">Move</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>legalMoves</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Všetkým figúrkam sa odstránia legálne pohyby a priradia sa im nové.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">legalMoves</td><td>Zoznam legálnych pohybov. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef023cb8dffab14d2b891b4905182512" name="aef023cb8dffab14d2b891b4905182512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef023cb8dffab14d2b891b4905182512">&#9670;&#160;</a></span>SetPly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardController.SetPly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Chess::Color</a></td>          <td class="paramname"><span class="paramname"><em>currentPly</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Nastaví sa lokálna premenná akutálneho hráča na rade.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentPly</td><td>Aktuálny hráč na rade. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru:<ul>
+<li><a class="el" href="_board_controller_8cs.html">BoardController.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generované programom&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess Evolved 2: Dokumentácia triedy EngineController</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Chess Evolved 2
+   </div>
+   <div id="projectbrief">Grafické rozhranie pre šachový engine Malakh</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generované programom Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hľadať');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítam...</div>
+<div class="SRStatus" id="Searching">Vyhľadávam...</div>
+<div class="SRStatus" id="NoMatches">Nič sa nenašlo</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Verejné metódy</a> &#124;
+<a href="#pub-attribs">Verejné atribúty</a> &#124;
+<a href="#pri-methods">Privátne metódy</a> &#124;
+<a href="#pri-attribs">Privátne atribúty</a> &#124;
+<a href="class_engine_controller-members.html">Zoznam všetkých členov</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentácia triedy EngineController</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Diagram dedičnosti pre triedu EngineController</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_engine_controller.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Verejné metódy</h2></td></tr>
+<tr class="memitem:a72747ea068cea74bbfad7a7c1f075d88" id="r_a72747ea068cea74bbfad7a7c1f075d88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72747ea068cea74bbfad7a7c1f075d88">StartEngine</a> ()</td></tr>
+<tr class="separator:a72747ea068cea74bbfad7a7c1f075d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d03df5c45791ad5929251bc6ce83883" id="r_a9d03df5c45791ad5929251bc6ce83883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d03df5c45791ad5929251bc6ce83883">StopEngine</a> ()</td></tr>
+<tr class="separator:a9d03df5c45791ad5929251bc6ce83883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d6194a104f24be819ae06fe1dd23e2f" id="r_a9d6194a104f24be819ae06fe1dd23e2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d6194a104f24be819ae06fe1dd23e2f">StartGame</a> (<a class="el" href="class_chess_1_1_game_settings.html">Chess.GameSettings</a> gameSettings)</td></tr>
+<tr class="separator:a9d6194a104f24be819ae06fe1dd23e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0bfb74d73036599a4a45329f4d4cf8" id="r_a5d0bfb74d73036599a4a45329f4d4cf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d0bfb74d73036599a4a45329f4d4cf8">RequestAvailableMoves</a> ()</td></tr>
+<tr class="separator:a5d0bfb74d73036599a4a45329f4d4cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d83d618e1af0a0011e83f90b7942d4" id="r_ad4d83d618e1af0a0011e83f90b7942d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4d83d618e1af0a0011e83f90b7942d4">RequestBestMove</a> ()</td></tr>
+<tr class="separator:ad4d83d618e1af0a0011e83f90b7942d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a411f495ff542f84bfcc4da9e545905b6" id="r_a411f495ff542f84bfcc4da9e545905b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a411f495ff542f84bfcc4da9e545905b6">MovePiece</a> (int x1, int y1, int x2, int y2, <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> promotedPieceType)</td></tr>
+<tr class="separator:a411f495ff542f84bfcc4da9e545905b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Verejné atribúty</h2></td></tr>
+<tr class="memitem:ac7e84f91315ca14b60da4dcf3f4beb38" id="r_ac7e84f91315ca14b60da4dcf3f4beb38"><td class="memItemLeft" align="right" valign="top"><a id="ac7e84f91315ca14b60da4dcf3f4beb38" name="ac7e84f91315ca14b60da4dcf3f4beb38"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>engineName</b> = string.Empty</td></tr>
+<tr class="separator:ac7e84f91315ca14b60da4dcf3f4beb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaaf2dab924b771e72e8c5f4cdfd78dc" id="r_acaaf2dab924b771e72e8c5f4cdfd78dc"><td class="memItemLeft" align="right" valign="top"><a id="acaaf2dab924b771e72e8c5f4cdfd78dc" name="acaaf2dab924b771e72e8c5f4cdfd78dc"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>author</b> = string.Empty</td></tr>
+<tr class="separator:acaaf2dab924b771e72e8c5f4cdfd78dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f49f2205de5457b6302a455443b67e" id="r_a05f49f2205de5457b6302a455443b67e"><td class="memItemLeft" align="right" valign="top"><a id="a05f49f2205de5457b6302a455443b67e" name="a05f49f2205de5457b6302a455443b67e"></a>
+Dictionary&lt; <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a>, Dictionary&lt; <a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Chess.Essence</a>, List&lt; <a class="el" href="class_mobility.html">Mobility</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mobilities</b> = new()</td></tr>
+<tr class="separator:a05f49f2205de5457b6302a455443b67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd71ac685a7946db531ae4e4fc57d72" id="r_a4dd71ac685a7946db531ae4e4fc57d72"><td class="memItemLeft" align="right" valign="top"><a id="a4dd71ac685a7946db531ae4e4fc57d72" name="a4dd71ac685a7946db531ae4e4fc57d72"></a>
+UnityEvent&lt; List&lt; <a class="el" href="class_move.html">Move</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onLegalMovesReceived</b> = new()</td></tr>
+<tr class="separator:a4dd71ac685a7946db531ae4e4fc57d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12afb7f16bda93b2fecd1a7fad188dc9" id="r_a12afb7f16bda93b2fecd1a7fad188dc9"><td class="memItemLeft" align="right" valign="top"><a id="a12afb7f16bda93b2fecd1a7fad188dc9" name="a12afb7f16bda93b2fecd1a7fad188dc9"></a>
+UnityEvent&lt; <a class="el" href="class_move.html">Move</a>, <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onBestMoveReceived</b> = new()</td></tr>
+<tr class="separator:a12afb7f16bda93b2fecd1a7fad188dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b82d506d6d1c3e2eb42e8df1972177" id="r_ad7b82d506d6d1c3e2eb42e8df1972177"><td class="memItemLeft" align="right" valign="top"><a id="ad7b82d506d6d1c3e2eb42e8df1972177" name="ad7b82d506d6d1c3e2eb42e8df1972177"></a>
+UnityEvent&lt; <a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Chess.Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onResultReceived</b> = new()</td></tr>
+<tr class="separator:ad7b82d506d6d1c3e2eb42e8df1972177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf77b21ca29d39cd54abfde54e01805" id="r_afdf77b21ca29d39cd54abfde54e01805"><td class="memItemLeft" align="right" valign="top"><a id="afdf77b21ca29d39cd54abfde54e01805" name="afdf77b21ca29d39cd54abfde54e01805"></a>
+UnityEvent&#160;</td><td class="memItemRight" valign="bottom"><b>onCheckReceived</b> = new()</td></tr>
+<tr class="separator:afdf77b21ca29d39cd54abfde54e01805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Privátne metódy</h2></td></tr>
+<tr class="memitem:a6e03acb4d7580f3ce69b671e5a273a5e" id="r_a6e03acb4d7580f3ce69b671e5a273a5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e03acb4d7580f3ce69b671e5a273a5e">Start</a> ()</td></tr>
+<tr class="separator:a6e03acb4d7580f3ce69b671e5a273a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf33bd09c4a83545f04be1cdc1050f7" id="r_a1cf33bd09c4a83545f04be1cdc1050f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cf33bd09c4a83545f04be1cdc1050f7">Update</a> ()</td></tr>
+<tr class="separator:a1cf33bd09c4a83545f04be1cdc1050f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ee445355bc26d89bbfff79cea240d2" id="r_a40ee445355bc26d89bbfff79cea240d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40ee445355bc26d89bbfff79cea240d2">OnApplicationQuit</a> ()</td></tr>
+<tr class="separator:a40ee445355bc26d89bbfff79cea240d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9745a61eb6689dd1ef5081523e4217b2" id="r_a9745a61eb6689dd1ef5081523e4217b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9745a61eb6689dd1ef5081523e4217b2">SendCommand</a> (string command)</td></tr>
+<tr class="separator:a9745a61eb6689dd1ef5081523e4217b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae390352322b27d97f19ca87d756dca12" id="r_ae390352322b27d97f19ca87d756dca12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae390352322b27d97f19ca87d756dca12">ReceiveEngineResponses</a> ()</td></tr>
+<tr class="separator:ae390352322b27d97f19ca87d756dca12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa023ddea1e21cedf2729aafa3faa426" id="r_aaa023ddea1e21cedf2729aafa3faa426"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_move.html">Move</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa023ddea1e21cedf2729aafa3faa426">ParseMove</a> (string move)</td></tr>
+<tr class="separator:aaa023ddea1e21cedf2729aafa3faa426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Privátne atribúty</h2></td></tr>
+<tr class="memitem:a84147599b7e63c5fbdb474f9b3a9f8ab" id="r_a84147599b7e63c5fbdb474f9b3a9f8ab"><td class="memItemLeft" align="right" valign="top">Process&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84147599b7e63c5fbdb474f9b3a9f8ab">engineProcess</a></td></tr>
+<tr class="separator:a84147599b7e63c5fbdb474f9b3a9f8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fc5d97e59ba740ddc2244c4ab9efbd" id="r_ab3fc5d97e59ba740ddc2244c4ab9efbd"><td class="memItemLeft" align="right" valign="top"><a id="ab3fc5d97e59ba740ddc2244c4ab9efbd" name="ab3fc5d97e59ba740ddc2244c4ab9efbd"></a>
+<a class="el" href="class_move.html">Move</a>&#160;</td><td class="memItemRight" valign="bottom"><b>receivedBestMove</b> = null</td></tr>
+<tr class="separator:ab3fc5d97e59ba740ddc2244c4ab9efbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e654cbfb28e89e6c944bafead3ab5fe" id="r_a4e654cbfb28e89e6c944bafead3ab5fe"><td class="memItemLeft" align="right" valign="top"><a id="a4e654cbfb28e89e6c944bafead3ab5fe" name="a4e654cbfb28e89e6c944bafead3ab5fe"></a>
+<a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess.PieceType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>promotedPieceType</b> = <a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80">Chess.PieceType.Pawn</a></td></tr>
+<tr class="separator:a4e654cbfb28e89e6c944bafead3ab5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3cafa2aeb862caa00e10b970946ac9" id="r_abf3cafa2aeb862caa00e10b970946ac9"><td class="memItemLeft" align="right" valign="top"><a id="abf3cafa2aeb862caa00e10b970946ac9" name="abf3cafa2aeb862caa00e10b970946ac9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>unhandledResult</b> = false</td></tr>
+<tr class="separator:abf3cafa2aeb862caa00e10b970946ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fc2000362d0f2ed2a9c9a07976e89e" id="r_a45fc2000362d0f2ed2a9c9a07976e89e"><td class="memItemLeft" align="right" valign="top"><a id="a45fc2000362d0f2ed2a9c9a07976e89e" name="a45fc2000362d0f2ed2a9c9a07976e89e"></a>
+<a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Chess.Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>receivedResult</b> = <a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dda64663f4646781c9c0110838b905daa23">Chess.Color.Random</a></td></tr>
+<tr class="separator:a45fc2000362d0f2ed2a9c9a07976e89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e8f6b21f7ebb2b86942893ec4fee68" id="r_ad6e8f6b21f7ebb2b86942893ec4fee68"><td class="memItemLeft" align="right" valign="top"><a id="ad6e8f6b21f7ebb2b86942893ec4fee68" name="ad6e8f6b21f7ebb2b86942893ec4fee68"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>receivedCheck</b> = false</td></tr>
+<tr class="separator:ad6e8f6b21f7ebb2b86942893ec4fee68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailný popis</h2>
+<div class="textblock"><p>Táto trieda je zodpovedná za komunikáciu s enginom Malakh pomocou UCI protokolu. </p>
+</div><h2 class="groupheader">Dokumentácia k metódam</h2>
+<a id="a411f495ff542f84bfcc4da9e545905b6" name="a411f495ff542f84bfcc4da9e545905b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a411f495ff542f84bfcc4da9e545905b6">&#9670;&#160;</a></span>MovePiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.MovePiece </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x1</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y1</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x2</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y2</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a5c28d265b562136476b0a7591659b0cf">Chess::PieceType</a></td>          <td class="paramname"><span class="paramname"><em>promotedPieceType</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Enginu prikážeme aby vykonal daný pohyb.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>Koordinát X zdrojovej pozície. </td></tr>
+    <tr><td class="paramname">y1</td><td>Koordinát Y zdrojovej pozície. </td></tr>
+    <tr><td class="paramname">x2</td><td>Koordinát X cieľovej pozície. </td></tr>
+    <tr><td class="paramname">y2</td><td>Koordinát Y cieľovej pozície. </td></tr>
+    <tr><td class="paramname">promotedPieceType</td><td>Typ figúrky na ktorú sa zmení pešiak pri promócii. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40ee445355bc26d89bbfff79cea240d2" name="a40ee445355bc26d89bbfff79cea240d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ee445355bc26d89bbfff79cea240d2">&#9670;&#160;</a></span>OnApplicationQuit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.OnApplicationQuit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pri ukončení aplikácie terminuje šachový engine. </p>
+
+</div>
+</div>
+<a id="aaa023ddea1e21cedf2729aafa3faa426" name="aaa023ddea1e21cedf2729aafa3faa426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa023ddea1e21cedf2729aafa3faa426">&#9670;&#160;</a></span>ParseMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_move.html">Move</a> EngineController.ParseMove </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>move</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>String konvertujeme na pohyb figúrky.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">move</td><td>Slovo reprezentujúce pohyb figúrky v algebraickej notácii. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Pohyb figúrky. </dd></dl>
+
+</div>
+</div>
+<a id="ae390352322b27d97f19ca87d756dca12" name="ae390352322b27d97f19ca87d756dca12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae390352322b27d97f19ca87d756dca12">&#9670;&#160;</a></span>ReceiveEngineResponses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.ReceiveEngineResponses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>V tejto metóde periodicky prijímame a spracuvávame prijaté správy od enginu. </p>
+
+</div>
+</div>
+<a id="a5d0bfb74d73036599a4a45329f4d4cf8" name="a5d0bfb74d73036599a4a45329f4d4cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d0bfb74d73036599a4a45329f4d4cf8">&#9670;&#160;</a></span>RequestAvailableMoves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.RequestAvailableMoves </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Od enginu si vyžiadame všetky dostupné legálne pohyby. </p>
+
+</div>
+</div>
+<a id="ad4d83d618e1af0a0011e83f90b7942d4" name="ad4d83d618e1af0a0011e83f90b7942d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d83d618e1af0a0011e83f90b7942d4">&#9670;&#160;</a></span>RequestBestMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.RequestBestMove </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Od enginu si vyžiadame najlepší pohyb. </p>
+
+</div>
+</div>
+<a id="a9745a61eb6689dd1ef5081523e4217b2" name="a9745a61eb6689dd1ef5081523e4217b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9745a61eb6689dd1ef5081523e4217b2">&#9670;&#160;</a></span>SendCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.SendCommand </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>command</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generická metóda na odoslanie ľubovoľnej správy enginu. </p>
+
+</div>
+</div>
+<a id="a6e03acb4d7580f3ce69b671e5a273a5e" name="a6e03acb4d7580f3ce69b671e5a273a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e03acb4d7580f3ce69b671e5a273a5e">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pri spustení tohto skriptu zapneme engine. </p>
+
+</div>
+</div>
+<a id="a72747ea068cea74bbfad7a7c1f075d88" name="a72747ea068cea74bbfad7a7c1f075d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72747ea068cea74bbfad7a7c1f075d88">&#9670;&#160;</a></span>StartEngine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.StartEngine </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Táto funkcia spustí engine Malakh v UCI režime. </p>
+
+</div>
+</div>
+<a id="a9d6194a104f24be819ae06fe1dd23e2f" name="a9d6194a104f24be819ae06fe1dd23e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d6194a104f24be819ae06fe1dd23e2f">&#9670;&#160;</a></span>StartGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.StartGame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_chess_1_1_game_settings.html">Chess::GameSettings</a></td>          <td class="paramname"><span class="paramname"><em>gameSettings</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Hra je spustená s danou hernou konfiguráciou.</p>
+<p>gameSettings Nastavenia novej hry. </p>
+
+</div>
+</div>
+<a id="a9d03df5c45791ad5929251bc6ce83883" name="a9d03df5c45791ad5929251bc6ce83883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d03df5c45791ad5929251bc6ce83883">&#9670;&#160;</a></span>StopEngine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.StopEngine </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Táto funkcia terminuje engine pomocou UCI príkazu. </p>
+
+</div>
+</div>
+<a id="a1cf33bd09c4a83545f04be1cdc1050f7" name="a1cf33bd09c4a83545f04be1cdc1050f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf33bd09c4a83545f04be1cdc1050f7">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EngineController.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pri každej aktualizácii kontrolujeme, či sme nedostali od enginu novú nespracovanú správu. Niektoré operácie musia byť vykonané cez update procedúru a nemôžu byť vykonané priamo. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k dátovým členom</h2>
+<a id="a84147599b7e63c5fbdb474f9b3a9f8ab" name="a84147599b7e63c5fbdb474f9b3a9f8ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84147599b7e63c5fbdb474f9b3a9f8ab">&#9670;&#160;</a></span>engineProcess</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Process EngineController.engineProcess</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Inicializátor:</b><div class="fragment"><div class="line">= <span class="keyword">new</span>()</div>
+<div class="line">    {</div>
+<div class="line">        StartInfo = <span class="keyword">new</span>()</div>
+<div class="line">        {</div>
+<div class="line">            FileName = <span class="stringliteral">&quot;Malakh-chess-engine.exe&quot;</span>,</div>
+<div class="line">            UseShellExecute = <span class="keyword">false</span>,</div>
+<div class="line">            RedirectStandardInput = <span class="keyword">true</span>,</div>
+<div class="line">            RedirectStandardOutput = <span class="keyword">true</span>,</div>
+<div class="line">            CreateNoWindow = <span class="keyword">true</span></div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru:<ul>
+<li><a class="el" href="_engine_controller_8cs.html">EngineController.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generované programom&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

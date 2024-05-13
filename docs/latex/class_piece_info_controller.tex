@@ -1,0 +1,93 @@
+\doxysection{Dokumentácia triedy Piece\+Info\+Controller}
+\hypertarget{class_piece_info_controller}{}\label{class_piece_info_controller}\index{PieceInfoController@{PieceInfoController}}
+Diagram dedičnosti pre triedu Piece\+Info\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_piece_info_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Vlastnosti}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_piece}{Piece}} \mbox{\hyperlink{class_piece_info_controller_a9af2f7fb0617a8975195153132a98bf9}{My\+Piece}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne metódy}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_piece_info_controller_ab274e39c382491173fbde0e7d4f951fb}\label{class_piece_info_controller_ab274e39c382491173fbde0e7d4f951fb} 
+void {\bfseries Awake} ()
+\item 
+\Hypertarget{class_piece_info_controller_aa9e8d16370165eab50d81ac2a6865100}\label{class_piece_info_controller_aa9e8d16370165eab50d81ac2a6865100} 
+void {\bfseries Start} ()
+\item 
+void \mbox{\hyperlink{class_piece_info_controller_adc341548336b99dca8dfcaf3dabbc651}{Create\+Piece}} ()
+\item 
+void \mbox{\hyperlink{class_piece_info_controller_a1fb2b38b74481cba3e973393556cf8ce}{Update\+Displayed\+Piece}} ()
+\item 
+void \mbox{\hyperlink{class_piece_info_controller_af2637d5ec5395229dc5d4e8938ae6327}{On\+Close\+Button\+Clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_piece_info_controller_a166eb9500f6d974723bb6aa09163da66}\label{class_piece_info_controller_a166eb9500f6d974723bb6aa09163da66} 
+Button {\bfseries close\+Btn}
+\item 
+\Hypertarget{class_piece_info_controller_ae7a8e8bc09a0b8aac8339c659b081a5f}\label{class_piece_info_controller_ae7a8e8bc09a0b8aac8339c659b081a5f} 
+Game\+Object {\bfseries board}
+\item 
+\Hypertarget{class_piece_info_controller_a4dada0c5bfd4b609ca718286a1f8b15b}\label{class_piece_info_controller_a4dada0c5bfd4b609ca718286a1f8b15b} 
+\mbox{\hyperlink{class_engine_controller}{Engine\+Controller}} {\bfseries engine\+Controller}
+\item 
+\Hypertarget{class_piece_info_controller_af37c35b1cbc97da74c6bab2e2dbe0707}\label{class_piece_info_controller_af37c35b1cbc97da74c6bab2e2dbe0707} 
+Game\+Object {\bfseries piece\+Prefab}
+\item 
+\Hypertarget{class_piece_info_controller_a5b996d8df8c6f34f704edb047ce14d8c}\label{class_piece_info_controller_a5b996d8df8c6f34f704edb047ce14d8c} 
+Game\+Object {\bfseries movement\+Prefab}
+\item 
+\Hypertarget{class_piece_info_controller_a2c4032d9421c19cccc736ef4e85ef612}\label{class_piece_info_controller_a2c4032d9421c19cccc736ef4e85ef612} 
+\mbox{\hyperlink{class_piece_object}{Piece\+Object}} {\bfseries piece\+Object}
+\item 
+\Hypertarget{class_piece_info_controller_a4317575711d370481b7bd964afec57db}\label{class_piece_info_controller_a4317575711d370481b7bd964afec57db} 
+List$<$ \mbox{\hyperlink{class_movement_object}{Movement\+Object}} $>$ {\bfseries movements} = new()
+\item 
+\Hypertarget{class_piece_info_controller_aae748f38798937f6539105e7cbfa46a8}\label{class_piece_info_controller_aae748f38798937f6539105e7cbfa46a8} 
+\mbox{\hyperlink{class_piece}{Piece}} {\bfseries my\+Piece}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Táto trieda je zodpovedná za správu nápovedy figúrky. 
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_piece_info_controller_adc341548336b99dca8dfcaf3dabbc651}\label{class_piece_info_controller_adc341548336b99dca8dfcaf3dabbc651} 
+\index{PieceInfoController@{PieceInfoController}!CreatePiece@{CreatePiece}}
+\index{CreatePiece@{CreatePiece}!PieceInfoController@{PieceInfoController}}
+\doxysubsubsection{\texorpdfstring{CreatePiece()}{CreatePiece()}}
+{\footnotesize\ttfamily void Piece\+Info\+Controller.\+Create\+Piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Objekt figúrky sa vytvorí a umiestni v strede šachovnice. \Hypertarget{class_piece_info_controller_af2637d5ec5395229dc5d4e8938ae6327}\label{class_piece_info_controller_af2637d5ec5395229dc5d4e8938ae6327} 
+\index{PieceInfoController@{PieceInfoController}!OnCloseButtonClicked@{OnCloseButtonClicked}}
+\index{OnCloseButtonClicked@{OnCloseButtonClicked}!PieceInfoController@{PieceInfoController}}
+\doxysubsubsection{\texorpdfstring{OnCloseButtonClicked()}{OnCloseButtonClicked()}}
+{\footnotesize\ttfamily void Piece\+Info\+Controller.\+On\+Close\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Po kliknutí tlačidla zatvorenia sa toto rozhranie deaktivuje. \Hypertarget{class_piece_info_controller_a1fb2b38b74481cba3e973393556cf8ce}\label{class_piece_info_controller_a1fb2b38b74481cba3e973393556cf8ce} 
+\index{PieceInfoController@{PieceInfoController}!UpdateDisplayedPiece@{UpdateDisplayedPiece}}
+\index{UpdateDisplayedPiece@{UpdateDisplayedPiece}!PieceInfoController@{PieceInfoController}}
+\doxysubsubsection{\texorpdfstring{UpdateDisplayedPiece()}{UpdateDisplayedPiece()}}
+{\footnotesize\ttfamily void Piece\+Info\+Controller.\+Update\+Displayed\+Piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Zobrazená figúrka sa aktualizuje a zobrazia sa jej dostupné pohyby. 
+
+\doxysubsection{Dokumentácia k vlastnosti}
+\Hypertarget{class_piece_info_controller_a9af2f7fb0617a8975195153132a98bf9}\label{class_piece_info_controller_a9af2f7fb0617a8975195153132a98bf9} 
+\index{PieceInfoController@{PieceInfoController}!MyPiece@{MyPiece}}
+\index{MyPiece@{MyPiece}!PieceInfoController@{PieceInfoController}}
+\doxysubsubsection{\texorpdfstring{MyPiece}{MyPiece}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_piece}{Piece}} Piece\+Info\+Controller.\+My\+Piece\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Aktuálne zobrazená figúrka. Ak ju zmeníme, tak sa aktualizuje jej zobrazenie. 
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+Piece\+Info\+Controller.\+cs\end{DoxyCompactItemize}

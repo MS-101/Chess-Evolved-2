@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess Evolved 2: Dokumentácia triedy Move</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Chess Evolved 2
+   </div>
+   <div id="projectbrief">Grafické rozhranie pre šachový engine Malakh</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generované programom Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hľadať');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítam...</div>
+<div class="SRStatus" id="Searching">Vyhľadávam...</div>
+<div class="SRStatus" id="NoMatches">Nič sa nenašlo</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Verejné metódy</a> &#124;
+<a href="#pub-attribs">Verejné atribúty</a> &#124;
+<a href="class_move-members.html">Zoznam všetkých členov</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentácia triedy Move</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Verejné metódy</h2></td></tr>
+<tr class="memitem:aa07c79184490842de077386e0ebb0f9b" id="r_aa07c79184490842de077386e0ebb0f9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa07c79184490842de077386e0ebb0f9b">Move</a> (int <a class="el" href="#a9089aa896901561d17b81dadd14d92ff">x1</a>, int <a class="el" href="#a2573db986b7d56576e797515b65e2698">y1</a>, int <a class="el" href="#addda9e090b792029711d06d8015fdca9">x2</a>, int <a class="el" href="#a7eb80c74ec0c6c55d11c7faf0d70e3ae">y2</a>)</td></tr>
+<tr class="separator:aa07c79184490842de077386e0ebb0f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88ef3d0b96d0628774a630b4f3c3e0e" id="r_af88ef3d0b96d0628774a630b4f3c3e0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af88ef3d0b96d0628774a630b4f3c3e0e">Move</a> (<a class="el" href="_move_8cs.html#ac663d85beab039663f297c3992360793">Castling</a> <a class="el" href="#a64293a21a5b33033ca9e4b70dd6056ef">castling</a>)</td></tr>
+<tr class="separator:af88ef3d0b96d0628774a630b4f3c3e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b0c62cd9dee92b182d412651663c41" id="r_a33b0c62cd9dee92b182d412651663c41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33b0c62cd9dee92b182d412651663c41">SetHasty</a> (int <a class="el" href="#abc796968316e71e4da7304911df0c252">hastyX</a>, int <a class="el" href="#a46fdbdb85e1373def5e5e878d1b1bc8f">hastyY</a>)</td></tr>
+<tr class="separator:a33b0c62cd9dee92b182d412651663c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f9a04e2e5a25ebdee7cc20eadd5cace" id="r_a7f9a04e2e5a25ebdee7cc20eadd5cace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f9a04e2e5a25ebdee7cc20eadd5cace">ClearHasty</a> ()</td></tr>
+<tr class="separator:a7f9a04e2e5a25ebdee7cc20eadd5cace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04041fbadd2296d2b96ead6ad363d1db" id="r_a04041fbadd2296d2b96ead6ad363d1db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04041fbadd2296d2b96ead6ad363d1db">SetVigilant</a> ()</td></tr>
+<tr class="separator:a04041fbadd2296d2b96ead6ad363d1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38adf9b8b474d19a25413947631e103" id="r_ad38adf9b8b474d19a25413947631e103"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad38adf9b8b474d19a25413947631e103">ClearVigilant</a> ()</td></tr>
+<tr class="separator:ad38adf9b8b474d19a25413947631e103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Verejné atribúty</h2></td></tr>
+<tr class="memitem:a9089aa896901561d17b81dadd14d92ff" id="r_a9089aa896901561d17b81dadd14d92ff"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9089aa896901561d17b81dadd14d92ff">x1</a></td></tr>
+<tr class="separator:a9089aa896901561d17b81dadd14d92ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2573db986b7d56576e797515b65e2698" id="r_a2573db986b7d56576e797515b65e2698"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2573db986b7d56576e797515b65e2698">y1</a></td></tr>
+<tr class="separator:a2573db986b7d56576e797515b65e2698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addda9e090b792029711d06d8015fdca9" id="r_addda9e090b792029711d06d8015fdca9"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addda9e090b792029711d06d8015fdca9">x2</a></td></tr>
+<tr class="separator:addda9e090b792029711d06d8015fdca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb80c74ec0c6c55d11c7faf0d70e3ae" id="r_a7eb80c74ec0c6c55d11c7faf0d70e3ae"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eb80c74ec0c6c55d11c7faf0d70e3ae">y2</a></td></tr>
+<tr class="separator:a7eb80c74ec0c6c55d11c7faf0d70e3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ac4dbc094ef11d16f8c076b84d0b8f" id="r_ab2ac4dbc094ef11d16f8c076b84d0b8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2ac4dbc094ef11d16f8c076b84d0b8f">hasty</a> = false</td></tr>
+<tr class="separator:ab2ac4dbc094ef11d16f8c076b84d0b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a3cfc24dcf0fbb31330728083dc7106" id="r_a5a3cfc24dcf0fbb31330728083dc7106"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a3cfc24dcf0fbb31330728083dc7106">vigilant</a> = false</td></tr>
+<tr class="separator:a5a3cfc24dcf0fbb31330728083dc7106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc796968316e71e4da7304911df0c252" id="r_abc796968316e71e4da7304911df0c252"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc796968316e71e4da7304911df0c252">hastyX</a></td></tr>
+<tr class="separator:abc796968316e71e4da7304911df0c252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46fdbdb85e1373def5e5e878d1b1bc8f" id="r_a46fdbdb85e1373def5e5e878d1b1bc8f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46fdbdb85e1373def5e5e878d1b1bc8f">hastyY</a></td></tr>
+<tr class="separator:a46fdbdb85e1373def5e5e878d1b1bc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64293a21a5b33033ca9e4b70dd6056ef" id="r_a64293a21a5b33033ca9e4b70dd6056ef"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="_move_8cs.html#ac663d85beab039663f297c3992360793">Castling</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64293a21a5b33033ca9e4b70dd6056ef">castling</a> = <a class="el" href="_move_8cs.html#ac663d85beab039663f297c3992360793a6adf97f83acf6453d4a6a4b1070f3754">Castling.None</a></td></tr>
+<tr class="separator:a64293a21a5b33033ca9e4b70dd6056ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailný popis</h2>
+<div class="textblock"><p>Trieda reprezentujúca pohyb na šachovnici. </p>
+</div><h2 class="groupheader">Dokumentácia konštruktoru a deštruktoru</h2>
+<a id="aa07c79184490842de077386e0ebb0f9b" name="aa07c79184490842de077386e0ebb0f9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07c79184490842de077386e0ebb0f9b">&#9670;&#160;</a></span>Move() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Move.Move </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x1</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y1</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x2</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Konštruktor normálneho pohybu na šachovnici.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>Koordinát X počiatočnej pozície. </td></tr>
+    <tr><td class="paramname">y1</td><td>Koordinát Y počiatočnej pozície. </td></tr>
+    <tr><td class="paramname">x2</td><td>Koordinát X cieľovej pozície. </td></tr>
+    <tr><td class="paramname">y2</td><td>Koordinát Y cieľovej pozície. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af88ef3d0b96d0628774a630b4f3c3e0e" name="af88ef3d0b96d0628774a630b4f3c3e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88ef3d0b96d0628774a630b4f3c3e0e">&#9670;&#160;</a></span>Move() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Move.Move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_move_8cs.html#ac663d85beab039663f297c3992360793">Castling</a></td>          <td class="paramname"><span class="paramname"><em>castling</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Konštruktor rošády.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">castling</td><td>Typ rošády. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k metódam</h2>
+<a id="a7f9a04e2e5a25ebdee7cc20eadd5cace" name="a7f9a04e2e5a25ebdee7cc20eadd5cace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f9a04e2e5a25ebdee7cc20eadd5cace">&#9670;&#160;</a></span>ClearHasty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Move.ClearHasty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zrušenie hasty flagu. </p>
+
+</div>
+</div>
+<a id="ad38adf9b8b474d19a25413947631e103" name="ad38adf9b8b474d19a25413947631e103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad38adf9b8b474d19a25413947631e103">&#9670;&#160;</a></span>ClearVigilant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Move.ClearVigilant </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Zrušenie vigilant flagu. </p>
+
+</div>
+</div>
+<a id="a33b0c62cd9dee92b182d412651663c41" name="a33b0c62cd9dee92b182d412651663c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b0c62cd9dee92b182d412651663c41">&#9670;&#160;</a></span>SetHasty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Move.SetHasty </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>hastyX</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>hastyY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Nastavenie hasty flagu.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hastyX</td><td>Koordinát X vytvoreného ducha. </td></tr>
+    <tr><td class="paramname">hastyY</td><td>Koordinát Y vytvoreného ducha. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a04041fbadd2296d2b96ead6ad363d1db" name="a04041fbadd2296d2b96ead6ad363d1db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04041fbadd2296d2b96ead6ad363d1db">&#9670;&#160;</a></span>SetVigilant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Move.SetVigilant </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Nastavenie vigilant flagu. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k dátovým členom</h2>
+<a id="a64293a21a5b33033ca9e4b70dd6056ef" name="a64293a21a5b33033ca9e4b70dd6056ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64293a21a5b33033ca9e4b70dd6056ef">&#9670;&#160;</a></span>castling</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="_move_8cs.html#ac663d85beab039663f297c3992360793">Castling</a> Move.castling = <a class="el" href="_move_8cs.html#ac663d85beab039663f297c3992360793a6adf97f83acf6453d4a6a4b1070f3754">Castling.None</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Typ rošády. </p>
+
+</div>
+</div>
+<a id="ab2ac4dbc094ef11d16f8c076b84d0b8f" name="ab2ac4dbc094ef11d16f8c076b84d0b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2ac4dbc094ef11d16f8c076b84d0b8f">&#9670;&#160;</a></span>hasty</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Move.hasty = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Hasty flag pohybu (pohyb vytvorí ducha). </p>
+
+</div>
+</div>
+<a id="abc796968316e71e4da7304911df0c252" name="abc796968316e71e4da7304911df0c252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc796968316e71e4da7304911df0c252">&#9670;&#160;</a></span>hastyX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Move.hastyX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Koordinát X vytvoreného ducha. </p>
+
+</div>
+</div>
+<a id="a46fdbdb85e1373def5e5e878d1b1bc8f" name="a46fdbdb85e1373def5e5e878d1b1bc8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46fdbdb85e1373def5e5e878d1b1bc8f">&#9670;&#160;</a></span>hastyY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Move.hastyY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Koordinát Y vytvoreného ducha. </p>
+
+</div>
+</div>
+<a id="a5a3cfc24dcf0fbb31330728083dc7106" name="a5a3cfc24dcf0fbb31330728083dc7106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a3cfc24dcf0fbb31330728083dc7106">&#9670;&#160;</a></span>vigilant</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Move.vigilant = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vigilant flag pohybu (pohyb môže napadnúť ducha). </p>
+
+</div>
+</div>
+<a id="a9089aa896901561d17b81dadd14d92ff" name="a9089aa896901561d17b81dadd14d92ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9089aa896901561d17b81dadd14d92ff">&#9670;&#160;</a></span>x1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int Move.x1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Koordinát X zdrojovej pozície. </p>
+
+</div>
+</div>
+<a id="addda9e090b792029711d06d8015fdca9" name="addda9e090b792029711d06d8015fdca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addda9e090b792029711d06d8015fdca9">&#9670;&#160;</a></span>x2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int Move.x2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Koordinát X cieľovej pozície. </p>
+
+</div>
+</div>
+<a id="a2573db986b7d56576e797515b65e2698" name="a2573db986b7d56576e797515b65e2698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2573db986b7d56576e797515b65e2698">&#9670;&#160;</a></span>y1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int Move.y1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Koordinát Y zdrojovej pozície. </p>
+
+</div>
+</div>
+<a id="a7eb80c74ec0c6c55d11c7faf0d70e3ae" name="a7eb80c74ec0c6c55d11c7faf0d70e3ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb80c74ec0c6c55d11c7faf0d70e3ae">&#9670;&#160;</a></span>y2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int Move.y2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Koordinát Y cieľovej pozície. </p>
+
+</div>
+</div>
+<hr/>Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru:<ul>
+<li><a class="el" href="_move_8cs.html">Move.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generované programom&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

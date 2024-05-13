@@ -1,0 +1,210 @@
+\doxysection{Dokumentácia triedy Chess}
+\hypertarget{class_chess}{}\label{class_chess}\index{Chess@{Chess}}
+Diagram dedičnosti pre triedu Chess\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_chess}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Triedy}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_chess_1_1_game_settings}{Game\+Settings}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Verejné typy}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Piece\+Type}} \{ \newline
+\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80}{Pawn}} = 0
+, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cfa8c23b2b86573edf2a5ea482c2ccc1497}{Knight}} = 1
+, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cfa3aa4584e547efba20238772d4af5c03d}{Bishop}} = 2
+, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cfa1a415f5ae0f891e49d34821a896b4466}{Rook}} = 3
+, \newline
+\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cfa2c2d2c0291163b077a372c2a9c5a6eda}{Queen}} = 4
+, \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cfa719ef271d38a388fd7b2bc967f4bd885}{King}} = 5
+ \}
+\item 
+enum \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Essence}} \{ \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758ad35b51b639528d580362ca7042de6a0e}{Classic}} = 0
+, \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758aee38e4d5dd68c4e440825018d549cb47}{Red}} = 1
+, \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758a9594eec95be70e7b1710f730fdda33d9}{Blue}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Color}} \{ \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dda25a81701fbfa4a1efdf660a950c1d006}{White}} = 0
+, \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8ddae90dfb84e30edf611e326eeb04d680de}{Black}} = 1
+, \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dda64663f4646781c9c0110838b905daa23}{Random}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Movement\+Type}} \{ \mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261da6bc362dbf494c61ea117fe3c71ca48a5}{Move}} = 0
+, \mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261dadcfafcb4323b102c7e204555d313ba0a}{Attack}} = 1
+, \mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261da364dce30a8b9b040a3938b09d9932a4a}{Attack\+Move}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{class_chess_a56f6ae8945c2b4a779131b4c087e7f73}{AI}} \{ \mbox{\hyperlink{class_chess_a56f6ae8945c2b4a779131b4c087e7f73a972e73b7a882d0802a4e3a16946a2f94}{Basic}} = 0
+, \mbox{\hyperlink{class_chess_a56f6ae8945c2b4a779131b4c087e7f73abe5dd267794f8f209543995a5461710f}{Ensemble}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Statické verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+static Sprite \mbox{\hyperlink{class_chess_af01198010246258000bd54d29388c2ae}{Get\+Piece\+Image}} (\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Piece\+Type}} type, \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Color}} color, \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Essence}} essence)
+\item 
+static Sprite \mbox{\hyperlink{class_chess_a0a11ca0578c5326279a32d7f651d2e7a}{Get\+Movement\+Image}} (\mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Movement\+Type}} type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Táto trieda slúži podobne ako Common trieda. 
+
+\doxysubsection{Dokumentácia k členským enumeráciám}
+\Hypertarget{class_chess_a56f6ae8945c2b4a779131b4c087e7f73}\label{class_chess_a56f6ae8945c2b4a779131b4c087e7f73} 
+\index{Chess@{Chess}!AI@{AI}}
+\index{AI@{AI}!Chess@{Chess}}
+\doxysubsubsection{\texorpdfstring{AI}{AI}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_chess_a56f6ae8945c2b4a779131b4c087e7f73}{Chess.\+AI}}}
+
+Enumerátor reprezentujúci typ šachovej inteligencie. \begin{DoxyEnumFields}{Hodnoty enumerácií}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Basic@{Basic}!Chess@{Chess}}\index{Chess@{Chess}!Basic@{Basic}}}\Hypertarget{class_chess_a56f6ae8945c2b4a779131b4c087e7f73a972e73b7a882d0802a4e3a16946a2f94}\label{class_chess_a56f6ae8945c2b4a779131b4c087e7f73a972e73b7a882d0802a4e3a16946a2f94} 
+Basic&Základná inteligencia využíva na evaluáciu šachovej pozície ručne nastavenú evaluačnú funkciu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ensemble@{Ensemble}!Chess@{Chess}}\index{Chess@{Chess}!Ensemble@{Ensemble}}}\Hypertarget{class_chess_a56f6ae8945c2b4a779131b4c087e7f73abe5dd267794f8f209543995a5461710f}\label{class_chess_a56f6ae8945c2b4a779131b4c087e7f73abe5dd267794f8f209543995a5461710f} 
+Ensemble&Základná inteligencia využíva na evaluáciu šachovej pozície súbor CNN modelov. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}\label{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd} 
+\index{Chess@{Chess}!Color@{Color}}
+\index{Color@{Color}!Chess@{Chess}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}}}
+
+Farba šachovej figúrky. \begin{DoxyEnumFields}{Hodnoty enumerácií}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{White@{White}!Chess@{Chess}}\index{Chess@{Chess}!White@{White}}}\Hypertarget{class_chess_a59a9d4e4128655f58f1b9e44d810b8dda25a81701fbfa4a1efdf660a950c1d006}\label{class_chess_a59a9d4e4128655f58f1b9e44d810b8dda25a81701fbfa4a1efdf660a950c1d006} 
+White&Biela figúrka. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Black@{Black}!Chess@{Chess}}\index{Chess@{Chess}!Black@{Black}}}\Hypertarget{class_chess_a59a9d4e4128655f58f1b9e44d810b8ddae90dfb84e30edf611e326eeb04d680de}\label{class_chess_a59a9d4e4128655f58f1b9e44d810b8ddae90dfb84e30edf611e326eeb04d680de} 
+Black&Čierna figúrka. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Random@{Random}!Chess@{Chess}}\index{Chess@{Chess}!Random@{Random}}}\Hypertarget{class_chess_a59a9d4e4128655f58f1b9e44d810b8dda64663f4646781c9c0110838b905daa23}\label{class_chess_a59a9d4e4128655f58f1b9e44d810b8dda64663f4646781c9c0110838b905daa23} 
+Random&Náhodná figúrka. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}\label{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758} 
+\index{Chess@{Chess}!Essence@{Essence}}
+\index{Essence@{Essence}!Chess@{Chess}}
+\doxysubsubsection{\texorpdfstring{Essence}{Essence}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}}}
+
+Enumerátor reprezentujúci esenciu šachovej figúrky \begin{DoxyEnumFields}{Hodnoty enumerácií}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Classic@{Classic}!Chess@{Chess}}\index{Chess@{Chess}!Classic@{Classic}}}\Hypertarget{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758ad35b51b639528d580362ca7042de6a0e}\label{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758ad35b51b639528d580362ca7042de6a0e} 
+Classic&Klasická esencia. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Red@{Red}!Chess@{Chess}}\index{Chess@{Chess}!Red@{Red}}}\Hypertarget{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758aee38e4d5dd68c4e440825018d549cb47}\label{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758aee38e4d5dd68c4e440825018d549cb47} 
+Red&Červená esencia. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Blue@{Blue}!Chess@{Chess}}\index{Chess@{Chess}!Blue@{Blue}}}\Hypertarget{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758a9594eec95be70e7b1710f730fdda33d9}\label{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758a9594eec95be70e7b1710f730fdda33d9} 
+Blue&Modrá esencia. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_chess_a680fe9f481ee48f3b19309dfc818261d}\label{class_chess_a680fe9f481ee48f3b19309dfc818261d} 
+\index{Chess@{Chess}!MovementType@{MovementType}}
+\index{MovementType@{MovementType}!Chess@{Chess}}
+\doxysubsubsection{\texorpdfstring{MovementType}{MovementType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Chess.\+Movement\+Type}}}
+
+Enumerátor reprezentujúci typ mobility. \begin{DoxyEnumFields}{Hodnoty enumerácií}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Move@{Move}!Chess@{Chess}}\index{Chess@{Chess}!Move@{Move}}}\Hypertarget{class_chess_a680fe9f481ee48f3b19309dfc818261da6bc362dbf494c61ea117fe3c71ca48a5}\label{class_chess_a680fe9f481ee48f3b19309dfc818261da6bc362dbf494c61ea117fe3c71ca48a5} 
+Move&Tento pohyb umožňuje len presunúť sa na prázdnu pozíciu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Attack@{Attack}!Chess@{Chess}}\index{Chess@{Chess}!Attack@{Attack}}}\Hypertarget{class_chess_a680fe9f481ee48f3b19309dfc818261dadcfafcb4323b102c7e204555d313ba0a}\label{class_chess_a680fe9f481ee48f3b19309dfc818261dadcfafcb4323b102c7e204555d313ba0a} 
+Attack&Tento pohyb umožňuje len napadnúť protivníkovu figúrku. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AttackMove@{AttackMove}!Chess@{Chess}}\index{Chess@{Chess}!AttackMove@{AttackMove}}}\Hypertarget{class_chess_a680fe9f481ee48f3b19309dfc818261da364dce30a8b9b040a3938b09d9932a4a}\label{class_chess_a680fe9f481ee48f3b19309dfc818261da364dce30a8b9b040a3938b09d9932a4a} 
+Attack\+Move&Tento pohyb umožňuje presunúť sa na prádznu pozíciu a napadnúť protivníkovu figúrku. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_chess_a5c28d265b562136476b0a7591659b0cf}\label{class_chess_a5c28d265b562136476b0a7591659b0cf} 
+\index{Chess@{Chess}!PieceType@{PieceType}}
+\index{PieceType@{PieceType}!Chess@{Chess}}
+\doxysubsubsection{\texorpdfstring{PieceType}{PieceType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}}}
+
+Enumerátor reprezentujúci typ šachovej figúrky. \begin{DoxyEnumFields}{Hodnoty enumerácií}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pawn@{Pawn}!Chess@{Chess}}\index{Chess@{Chess}!Pawn@{Pawn}}}\Hypertarget{class_chess_a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80}\label{class_chess_a5c28d265b562136476b0a7591659b0cfa36cddea7303c5d9d8a0930128b1fbb80} 
+Pawn&Pešiak. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Knight@{Knight}!Chess@{Chess}}\index{Chess@{Chess}!Knight@{Knight}}}\Hypertarget{class_chess_a5c28d265b562136476b0a7591659b0cfa8c23b2b86573edf2a5ea482c2ccc1497}\label{class_chess_a5c28d265b562136476b0a7591659b0cfa8c23b2b86573edf2a5ea482c2ccc1497} 
+Knight&Rytier. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bishop@{Bishop}!Chess@{Chess}}\index{Chess@{Chess}!Bishop@{Bishop}}}\Hypertarget{class_chess_a5c28d265b562136476b0a7591659b0cfa3aa4584e547efba20238772d4af5c03d}\label{class_chess_a5c28d265b562136476b0a7591659b0cfa3aa4584e547efba20238772d4af5c03d} 
+Bishop&Strelec. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Rook@{Rook}!Chess@{Chess}}\index{Chess@{Chess}!Rook@{Rook}}}\Hypertarget{class_chess_a5c28d265b562136476b0a7591659b0cfa1a415f5ae0f891e49d34821a896b4466}\label{class_chess_a5c28d265b562136476b0a7591659b0cfa1a415f5ae0f891e49d34821a896b4466} 
+Rook&Veža. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Queen@{Queen}!Chess@{Chess}}\index{Chess@{Chess}!Queen@{Queen}}}\Hypertarget{class_chess_a5c28d265b562136476b0a7591659b0cfa2c2d2c0291163b077a372c2a9c5a6eda}\label{class_chess_a5c28d265b562136476b0a7591659b0cfa2c2d2c0291163b077a372c2a9c5a6eda} 
+Queen&Kráľovná. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{King@{King}!Chess@{Chess}}\index{Chess@{Chess}!King@{King}}}\Hypertarget{class_chess_a5c28d265b562136476b0a7591659b0cfa719ef271d38a388fd7b2bc967f4bd885}\label{class_chess_a5c28d265b562136476b0a7591659b0cfa719ef271d38a388fd7b2bc967f4bd885} 
+King&Kráľ. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_chess_a0a11ca0578c5326279a32d7f651d2e7a}\label{class_chess_a0a11ca0578c5326279a32d7f651d2e7a} 
+\index{Chess@{Chess}!GetMovementImage@{GetMovementImage}}
+\index{GetMovementImage@{GetMovementImage}!Chess@{Chess}}
+\doxysubsubsection{\texorpdfstring{GetMovementImage()}{GetMovementImage()}}
+{\footnotesize\ttfamily static Sprite Chess.\+Get\+Movement\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a680fe9f481ee48f3b19309dfc818261d}{Movement\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Táto metóda načíta obrázok požadovaného pohybu
+
+
+\begin{DoxyParams}{Parametre}
+{\em type} & Typ pohybu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Obrázok daného pohybu. 
+\end{DoxyReturn}
+\Hypertarget{class_chess_af01198010246258000bd54d29388c2ae}\label{class_chess_af01198010246258000bd54d29388c2ae} 
+\index{Chess@{Chess}!GetPieceImage@{GetPieceImage}}
+\index{GetPieceImage@{GetPieceImage}!Chess@{Chess}}
+\doxysubsubsection{\texorpdfstring{GetPieceImage()}{GetPieceImage()}}
+{\footnotesize\ttfamily static Sprite Chess.\+Get\+Piece\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Piece\+Type}}}]{type,  }\item[{\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Color}}}]{color,  }\item[{\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Essence}}}]{essence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Táto metóda načíta obrázok požadovanej šachovej figúrky.
+
+
+\begin{DoxyParams}{Parametre}
+{\em type} & Typ figúrky. \\
+\hline
+{\em color} & Farba figúrky. \\
+\hline
+{\em essence} & Esencia figúrky. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Obrázok danej figúrky. 
+\end{DoxyReturn}
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_chess_8cs}{Chess.\+cs}}\end{DoxyCompactItemize}

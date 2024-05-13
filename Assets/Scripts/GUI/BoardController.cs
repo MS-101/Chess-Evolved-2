@@ -1,3 +1,11 @@
+﻿/*****************************************************************//**
+ * \file   BoardController.cs
+ * \brief  Ovládač rozhrania šachovnice.
+ * 
+ * \author Martin Šváb
+ * \date   Máj 2024
+ *********************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,6 +13,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
+/**
+ * Táto trieda je zodpovedná za správu šachovnice.
+ */
 public class BoardController : MonoBehaviour
 {
     [SerializeField] private TMP_Text topColumn1, topColumn2, topColumn3, topColumn4, topColumn5, topColumn6, topColumn7, topColumn8;
@@ -21,6 +32,12 @@ public class BoardController : MonoBehaviour
     public UnityEvent<Movement, Chess.PieceType> onPlayerMove = new();
     public UnityEvent onPromotionRequested = new();
 
+    /**
+     * Šachovnica sa inicializuje na počiatočnú pozíciu sa danou hernou konfiguráciou a orientáciou.
+     * 
+     * \param reversed Ak hráč hráč hrá za čierneho hráča, tak šachovnica je obrátená o 180 stupňov.
+     * \param gameSettings Herná konfigurácia.
+     */
     public void InitBoard(bool reversed, Chess.GameSettings gameSettings)
     {
         this.gameSettings = gameSettings;
@@ -32,11 +49,19 @@ public class BoardController : MonoBehaviour
         CreateInitialPosition();
     }
 
+    /**
+     * Nastaví sa lokálna premenná akutálneho hráča na rade.
+     * 
+     * \param currentPly Aktuálny hráč na rade.
+     */
     public void SetPly(Chess.Color currentPly)
     {
         this.currentPly = currentPly;
     }
 
+    /**
+     * Na šachovnici sa zobrazí napadnutie kráľa s červeným políčkom pre hráča na rade.
+     */
     public void SetCheck()
     {
         foreach (PieceObject pieceObject in pieceObjects)
@@ -49,6 +74,11 @@ public class BoardController : MonoBehaviour
         }
     }
 
+    /**
+     * Všetkým figúrkam sa odstránia legálne pohyby a priradia sa im nové.
+     * 
+     * \param legalMoves Zoznam legálnych pohybov.
+     */
     public void SetLegalMoves(List<Move> legalMoves)
     {
         foreach (PieceObject pieceObject in pieceObjects)
@@ -74,6 +104,13 @@ public class BoardController : MonoBehaviour
         }
     }
 
+    /**
+     * Na danej pozícii sa vyhľadá figúrka.
+     * 
+     * \param x Koordinát X danej pozície.
+     * \param y Koordinát Y danej pozície.
+     * \return Nájdená figúrka na danej pozícii. Ak žiadan nebol nájdená tak sa vráti null.
+     */
     public Piece GetPiece(int x, int y)
     {
         PieceObject pieceObject = GetPieceObject(x, y);
@@ -83,11 +120,21 @@ public class BoardController : MonoBehaviour
             return null;
     }
 
+    /**
+     * Vykoná sa daný pohyb. Vykonaný pohyb sa zapíše do lokálnej premennej
+     * 
+     * \param legalMove Vykonaný pohyb.
+     */
     public void PerformMove(Move legalMove)
     {
         performedMovement = MovePiece(legalMove);
     }
 
+    /**
+     * Vykoná sa promócia poslednej pohnutej figúrky.
+     * 
+     * \param promotedPieceType Nový typ figúrky priradený pešiakovi.
+     */
     public void PerformPromotion(Chess.PieceType promotedPieceType)
     {
         PieceObject promotedPieceObject = GetPieceObject(performedMovement.move.x2, performedMovement.move.y2);
@@ -102,6 +149,11 @@ public class BoardController : MonoBehaviour
         promotedPieceObject.Piece = promotedPiece;
     }
 
+    /**
+     * Táto metóda nastaví orientáciu šachovnice.
+     * 
+     * \param reversed Ak hráč hráč hrá za čierneho hráča, tak šachovnica je obrátená o 180 stupňov.
+     */
     private void SetBoardOrientation(bool reversed)
     {
         this.reversed = reversed;
@@ -148,6 +200,10 @@ public class BoardController : MonoBehaviour
         }
     }
 
+    /**
+     * Zo šachovnice sa odstránia všetky figúrky a pridajú sa tu nové figúrky na počiatočnú pozíciu.
+     * Esencie sú priradené podľa aktuálnej hernej konfigurácie.
+     */
     private void CreateInitialPosition()
     {
         ClearPieces();
@@ -223,6 +279,9 @@ public class BoardController : MonoBehaviour
     private GhostObject ghostObject = null;
     private GameObject highlightedSquare = null;
 
+    /**
+     * Zo šachovnice sa odstránia všetky figúrky.
+     */
     private void ClearPieces()
     {
         while (pieceObjects.Count > 0)
@@ -232,6 +291,9 @@ public class BoardController : MonoBehaviour
         }
     }
 
+    /**
+     * Zo šachovnice sa odstráni duch (pre pravidlo En Passant).
+     */
     private void ClearGhost()
     {
         if (ghostObject != null)
@@ -241,6 +303,11 @@ public class BoardController : MonoBehaviour
         }
     }
 
+    /**
+     * Na šachovnici sa vytvorí nový duch (pre pravidlo En Passant).
+     * 
+     * \param ghost Nový duch.
+     */
     private void SetGhost(Ghost ghost)
     {
         ClearGhost();
@@ -251,6 +318,9 @@ public class BoardController : MonoBehaviour
         MoveGameObject(ghostObject.gameObject, ghost.x, ghost.y);
     }
 
+    /**
+     * Zo šachovnice sa odstráni znázornené políčko.
+     */
     private void ClearHighlightedSquare()
     {
         if (highlightedSquare != null)
@@ -260,6 +330,12 @@ public class BoardController : MonoBehaviour
         }
     }
 
+    /**
+     * Do šachovnice sa na danú pozíciu pridá znázornené políčko.
+     * 
+     * \param x Koordinát X danej pozície.
+     * \param x Koordinát Y danej pozície.
+     */
     private void SetHighlightedSquare(int x, int y)
     {
         ClearHighlightedSquare();
@@ -268,6 +344,13 @@ public class BoardController : MonoBehaviour
         MoveGameObject(highlightedSquare, x, y);
     }
 
+    /**
+     * Do šachovnice sa na danú pozíciu pridá nová figúrka.
+     * 
+     * \param piece Nová figúrka.
+     * \param x Koordinát X danej pozície.
+     * \param x Koordinát Y danej pozície.
+     */
     private void AddPiece(Piece piece, int x, int y)
     {
         PieceObject pieceObject = Instantiate((GameObject)Resources.Load("Prefabs/Piece"), board.transform).GetComponent<PieceObject>();
@@ -281,6 +364,12 @@ public class BoardController : MonoBehaviour
         pieceObject.onPieceClicked.AddListener(OnPieceClicked);
     }
 
+    /**
+     * Na šachovnici sa vykoná daný pohyb.
+     * 
+     * \param move Vykonaný pohyb.
+     * \return Vykonaný pohyb spolu s jej figúrkou.
+     */
     private Movement MovePiece(Move move)
     {
         PieceObject movedPieceObject;
@@ -380,11 +469,24 @@ public class BoardController : MonoBehaviour
         return new(movedPieceObject.Piece, movementType, move);
     }
 
+    /**
+     * Na šachovnici sa nájde objekt figúrky na danej pozícii.
+     * 
+     * \param x Koordinát X danej pozície.
+     * \param x Koordinát Y danej pozície.
+     * \return Nájdený objekt figúrky.
+     */
     private PieceObject GetPieceObject(int x, int y)
     {
         return pieceObjects.Find(target => (target.Piece.x == x && target.Piece.y == y));
     }
 
+    /**
+     * Pri kliknutí na figúrku sa vymažú všetky aktuálne pohyby a zruší sa výber všetkých figúrok.
+     * Ak táto figúrka ešte nebola vybraná tak sa vyberie a znázornia sa jej dostupné pohyby.
+     * 
+     * \param piece Kliknutá figúrka.
+     */
     private void OnPieceClicked(Piece piece)
     {
         if (currentPly == gameSettings.playerColor)
@@ -416,6 +518,9 @@ public class BoardController : MonoBehaviour
 
     private List<MovementObject> movementObjects = new();
 
+    /**
+     * Zo šachovnice sa odstránia všetky pohyby.
+     */
     private void ClearMovements()
     {
         while (movementObjects.Count > 0)
@@ -425,6 +530,11 @@ public class BoardController : MonoBehaviour
         }
     }
 
+    /**
+     * Do šachovnice sa pridá nový pohyb.
+     * 
+     * \param movement Vykonaný pohyb.
+     */
     private void AddMovement(Movement movement)
     {
         MovementObject movementObject = Instantiate((GameObject)Resources.Load("Prefabs/Movement"), board.transform).GetComponent<MovementObject>();
@@ -438,6 +548,12 @@ public class BoardController : MonoBehaviour
 
     Movement performedMovement = null;
 
+    /**
+     * Po kliknutí na pohyb sa daný pohyb vykoná.
+     * Ak došlo k promócii tak sa vyžiada vykonanie promócie pešiaka.
+     * 
+     * \param movement Vybraný pohyb.
+     */
     private void OnMovementClicked(Movement movement)
     {
         ClearMovements();
@@ -458,6 +574,13 @@ public class BoardController : MonoBehaviour
 
     #endregion
 
+    /**
+     * Generická metóda na presunutie herného objektu na danú pozíciu na šachovnici.
+     * 
+     * \param gameObject Presunutý herný objekt.
+     * \param x Koordinát X danej pozície.
+     * \param x Koordinát Y danej pozície.
+     */
     private void MoveGameObject(GameObject gameObject, int x, int y)
     {
         RectTransform parentRect = board.GetComponent<RectTransform>();

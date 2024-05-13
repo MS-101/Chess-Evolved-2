@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess Evolved 2: Dokumentácia triedy PieceObject</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Chess Evolved 2
+   </div>
+   <div id="projectbrief">Grafické rozhranie pre šachový engine Malakh</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generované programom Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hľadať');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítam...</div>
+<div class="SRStatus" id="Searching">Vyhľadávam...</div>
+<div class="SRStatus" id="NoMatches">Nič sa nenašlo</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Verejné metódy</a> &#124;
+<a href="#pub-attribs">Verejné atribúty</a> &#124;
+<a href="#properties">Vlastnosti</a> &#124;
+<a href="#pri-attribs">Privátne atribúty</a> &#124;
+<a href="class_piece_object-members.html">Zoznam všetkých členov</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentácia triedy PieceObject</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Diagram dedičnosti pre triedu PieceObject</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_piece_object.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Verejné metódy</h2></td></tr>
+<tr class="memitem:a2d207ccc7cfe8ae5b2a18a7b68ab3a90" id="r_a2d207ccc7cfe8ae5b2a18a7b68ab3a90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d207ccc7cfe8ae5b2a18a7b68ab3a90">OnPointerClick</a> (PointerEventData eventData)</td></tr>
+<tr class="separator:a2d207ccc7cfe8ae5b2a18a7b68ab3a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Verejné atribúty</h2></td></tr>
+<tr class="memitem:a721a362726770a5f278da524cb4d4227" id="r_a721a362726770a5f278da524cb4d4227"><td class="memItemLeft" align="right" valign="top"><a id="a721a362726770a5f278da524cb4d4227" name="a721a362726770a5f278da524cb4d4227"></a>
+UnityEvent&lt; <a class="el" href="class_piece.html">Piece</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onPieceClicked</b></td></tr>
+<tr class="separator:a721a362726770a5f278da524cb4d4227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Vlastnosti</h2></td></tr>
+<tr class="memitem:ac4dcba4bb3e84a4337b2cf305ceac122" id="r_ac4dcba4bb3e84a4337b2cf305ceac122"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_piece.html">Piece</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4dcba4bb3e84a4337b2cf305ceac122">Piece</a><code> [get, set]</code></td></tr>
+<tr class="separator:ac4dcba4bb3e84a4337b2cf305ceac122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918a9192e195e60298c6c406641a4771" id="r_a918a9192e195e60298c6c406641a4771"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a918a9192e195e60298c6c406641a4771">Selected</a><code> [get, set]</code></td></tr>
+<tr class="separator:a918a9192e195e60298c6c406641a4771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a750b1244b4187b5ef866b7d1bd834e" id="r_a6a750b1244b4187b5ef866b7d1bd834e"><td class="memItemLeft" align="right" valign="top"><a id="a6a750b1244b4187b5ef866b7d1bd834e" name="a6a750b1244b4187b5ef866b7d1bd834e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Highlighted</b><code> [get, set]</code></td></tr>
+<tr class="separator:a6a750b1244b4187b5ef866b7d1bd834e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979be5c3ba976bfd62ffb3126a5569cf" id="r_a979be5c3ba976bfd62ffb3126a5569cf"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a979be5c3ba976bfd62ffb3126a5569cf">HighlightColor</a><code> [get, set]</code></td></tr>
+<tr class="separator:a979be5c3ba976bfd62ffb3126a5569cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Privátne atribúty</h2></td></tr>
+<tr class="memitem:a6209314fdd074529f48b78680dd4720c" id="r_a6209314fdd074529f48b78680dd4720c"><td class="memItemLeft" align="right" valign="top"><a id="a6209314fdd074529f48b78680dd4720c" name="a6209314fdd074529f48b78680dd4720c"></a>
+Image&#160;</td><td class="memItemRight" valign="bottom"><b>pieceImage</b></td></tr>
+<tr class="separator:a6209314fdd074529f48b78680dd4720c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a883c3b247b0a1ac9e4c89aa1d75c63ad" id="r_a883c3b247b0a1ac9e4c89aa1d75c63ad"><td class="memItemLeft" align="right" valign="top"><a id="a883c3b247b0a1ac9e4c89aa1d75c63ad" name="a883c3b247b0a1ac9e4c89aa1d75c63ad"></a>
+Image&#160;</td><td class="memItemRight" valign="bottom"><b>outlineImage</b></td></tr>
+<tr class="separator:a883c3b247b0a1ac9e4c89aa1d75c63ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38fef2140d1f0928ea07317d9a5f6165" id="r_a38fef2140d1f0928ea07317d9a5f6165"><td class="memItemLeft" align="right" valign="top"><a id="a38fef2140d1f0928ea07317d9a5f6165" name="a38fef2140d1f0928ea07317d9a5f6165"></a>
+Image&#160;</td><td class="memItemRight" valign="bottom"><b>backgroundImage</b></td></tr>
+<tr class="separator:a38fef2140d1f0928ea07317d9a5f6165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4b140bed982110c72e661dba126596" id="r_aef4b140bed982110c72e661dba126596"><td class="memItemLeft" align="right" valign="top"><a id="aef4b140bed982110c72e661dba126596" name="aef4b140bed982110c72e661dba126596"></a>
+<a class="el" href="class_piece.html">Piece</a>&#160;</td><td class="memItemRight" valign="bottom"><b>piece</b> = null</td></tr>
+<tr class="separator:aef4b140bed982110c72e661dba126596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a598b3b410e82b7151145ccb49955357f" id="r_a598b3b410e82b7151145ccb49955357f"><td class="memItemLeft" align="right" valign="top"><a id="a598b3b410e82b7151145ccb49955357f" name="a598b3b410e82b7151145ccb49955357f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>selected</b> = false</td></tr>
+<tr class="separator:a598b3b410e82b7151145ccb49955357f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e8b50b605322ebe72a8bdae003b8c9e" id="r_a0e8b50b605322ebe72a8bdae003b8c9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e8b50b605322ebe72a8bdae003b8c9e">highlighted</a> = false</td></tr>
+<tr class="separator:a0e8b50b605322ebe72a8bdae003b8c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailný popis</h2>
+<div class="textblock"><p>Táto trieda spravuje objekt figúrky. </p>
+</div><h2 class="groupheader">Dokumentácia k metódam</h2>
+<a id="a2d207ccc7cfe8ae5b2a18a7b68ab3a90" name="a2d207ccc7cfe8ae5b2a18a7b68ab3a90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d207ccc7cfe8ae5b2a18a7b68ab3a90">&#9670;&#160;</a></span>OnPointerClick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PieceObject.OnPointerClick </td>
+          <td>(</td>
+          <td class="paramtype">PointerEventData</td>          <td class="paramname"><span class="paramname"><em>eventData</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pri kliknutí na tento objekt sa to oznámi poslucháčom jeho onClick eventu.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td>Informácie o kliknutí. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k dátovým členom</h2>
+<a id="a0e8b50b605322ebe72a8bdae003b8c9e" name="a0e8b50b605322ebe72a8bdae003b8c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e8b50b605322ebe72a8bdae003b8c9e">&#9670;&#160;</a></span>highlighted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PieceObject.highlighted = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Informácia o znázornení figúky. Ak sa zmení znázornenie figúrky, tak sa aktivuje alebo deaktivuje pozadie figúrky. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k vlastnosti</h2>
+<a id="a979be5c3ba976bfd62ffb3126a5569cf" name="a979be5c3ba976bfd62ffb3126a5569cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979be5c3ba976bfd62ffb3126a5569cf">&#9670;&#160;</a></span>HighlightColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color PieceObject.HighlightColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Aktuálna farba znázornenia figúrky. Ak sa táto vlastnosť zmení, tak sa aktualizuje farba pozadia. </p>
+
+</div>
+</div>
+<a id="ac4dcba4bb3e84a4337b2cf305ceac122" name="ac4dcba4bb3e84a4337b2cf305ceac122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4dcba4bb3e84a4337b2cf305ceac122">&#9670;&#160;</a></span>Piece</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_piece.html">Piece</a> PieceObject.Piece</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Figúrka priradená tomuto objektu. Ak ju zmeníme, tak sa aktualizuje jej zobrazenie. </p>
+
+</div>
+</div>
+<a id="a918a9192e195e60298c6c406641a4771" name="a918a9192e195e60298c6c406641a4771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a918a9192e195e60298c6c406641a4771">&#9670;&#160;</a></span>Selected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PieceObject.Selected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Informácia o výbere figúky. Ak sa zmení výber figúrky, tak sa aktivuje alebo deaktivuje outline figúrky. </p>
+
+</div>
+</div>
+<hr/>Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru:<ul>
+<li><a class="el" href="_piece_object_8cs.html">PieceObject.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generované programom&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

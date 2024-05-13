@@ -1,0 +1,287 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {slovak}{}\relax 
+\contentsline {chapter}{\numberline {1}Register hierarchie tried}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Hierarchia tried}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Register tried}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Zoznam tried}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Register súborov}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Zoznam súborov}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Dokumentácia tried}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dokumentácia triedy Board\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailný popis}{9}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Dokumentácia k metódam}{9}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}AddMovement()}{9}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}AddPiece()}{9}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}ClearGhost()}{9}{subsubsection.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}ClearHighlightedSquare()}{9}{subsubsection.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}ClearMovements()}{10}{subsubsection.4.1.2.5}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}ClearPieces()}{10}{subsubsection.4.1.2.6}%
+\contentsline {subsubsection}{\numberline {4.1.2.7}CreateInitialPosition()}{10}{subsubsection.4.1.2.7}%
+\contentsline {subsubsection}{\numberline {4.1.2.8}GetPiece()}{10}{subsubsection.4.1.2.8}%
+\contentsline {subsubsection}{\numberline {4.1.2.9}GetPieceObject()}{10}{subsubsection.4.1.2.9}%
+\contentsline {subsubsection}{\numberline {4.1.2.10}InitBoard()}{11}{subsubsection.4.1.2.10}%
+\contentsline {subsubsection}{\numberline {4.1.2.11}MoveGameObject()}{11}{subsubsection.4.1.2.11}%
+\contentsline {subsubsection}{\numberline {4.1.2.12}MovePiece()}{11}{subsubsection.4.1.2.12}%
+\contentsline {subsubsection}{\numberline {4.1.2.13}OnMovementClicked()}{12}{subsubsection.4.1.2.13}%
+\contentsline {subsubsection}{\numberline {4.1.2.14}OnPieceClicked()}{12}{subsubsection.4.1.2.14}%
+\contentsline {subsubsection}{\numberline {4.1.2.15}PerformMove()}{12}{subsubsection.4.1.2.15}%
+\contentsline {subsubsection}{\numberline {4.1.2.16}PerformPromotion()}{12}{subsubsection.4.1.2.16}%
+\contentsline {subsubsection}{\numberline {4.1.2.17}SetBoardOrientation()}{13}{subsubsection.4.1.2.17}%
+\contentsline {subsubsection}{\numberline {4.1.2.18}SetCheck()}{13}{subsubsection.4.1.2.18}%
+\contentsline {subsubsection}{\numberline {4.1.2.19}SetGhost()}{13}{subsubsection.4.1.2.19}%
+\contentsline {subsubsection}{\numberline {4.1.2.20}SetHighlightedSquare()}{13}{subsubsection.4.1.2.20}%
+\contentsline {subsubsection}{\numberline {4.1.2.21}SetLegalMoves()}{13}{subsubsection.4.1.2.21}%
+\contentsline {subsubsection}{\numberline {4.1.2.22}SetPly()}{14}{subsubsection.4.1.2.22}%
+\contentsline {section}{\numberline {4.2}Dokumentácia triedy Chess}{14}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailný popis}{15}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Dokumentácia k členským enumeráciám}{15}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}AI}{15}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Color}{15}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Essence}{15}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}MovementType}{15}{subsubsection.4.2.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.2.5}PieceType}{16}{subsubsection.4.2.2.5}%
+\contentsline {subsection}{\numberline {4.2.3}Dokumentácia k metódam}{16}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}GetMovementImage()}{16}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}GetPieceImage()}{16}{subsubsection.4.2.3.2}%
+\contentsline {section}{\numberline {4.3}Dokumentácia triedy Clickable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dropdown}{17}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailný popis}{17}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Dokumentácia k metódam}{17}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}OnPointerClick()}{17}{subsubsection.4.3.2.1}%
+\contentsline {section}{\numberline {4.4}Dokumentácia triedy Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Overlay}{18}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailný popis}{19}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Dokumentácia k metódam}{19}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}InitializeSettings()}{19}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}OnMalakhColorSet()}{20}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}OnMalakhRandomPiecesToggled()}{20}{subsubsection.4.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}OnPlayClick()}{20}{subsubsection.4.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.4.2.5}OnPlayerColorSet()}{20}{subsubsection.4.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.4.2.6}OnPlayerRandomPiecesToggled()}{20}{subsubsection.4.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.4.2.7}OnReturnClick()}{22}{subsubsection.4.4.2.7}%
+\contentsline {subsubsection}{\numberline {4.4.2.8}SetEngineController()}{22}{subsubsection.4.4.2.8}%
+\contentsline {subsubsection}{\numberline {4.4.2.9}SetPieceInfo()}{22}{subsubsection.4.4.2.9}%
+\contentsline {section}{\numberline {4.5}Dokumentácia triedy Engine\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{22}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailný popis}{23}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Dokumentácia k metódam}{23}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}MovePiece()}{23}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}OnApplicationQuit()}{24}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}ParseMove()}{24}{subsubsection.4.5.2.3}%
+\contentsline {subsubsection}{\numberline {4.5.2.4}ReceiveEngineResponses()}{24}{subsubsection.4.5.2.4}%
+\contentsline {subsubsection}{\numberline {4.5.2.5}RequestAvailableMoves()}{24}{subsubsection.4.5.2.5}%
+\contentsline {subsubsection}{\numberline {4.5.2.6}RequestBestMove()}{24}{subsubsection.4.5.2.6}%
+\contentsline {subsubsection}{\numberline {4.5.2.7}SendCommand()}{25}{subsubsection.4.5.2.7}%
+\contentsline {subsubsection}{\numberline {4.5.2.8}Start()}{25}{subsubsection.4.5.2.8}%
+\contentsline {subsubsection}{\numberline {4.5.2.9}StartEngine()}{25}{subsubsection.4.5.2.9}%
+\contentsline {subsubsection}{\numberline {4.5.2.10}StartGame()}{25}{subsubsection.4.5.2.10}%
+\contentsline {subsubsection}{\numberline {4.5.2.11}StopEngine()}{25}{subsubsection.4.5.2.11}%
+\contentsline {subsubsection}{\numberline {4.5.2.12}Update()}{25}{subsubsection.4.5.2.12}%
+\contentsline {subsection}{\numberline {4.5.3}Dokumentácia k dátovým členom}{26}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}engineProcess}{26}{subsubsection.4.5.3.1}%
+\contentsline {section}{\numberline {4.6}Dokumentácia triedy Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Canvas}{26}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Detailný popis}{27}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Dokumentácia k metódam}{27}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}AddTurn()}{27}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}ClearTurns()}{27}{subsubsection.4.6.2.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.3}OnBestMoveReceived()}{28}{subsubsection.4.6.2.3}%
+\contentsline {subsubsection}{\numberline {4.6.2.4}OnCheckReceived()}{28}{subsubsection.4.6.2.4}%
+\contentsline {subsubsection}{\numberline {4.6.2.5}OnExportClick()}{28}{subsubsection.4.6.2.5}%
+\contentsline {subsubsection}{\numberline {4.6.2.6}OnGameCreated()}{28}{subsubsection.4.6.2.6}%
+\contentsline {subsubsection}{\numberline {4.6.2.7}OnHelpButtonClicked()}{28}{subsubsection.4.6.2.7}%
+\contentsline {subsubsection}{\numberline {4.6.2.8}OnLegalMovesReceived()}{29}{subsubsection.4.6.2.8}%
+\contentsline {subsubsection}{\numberline {4.6.2.9}OnPlayClick()}{29}{subsubsection.4.6.2.9}%
+\contentsline {subsubsection}{\numberline {4.6.2.10}OnPlayerMove()}{29}{subsubsection.4.6.2.10}%
+\contentsline {subsubsection}{\numberline {4.6.2.11}OnPromotionChosen()}{29}{subsubsection.4.6.2.11}%
+\contentsline {subsubsection}{\numberline {4.6.2.12}OnPromotionRequested()}{30}{subsubsection.4.6.2.12}%
+\contentsline {subsubsection}{\numberline {4.6.2.13}OnResultReceived()}{30}{subsubsection.4.6.2.13}%
+\contentsline {subsubsection}{\numberline {4.6.2.14}OnReturnClick()}{30}{subsubsection.4.6.2.14}%
+\contentsline {subsubsection}{\numberline {4.6.2.15}SetBlackPly()}{30}{subsubsection.4.6.2.15}%
+\contentsline {subsubsection}{\numberline {4.6.2.16}SetGame()}{30}{subsubsection.4.6.2.16}%
+\contentsline {subsubsection}{\numberline {4.6.2.17}SetTurn()}{31}{subsubsection.4.6.2.17}%
+\contentsline {section}{\numberline {4.7}Dokumentácia triedy Chess.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Settings}{31}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailný popis}{31}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Dokumentácia konštruktoru a deštruktoru}{32}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}GameSettings()}{32}{subsubsection.4.7.2.1}%
+\contentsline {subsection}{\numberline {4.7.3}Dokumentácia k dátovým členom}{32}{subsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.3.1}ai}{32}{subsubsection.4.7.3.1}%
+\contentsline {subsubsection}{\numberline {4.7.3.2}malakhBishop}{32}{subsubsection.4.7.3.2}%
+\contentsline {subsubsection}{\numberline {4.7.3.3}malakhColor}{33}{subsubsection.4.7.3.3}%
+\contentsline {subsubsection}{\numberline {4.7.3.4}malakhKnight}{33}{subsubsection.4.7.3.4}%
+\contentsline {subsubsection}{\numberline {4.7.3.5}malakhPawn}{33}{subsubsection.4.7.3.5}%
+\contentsline {subsubsection}{\numberline {4.7.3.6}malakhRook}{33}{subsubsection.4.7.3.6}%
+\contentsline {subsubsection}{\numberline {4.7.3.7}playerBishop}{33}{subsubsection.4.7.3.7}%
+\contentsline {subsubsection}{\numberline {4.7.3.8}playerColor}{33}{subsubsection.4.7.3.8}%
+\contentsline {subsubsection}{\numberline {4.7.3.9}playerKnight}{33}{subsubsection.4.7.3.9}%
+\contentsline {subsubsection}{\numberline {4.7.3.10}playerPawn}{33}{subsubsection.4.7.3.10}%
+\contentsline {subsubsection}{\numberline {4.7.3.11}playerRook}{34}{subsubsection.4.7.3.11}%
+\contentsline {section}{\numberline {4.8}Dokumentácia triedy Ghost}{34}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Detailný popis}{34}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Dokumentácia konštruktoru a deštruktoru}{34}{subsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.1}Ghost()}{34}{subsubsection.4.8.2.1}%
+\contentsline {subsection}{\numberline {4.8.3}Dokumentácia k dátovým členom}{35}{subsection.4.8.3}%
+\contentsline {subsubsection}{\numberline {4.8.3.1}parent}{35}{subsubsection.4.8.3.1}%
+\contentsline {subsubsection}{\numberline {4.8.3.2}x}{35}{subsubsection.4.8.3.2}%
+\contentsline {subsubsection}{\numberline {4.8.3.3}y}{35}{subsubsection.4.8.3.3}%
+\contentsline {section}{\numberline {4.9}Dokumentácia triedy Ghost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object}{35}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Detailný popis}{35}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Dokumentácia k vlastnosti}{36}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}Ghost}{36}{subsubsection.4.9.2.1}%
+\contentsline {section}{\numberline {4.10}Dokumentácia triedy Mobility}{36}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Detailný popis}{36}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Dokumentácia konštruktoru a deštruktoru}{36}{subsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}Mobility()}{36}{subsubsection.4.10.2.1}%
+\contentsline {subsection}{\numberline {4.10.3}Dokumentácia k dátovým členom}{37}{subsection.4.10.3}%
+\contentsline {subsubsection}{\numberline {4.10.3.1}direction\_x}{37}{subsubsection.4.10.3.1}%
+\contentsline {subsubsection}{\numberline {4.10.3.2}direction\_y}{37}{subsubsection.4.10.3.2}%
+\contentsline {subsubsection}{\numberline {4.10.3.3}limit}{37}{subsubsection.4.10.3.3}%
+\contentsline {subsubsection}{\numberline {4.10.3.4}start\_x}{37}{subsubsection.4.10.3.4}%
+\contentsline {subsubsection}{\numberline {4.10.3.5}start\_y}{37}{subsubsection.4.10.3.5}%
+\contentsline {subsubsection}{\numberline {4.10.3.6}type}{38}{subsubsection.4.10.3.6}%
+\contentsline {section}{\numberline {4.11}Dokumentácia triedy Move}{38}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Detailný popis}{38}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}Dokumentácia konštruktoru a deštruktoru}{38}{subsection.4.11.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.1}Move()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{38}{subsubsection.4.11.2.1}%
+\contentsline {subsubsection}{\numberline {4.11.2.2}Move()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{39}{subsubsection.4.11.2.2}%
+\contentsline {subsection}{\numberline {4.11.3}Dokumentácia k metódam}{39}{subsection.4.11.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.1}ClearHasty()}{39}{subsubsection.4.11.3.1}%
+\contentsline {subsubsection}{\numberline {4.11.3.2}ClearVigilant()}{39}{subsubsection.4.11.3.2}%
+\contentsline {subsubsection}{\numberline {4.11.3.3}SetHasty()}{39}{subsubsection.4.11.3.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.4}SetVigilant()}{40}{subsubsection.4.11.3.4}%
+\contentsline {subsection}{\numberline {4.11.4}Dokumentácia k dátovým členom}{40}{subsection.4.11.4}%
+\contentsline {subsubsection}{\numberline {4.11.4.1}castling}{40}{subsubsection.4.11.4.1}%
+\contentsline {subsubsection}{\numberline {4.11.4.2}hasty}{40}{subsubsection.4.11.4.2}%
+\contentsline {subsubsection}{\numberline {4.11.4.3}hastyX}{40}{subsubsection.4.11.4.3}%
+\contentsline {subsubsection}{\numberline {4.11.4.4}hastyY}{40}{subsubsection.4.11.4.4}%
+\contentsline {subsubsection}{\numberline {4.11.4.5}vigilant}{40}{subsubsection.4.11.4.5}%
+\contentsline {subsubsection}{\numberline {4.11.4.6}x1}{40}{subsubsection.4.11.4.6}%
+\contentsline {subsubsection}{\numberline {4.11.4.7}x2}{41}{subsubsection.4.11.4.7}%
+\contentsline {subsubsection}{\numberline {4.11.4.8}y1}{41}{subsubsection.4.11.4.8}%
+\contentsline {subsubsection}{\numberline {4.11.4.9}y2}{41}{subsubsection.4.11.4.9}%
+\contentsline {section}{\numberline {4.12}Dokumentácia triedy Movement}{41}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Detailný popis}{41}{subsection.4.12.1}%
+\contentsline {subsection}{\numberline {4.12.2}Dokumentácia konštruktoru a deštruktoru}{41}{subsection.4.12.2}%
+\contentsline {subsubsection}{\numberline {4.12.2.1}Movement()}{41}{subsubsection.4.12.2.1}%
+\contentsline {subsection}{\numberline {4.12.3}Dokumentácia k dátovým členom}{42}{subsection.4.12.3}%
+\contentsline {subsubsection}{\numberline {4.12.3.1}move}{42}{subsubsection.4.12.3.1}%
+\contentsline {subsubsection}{\numberline {4.12.3.2}owner}{42}{subsubsection.4.12.3.2}%
+\contentsline {subsubsection}{\numberline {4.12.3.3}type}{42}{subsubsection.4.12.3.3}%
+\contentsline {section}{\numberline {4.13}Dokumentácia triedy Movement\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object}{42}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Detailný popis}{43}{subsection.4.13.1}%
+\contentsline {subsection}{\numberline {4.13.2}Dokumentácia k metódam}{43}{subsection.4.13.2}%
+\contentsline {subsubsection}{\numberline {4.13.2.1}OnPointerClick()}{43}{subsubsection.4.13.2.1}%
+\contentsline {subsection}{\numberline {4.13.3}Dokumentácia k vlastnosti}{43}{subsection.4.13.3}%
+\contentsline {subsubsection}{\numberline {4.13.3.1}Movement}{43}{subsubsection.4.13.3.1}%
+\contentsline {section}{\numberline {4.14}Dokumentácia triedy Piece}{43}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Detailný popis}{44}{subsection.4.14.1}%
+\contentsline {subsection}{\numberline {4.14.2}Dokumentácia konštruktoru a deštruktoru}{44}{subsection.4.14.2}%
+\contentsline {subsubsection}{\numberline {4.14.2.1}Piece()}{44}{subsubsection.4.14.2.1}%
+\contentsline {subsection}{\numberline {4.14.3}Dokumentácia k dátovým členom}{44}{subsection.4.14.3}%
+\contentsline {subsubsection}{\numberline {4.14.3.1}availableMoves}{44}{subsubsection.4.14.3.1}%
+\contentsline {subsubsection}{\numberline {4.14.3.2}color}{44}{subsubsection.4.14.3.2}%
+\contentsline {subsubsection}{\numberline {4.14.3.3}essence}{45}{subsubsection.4.14.3.3}%
+\contentsline {subsubsection}{\numberline {4.14.3.4}type}{45}{subsubsection.4.14.3.4}%
+\contentsline {subsubsection}{\numberline {4.14.3.5}x}{45}{subsubsection.4.14.3.5}%
+\contentsline {subsubsection}{\numberline {4.14.3.6}y}{45}{subsubsection.4.14.3.6}%
+\contentsline {section}{\numberline {4.15}Dokumentácia triedy Piece\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Info\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{45}{section.4.15}%
+\contentsline {subsection}{\numberline {4.15.1}Detailný popis}{46}{subsection.4.15.1}%
+\contentsline {subsection}{\numberline {4.15.2}Dokumentácia k metódam}{46}{subsection.4.15.2}%
+\contentsline {subsubsection}{\numberline {4.15.2.1}CreatePiece()}{46}{subsubsection.4.15.2.1}%
+\contentsline {subsubsection}{\numberline {4.15.2.2}OnCloseButtonClicked()}{46}{subsubsection.4.15.2.2}%
+\contentsline {subsubsection}{\numberline {4.15.2.3}UpdateDisplayedPiece()}{46}{subsubsection.4.15.2.3}%
+\contentsline {subsection}{\numberline {4.15.3}Dokumentácia k vlastnosti}{47}{subsection.4.15.3}%
+\contentsline {subsubsection}{\numberline {4.15.3.1}MyPiece}{47}{subsubsection.4.15.3.1}%
+\contentsline {section}{\numberline {4.16}Dokumentácia triedy Piece\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object}{47}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Detailný popis}{48}{subsection.4.16.1}%
+\contentsline {subsection}{\numberline {4.16.2}Dokumentácia k metódam}{48}{subsection.4.16.2}%
+\contentsline {subsubsection}{\numberline {4.16.2.1}OnPointerClick()}{48}{subsubsection.4.16.2.1}%
+\contentsline {subsection}{\numberline {4.16.3}Dokumentácia k dátovým členom}{49}{subsection.4.16.3}%
+\contentsline {subsubsection}{\numberline {4.16.3.1}highlighted}{49}{subsubsection.4.16.3.1}%
+\contentsline {subsection}{\numberline {4.16.4}Dokumentácia k vlastnosti}{49}{subsection.4.16.4}%
+\contentsline {subsubsection}{\numberline {4.16.4.1}HighlightColor}{49}{subsubsection.4.16.4.1}%
+\contentsline {subsubsection}{\numberline {4.16.4.2}Piece}{49}{subsubsection.4.16.4.2}%
+\contentsline {subsubsection}{\numberline {4.16.4.3}Selected}{49}{subsubsection.4.16.4.3}%
+\contentsline {section}{\numberline {4.17}Dokumentácia triedy Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Info\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{49}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Detailný popis}{50}{subsection.4.17.1}%
+\contentsline {subsection}{\numberline {4.17.2}Dokumentácia k metódam}{50}{subsection.4.17.2}%
+\contentsline {subsubsection}{\numberline {4.17.2.1}OnHelpButtonClicked()}{50}{subsubsection.4.17.2.1}%
+\contentsline {subsubsection}{\numberline {4.17.2.2}SetPieces()}{51}{subsubsection.4.17.2.2}%
+\contentsline {section}{\numberline {4.18}Dokumentácia triedy Promotion\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{51}{section.4.18}%
+\contentsline {subsection}{\numberline {4.18.1}Detailný popis}{52}{subsection.4.18.1}%
+\contentsline {subsection}{\numberline {4.18.2}Dokumentácia k metódam}{52}{subsection.4.18.2}%
+\contentsline {subsubsection}{\numberline {4.18.2.1}OnPromotionBtnClicked()}{52}{subsubsection.4.18.2.1}%
+\contentsline {subsubsection}{\numberline {4.18.2.2}SetColor()}{52}{subsubsection.4.18.2.2}%
+\contentsline {subsubsection}{\numberline {4.18.2.3}SetPieces()}{53}{subsubsection.4.18.2.3}%
+\contentsline {section}{\numberline {4.19}Dokumentácia triedy Title\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Canvas}{53}{section.4.19}%
+\contentsline {subsection}{\numberline {4.19.1}Detailný popis}{53}{subsection.4.19.1}%
+\contentsline {subsection}{\numberline {4.19.2}Dokumentácia k metódam}{54}{subsection.4.19.2}%
+\contentsline {subsubsection}{\numberline {4.19.2.1}OnGameCreated()}{54}{subsubsection.4.19.2.1}%
+\contentsline {subsubsection}{\numberline {4.19.2.2}OnPlayClick()}{54}{subsubsection.4.19.2.2}%
+\contentsline {subsubsection}{\numberline {4.19.2.3}OnQuitClick()}{54}{subsubsection.4.19.2.3}%
+\contentsline {section}{\numberline {4.20}Dokumentácia triedy Turn}{54}{section.4.20}%
+\contentsline {subsection}{\numberline {4.20.1}Detailný popis}{55}{subsection.4.20.1}%
+\contentsline {subsection}{\numberline {4.20.2}Dokumentácia konštruktoru a deštruktoru}{55}{subsection.4.20.2}%
+\contentsline {subsubsection}{\numberline {4.20.2.1}Turn()}{55}{subsubsection.4.20.2.1}%
+\contentsline {subsection}{\numberline {4.20.3}Dokumentácia k metódam}{55}{subsection.4.20.3}%
+\contentsline {subsubsection}{\numberline {4.20.3.1}GetBlackPly()}{55}{subsubsection.4.20.3.1}%
+\contentsline {subsubsection}{\numberline {4.20.3.2}GetPly()}{56}{subsubsection.4.20.3.2}%
+\contentsline {subsubsection}{\numberline {4.20.3.3}GetWhitePly()}{56}{subsubsection.4.20.3.3}%
+\contentsline {subsubsection}{\numberline {4.20.3.4}SetBlackPly()}{56}{subsubsection.4.20.3.4}%
+\contentsline {subsubsection}{\numberline {4.20.3.5}SetWhitePly()}{56}{subsubsection.4.20.3.5}%
+\contentsline {subsection}{\numberline {4.20.4}Dokumentácia k dátovým členom}{57}{subsection.4.20.4}%
+\contentsline {subsubsection}{\numberline {4.20.4.1}blackMove}{57}{subsubsection.4.20.4.1}%
+\contentsline {subsubsection}{\numberline {4.20.4.2}blackMovementType}{57}{subsubsection.4.20.4.2}%
+\contentsline {subsubsection}{\numberline {4.20.4.3}blackPieceType}{57}{subsubsection.4.20.4.3}%
+\contentsline {subsubsection}{\numberline {4.20.4.4}blackPromotion}{57}{subsubsection.4.20.4.4}%
+\contentsline {subsubsection}{\numberline {4.20.4.5}turnCounter}{57}{subsubsection.4.20.4.5}%
+\contentsline {subsubsection}{\numberline {4.20.4.6}whiteMove}{58}{subsubsection.4.20.4.6}%
+\contentsline {subsubsection}{\numberline {4.20.4.7}whiteMovementType}{58}{subsubsection.4.20.4.7}%
+\contentsline {subsubsection}{\numberline {4.20.4.8}whitePieceType}{58}{subsubsection.4.20.4.8}%
+\contentsline {subsubsection}{\numberline {4.20.4.9}whitePromotion}{58}{subsubsection.4.20.4.9}%
+\contentsline {section}{\numberline {4.21}Dokumentácia triedy Turn\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object}{58}{section.4.21}%
+\contentsline {subsection}{\numberline {4.21.1}Detailný popis}{59}{subsection.4.21.1}%
+\contentsline {subsection}{\numberline {4.21.2}Dokumentácia k metódam}{59}{subsection.4.21.2}%
+\contentsline {subsubsection}{\numberline {4.21.2.1}UpdateBlackPly()}{59}{subsubsection.4.21.2.1}%
+\contentsline {subsubsection}{\numberline {4.21.2.2}UpdateDisplayedText()}{59}{subsubsection.4.21.2.2}%
+\contentsline {subsubsection}{\numberline {4.21.2.3}UpdateWhitePly()}{59}{subsubsection.4.21.2.3}%
+\contentsline {subsection}{\numberline {4.21.3}Dokumentácia k vlastnosti}{60}{subsection.4.21.3}%
+\contentsline {subsubsection}{\numberline {4.21.3.1}MyTurn}{60}{subsubsection.4.21.3.1}%
+\contentsline {chapter}{\numberline {5}Dokumentácia súborov}{61}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Dokumentácia súboru Chess.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{61}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Detailný popis}{61}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Dokumentácia súboru Ghost.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{61}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Detailný popis}{62}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Dokumentácia súboru Mobility.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{62}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Detailný popis}{62}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Dokumentácia súboru Move.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{62}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Detailný popis}{63}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Dokumentácia enumeračných typov}{63}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}Castling}{63}{subsubsection.5.4.2.1}%
+\contentsline {section}{\numberline {5.5}Dokumentácia súboru Movement.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{63}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Detailný popis}{63}{subsection.5.5.1}%
+\contentsline {section}{\numberline {5.6}Dokumentácia súboru Piece.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{64}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Detailný popis}{64}{subsection.5.6.1}%
+\contentsline {section}{\numberline {5.7}Dokumentácia súboru Turn.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{64}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Detailný popis}{64}{subsection.5.7.1}%
+\contentsline {section}{\numberline {5.8}Dokumentácia súboru Engine\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{64}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Detailný popis}{65}{subsection.5.8.1}%
+\contentsline {section}{\numberline {5.9}Dokumentácia súboru Board\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{65}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Detailný popis}{65}{subsection.5.9.1}%
+\contentsline {section}{\numberline {5.10}Dokumentácia súboru Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Canvas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{65}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Detailný popis}{66}{subsection.5.10.1}%
+\contentsline {section}{\numberline {5.11}Dokumentácia súboru Title\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Canvas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{66}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Detailný popis}{66}{subsection.5.11.1}%
+\contentsline {section}{\numberline {5.12}Dokumentácia súboru Clickable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dropdown.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{66}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Detailný popis}{67}{subsection.5.12.1}%
+\contentsline {section}{\numberline {5.13}Dokumentácia súboru Create\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Overlay.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{67}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Detailný popis}{67}{subsection.5.13.1}%
+\contentsline {section}{\numberline {5.14}Dokumentácia súboru Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Info\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{67}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Detailný popis}{68}{subsection.5.14.1}%
+\contentsline {section}{\numberline {5.15}Dokumentácia súboru Ghost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{68}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Detailný popis}{68}{subsection.5.15.1}%
+\contentsline {section}{\numberline {5.16}Dokumentácia súboru Movement\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{68}{section.5.16}%
+\contentsline {subsection}{\numberline {5.16.1}Detailný popis}{69}{subsection.5.16.1}%
+\contentsline {section}{\numberline {5.17}Dokumentácia súboru Piece\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{69}{section.5.17}%
+\contentsline {subsection}{\numberline {5.17.1}Detailný popis}{69}{subsection.5.17.1}%
+\contentsline {section}{\numberline {5.18}Dokumentácia súboru Turn\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{69}{section.5.18}%
+\contentsline {subsection}{\numberline {5.18.1}Detailný popis}{70}{subsection.5.18.1}%
+\contentsline {section}{\numberline {5.19}Dokumentácia súboru Promotion\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{70}{section.5.19}%
+\contentsline {subsection}{\numberline {5.19.1}Detailný popis}{70}{subsection.5.19.1}%
+\contentsline {chapter}{Register}{71}{section*.97}%

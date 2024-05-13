@@ -1,0 +1,105 @@
+\doxysection{Dokumentácia triedy Piece\+Object}
+\hypertarget{class_piece_object}{}\label{class_piece_object}\index{PieceObject@{PieceObject}}
+Diagram dedičnosti pre triedu Piece\+Object\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_piece_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_piece_object_a2d207ccc7cfe8ae5b2a18a7b68ab3a90}{On\+Pointer\+Click}} (Pointer\+Event\+Data event\+Data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Verejné atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_piece_object_a721a362726770a5f278da524cb4d4227}\label{class_piece_object_a721a362726770a5f278da524cb4d4227} 
+Unity\+Event$<$ \mbox{\hyperlink{class_piece}{Piece}} $>$ {\bfseries on\+Piece\+Clicked}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Vlastnosti}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_piece}{Piece}} \mbox{\hyperlink{class_piece_object_ac4dcba4bb3e84a4337b2cf305ceac122}{Piece}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_piece_object_a918a9192e195e60298c6c406641a4771}{Selected}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_piece_object_a6a750b1244b4187b5ef866b7d1bd834e}\label{class_piece_object_a6a750b1244b4187b5ef866b7d1bd834e} 
+bool {\bfseries Highlighted}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Color \mbox{\hyperlink{class_piece_object_a979be5c3ba976bfd62ffb3126a5569cf}{Highlight\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_piece_object_a6209314fdd074529f48b78680dd4720c}\label{class_piece_object_a6209314fdd074529f48b78680dd4720c} 
+Image {\bfseries piece\+Image}
+\item 
+\Hypertarget{class_piece_object_a883c3b247b0a1ac9e4c89aa1d75c63ad}\label{class_piece_object_a883c3b247b0a1ac9e4c89aa1d75c63ad} 
+Image {\bfseries outline\+Image}
+\item 
+\Hypertarget{class_piece_object_a38fef2140d1f0928ea07317d9a5f6165}\label{class_piece_object_a38fef2140d1f0928ea07317d9a5f6165} 
+Image {\bfseries background\+Image}
+\item 
+\Hypertarget{class_piece_object_aef4b140bed982110c72e661dba126596}\label{class_piece_object_aef4b140bed982110c72e661dba126596} 
+\mbox{\hyperlink{class_piece}{Piece}} {\bfseries piece} = null
+\item 
+\Hypertarget{class_piece_object_a598b3b410e82b7151145ccb49955357f}\label{class_piece_object_a598b3b410e82b7151145ccb49955357f} 
+bool {\bfseries selected} = false
+\item 
+bool \mbox{\hyperlink{class_piece_object_a0e8b50b605322ebe72a8bdae003b8c9e}{highlighted}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Táto trieda spravuje objekt figúrky. 
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_piece_object_a2d207ccc7cfe8ae5b2a18a7b68ab3a90}\label{class_piece_object_a2d207ccc7cfe8ae5b2a18a7b68ab3a90} 
+\index{PieceObject@{PieceObject}!OnPointerClick@{OnPointerClick}}
+\index{OnPointerClick@{OnPointerClick}!PieceObject@{PieceObject}}
+\doxysubsubsection{\texorpdfstring{OnPointerClick()}{OnPointerClick()}}
+{\footnotesize\ttfamily void Piece\+Object.\+On\+Pointer\+Click (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pri kliknutí na tento objekt sa to oznámi poslucháčom jeho on\+Click eventu.
+
+
+\begin{DoxyParams}{Parametre}
+{\em event\+Data} & Informácie o kliknutí. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentácia k dátovým členom}
+\Hypertarget{class_piece_object_a0e8b50b605322ebe72a8bdae003b8c9e}\label{class_piece_object_a0e8b50b605322ebe72a8bdae003b8c9e} 
+\index{PieceObject@{PieceObject}!highlighted@{highlighted}}
+\index{highlighted@{highlighted}!PieceObject@{PieceObject}}
+\doxysubsubsection{\texorpdfstring{highlighted}{highlighted}}
+{\footnotesize\ttfamily bool Piece\+Object.\+highlighted = false\hspace{0.3cm}{\ttfamily [private]}}
+
+Informácia o znázornení figúky. Ak sa zmení znázornenie figúrky, tak sa aktivuje alebo deaktivuje pozadie figúrky. 
+
+\doxysubsection{Dokumentácia k vlastnosti}
+\Hypertarget{class_piece_object_a979be5c3ba976bfd62ffb3126a5569cf}\label{class_piece_object_a979be5c3ba976bfd62ffb3126a5569cf} 
+\index{PieceObject@{PieceObject}!HighlightColor@{HighlightColor}}
+\index{HighlightColor@{HighlightColor}!PieceObject@{PieceObject}}
+\doxysubsubsection{\texorpdfstring{HighlightColor}{HighlightColor}}
+{\footnotesize\ttfamily Color Piece\+Object.\+Highlight\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Aktuálna farba znázornenia figúrky. Ak sa táto vlastnosť zmení, tak sa aktualizuje farba pozadia. \Hypertarget{class_piece_object_ac4dcba4bb3e84a4337b2cf305ceac122}\label{class_piece_object_ac4dcba4bb3e84a4337b2cf305ceac122} 
+\index{PieceObject@{PieceObject}!Piece@{Piece}}
+\index{Piece@{Piece}!PieceObject@{PieceObject}}
+\doxysubsubsection{\texorpdfstring{Piece}{Piece}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_piece}{Piece}} Piece\+Object.\+Piece\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Figúrka priradená tomuto objektu. Ak ju zmeníme, tak sa aktualizuje jej zobrazenie. \Hypertarget{class_piece_object_a918a9192e195e60298c6c406641a4771}\label{class_piece_object_a918a9192e195e60298c6c406641a4771} 
+\index{PieceObject@{PieceObject}!Selected@{Selected}}
+\index{Selected@{Selected}!PieceObject@{PieceObject}}
+\doxysubsubsection{\texorpdfstring{Selected}{Selected}}
+{\footnotesize\ttfamily bool Piece\+Object.\+Selected\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Informácia o výbere figúky. Ak sa zmení výber figúrky, tak sa aktivuje alebo deaktivuje outline figúrky. 
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_piece_object_8cs}{Piece\+Object.\+cs}}\end{DoxyCompactItemize}

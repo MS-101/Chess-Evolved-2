@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['onapplicationquit_0',['OnApplicationQuit',['../class_engine_controller.html#a40ee445355bc26d89bbfff79cea240d2',1,'EngineController']]],
+  ['onbestmovereceived_1',['OnBestMoveReceived',['../class_game_canvas.html#af353d4f1fc363d829d1896a0778be97a',1,'GameCanvas']]],
+  ['oncheckreceived_2',['OnCheckReceived',['../class_game_canvas.html#a47a6b701dfa984bd4efa6b7059808608',1,'GameCanvas']]],
+  ['onclosebuttonclicked_3',['OnCloseButtonClicked',['../class_piece_info_controller.html#af2637d5ec5395229dc5d4e8938ae6327',1,'PieceInfoController']]],
+  ['onexportclick_4',['OnExportClick',['../class_game_canvas.html#aab5ac95af051fa2789f841d18b968236',1,'GameCanvas']]],
+  ['ongamecreated_5',['OnGameCreated',['../class_game_canvas.html#a96c33bb9e6c2ec04a89c4cfda27d446c',1,'GameCanvas.OnGameCreated()'],['../class_title_canvas.html#a0ab2dd40ada2334aa2112d7c2b43acac',1,'TitleCanvas.OnGameCreated()']]],
+  ['onhelpbuttonclicked_6',['OnHelpButtonClicked',['../class_game_canvas.html#a3f461f614d1ae8c86fb5e3106743af29',1,'GameCanvas.OnHelpButtonClicked()'],['../class_player_info_controller.html#adfd347ab7eea80a3b7498c978052488d',1,'PlayerInfoController.OnHelpButtonClicked()']]],
+  ['onlegalmovesreceived_7',['OnLegalMovesReceived',['../class_game_canvas.html#a738efe68d792310e16038b23c82c1d14',1,'GameCanvas']]],
+  ['onmalakhcolorset_8',['OnMalakhColorSet',['../class_create_game_overlay.html#ac370864faf288124a811cac84b312760',1,'CreateGameOverlay']]],
+  ['onmalakhrandompiecestoggled_9',['OnMalakhRandomPiecesToggled',['../class_create_game_overlay.html#ae3fe8a0f027dac2ea27ab5c4dd15ccc4',1,'CreateGameOverlay']]],
+  ['onmovementclicked_10',['OnMovementClicked',['../class_board_controller.html#a3a6fc91b90cbaaa60874e37333c494b7',1,'BoardController']]],
+  ['onpiececlicked_11',['OnPieceClicked',['../class_board_controller.html#aaf6b42b7b122b5b4e6256d898d60bcac',1,'BoardController']]],
+  ['onplayclick_12',['OnPlayClick',['../class_game_canvas.html#a1bf90df4b35826a2bc772492e6e8699a',1,'GameCanvas.OnPlayClick()'],['../class_title_canvas.html#a5c5aa8de68330d337e58a87a281af945',1,'TitleCanvas.OnPlayClick()'],['../class_create_game_overlay.html#a385715a60853386ef88215287cf80030',1,'CreateGameOverlay.OnPlayClick()']]],
+  ['onplayercolorset_13',['OnPlayerColorSet',['../class_create_game_overlay.html#ac5112fadee4ac85debfb1e5161ec62d0',1,'CreateGameOverlay']]],
+  ['onplayermove_14',['OnPlayerMove',['../class_game_canvas.html#aeb59f4ea64239fd609f2e0ea1600c936',1,'GameCanvas']]],
+  ['onplayerrandompiecestoggled_15',['OnPlayerRandomPiecesToggled',['../class_create_game_overlay.html#ab080da9544ccfbba10b1528c6c98853e',1,'CreateGameOverlay']]],
+  ['onpointerclick_16',['OnPointerClick',['../class_clickable_dropdown.html#ad3b1ebe33c3dc22a1bef2c3962c7a9c1',1,'ClickableDropdown.OnPointerClick()'],['../class_movement_object.html#a30be660601e59e42b63f8205d474c570',1,'MovementObject.OnPointerClick()'],['../class_piece_object.html#a2d207ccc7cfe8ae5b2a18a7b68ab3a90',1,'PieceObject.OnPointerClick()']]],
+  ['onpromotionbtnclicked_17',['OnPromotionBtnClicked',['../class_promotion_controller.html#a561766d85ebe8ad011a37b29d2fdf7ad',1,'PromotionController']]],
+  ['onpromotionchosen_18',['OnPromotionChosen',['../class_game_canvas.html#a0ec0cdfb76f02a6a12d9cb2f249740dc',1,'GameCanvas']]],
+  ['onpromotionrequested_19',['OnPromotionRequested',['../class_game_canvas.html#a55783f6bee10cfa96bc4f5c0a9e51f5f',1,'GameCanvas']]],
+  ['onquitclick_20',['OnQuitClick',['../class_title_canvas.html#a84e5ad0400af12457be48021b9dd7888',1,'TitleCanvas']]],
+  ['onresultreceived_21',['OnResultReceived',['../class_game_canvas.html#af420961f601e54e9faa0bf5c40d864be',1,'GameCanvas']]],
+  ['onreturnclick_22',['OnReturnClick',['../class_game_canvas.html#a692706c9389169020b1028bcce42e5a4',1,'GameCanvas.OnReturnClick()'],['../class_create_game_overlay.html#a7b9129efa258f32037650d88e080fa7d',1,'CreateGameOverlay.OnReturnClick()']]]
+];

@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess Evolved 2: Dokumentácia triedy Chess.GameSettings</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Chess Evolved 2
+   </div>
+   <div id="projectbrief">Grafické rozhranie pre šachový engine Malakh</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generované programom Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hľadať');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítam...</div>
+<div class="SRStatus" id="Searching">Vyhľadávam...</div>
+<div class="SRStatus" id="NoMatches">Nič sa nenašlo</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="class_chess.html">Chess</a></li><li class="navelem"><a class="el" href="class_chess_1_1_game_settings.html">GameSettings</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Verejné metódy</a> &#124;
+<a href="#pub-attribs">Verejné atribúty</a> &#124;
+<a href="class_chess_1_1_game_settings-members.html">Zoznam všetkých členov</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentácia triedy Chess.GameSettings</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Verejné metódy</h2></td></tr>
+<tr class="memitem:ab1ba981433ff1d2a7a412ff532fce5a8" id="r_ab1ba981433ff1d2a7a412ff532fce5a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1ba981433ff1d2a7a412ff532fce5a8">GameSettings</a> (<a class="el" href="class_chess.html#a56f6ae8945c2b4a779131b4c087e7f73">AI</a> <a class="el" href="#a751bac51e4aff3cc5e1fcc37986196ca">ai</a>, <a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a> <a class="el" href="#a34618fe76d9629855aff0e1c2d809143">playerColor</a>, <a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> <a class="el" href="#a9aa21d4d09200cad0a58cf14db40b56d">playerPawn</a>, <a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> <a class="el" href="#abd67bd942679a69a5872ccfd37cf88b0">playerKnight</a>, <a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> <a class="el" href="#ace3eb191cae8be11bbcd29388d71871b">playerBishop</a>, <a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> <a class="el" href="#a75e8787761fee9fe640e9e638a5d1ad3">playerRook</a>, <a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a> <a class="el" href="#added7f739ae690d579c7d77522966afd">malakhColor</a>, <a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> <a class="el" href="#ad1e1b99bb3b54b854c1b1706a2decb62">malakhPawn</a>, <a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> <a class="el" href="#a737557a8a3a904ed4ca3d7f066feddd7">malakhKnight</a>, <a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> <a class="el" href="#a309715c1dd39579372f84fe3ae35ca49">malakhBishop</a>, <a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> <a class="el" href="#a9f6e805ad0c22e735118a88bff4953f3">malakhRook</a>)</td></tr>
+<tr class="separator:ab1ba981433ff1d2a7a412ff532fce5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Verejné atribúty</h2></td></tr>
+<tr class="memitem:a751bac51e4aff3cc5e1fcc37986196ca" id="r_a751bac51e4aff3cc5e1fcc37986196ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#a56f6ae8945c2b4a779131b4c087e7f73">AI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a751bac51e4aff3cc5e1fcc37986196ca">ai</a></td></tr>
+<tr class="separator:a751bac51e4aff3cc5e1fcc37986196ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34618fe76d9629855aff0e1c2d809143" id="r_a34618fe76d9629855aff0e1c2d809143"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34618fe76d9629855aff0e1c2d809143">playerColor</a></td></tr>
+<tr class="separator:a34618fe76d9629855aff0e1c2d809143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:added7f739ae690d579c7d77522966afd" id="r_added7f739ae690d579c7d77522966afd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#added7f739ae690d579c7d77522966afd">malakhColor</a></td></tr>
+<tr class="separator:added7f739ae690d579c7d77522966afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aa21d4d09200cad0a58cf14db40b56d" id="r_a9aa21d4d09200cad0a58cf14db40b56d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9aa21d4d09200cad0a58cf14db40b56d">playerPawn</a></td></tr>
+<tr class="separator:a9aa21d4d09200cad0a58cf14db40b56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd67bd942679a69a5872ccfd37cf88b0" id="r_abd67bd942679a69a5872ccfd37cf88b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd67bd942679a69a5872ccfd37cf88b0">playerKnight</a></td></tr>
+<tr class="separator:abd67bd942679a69a5872ccfd37cf88b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace3eb191cae8be11bbcd29388d71871b" id="r_ace3eb191cae8be11bbcd29388d71871b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace3eb191cae8be11bbcd29388d71871b">playerBishop</a></td></tr>
+<tr class="separator:ace3eb191cae8be11bbcd29388d71871b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75e8787761fee9fe640e9e638a5d1ad3" id="r_a75e8787761fee9fe640e9e638a5d1ad3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75e8787761fee9fe640e9e638a5d1ad3">playerRook</a></td></tr>
+<tr class="separator:a75e8787761fee9fe640e9e638a5d1ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e1b99bb3b54b854c1b1706a2decb62" id="r_ad1e1b99bb3b54b854c1b1706a2decb62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1e1b99bb3b54b854c1b1706a2decb62">malakhPawn</a></td></tr>
+<tr class="separator:ad1e1b99bb3b54b854c1b1706a2decb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a737557a8a3a904ed4ca3d7f066feddd7" id="r_a737557a8a3a904ed4ca3d7f066feddd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a737557a8a3a904ed4ca3d7f066feddd7">malakhKnight</a></td></tr>
+<tr class="separator:a737557a8a3a904ed4ca3d7f066feddd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309715c1dd39579372f84fe3ae35ca49" id="r_a309715c1dd39579372f84fe3ae35ca49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a309715c1dd39579372f84fe3ae35ca49">malakhBishop</a></td></tr>
+<tr class="separator:a309715c1dd39579372f84fe3ae35ca49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f6e805ad0c22e735118a88bff4953f3" id="r_a9f6e805ad0c22e735118a88bff4953f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f6e805ad0c22e735118a88bff4953f3">malakhRook</a></td></tr>
+<tr class="separator:a9f6e805ad0c22e735118a88bff4953f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailný popis</h2>
+<div class="textblock"><p>Trieda reprezentujúca hernú konfiguráciu. </p>
+</div><h2 class="groupheader">Dokumentácia konštruktoru a deštruktoru</h2>
+<a id="ab1ba981433ff1d2a7a412ff532fce5a8" name="ab1ba981433ff1d2a7a412ff532fce5a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ba981433ff1d2a7a412ff532fce5a8">&#9670;&#160;</a></span>GameSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Chess.GameSettings.GameSettings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a56f6ae8945c2b4a779131b4c087e7f73">AI</a></td>          <td class="paramname"><span class="paramname"><em>ai</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a></td>          <td class="paramname"><span class="paramname"><em>playerColor</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a></td>          <td class="paramname"><span class="paramname"><em>playerPawn</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a></td>          <td class="paramname"><span class="paramname"><em>playerKnight</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a></td>          <td class="paramname"><span class="paramname"><em>playerBishop</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a></td>          <td class="paramname"><span class="paramname"><em>playerRook</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a></td>          <td class="paramname"><span class="paramname"><em>malakhColor</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a></td>          <td class="paramname"><span class="paramname"><em>malakhPawn</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a></td>          <td class="paramname"><span class="paramname"><em>malakhKnight</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a></td>          <td class="paramname"><span class="paramname"><em>malakhBishop</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a></td>          <td class="paramname"><span class="paramname"><em>malakhRook</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Konštruktor hernej konfigurácie.</p>
+<dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ai</td><td>Typ šachovej inteligencie. </td></tr>
+    <tr><td class="paramname">playerColor</td><td>Farba hráča. </td></tr>
+    <tr><td class="paramname">playerPawn</td><td>Esencia hráčovho pešiaka. </td></tr>
+    <tr><td class="paramname">playerKnight</td><td>Esencia hráčovho rytiera. </td></tr>
+    <tr><td class="paramname">playerBishop</td><td>Esencia hráčovho strelca. </td></tr>
+    <tr><td class="paramname">playerRook</td><td>Esencia hráčovej veže. </td></tr>
+    <tr><td class="paramname">malakhColor</td><td>Farba Malakha </td></tr>
+    <tr><td class="paramname">malakhPawn</td><td>Esencia Malakhovho pešiaka. </td></tr>
+    <tr><td class="paramname">malakhKnight</td><td>Esencia Malakhovho rytiera. </td></tr>
+    <tr><td class="paramname">malakhBishop</td><td>Esencia Malakhovho strelca. </td></tr>
+    <tr><td class="paramname">malakhRooks</td><td>Esencia Malakhovej veže. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentácia k dátovým členom</h2>
+<a id="a751bac51e4aff3cc5e1fcc37986196ca" name="a751bac51e4aff3cc5e1fcc37986196ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751bac51e4aff3cc5e1fcc37986196ca">&#9670;&#160;</a></span>ai</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#a56f6ae8945c2b4a779131b4c087e7f73">AI</a> Chess.GameSettings.ai</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Typ šachovej inteligencie. </p>
+
+</div>
+</div>
+<a id="a309715c1dd39579372f84fe3ae35ca49" name="a309715c1dd39579372f84fe3ae35ca49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a309715c1dd39579372f84fe3ae35ca49">&#9670;&#160;</a></span>malakhBishop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> Chess.GameSettings.malakhBishop</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Esencia Malakhovho strelca. </p>
+
+</div>
+</div>
+<a id="added7f739ae690d579c7d77522966afd" name="added7f739ae690d579c7d77522966afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#added7f739ae690d579c7d77522966afd">&#9670;&#160;</a></span>malakhColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a> Chess.GameSettings.malakhColor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Farba Malakha. </p>
+
+</div>
+</div>
+<a id="a737557a8a3a904ed4ca3d7f066feddd7" name="a737557a8a3a904ed4ca3d7f066feddd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a737557a8a3a904ed4ca3d7f066feddd7">&#9670;&#160;</a></span>malakhKnight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> Chess.GameSettings.malakhKnight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Esencia Malakhovho rytiera. </p>
+
+</div>
+</div>
+<a id="ad1e1b99bb3b54b854c1b1706a2decb62" name="ad1e1b99bb3b54b854c1b1706a2decb62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e1b99bb3b54b854c1b1706a2decb62">&#9670;&#160;</a></span>malakhPawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> Chess.GameSettings.malakhPawn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Esencia Malakhovho pešiaka. </p>
+
+</div>
+</div>
+<a id="a9f6e805ad0c22e735118a88bff4953f3" name="a9f6e805ad0c22e735118a88bff4953f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f6e805ad0c22e735118a88bff4953f3">&#9670;&#160;</a></span>malakhRook</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> Chess.GameSettings.malakhRook</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Esencia Malakhovej veže. </p>
+
+</div>
+</div>
+<a id="ace3eb191cae8be11bbcd29388d71871b" name="ace3eb191cae8be11bbcd29388d71871b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace3eb191cae8be11bbcd29388d71871b">&#9670;&#160;</a></span>playerBishop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> Chess.GameSettings.playerBishop</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Esencia hráčovho strelca. </p>
+
+</div>
+</div>
+<a id="a34618fe76d9629855aff0e1c2d809143" name="a34618fe76d9629855aff0e1c2d809143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34618fe76d9629855aff0e1c2d809143">&#9670;&#160;</a></span>playerColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#a59a9d4e4128655f58f1b9e44d810b8dd">Color</a> Chess.GameSettings.playerColor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Farba hráča. </p>
+
+</div>
+</div>
+<a id="abd67bd942679a69a5872ccfd37cf88b0" name="abd67bd942679a69a5872ccfd37cf88b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd67bd942679a69a5872ccfd37cf88b0">&#9670;&#160;</a></span>playerKnight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> Chess.GameSettings.playerKnight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Esencia hráčovho rytiera. </p>
+
+</div>
+</div>
+<a id="a9aa21d4d09200cad0a58cf14db40b56d" name="a9aa21d4d09200cad0a58cf14db40b56d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aa21d4d09200cad0a58cf14db40b56d">&#9670;&#160;</a></span>playerPawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> Chess.GameSettings.playerPawn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Esencia hráčovho pešiaka. </p>
+
+</div>
+</div>
+<a id="a75e8787761fee9fe640e9e638a5d1ad3" name="a75e8787761fee9fe640e9e638a5d1ad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e8787761fee9fe640e9e638a5d1ad3">&#9670;&#160;</a></span>playerRook</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_chess.html#ab74d2b8080f6aa53fd7f72fc7e396758">Essence</a> Chess.GameSettings.playerRook</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Esencia hráčovej veže. </p>
+
+</div>
+</div>
+<hr/>Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru:<ul>
+<li><a class="el" href="_chess_8cs.html">Chess.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generované programom&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

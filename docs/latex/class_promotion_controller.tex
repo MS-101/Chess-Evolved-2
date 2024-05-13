@@ -1,0 +1,119 @@
+\doxysection{Dokumentácia triedy Promotion\+Controller}
+\hypertarget{class_promotion_controller}{}\label{class_promotion_controller}\index{PromotionController@{PromotionController}}
+Diagram dedičnosti pre triedu Promotion\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_promotion_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_promotion_controller_aaabba6f446166e17f052915f2ef03229}{Set\+Pieces}} (\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}} rook\+Essence, \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}} bishop\+Essence, \mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}} knight\+Essence)
+\item 
+void \mbox{\hyperlink{class_promotion_controller_aec9893d53f60b40d0e685b3cad6ebcb7}{Set\+Color}} (\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess.\+Color}} color)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Verejné atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_promotion_controller_a22bb08a62d610ff6eee1c65fd10b21a6}\label{class_promotion_controller_a22bb08a62d610ff6eee1c65fd10b21a6} 
+Unity\+Event$<$ \mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} $>$ {\bfseries on\+Promotion\+Chosen}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne metódy}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_promotion_controller_a5a5e93e9dd36dab2cbed4542823a7594}\label{class_promotion_controller_a5a5e93e9dd36dab2cbed4542823a7594} 
+void {\bfseries Start} ()
+\item 
+void \mbox{\hyperlink{class_promotion_controller_a561766d85ebe8ad011a37b29d2fdf7ad}{On\+Promotion\+Btn\+Clicked}} (\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess.\+Piece\+Type}} piece\+Type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_promotion_controller_ab385275deec59ef64ea5338df68eccff}\label{class_promotion_controller_ab385275deec59ef64ea5338df68eccff} 
+Button {\bfseries queen\+Btn}
+\item 
+\Hypertarget{class_promotion_controller_abd4a01d309e7257754bcafae303c0768}\label{class_promotion_controller_abd4a01d309e7257754bcafae303c0768} 
+Button {\bfseries rook\+Btn}
+\item 
+\Hypertarget{class_promotion_controller_ab0392d14a3160225344350a0f898ce42}\label{class_promotion_controller_ab0392d14a3160225344350a0f898ce42} 
+Button {\bfseries bishop\+Btn}
+\item 
+\Hypertarget{class_promotion_controller_a4cc75d37d61e8e406d6d12da473bff7e}\label{class_promotion_controller_a4cc75d37d61e8e406d6d12da473bff7e} 
+Button {\bfseries knight\+Btn}
+\item 
+\Hypertarget{class_promotion_controller_a9bb3ee787dfa060be5f3300926f6da6b}\label{class_promotion_controller_a9bb3ee787dfa060be5f3300926f6da6b} 
+Image {\bfseries queen\+Image}
+\item 
+\Hypertarget{class_promotion_controller_a7903e0eb3eb8e574a6e8612cde92b957}\label{class_promotion_controller_a7903e0eb3eb8e574a6e8612cde92b957} 
+Image {\bfseries rook\+Image}
+\item 
+\Hypertarget{class_promotion_controller_a89a2010785b20a13e1e75b99b2780d73}\label{class_promotion_controller_a89a2010785b20a13e1e75b99b2780d73} 
+Image {\bfseries bishop\+Image}
+\item 
+\Hypertarget{class_promotion_controller_a14f522de01ce5d2b042bb8f10bfe7389}\label{class_promotion_controller_a14f522de01ce5d2b042bb8f10bfe7389} 
+Image {\bfseries knight\+Image}
+\item 
+\Hypertarget{class_promotion_controller_a0f2bf0681f9810c20cb420fc7c76acfa}\label{class_promotion_controller_a0f2bf0681f9810c20cb420fc7c76acfa} 
+\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}} {\bfseries rook\+Essence}
+\item 
+\Hypertarget{class_promotion_controller_a67072162908e89cb51137279784579d1}\label{class_promotion_controller_a67072162908e89cb51137279784579d1} 
+\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}} {\bfseries bishop\+Essence}
+\item 
+\Hypertarget{class_promotion_controller_ad8915e43b4cd5d6127cfef71ffdbd7fa}\label{class_promotion_controller_ad8915e43b4cd5d6127cfef71ffdbd7fa} 
+\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess.\+Essence}} {\bfseries knight\+Essence}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Táto trieda je zodpovedná za správu rozhrania výberu promócie pešiaka. 
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_promotion_controller_a561766d85ebe8ad011a37b29d2fdf7ad}\label{class_promotion_controller_a561766d85ebe8ad011a37b29d2fdf7ad} 
+\index{PromotionController@{PromotionController}!OnPromotionBtnClicked@{OnPromotionBtnClicked}}
+\index{OnPromotionBtnClicked@{OnPromotionBtnClicked}!PromotionController@{PromotionController}}
+\doxysubsubsection{\texorpdfstring{OnPromotionBtnClicked()}{OnPromotionBtnClicked()}}
+{\footnotesize\ttfamily void Promotion\+Controller.\+On\+Promotion\+Btn\+Clicked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a5c28d265b562136476b0a7591659b0cf}{Chess\+::\+Piece\+Type}}}]{piece\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Po vybratí promócie sa táto informácia odošle poslucháčom (tí vykonajú promóciu pešiaka).
+
+
+\begin{DoxyParams}{Parametre}
+{\em piece\+Type} & Typ vybranej figúrky. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_promotion_controller_aec9893d53f60b40d0e685b3cad6ebcb7}\label{class_promotion_controller_aec9893d53f60b40d0e685b3cad6ebcb7} 
+\index{PromotionController@{PromotionController}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!PromotionController@{PromotionController}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily void Promotion\+Controller.\+Set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_a59a9d4e4128655f58f1b9e44d810b8dd}{Chess\+::\+Color}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Táto metóda nastaví farbu hráča pre dostupné promócie pešiaka.
+
+
+\begin{DoxyParams}{Parametre}
+{\em color} & Farba hráča, ktorý si vyberá promóciu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_promotion_controller_aaabba6f446166e17f052915f2ef03229}\label{class_promotion_controller_aaabba6f446166e17f052915f2ef03229} 
+\index{PromotionController@{PromotionController}!SetPieces@{SetPieces}}
+\index{SetPieces@{SetPieces}!PromotionController@{PromotionController}}
+\doxysubsubsection{\texorpdfstring{SetPieces()}{SetPieces()}}
+{\footnotesize\ttfamily void Promotion\+Controller.\+Set\+Pieces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess\+::\+Essence}}}]{rook\+Essence,  }\item[{\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess\+::\+Essence}}}]{bishop\+Essence,  }\item[{\mbox{\hyperlink{class_chess_ab74d2b8080f6aa53fd7f72fc7e396758}{Chess\+::\+Essence}}}]{knight\+Essence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pri výbere promócie sa pešiak zmení na esenciu vybraného typu figúrky. Táto metóda nastaví prislúchajúce esencie dostupným typom figúrok.
+
+
+\begin{DoxyParams}{Parametre}
+{\em rook\+Essence} & Esencia veže. \\
+\hline
+{\em bishop\+Essence} & Esencia strelca. \\
+\hline
+{\em knight\+Essence} & Esencia rytiera. \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_promotion_controller_8cs}{Promotion\+Controller.\+cs}}\end{DoxyCompactItemize}

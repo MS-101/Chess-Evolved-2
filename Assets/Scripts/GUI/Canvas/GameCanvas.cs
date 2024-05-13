@@ -1,3 +1,11 @@
+﻿/*****************************************************************//**
+ * \file   GameCanvas.cs
+ * \brief  Ovládač rozhrania hernej obrazovky.
+ * 
+ * \author Martin Šváb
+ * \date   Máj 2024
+ *********************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,6 +15,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/**
+ * Táto trieda je zodpovedná za správu hernej obrazovky.
+ */
 public class GameCanvas : MonoBehaviour
 {
     [SerializeField] private BoardController boardController;
@@ -40,6 +52,11 @@ public class GameCanvas : MonoBehaviour
 
     private Chess.GameSettings gameSettings;
 
+    /**
+     * Inicializujeme toto rozhranie aby sa spustila hra s danou hernou konfiguráciou.
+     * 
+     * \param gameSettings Herná konfigurácia novej hry
+     */
     public void SetGame(Chess.GameSettings gameSettings)
     {
         this.gameSettings = gameSettings;
@@ -59,11 +76,21 @@ public class GameCanvas : MonoBehaviour
         SetTurn(Chess.Color.White);
     }
 
+    /**
+     * Pri prijatí legálnych pohybov od enginu prepošleme túto informáciu ovládaču šachovnice.
+     */
     private void OnLegalMovesReceived(List<Move> legalMoves)
     {
         boardController.SetLegalMoves(legalMoves);
     }
 
+    /**
+     * Pri prijatí najlepšieho pohybu od enginu tento pohyb vykonáme na šachovnici a pohyb vložíme do histórie hry.
+     * Následne prikážeme enginu aby daný pohyb vykonal a vyžiadame si legálne pohyby.
+     * 
+     * \param bestMove Najlepší pohyb podľa enginu.
+     * \param promotedPieceType ak bola vykonaná promócia tak sa pešiak premení na tento typ figúrky.
+     */
     private void OnBestMoveReceived(Move bestMove, Chess.PieceType promotedPieceType)
     {
         Piece movingPiece = boardController.GetPiece(bestMove.x1, bestMove.y1);
@@ -88,6 +115,13 @@ public class GameCanvas : MonoBehaviour
         SetTurn(gameSettings.playerColor);
     }
 
+    /**
+     * Po prijatí pohybu hráča od ovládača šachovnice sa vykonaný pohyb zapíše do histórie hry.
+     * Následne prikážeme enginu aby daný pohyb vykonal a vyžiadame si najlepší pohyb.
+     * 
+     * \param movement Vykonaný pohyb hráča.
+     * \param promotedPieceType Ak bola vykonaná promócia pešiaka, tak toto bol typ figúrky na ktorú sa premenil.
+     */
     private void OnPlayerMove(Movement movement, Chess.PieceType promotedPieceType)
     {
         if (gameSettings.playerColor == Chess.Color.White)
@@ -99,6 +133,11 @@ public class GameCanvas : MonoBehaviour
         SetTurn(gameSettings.malakhColor);
     }
 
+    /**
+     * Pri prijatí výsledku hry od enginu hra je terminovaná a zobrazí sa výsledok hry.
+     * 
+     * \param victor Výherný hráč.
+     */
     private void OnResultReceived(Chess.Color victor)
     {
         if (gameSettings.playerColor == victor)
@@ -109,22 +148,40 @@ public class GameCanvas : MonoBehaviour
             turnDisplay.text = "<b><color=\"red\">Stalemate</color></b>!";
     }
 
+    /**
+     * Pri prijatí informácie o napadnutí kráľa od enginu to nastavíme na šachovnici.
+     */
     private void OnCheckReceived()
     {
         boardController.SetCheck();
     }
 
+    /**
+     * Pri prijatí žiadosti o výber promócie od ovládača šachovnice zobrazíme rozhranie na výber promócie.
+     */
     private void OnPromotionRequested()
     {
         promotionController.gameObject.SetActive(true);
     }
 
+    /**
+     * Pri prijatí promócia od rozhrania promócie vykonáme promóciu na šachovnici.
+     * 
+     * \param pieceType Vybraná promócia pešiaka.
+     */
     private void OnPromotionChosen(Chess.PieceType pieceType)
     {
         promotionController.gameObject.SetActive(false);
         boardController.PerformPromotion(pieceType);
     }
 
+    /**
+     * Nastavenie hráča na rade. Informáciu zobrazíme v nadpise.
+     * Ak je na rade hráč, tak si vyžiadame dostupné pohyby.
+     * Ak je na rade Malakh, tak si vyžiadame najlepší pohyb.
+     * 
+     * \param currentPly Hráč na rade.
+     */
     private void SetTurn(Chess.Color currentPly)
     {
         boardController.SetPly(currentPly);
@@ -141,6 +198,13 @@ public class GameCanvas : MonoBehaviour
         }
     }
 
+    /**
+     * Pri kliknutí na tlačidlo nápovedy pri figúrke v bočnom paneli zobrazíme nápovedu pre danú figúrku.
+     * 
+     * \param pieceType Typ figúrky.
+     * \param color Vlastník figúrky.
+     * \param essence Esencia figúrky.
+     */
     private void OnHelpButtonClicked(Chess.PieceType pieceType, Chess.Color color, Chess.Essence essence)
     {
         pieceInfoController.gameObject.SetActive(true);
@@ -155,6 +219,14 @@ public class GameCanvas : MonoBehaviour
     private List<TurnObject> turnObjectList = new();
     private int turnCounter = 0;
 
+    /**
+     * Do histórie hry pridáme nový pohyb bieleho hráča.
+     * 
+     * \param whitePieceType Typ bielej figúrky.
+     * \param whitePromotion Promócia bieleho pešiaka.
+     * \param whiteMovementType Typ pohybu bielej figúrky.
+     * \param whiteMove Vykonaný pohyb bielej figúrky.
+     */
     public void AddTurn(Chess.PieceType whitePieceType, Chess.PieceType whitePromotion, Chess.MovementType whiteMovementType, Move whiteMove)
     {
         turnCounter++;
@@ -172,11 +244,22 @@ public class GameCanvas : MonoBehaviour
         turnScrollbar.value = 0;
     }
 
+    /**
+     * Do histórie hry pridáme nová pohyb čierneho hráča.
+     * 
+     * \param blackPieceType Typ čiernej figúrky.
+     * \param blackPromotion Promócia čierneho pešiaka.
+     * \param blackMovementType Typ pohybu čiernej figúrky.
+     * \param blackMove Vykonaný pohyb čiernej figúrky.
+     */
     public void SetBlackPly(Chess.PieceType blackPieceType, Chess.PieceType blackPromotion, Chess.MovementType blackMovementType, Move blackMove)
     {
         turnObjectList.Last()?.UpdateBlackPly(blackPieceType, blackPromotion, blackMovementType, blackMove);
     }
 
+    /**
+     * Vymažeme históriu hry.
+     */
     public void ClearTurns()
     {
         turnCounter = 0;
@@ -189,6 +272,10 @@ public class GameCanvas : MonoBehaviour
         }
     }
 
+    /**
+     * Pri kliknutí na tlačidlo exportu výsledok hry exportujeme do výstupného súboru.
+     * Do súboru ukladáme informácie ako herná konfigurácia, výsledok hry a história hry.
+     */
     public void OnExportClick()
     {
         string outputDir = "output";
@@ -249,6 +336,9 @@ public class GameCanvas : MonoBehaviour
 
     #region Buttons
 
+    /**
+     * Po stlačení tlačidla návratu sa vrátime do rozhrania hlavnej obrazovky.
+     */
     private void OnReturnClick()
     {
         gameObject.SetActive(false);
@@ -257,6 +347,10 @@ public class GameCanvas : MonoBehaviour
 
     private GameObject createGameOverlay = null;
 
+
+    /**
+     * Po stlačení tlačidla novej hry zobrazíme rozhranie vytvorenia novej hry.
+     */
     private void OnPlayClick()
     {
         createGameOverlay = Instantiate((GameObject)Resources.Load("Prefabs/CreateGameOverlay"), gameObject.transform);
@@ -268,6 +362,11 @@ public class GameCanvas : MonoBehaviour
             createGameOverlayScript.InitializeSettings(gameSettings);
     }
 
+    /**
+     * Pri prijatí hernej konfigurácie od rozhrania vytvorenia novej hry nastavíme túto konfiguráciu v tomto rozhraní.
+     * 
+     * \param gameSettings Herná konfigurácia.
+     */
     private void OnGameCreated(Chess.GameSettings gameSettings)
     {
         Destroy(createGameOverlay);

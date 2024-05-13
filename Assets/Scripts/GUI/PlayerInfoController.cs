@@ -1,3 +1,11 @@
+﻿/*****************************************************************//**
+ * \file   PlayerInfoController.cs
+ * \brief  Ovládač rozhrania hráčovych informácií.
+ * 
+ * \author Martin Šváb
+ * \date   Máj 2024
+ *********************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,6 +13,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+/**
+ * Táto trieda spravuje rozhranie hráčovych informácií.
+ */
 public class PlayerInfoController : MonoBehaviour
 {
     [SerializeField] private Image pawnImage, knightImage, bishopImage, rookImage, queenImage, kingImage;
@@ -25,6 +36,15 @@ public class PlayerInfoController : MonoBehaviour
         kingButton.onClick.AddListener(() => OnHelpButtonClicked(Chess.PieceType.King, color, Chess.Essence.Classic));
     }
 
+    /**
+     * Táto metóda nastaví farbu a esencie figúrok hráča.
+     * 
+     * \param color Farba hráča.
+     * \param pawnEssence Esencia pešiaka.
+     * \param knightEssence Esencia rytiera.
+     * \param bishopEssence Esencia strelca.
+     * \param rookEssence Esencia veže.
+     */
     public void SetPieces(Chess.Color color, Chess.Essence pawnEssence, Chess.Essence knightEssence, Chess.Essence bishopEssence, Chess.Essence rookEssence)
     {
         this.color = color;
@@ -42,6 +62,13 @@ public class PlayerInfoController : MonoBehaviour
         kingImage.sprite = Chess.GetPieceImage(Chess.PieceType.King, color, Chess.Essence.Classic);
     }
 
+    /**
+     * Po kliknutí na tlačidlo nápovedy sa informácia o vyžiadanej nápovede prepošle poslucháčom (tí otvoria okno nápovedy).
+     * 
+     * \param pieceType Typ figúrky.
+     * \param color Farba figúrky.
+     * \param pieceEssence Esencia figúrky.
+     */
     private void OnHelpButtonClicked(Chess.PieceType pieceType, Chess.Color color, Chess.Essence pieceEssence)
     {
         onHelpButtonClicked?.Invoke(pieceType, color, pieceEssence);

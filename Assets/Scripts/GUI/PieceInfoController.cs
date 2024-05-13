@@ -1,9 +1,20 @@
+﻿/*****************************************************************//**
+ * \file   PlayerInfoController.cs
+ * \brief  Ovládač nápovedy figúrky.
+ * 
+ * \author Martin Šváb
+ * \date   Máj 2024
+ *********************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * Táto trieda je zodpovedná za správu nápovedy figúrky.
+ */
 public class PieceInfoController : MonoBehaviour
 {
     [SerializeField] private Button closeBtn;
@@ -28,6 +39,11 @@ public class PieceInfoController : MonoBehaviour
     }
 
     private Piece myPiece;
+
+    /**
+    * Aktuálne zobrazená figúrka.
+    * Ak ju zmeníme, tak sa aktualizuje jej zobrazenie.
+    */
     public Piece MyPiece
     {
         get { return myPiece; }
@@ -39,6 +55,9 @@ public class PieceInfoController : MonoBehaviour
         }
     }
 
+    /**
+     * Objekt figúrky sa vytvorí a umiestni v strede šachovnice.
+     */
     private void CreatePiece()
     {
         pieceObject = Instantiate(piecePrefab, board.transform).GetComponent<PieceObject>();
@@ -56,6 +75,9 @@ public class PieceInfoController : MonoBehaviour
         rect.sizeDelta = new(width, height);
     }
 
+    /**
+     * Zobrazená figúrka sa aktualizuje a zobrazia sa jej dostupné pohyby.
+     */
     private void UpdateDisplayedPiece()
     {
         pieceObject.Piece = new(myPiece.type, myPiece.color, myPiece.essence);
@@ -97,6 +119,9 @@ public class PieceInfoController : MonoBehaviour
         }
     }
 
+    /**
+     * Po kliknutí tlačidla zatvorenia sa toto rozhranie deaktivuje.
+     */
     private void OnCloseButtonClicked()
     {
         gameObject.SetActive(false);

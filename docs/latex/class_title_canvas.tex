@@ -1,0 +1,74 @@
+\doxysection{Dokumentácia triedy Title\+Canvas}
+\hypertarget{class_title_canvas}{}\label{class_title_canvas}\index{TitleCanvas@{TitleCanvas}}
+Diagram dedičnosti pre triedu Title\+Canvas\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_title_canvas}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Privátne metódy}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_title_canvas_ac18d821bf8db436ee75af95278c6496e}\label{class_title_canvas_ac18d821bf8db436ee75af95278c6496e} 
+void {\bfseries Start} ()
+\item 
+void \mbox{\hyperlink{class_title_canvas_a5c5aa8de68330d337e58a87a281af945}{On\+Play\+Click}} ()
+\item 
+void \mbox{\hyperlink{class_title_canvas_a0ab2dd40ada2334aa2112d7c2b43acac}{On\+Game\+Created}} (\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess.\+Game\+Settings}} game\+Settings)
+\item 
+void \mbox{\hyperlink{class_title_canvas_a84e5ad0400af12457be48021b9dd7888}{On\+Quit\+Click}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_title_canvas_a2a1b19126c33651377c98a016f0fe49f}\label{class_title_canvas_a2a1b19126c33651377c98a016f0fe49f} 
+Button {\bfseries play\+Btn}
+\item 
+\Hypertarget{class_title_canvas_a09b7ddf543d4b793adde94f60c42c36d}\label{class_title_canvas_a09b7ddf543d4b793adde94f60c42c36d} 
+Button {\bfseries quit\+Btn}
+\item 
+\Hypertarget{class_title_canvas_a21d553ee40dd7a4129bf4cd32eaad871}\label{class_title_canvas_a21d553ee40dd7a4129bf4cd32eaad871} 
+\mbox{\hyperlink{class_game_canvas}{Game\+Canvas}} {\bfseries game\+Canvas}
+\item 
+\Hypertarget{class_title_canvas_a476520b763a248d187c99004ce9f39c3}\label{class_title_canvas_a476520b763a248d187c99004ce9f39c3} 
+\mbox{\hyperlink{class_engine_controller}{Engine\+Controller}} {\bfseries engine\+Controller}
+\item 
+\Hypertarget{class_title_canvas_a2cd08d47cc10f15d85c0b549d347702e}\label{class_title_canvas_a2cd08d47cc10f15d85c0b549d347702e} 
+Game\+Object {\bfseries create\+Game\+Overlay} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailný popis}
+Táto trieda je zodpovedná za správu titulnej obrazovky. 
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_title_canvas_a0ab2dd40ada2334aa2112d7c2b43acac}\label{class_title_canvas_a0ab2dd40ada2334aa2112d7c2b43acac} 
+\index{TitleCanvas@{TitleCanvas}!OnGameCreated@{OnGameCreated}}
+\index{OnGameCreated@{OnGameCreated}!TitleCanvas@{TitleCanvas}}
+\doxysubsubsection{\texorpdfstring{OnGameCreated()}{OnGameCreated()}}
+{\footnotesize\ttfamily void Title\+Canvas.\+On\+Game\+Created (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_1_1_game_settings}{Chess\+::\+Game\+Settings}}}]{game\+Settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Pri prijatí hernej konfigurácie od rozhrania vytvorenia novej hry sa presunieme do rozhrania hernej obrazovky s danou konfiguráciou.
+
+
+\begin{DoxyParams}{Parametre}
+{\em game\+Settings} & Herná konfigurácia. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_title_canvas_a5c5aa8de68330d337e58a87a281af945}\label{class_title_canvas_a5c5aa8de68330d337e58a87a281af945} 
+\index{TitleCanvas@{TitleCanvas}!OnPlayClick@{OnPlayClick}}
+\index{OnPlayClick@{OnPlayClick}!TitleCanvas@{TitleCanvas}}
+\doxysubsubsection{\texorpdfstring{OnPlayClick()}{OnPlayClick()}}
+{\footnotesize\ttfamily void Title\+Canvas.\+On\+Play\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Po stlačení tlačidla spustenia hry sa zobrazí rozhranie vytvorenia novej hry. \Hypertarget{class_title_canvas_a84e5ad0400af12457be48021b9dd7888}\label{class_title_canvas_a84e5ad0400af12457be48021b9dd7888} 
+\index{TitleCanvas@{TitleCanvas}!OnQuitClick@{OnQuitClick}}
+\index{OnQuitClick@{OnQuitClick}!TitleCanvas@{TitleCanvas}}
+\doxysubsubsection{\texorpdfstring{OnQuitClick()}{OnQuitClick()}}
+{\footnotesize\ttfamily void Title\+Canvas.\+On\+Quit\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Po stlačení tlačidla vypnutia hry sa terminuje aplikácia. 
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúceho súboru\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_title_canvas_8cs}{Title\+Canvas.\+cs}}\end{DoxyCompactItemize}
